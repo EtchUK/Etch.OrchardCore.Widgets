@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>0.0.1-beta</Version>
+    <PackageId>Moov2.OrchardCore.Widgets</PackageId>
+    <Title>Moov2 OrchardCore Widgets</Title>
+    <Authors>Moov2</Authors>
+    <Description>Module for Orchard Core that provides common widgets used when constructing a web page.</Description>
+    <PackageTags>orchardcore;moov2</PackageTags>
+    <RepositoryUrl>https://github.com/moov2/Moov2.OrchardCore.Widgets</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/moov2/Moov2.OrchardCore.Widgets</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
