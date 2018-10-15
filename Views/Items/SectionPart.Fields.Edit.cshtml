@@ -1,0 +1,8 @@
+﻿@using Moov2.OrchardCore.Widgets.ViewModels;
+@model SectionPartEditViewModel
+
+<fieldset class="form-group">
+    <label asp-for="CssClass">@T["CSS Classes"]</label>
+    <input type="text" asp-for="CssClass" class="form-control content-preview-text" />
+    <span class="hint">@T["CSS classes added to section element."]</span>
+</fieldset>
