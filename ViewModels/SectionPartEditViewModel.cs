@@ -2,6 +2,6 @@
 {
     public class SectionPartEditViewModel
     {
-        public string CssClass { get; set; }
+        
     }
 }

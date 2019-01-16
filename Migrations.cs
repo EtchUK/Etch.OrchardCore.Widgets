@@ -15,7 +15,11 @@ namespace Moov2.OrchardCore.Widgets
 
         public int Create()
         {
-            // Form
+            _contentDefinitionManager.AlterPartDefinition("HtmlAttributesPart", part => part
+                .Attachable()
+                .WithDescription("Customise common attributes on HTML element.")
+                .WithDisplayName("HTML Attributes"));
+
             _contentDefinitionManager.AlterPartDefinition("SectionPart", part => part
                 .Attachable()
                 .WithDescription("Properties for a section widget."));
@@ -23,10 +27,24 @@ namespace Moov2.OrchardCore.Widgets
             _contentDefinitionManager.AlterTypeDefinition("Section", type => type
                 .WithPart("TitlePart")
                 .WithPart("SectionPart")
+                .WithPart("HtmlAttributesPart")
                 .WithPart("FlowPart")
                 .Stereotype("Widget"));
             
-            return 1;
+            return 2;
+        }
+
+        public int UpdateFrom1()
+        {
+            _contentDefinitionManager.AlterPartDefinition("HtmlAttributesPart", part => part
+                .Attachable()
+                .WithDescription("Customise common attributes on HTML element.")
+                .WithDisplayName("HTML Attributes"));
+
+            _contentDefinitionManager.AlterTypeDefinition("Section", type => type
+                .WithPart("HtmlAttributesPart"));
+
+            return 2;
         }
     }
 }

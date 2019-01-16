@@ -21,7 +21,9 @@ namespace Moov2.OrchardCore.Widgets
             services.AddMvc();
             
             services.AddScoped<IContentPartDisplayDriver, SectionPartDisplay>();
+            services.AddScoped<IContentPartDisplayDriver, HtmlAttributesPartDisplay>();
 
+            services.AddSingleton<ContentPart, HtmlAttributesPart>();
             services.AddSingleton<ContentPart, SectionPart>();
 
             services.AddScoped<IDataMigration, Migrations>();

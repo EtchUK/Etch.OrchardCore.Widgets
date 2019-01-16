@@ -14,7 +14,7 @@ namespace Moov2.OrchardCore.Widgets.Drivers
         {
             return Initialize<SectionPartEditViewModel>("SectionPart_Fields_Edit", m =>
             {
-                m.CssClass = part.CssClass;
+                
             });
         }
 
@@ -23,7 +23,9 @@ namespace Moov2.OrchardCore.Widgets.Drivers
             var viewModel = new SectionPartEditViewModel();
 
             if (await updater.TryUpdateModelAsync(viewModel, Prefix))
-                part.CssClass = viewModel.CssClass?.Trim();
+            {
+
+            }
 
             return Edit(part);
         }

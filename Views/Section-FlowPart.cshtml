@@ -8,10 +8,13 @@
 @inject OrchardCore.ContentManagement.Display.IContentItemDisplayManager ContentItemDisplayManager
 
 @{
-    var sectionPart = Model.FlowPart.ContentItem.As<SectionPart>();
+    var htmlAttributesPart = Model.FlowPart.ContentItem.As<HtmlAttributesPart>();
+
+    var hasCssClasses = !string.IsNullOrWhiteSpace(htmlAttributesPart.CssClasses);
+    var hasId = !string.IsNullOrWhiteSpace(htmlAttributesPart.Id);
 }
 
-<section class="@sectionPart.CssClass">
+<section @(hasId ? $"id={htmlAttributesPart.Id}" : "") @(hasCssClasses ? $"class={htmlAttributesPart.CssClasses}" : "")>
     @foreach (var widget in Model.FlowPart.Widgets)
     {
         var widgetContent = await ContentItemDisplayManager.BuildDisplayAsync(widget, Model.BuildPartDisplayContext.Updater, Model.BuildPartDisplayContext.DisplayType, Model.BuildPartDisplayContext.GroupId);

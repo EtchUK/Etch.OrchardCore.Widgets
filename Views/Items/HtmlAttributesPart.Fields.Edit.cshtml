@@ -1,0 +1,14 @@
+﻿@using Moov2.OrchardCore.Widgets.ViewModels;
+@model HtmlAttributesPartEditViewModel
+
+<fieldset class="form-group">
+    <label asp-for="CssClasses">@T["CSS Classes"]</label>
+    <input type="text" asp-for="CssClasses" class="form-control content-preview-text" />
+    <span class="hint">@T["CSS classes applied to element."]</span>
+</fieldset>
+
+<fieldset class="form-group">
+    <label asp-for="Id">@T["ID"]</label>
+    <input type="text" asp-for="Id" class="form-control content-preview-text" />
+    <span class="hint">@T["Useful for linking to sections within the current page."]</span>
+</fieldset>
