@@ -15,10 +15,16 @@ namespace Moov2.OrchardCore.Widgets
 
         public int Create()
         {
+            #region HtmlAttributes
+
             _contentDefinitionManager.AlterPartDefinition("HtmlAttributesPart", part => part
                 .Attachable()
                 .WithDescription("Customise common attributes on HTML element.")
                 .WithDisplayName("HTML Attributes"));
+
+            #endregion
+
+            #region Section
 
             _contentDefinitionManager.AlterPartDefinition("SectionPart", part => part
                 .WithDescription("Properties for section widget."));
@@ -30,6 +36,10 @@ namespace Moov2.OrchardCore.Widgets
                 .WithPart("FlowPart")
                 .Stereotype("Widget"));
 
+            #endregion
+
+            #region Heading
+
             _contentDefinitionManager.AlterPartDefinition("HeadingPart", part => part
                 .WithDescription("Properties for heading widget."));
 
@@ -37,6 +47,10 @@ namespace Moov2.OrchardCore.Widgets
                 .WithPart("HeadingPart")
                 .WithPart("HtmlAttributesPart")
                 .Stereotype("Widget"));
+
+            #endregion
+
+            #region Link
 
             _contentDefinitionManager.AlterPartDefinition("LinkPart", part => part
                 .WithDescription("Properties for link widget."));
@@ -46,7 +60,18 @@ namespace Moov2.OrchardCore.Widgets
                 .WithPart("HtmlAttributesPart")
                 .Stereotype("Widget"));
 
-            return 4;
+            #endregion
+
+            #region Container
+
+            _contentDefinitionManager.AlterTypeDefinition("Container", type => type
+                .WithPart("TitlePart")
+                .WithPart("HtmlAttributesPart")
+                .Stereotype("Widget"));
+
+            #endregion
+
+            return 5;
         }
 
         public int UpdateFrom1()
@@ -86,6 +111,17 @@ namespace Moov2.OrchardCore.Widgets
                 .Stereotype("Widget"));
 
             return 4;
+        }
+
+        public int UpdateFrom4()
+        {
+            _contentDefinitionManager.AlterTypeDefinition("Container", type => type
+                .WithPart("TitlePart")
+                .WithPart("HtmlAttributesPart")
+                .WithPart("FlowPart")
+                .Stereotype("Widget"));
+
+            return 5;
         }
     }
 }
