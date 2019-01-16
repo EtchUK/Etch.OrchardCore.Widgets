@@ -1,0 +1,19 @@
+﻿@using Moov2.OrchardCore.Widgets.Models;
+@using Moov2.OrchardCore.Widgets.ViewModels;
+
+@model HeadingPartViewModel
+
+@{
+    TagBuilder tag = Tag(Model, Model.Tag);
+
+    var htmlAttributes = Model.HeadingPart.ContentItem.As<HtmlAttributesPart>();
+
+    if (htmlAttributes != null)
+    {
+        htmlAttributes.ApplyToTagBuilder(tag);
+    }
+
+    tag.InnerHtml.Append(Model.Text);
+}
+
+@tag

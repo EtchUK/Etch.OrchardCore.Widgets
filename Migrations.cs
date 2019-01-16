@@ -21,8 +21,7 @@ namespace Moov2.OrchardCore.Widgets
                 .WithDisplayName("HTML Attributes"));
 
             _contentDefinitionManager.AlterPartDefinition("SectionPart", part => part
-                .Attachable()
-                .WithDescription("Properties for a section widget."));
+                .WithDescription("Properties for section widget."));
 
             _contentDefinitionManager.AlterTypeDefinition("Section", type => type
                 .WithPart("TitlePart")
@@ -30,8 +29,16 @@ namespace Moov2.OrchardCore.Widgets
                 .WithPart("HtmlAttributesPart")
                 .WithPart("FlowPart")
                 .Stereotype("Widget"));
-            
-            return 2;
+
+            _contentDefinitionManager.AlterPartDefinition("HeadingPart", part => part
+                .WithDescription("Properties for heading widget."));
+
+            _contentDefinitionManager.AlterTypeDefinition("Heading", type => type
+                .WithPart("HeadingPart")
+                .WithPart("HtmlAttributesPart")
+                .Stereotype("Widget"));
+
+            return 3;
         }
 
         public int UpdateFrom1()
@@ -45,6 +52,19 @@ namespace Moov2.OrchardCore.Widgets
                 .WithPart("HtmlAttributesPart"));
 
             return 2;
+        }
+
+        public int UpdateFrom2()
+        {
+            _contentDefinitionManager.AlterPartDefinition("HeadingPart", part => part
+                .WithDescription("Properties for heading widget."));
+
+            _contentDefinitionManager.AlterTypeDefinition("Heading", type => type
+                .WithPart("HeadingPart")
+                .WithPart("HtmlAttributesPart")
+                .Stereotype("Widget"));
+
+            return 3;
         }
     }
 }

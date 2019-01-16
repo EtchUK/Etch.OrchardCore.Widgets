@@ -13,16 +13,20 @@ namespace Moov2.OrchardCore.Widgets
     {
         static Startup()
         {
+            TemplateContext.GlobalMemberAccessStrategy.Register<HeadingPart>();
+            TemplateContext.GlobalMemberAccessStrategy.Register<HtmlAttributesPart>();
             TemplateContext.GlobalMemberAccessStrategy.Register<SectionPart>();
         }
 
         public override void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            
-            services.AddScoped<IContentPartDisplayDriver, SectionPartDisplay>();
-            services.AddScoped<IContentPartDisplayDriver, HtmlAttributesPartDisplay>();
 
+            services.AddScoped<IContentPartDisplayDriver, HeadingPartDisplay>();
+            services.AddScoped<IContentPartDisplayDriver, HtmlAttributesPartDisplay>();
+            services.AddScoped<IContentPartDisplayDriver, SectionPartDisplay>();
+
+            services.AddSingleton<ContentPart, HeadingPart>();
             services.AddSingleton<ContentPart, HtmlAttributesPart>();
             services.AddSingleton<ContentPart, SectionPart>();
 

@@ -1,0 +1,15 @@
+﻿@using Moov2.OrchardCore.Widgets.ViewModels;
+
+@model HeadingPartViewModel
+
+<fieldset class="form-group">
+    <label asp-for="Text">@T["Text"]</label>
+    <input type="text" asp-for="Text" class="form-control content-preview-text content-caption-text" />
+    <span class="hint">@T["Text to be displayed in heading."]</span>
+</fieldset>
+
+<fieldset class="form-group">
+    <label asp-for="Level">@T["Level"]</label>
+    <input type="number" max="6" min="1" asp-for="Level" class="form-control content-preview-text" />
+    <span class="hint">@T["Importance of the heading, where the lower the value the more important the heading."]</span>
+</fieldset>
