@@ -38,7 +38,15 @@ namespace Moov2.OrchardCore.Widgets
                 .WithPart("HtmlAttributesPart")
                 .Stereotype("Widget"));
 
-            return 3;
+            _contentDefinitionManager.AlterPartDefinition("LinkPart", part => part
+                .WithDescription("Properties for link widget."));
+
+            _contentDefinitionManager.AlterTypeDefinition("Link", type => type
+                .WithPart("LinkPart")
+                .WithPart("HtmlAttributesPart")
+                .Stereotype("Widget"));
+
+            return 4;
         }
 
         public int UpdateFrom1()
@@ -65,6 +73,19 @@ namespace Moov2.OrchardCore.Widgets
                 .Stereotype("Widget"));
 
             return 3;
+        }
+
+        public int UpdateFrom3()
+        {
+            _contentDefinitionManager.AlterPartDefinition("LinkPart", part => part
+                .WithDescription("Properties for link widget."));
+
+            _contentDefinitionManager.AlterTypeDefinition("Link", type => type
+                .WithPart("LinkPart")
+                .WithPart("HtmlAttributesPart")
+                .Stereotype("Widget"));
+
+            return 4;
         }
     }
 }

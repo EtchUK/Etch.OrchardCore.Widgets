@@ -1,0 +1,17 @@
+﻿@using Moov2.OrchardCore.Widgets.ViewModels;
+
+@model LinkPartViewModel
+
+<fieldset class="form-group" asp-validation-class-for="Text">
+    <label asp-for="Text">@T["Text"]</label>
+    <input type="text" asp-for="Text" class="form-control content-preview-text content-caption-text" />
+    <span asp-validation-for="Text"></span>
+    <span class="hint">@T["Text to be displayed in link."]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="Url">
+    <label asp-for="Url">@T["Url"]</label>
+    <input type="text" asp-for="Url" class="form-control content-preview-text" />
+    <span asp-validation-for="Url"></span>
+    <span class="hint">@T["URL user is taken to when interacting with link"]</span>
+</fieldset>

@@ -1,18 +1,19 @@
 ﻿@using Moov2.OrchardCore.Widgets.Models;
 @using Moov2.OrchardCore.Widgets.ViewModels;
 
-@model HeadingPartViewModel
+@model LinkPartViewModel
 
 @{
-    var tag = new TagBuilder($"h{Model.Level}");
+    var tag = new TagBuilder("a");
 
-    var htmlAttributes = Model.HeadingPart.ContentItem.As<HtmlAttributesPart>();
+    var htmlAttributes = Model.LinkPart.ContentItem.As<HtmlAttributesPart>();
 
     if (htmlAttributes != null)
     {
         htmlAttributes.ApplyToTagBuilder(tag);
     }
 
+    tag.Attributes.Add("href", Model.Url);
     tag.InnerHtml.Append(Model.Text);
 }
 

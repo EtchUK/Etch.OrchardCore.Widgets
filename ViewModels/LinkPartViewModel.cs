@@ -1,16 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Moov2.OrchardCore.Widgets.Models;
-using System.ComponentModel.DataAnnotations;
 
 namespace Moov2.OrchardCore.Widgets.ViewModels
 {
-    public class HeadingPartViewModel
+    public class LinkPartViewModel
     {
-        [Range(1, 6)]
-        public int Level { get; set; }
         public string Text { get; set; }
+        public string Url { get; set; }
 
         [BindNever]
-        public HeadingPart HeadingPart { get; set; }
+        public LinkPart LinkPart { get; set; }
     }
 }
