@@ -16,6 +16,7 @@ namespace Moov2.OrchardCore.Widgets
             TemplateContext.GlobalMemberAccessStrategy.Register<HeadingPart>();
             TemplateContext.GlobalMemberAccessStrategy.Register<HtmlAttributesPart>();
             TemplateContext.GlobalMemberAccessStrategy.Register<LinkPart>();
+            TemplateContext.GlobalMemberAccessStrategy.Register<ParagraphPart>();
             TemplateContext.GlobalMemberAccessStrategy.Register<SectionPart>();
         }
 
@@ -26,11 +27,13 @@ namespace Moov2.OrchardCore.Widgets
             services.AddScoped<IContentPartDisplayDriver, HeadingPartDisplay>();
             services.AddScoped<IContentPartDisplayDriver, HtmlAttributesPartDisplay>();
             services.AddScoped<IContentPartDisplayDriver, LinkPartDisplay>();
+            services.AddScoped<IContentPartDisplayDriver, ParagraphPartDisplay>();
             services.AddScoped<IContentPartDisplayDriver, SectionPartDisplay>();
 
             services.AddSingleton<ContentPart, HeadingPart>();
             services.AddSingleton<ContentPart, HtmlAttributesPart>();
             services.AddSingleton<ContentPart, LinkPart>();
+            services.AddSingleton<ContentPart, ParagraphPart>();
             services.AddSingleton<ContentPart, SectionPart>();
 
             services.AddScoped<IDataMigration, Migrations>();

@@ -1,0 +1,10 @@
+﻿@using Moov2.OrchardCore.Widgets.ViewModels;
+
+@model ParagraphPartViewModel
+
+<fieldset class="form-group" asp-validation-class-for="Text">
+    <label asp-for="Text">@T["Text"]</label>
+    <textarea asp-for="Text" class="form-control content-preview-text content-caption-text"></textarea>
+    <span asp-validation-for="Text"></span>
+    <span class="hint">@T["Text that makes up the paragraph."]</span>
+</fieldset>

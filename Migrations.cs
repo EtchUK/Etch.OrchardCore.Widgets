@@ -71,7 +71,19 @@ namespace Moov2.OrchardCore.Widgets
 
             #endregion
 
-            return 5;
+            #region Paragraph 
+
+            _contentDefinitionManager.AlterPartDefinition("ParagraphPart", part => part
+                .WithDescription("Properties for paragraph widget."));
+
+            _contentDefinitionManager.AlterTypeDefinition("Paragraph", type => type
+                .WithPart("ParagraphPart")
+                .WithPart("HtmlAttributesPart")
+                .Stereotype("Widget"));
+
+            #endregion
+
+            return 6;
         }
 
         public int UpdateFrom1()
@@ -122,6 +134,19 @@ namespace Moov2.OrchardCore.Widgets
                 .Stereotype("Widget"));
 
             return 5;
+        }
+
+        public int UpdateFrom5()
+        {
+            _contentDefinitionManager.AlterPartDefinition("ParagraphPart", part => part
+                .WithDescription("Properties for paragraph widget."));
+
+            _contentDefinitionManager.AlterTypeDefinition("Paragraph", type => type
+                .WithPart("ParagraphPart")
+                .WithPart("HtmlAttributesPart")
+                .Stereotype("Widget"));
+
+            return 6;
         }
     }
 }

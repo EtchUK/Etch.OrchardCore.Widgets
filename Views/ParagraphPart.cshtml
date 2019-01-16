@@ -1,0 +1,19 @@
+﻿@using Moov2.OrchardCore.Widgets.Models;
+@using Moov2.OrchardCore.Widgets.ViewModels;
+
+@model ParagraphPartViewModel
+
+@{
+    var tag = new TagBuilder("p");
+
+    var htmlAttributes = Model.ParagraphPart.ContentItem.As<HtmlAttributesPart>();
+
+    if (htmlAttributes != null)
+    {
+        htmlAttributes.ApplyToTagBuilder(tag);
+    }
+}
+
+@tag.RenderStartTag()
+    @Html.Raw(Model.Text)
+@tag.RenderEndTag()
