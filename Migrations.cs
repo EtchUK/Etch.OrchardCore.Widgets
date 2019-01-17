@@ -1,5 +1,6 @@
 ﻿using OrchardCore.ContentManagement.Metadata;
 using OrchardCore.ContentManagement.Metadata.Settings;
+using OrchardCore.Lists.Models;
 using OrchardCore.Data.Migration;
 
 namespace Moov2.OrchardCore.Widgets
@@ -83,7 +84,21 @@ namespace Moov2.OrchardCore.Widgets
 
             #endregion
 
-            return 6;
+            #region Media
+
+            _contentDefinitionManager.AlterTypeDefinition("Media", type => type
+                .WithPart("TitlePart")
+                .WithPart("MediaItems", "BagPart")
+                    .WithSetting("DisplayName", "Media Items")
+                    .WithSetting("Description", "Images, video embeds or HTML to be displayed")
+                    .WithSetting("ContainedContentTypes", "HtmlWidget")
+                .WithPart("FlowPart")
+                .WithPart("HtmlAttributesPart")
+                .Stereotype("Widget"));
+
+            #endregion
+
+            return 7;
         }
 
         public int UpdateFrom1()
@@ -147,6 +162,23 @@ namespace Moov2.OrchardCore.Widgets
                 .Stereotype("Widget"));
 
             return 6;
+        }
+
+        public int UpdateFrom6()
+        {
+            _contentDefinitionManager.AlterTypeDefinition("Media", type => type
+                .WithSetting("Description", "Displays media accompanied with text content")
+                .WithPart("TitlePart")
+                .WithPart("MediaItems", "BagPart")
+                    .WithSetting("DisplayName", "Media Items")
+                    .WithSetting("Description", "Images, video, embeds or HTML to be displayed")
+                .WithPart("Body", "FlowPart")
+                    .WithSetting("DisplayName", "Body")
+                    .WithSetting("Description", "Content displayed alongside media.")
+                .WithPart("HtmlAttributesPart")
+                .Stereotype("Widget"));
+
+            return 7;
         }
     }
 }
