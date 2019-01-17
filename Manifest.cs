@@ -4,7 +4,7 @@
     Name = "Common Widgets",
     Author = "Moov2",
     Website = "https://moov2.com",
-    Version = "0.0.1"
+    Version = "0.2.0"
 )]
 
 [assembly: Feature(
