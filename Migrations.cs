@@ -87,12 +87,14 @@ namespace Moov2.OrchardCore.Widgets
             #region Media
 
             _contentDefinitionManager.AlterTypeDefinition("Media", type => type
+                .WithSetting("Description", "Displays media accompanied with text content")
                 .WithPart("TitlePart")
                 .WithPart("MediaItems", "BagPart")
                     .WithSetting("DisplayName", "Media Items")
-                    .WithSetting("Description", "Images, video embeds or HTML to be displayed")
-                    .WithSetting("ContainedContentTypes", "HtmlWidget")
-                .WithPart("FlowPart")
+                    .WithSetting("Description", "Images, video, embeds or HTML to be displayed")
+                .WithPart("Body", "FlowPart")
+                    .WithSetting("DisplayName", "Body")
+                    .WithSetting("Description", "Content displayed alongside media")
                 .WithPart("HtmlAttributesPart")
                 .Stereotype("Widget"));
 
