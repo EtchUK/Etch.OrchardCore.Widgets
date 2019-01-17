@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.2.0-beta</Version>
+    <Version>0.2.1-beta</Version>
     <PackageId>Moov2.OrchardCore.Widgets</PackageId>
     <Title>Moov2 OrchardCore Widgets</Title>
     <Authors>Moov2</Authors>
