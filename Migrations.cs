@@ -111,7 +111,15 @@ namespace Moov2.OrchardCore.Widgets
 
             #endregion
 
-            return 7;
+            #region Html
+
+            _contentDefinitionManager.AlterTypeDefinition("Html", type => type
+                .WithPart("HtmlBodyPart")
+                .Stereotype("Widget"));
+
+            #endregion
+
+            return 8;
         }
 
         public int UpdateFrom1()
@@ -197,6 +205,15 @@ namespace Moov2.OrchardCore.Widgets
                 .Stereotype("Widget"));
 
             return 7;
+        }
+
+        public int UpdateFrom7()
+        {
+            _contentDefinitionManager.AlterTypeDefinition("Html", type => type
+                .WithPart("HtmlBodyPart")
+                .Stereotype("Widget"));
+
+            return 8;
         }
     }
 }
