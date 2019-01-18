@@ -16,6 +16,11 @@ namespace Moov2.OrchardCore.Widgets
 
         public int Create()
         {
+            // by default the `FlowPart` isn't reusable, so we'll make it
+            // reusable to provide a cleaner UI
+            _contentDefinitionManager.AlterPartDefinition("FlowPart", part => part
+                .Reusable());
+
             #region HtmlAttributes
 
             _contentDefinitionManager.AlterPartDefinition("HtmlAttributesPart", part => part
@@ -67,6 +72,9 @@ namespace Moov2.OrchardCore.Widgets
 
             _contentDefinitionManager.AlterTypeDefinition("Container", type => type
                 .WithPart("TitlePart")
+                .WithPart("Children", "FlowPart", part => part
+                    .WithDescription("Elements displayed within container")
+                    .WithDisplayName("Children"))
                 .WithPart("HtmlAttributesPart")
                 .Stereotype("Widget"));
 
@@ -89,12 +97,15 @@ namespace Moov2.OrchardCore.Widgets
             _contentDefinitionManager.AlterTypeDefinition("Media", type => type
                 .WithSetting("Description", "Displays media accompanied with text content")
                 .WithPart("TitlePart")
-                .WithPart("MediaItems", "BagPart")
-                    .WithSetting("DisplayName", "Media Items")
-                    .WithSetting("Description", "Images, video, embeds or HTML to be displayed")
-                .WithPart("Body", "FlowPart")
-                    .WithSetting("DisplayName", "Body")
-                    .WithSetting("Description", "Content displayed alongside media")
+                .WithPart("MediaItems", "BagPart", part => part
+                    .WithDisplayName("Media Items")
+                    .WithDescription("Images, video, embeds or HTML to be displayed")
+                    .ContainedContentTypes(new string[] { "Html" })
+                )
+                .WithPart("Body", "FlowPart", part => part
+                    .WithDisplayName("Body")
+                    .WithDescription("Content displayed alongside media")
+                )
                 .WithPart("HtmlAttributesPart")
                 .Stereotype("Widget"));
 
@@ -146,8 +157,10 @@ namespace Moov2.OrchardCore.Widgets
         {
             _contentDefinitionManager.AlterTypeDefinition("Container", type => type
                 .WithPart("TitlePart")
+                .WithPart("Children", "FlowPart", part => part
+                    .WithDescription("Elements displayed within container")
+                    .WithDisplayName("Children"))
                 .WithPart("HtmlAttributesPart")
-                .WithPart("FlowPart")
                 .Stereotype("Widget"));
 
             return 5;
@@ -171,12 +184,15 @@ namespace Moov2.OrchardCore.Widgets
             _contentDefinitionManager.AlterTypeDefinition("Media", type => type
                 .WithSetting("Description", "Displays media accompanied with text content")
                 .WithPart("TitlePart")
-                .WithPart("MediaItems", "BagPart")
-                    .WithSetting("DisplayName", "Media Items")
-                    .WithSetting("Description", "Images, video, embeds or HTML to be displayed")
-                .WithPart("Body", "FlowPart")
-                    .WithSetting("DisplayName", "Body")
-                    .WithSetting("Description", "Content displayed alongside media.")
+                .WithPart("MediaItems", "BagPart", part => part
+                    .WithDisplayName("Media Items")
+                    .WithDescription("Images, video, embeds or HTML to be displayed")
+                    .ContainedContentTypes(new string[] { "Html" })
+                )
+                .WithPart("Body", "FlowPart", part => part
+                    .WithDisplayName("Body")
+                    .WithDescription("Content displayed alongside media")
+                )
                 .WithPart("HtmlAttributesPart")
                 .Stereotype("Widget"));
 
