@@ -39,7 +39,9 @@ namespace Moov2.OrchardCore.Widgets
                 .WithPart("TitlePart")
                 .WithPart("SectionPart")
                 .WithPart("HtmlAttributesPart")
-                .WithPart("FlowPart")
+                .WithPart("Content", "FlowPart", part => part
+                    .WithDescription("Elements displayed within section")
+                    .WithDisplayName("Content"))
                 .Stereotype("Widget"));
 
             #endregion
