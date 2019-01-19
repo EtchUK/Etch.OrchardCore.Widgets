@@ -102,6 +102,7 @@ namespace Moov2.OrchardCore.Widgets
                 .WithPart("MediaItems", "BagPart", part => part
                     .WithDisplayName("Media Items")
                     .WithDescription("Images, video, embeds or HTML to be displayed")
+                    .WithSetting("DisplayType", "Detail")
                     .ContainedContentTypes(new string[] { "Html" })
                 )
                 .WithPart("Body", "FlowPart", part => part
@@ -197,6 +198,7 @@ namespace Moov2.OrchardCore.Widgets
                 .WithPart("MediaItems", "BagPart", part => part
                     .WithDisplayName("Media Items")
                     .WithDescription("Images, video, embeds or HTML to be displayed")
+                    .WithSetting("DisplayType", "Detail")
                     .ContainedContentTypes(new string[] { "Html" })
                 )
                 .WithPart("Body", "FlowPart", part => part
