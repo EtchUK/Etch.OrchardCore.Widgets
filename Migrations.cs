@@ -117,7 +117,9 @@ namespace Moov2.OrchardCore.Widgets
             #region Html
 
             _contentDefinitionManager.AlterTypeDefinition("Html", type => type
-                .WithPart("HtmlBodyPart")
+                .WithPart("HtmlBodyPart", 
+                    part => part.WithSetting("Editor", "Wysiwyg")
+                )
                 .Stereotype("Widget"));
 
             #endregion
@@ -214,7 +216,9 @@ namespace Moov2.OrchardCore.Widgets
         public int UpdateFrom7()
         {
             _contentDefinitionManager.AlterTypeDefinition("Html", type => type
-                .WithPart("HtmlBodyPart")
+                .WithPart("HtmlBodyPart",
+                    part => part.WithSetting("Editor", "Wysiwyg")
+                )
                 .Stereotype("Widget"));
 
             return 8;
