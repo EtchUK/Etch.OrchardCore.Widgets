@@ -1,13 +1,13 @@
 ﻿using Fluid;
 using Microsoft.Extensions.DependencyInjection;
-using Moov2.OrchardCore.Widgets.Drivers;
-using Moov2.OrchardCore.Widgets.Models;
+using Etch.OrchardCore.Widgets.Drivers;
+using Etch.OrchardCore.Widgets.Models;
 using OrchardCore.ContentManagement;
 using OrchardCore.ContentManagement.Display.ContentDisplay;
 using OrchardCore.Data.Migration;
 using OrchardCore.Modules;
 
-namespace Moov2.OrchardCore.Widgets
+namespace Etch.OrchardCore.Widgets
 {
     public class Startup : StartupBase
     {
