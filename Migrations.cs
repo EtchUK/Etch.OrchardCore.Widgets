@@ -38,7 +38,6 @@ namespace Etch.OrchardCore.Widgets
             _contentDefinitionManager.AlterTypeDefinition("Section", type => type
                 .WithPart("TitlePart")
                 .WithPart("SectionPart")
-                .WithPart("HtmlAttributesPart")
                 .WithPart("Content", "FlowPart", part => part
                     .WithDescription("Elements displayed within section")
                     .WithDisplayName("Content"))
@@ -53,7 +52,6 @@ namespace Etch.OrchardCore.Widgets
 
             _contentDefinitionManager.AlterTypeDefinition("Heading", type => type
                 .WithPart("HeadingPart")
-                .WithPart("HtmlAttributesPart")
                 .Stereotype("Widget"));
 
             #endregion
@@ -65,7 +63,6 @@ namespace Etch.OrchardCore.Widgets
 
             _contentDefinitionManager.AlterTypeDefinition("Link", type => type
                 .WithPart("LinkPart")
-                .WithPart("HtmlAttributesPart")
                 .Stereotype("Widget"));
 
             #endregion
@@ -77,7 +74,6 @@ namespace Etch.OrchardCore.Widgets
                 .WithPart("Children", "FlowPart", part => part
                     .WithDescription("Elements displayed within container")
                     .WithDisplayName("Children"))
-                .WithPart("HtmlAttributesPart")
                 .Stereotype("Widget"));
 
             #endregion
@@ -89,7 +85,6 @@ namespace Etch.OrchardCore.Widgets
 
             _contentDefinitionManager.AlterTypeDefinition("Paragraph", type => type
                 .WithPart("ParagraphPart")
-                .WithPart("HtmlAttributesPart")
                 .Stereotype("Widget"));
 
             #endregion
@@ -109,7 +104,6 @@ namespace Etch.OrchardCore.Widgets
                     .WithDisplayName("Body")
                     .WithDescription("Content displayed alongside media")
                 )
-                .WithPart("HtmlAttributesPart")
                 .Stereotype("Widget"));
 
             #endregion
@@ -147,7 +141,6 @@ namespace Etch.OrchardCore.Widgets
 
             _contentDefinitionManager.AlterTypeDefinition("Heading", type => type
                 .WithPart("HeadingPart")
-                .WithPart("HtmlAttributesPart")
                 .Stereotype("Widget"));
 
             return 3;
@@ -160,7 +153,6 @@ namespace Etch.OrchardCore.Widgets
 
             _contentDefinitionManager.AlterTypeDefinition("Link", type => type
                 .WithPart("LinkPart")
-                .WithPart("HtmlAttributesPart")
                 .Stereotype("Widget"));
 
             return 4;
@@ -173,7 +165,6 @@ namespace Etch.OrchardCore.Widgets
                 .WithPart("Children", "FlowPart", part => part
                     .WithDescription("Elements displayed within container")
                     .WithDisplayName("Children"))
-                .WithPart("HtmlAttributesPart")
                 .Stereotype("Widget"));
 
             return 5;
@@ -186,7 +177,6 @@ namespace Etch.OrchardCore.Widgets
 
             _contentDefinitionManager.AlterTypeDefinition("Paragraph", type => type
                 .WithPart("ParagraphPart")
-                .WithPart("HtmlAttributesPart")
                 .Stereotype("Widget"));
 
             return 6;
@@ -207,7 +197,6 @@ namespace Etch.OrchardCore.Widgets
                     .WithDisplayName("Body")
                     .WithDescription("Content displayed alongside media")
                 )
-                .WithPart("HtmlAttributesPart")
                 .Stereotype("Widget"));
 
             return 7;
