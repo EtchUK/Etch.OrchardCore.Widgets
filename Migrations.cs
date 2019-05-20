@@ -3,7 +3,7 @@ using OrchardCore.ContentManagement.Metadata.Settings;
 using OrchardCore.Lists.Models;
 using OrchardCore.Data.Migration;
 
-namespace Moov2.OrchardCore.Widgets
+namespace Etch.OrchardCore.Widgets
 {
     public class Migrations : DataMigration
     {

@@ -1,7 +1,7 @@
 ﻿using OrchardCore.ContentManagement;
 using System.ComponentModel.DataAnnotations;
 
-namespace Moov2.OrchardCore.Widgets.Models
+namespace Etch.OrchardCore.Widgets.Models
 {
     public class LinkPart : ContentPart
     {

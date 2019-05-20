@@ -1,12 +1,12 @@
-﻿using Moov2.OrchardCore.Widgets.Models;
-using Moov2.OrchardCore.Widgets.ViewModels;
+﻿using Etch.OrchardCore.Widgets.Models;
+using Etch.OrchardCore.Widgets.ViewModels;
 using OrchardCore.ContentManagement.Display.ContentDisplay;
 using OrchardCore.ContentManagement.Display.Models;
 using OrchardCore.DisplayManagement.ModelBinding;
 using OrchardCore.DisplayManagement.Views;
 using System.Threading.Tasks;
 
-namespace Moov2.OrchardCore.Widgets.Drivers
+namespace Etch.OrchardCore.Widgets.Drivers
 {
     public class LinkPartDisplay : ContentPartDisplayDriver<LinkPart>
     {

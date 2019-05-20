@@ -1,4 +1,4 @@
-﻿namespace Moov2.OrchardCore.Widgets.ViewModels
+﻿namespace Etch.OrchardCore.Widgets.ViewModels
 {
     public class HtmlAttributesPartEditViewModel
     {

@@ -1,6 +1,6 @@
 ﻿using OrchardCore.ContentManagement;
 
-namespace Moov2.OrchardCore.Widgets.Models
+namespace Etch.OrchardCore.Widgets.Models
 {
     public class ParagraphPart : ContentPart
     {

@@ -4,13 +4,13 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>0.3.0-beta</Version>
-    <PackageId>Moov2.OrchardCore.Widgets</PackageId>
-    <Title>Moov2 OrchardCore Widgets</Title>
-    <Authors>Moov2</Authors>
+    <PackageId>Etch.OrchardCore.Widgets</PackageId>
+    <Title>Etch OrchardCore Widgets</Title>
+    <Authors>Etch</Authors>
     <Description>Module for Orchard Core that provides common widgets used when constructing a web page.</Description>
-    <PackageTags>orchardcore;moov2</PackageTags>
-    <RepositoryUrl>https://github.com/moov2/Moov2.OrchardCore.Widgets</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/moov2/Moov2.OrchardCore.Widgets</PackageProjectUrl>
+    <PackageTags>orchardcore;etch</PackageTags>
+    <RepositoryUrl>https://github.com/etchuk/Etch.OrchardCore.Widgets</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/etchuk/Etch.OrchardCore.Widgets</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>

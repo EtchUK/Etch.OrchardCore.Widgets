@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Moov2.OrchardCore.Widgets.Models;
+using Etch.OrchardCore.Widgets.Models;
 
-namespace Moov2.OrchardCore.Widgets.ViewModels
+namespace Etch.OrchardCore.Widgets.ViewModels
 {
     public class LinkPartViewModel
     {
