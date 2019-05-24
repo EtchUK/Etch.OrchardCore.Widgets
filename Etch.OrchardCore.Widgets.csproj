@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.4.0-beta</Version>
+    <Version>0.4.1-beta</Version>
     <PackageId>Etch.OrchardCore.Widgets</PackageId>
     <Title>Etch OrchardCore Widgets</Title>
     <Authors>Etch</Authors>
