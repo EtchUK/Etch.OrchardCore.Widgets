@@ -1,7 +1,7 @@
 ﻿using OrchardCore.ContentManagement.Metadata;
 using OrchardCore.ContentManagement.Metadata.Settings;
-using OrchardCore.Lists.Models;
 using OrchardCore.Data.Migration;
+using OrchardCore.Lists.Models;
 
 namespace Etch.OrchardCore.Widgets
 {
@@ -28,7 +28,7 @@ namespace Etch.OrchardCore.Widgets
                 .WithDescription("Customise common attributes on HTML element.")
                 .WithDisplayName("HTML Attributes"));
 
-            #endregion
+            #endregion HtmlAttributes
 
             #region Section
 
@@ -43,7 +43,7 @@ namespace Etch.OrchardCore.Widgets
                     .WithDisplayName("Content"))
                 .Stereotype("Widget"));
 
-            #endregion
+            #endregion Section
 
             #region Heading
 
@@ -54,7 +54,7 @@ namespace Etch.OrchardCore.Widgets
                 .WithPart("HeadingPart")
                 .Stereotype("Widget"));
 
-            #endregion
+            #endregion Heading
 
             #region Link
 
@@ -65,7 +65,7 @@ namespace Etch.OrchardCore.Widgets
                 .WithPart("LinkPart")
                 .Stereotype("Widget"));
 
-            #endregion
+            #endregion Link
 
             #region Container
 
@@ -76,9 +76,9 @@ namespace Etch.OrchardCore.Widgets
                     .WithDisplayName("Children"))
                 .Stereotype("Widget"));
 
-            #endregion
+            #endregion Container
 
-            #region Paragraph 
+            #region Paragraph
 
             _contentDefinitionManager.AlterPartDefinition("ParagraphPart", part => part
                 .WithDescription("Properties for paragraph widget."));
@@ -87,7 +87,7 @@ namespace Etch.OrchardCore.Widgets
                 .WithPart("ParagraphPart")
                 .Stereotype("Widget"));
 
-            #endregion
+            #endregion Paragraph
 
             #region Media
 
@@ -106,17 +106,17 @@ namespace Etch.OrchardCore.Widgets
                 )
                 .Stereotype("Widget"));
 
-            #endregion
+            #endregion Media
 
             #region Html
 
             _contentDefinitionManager.AlterTypeDefinition("Html", type => type
-                .WithPart("HtmlBodyPart", 
+                .WithPart("HtmlBodyPart",
                     part => part.WithSetting("Editor", "Wysiwyg")
                 )
                 .Stereotype("Widget"));
 
-            #endregion
+            #endregion Html
 
             return 8;
         }
@@ -212,6 +212,13 @@ namespace Etch.OrchardCore.Widgets
 
             return 8;
         }
+
+        public int UpdarteFrom8()
+        {
+            _contentDefinitionManager.DeleteTypeDefinition("Container");
+            _contentDefinitionManager.DeleteTypeDefinition("Media");
+
+            return 9;
+        }
     }
 }
-
