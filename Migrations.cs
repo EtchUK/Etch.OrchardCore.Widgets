@@ -1,4 +1,4 @@
-﻿using OrchardCore.ContentManagement.Metadata;
+using OrchardCore.ContentManagement.Metadata;
 using OrchardCore.ContentManagement.Metadata.Settings;
 using OrchardCore.Data.Migration;
 using OrchardCore.Lists.Models;
@@ -215,8 +215,15 @@ namespace Etch.OrchardCore.Widgets
 
         public int UpdarteFrom8()
         {
-            _contentDefinitionManager.DeleteTypeDefinition("Container");
-            _contentDefinitionManager.DeleteTypeDefinition("Media");
+            if (_contentDefinitionManager.GetTypeDefinition("Container") != null)
+            {
+                _contentDefinitionManager.DeleteTypeDefinition("Container");
+            }
+
+            if (_contentDefinitionManager.GetTypeDefinition("Media") != null)
+            {
+                _contentDefinitionManager.DeleteTypeDefinition("Media");
+            }
 
             return 9;
         }
