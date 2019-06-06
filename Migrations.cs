@@ -1,4 +1,4 @@
-using OrchardCore.ContentManagement.Metadata;
+﻿using OrchardCore.ContentManagement.Metadata;
 using OrchardCore.ContentManagement.Metadata.Settings;
 using OrchardCore.Data.Migration;
 using OrchardCore.Lists.Models;
@@ -67,17 +67,6 @@ namespace Etch.OrchardCore.Widgets
 
             #endregion Link
 
-            #region Container
-
-            _contentDefinitionManager.AlterTypeDefinition("Container", type => type
-                .WithPart("TitlePart")
-                .WithPart("Children", "FlowPart", part => part
-                    .WithDescription("Elements displayed within container")
-                    .WithDisplayName("Children"))
-                .Stereotype("Widget"));
-
-            #endregion Container
-
             #region Paragraph
 
             _contentDefinitionManager.AlterPartDefinition("ParagraphPart", part => part
@@ -89,25 +78,6 @@ namespace Etch.OrchardCore.Widgets
 
             #endregion Paragraph
 
-            #region Media
-
-            _contentDefinitionManager.AlterTypeDefinition("Media", type => type
-                .WithSetting("Description", "Displays media accompanied with text content")
-                .WithPart("TitlePart")
-                .WithPart("MediaItems", "BagPart", part => part
-                    .WithDisplayName("Media Items")
-                    .WithDescription("Images, video, embeds or HTML to be displayed")
-                    .WithSetting("DisplayType", "Detail")
-                    .ContainedContentTypes(new string[] { "Html" })
-                )
-                .WithPart("Body", "FlowPart", part => part
-                    .WithDisplayName("Body")
-                    .WithDescription("Content displayed alongside media")
-                )
-                .Stereotype("Widget"));
-
-            #endregion Media
-
             #region Html
 
             _contentDefinitionManager.AlterTypeDefinition("Html", type => type
@@ -118,7 +88,7 @@ namespace Etch.OrchardCore.Widgets
 
             #endregion Html
 
-            return 8;
+            return 9;
         }
 
         public int UpdateFrom1()
