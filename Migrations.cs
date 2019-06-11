@@ -1,7 +1,7 @@
 ﻿using OrchardCore.ContentManagement.Metadata;
 using OrchardCore.ContentManagement.Metadata.Settings;
-using OrchardCore.Lists.Models;
 using OrchardCore.Data.Migration;
+using OrchardCore.Lists.Models;
 
 namespace Etch.OrchardCore.Widgets
 {
@@ -28,7 +28,7 @@ namespace Etch.OrchardCore.Widgets
                 .WithDescription("Customise common attributes on HTML element.")
                 .WithDisplayName("HTML Attributes"));
 
-            #endregion
+            #endregion HtmlAttributes
 
             #region Section
 
@@ -43,7 +43,7 @@ namespace Etch.OrchardCore.Widgets
                     .WithDisplayName("Content"))
                 .Stereotype("Widget"));
 
-            #endregion
+            #endregion Section
 
             #region Heading
 
@@ -54,7 +54,7 @@ namespace Etch.OrchardCore.Widgets
                 .WithPart("HeadingPart")
                 .Stereotype("Widget"));
 
-            #endregion
+            #endregion Heading
 
             #region Link
 
@@ -65,20 +65,9 @@ namespace Etch.OrchardCore.Widgets
                 .WithPart("LinkPart")
                 .Stereotype("Widget"));
 
-            #endregion
+            #endregion Link
 
-            #region Container
-
-            _contentDefinitionManager.AlterTypeDefinition("Container", type => type
-                .WithPart("TitlePart")
-                .WithPart("Children", "FlowPart", part => part
-                    .WithDescription("Elements displayed within container")
-                    .WithDisplayName("Children"))
-                .Stereotype("Widget"));
-
-            #endregion
-
-            #region Paragraph 
+            #region Paragraph
 
             _contentDefinitionManager.AlterPartDefinition("ParagraphPart", part => part
                 .WithDescription("Properties for paragraph widget."));
@@ -87,38 +76,19 @@ namespace Etch.OrchardCore.Widgets
                 .WithPart("ParagraphPart")
                 .Stereotype("Widget"));
 
-            #endregion
-
-            #region Media
-
-            _contentDefinitionManager.AlterTypeDefinition("Media", type => type
-                .WithSetting("Description", "Displays media accompanied with text content")
-                .WithPart("TitlePart")
-                .WithPart("MediaItems", "BagPart", part => part
-                    .WithDisplayName("Media Items")
-                    .WithDescription("Images, video, embeds or HTML to be displayed")
-                    .WithSetting("DisplayType", "Detail")
-                    .ContainedContentTypes(new string[] { "Html" })
-                )
-                .WithPart("Body", "FlowPart", part => part
-                    .WithDisplayName("Body")
-                    .WithDescription("Content displayed alongside media")
-                )
-                .Stereotype("Widget"));
-
-            #endregion
+            #endregion Paragraph
 
             #region Html
 
             _contentDefinitionManager.AlterTypeDefinition("Html", type => type
-                .WithPart("HtmlBodyPart", 
+                .WithPart("HtmlBodyPart",
                     part => part.WithSetting("Editor", "Wysiwyg")
                 )
                 .Stereotype("Widget"));
 
-            #endregion
+            #endregion Html
 
-            return 8;
+            return 9;
         }
 
         public int UpdateFrom1()
@@ -212,6 +182,20 @@ namespace Etch.OrchardCore.Widgets
 
             return 8;
         }
+
+        public int UpdarteFrom8()
+        {
+            if (_contentDefinitionManager.GetTypeDefinition("Container") != null)
+            {
+                _contentDefinitionManager.DeleteTypeDefinition("Container");
+            }
+
+            if (_contentDefinitionManager.GetTypeDefinition("Media") != null)
+            {
+                _contentDefinitionManager.DeleteTypeDefinition("Media");
+            }
+
+            return 9;
+        }
     }
 }
-
