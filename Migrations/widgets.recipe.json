@@ -1,0 +1,319 @@
+{
+    "name": "Etch.OrchardCore.Widgets",
+    "displayName": "Widgets",
+    "description": "Provides common widgets used to put together web pages.",
+    "author": "Etch",
+    "website": "https://etchuk.com",
+    "version": "0.4.2",
+    "issetuprecipe": false,
+    "categories": ["Content"],
+    "tags": ["etch"],
+    "steps": [
+      {
+        "name": "ContentDefinition",
+        "ContentTypes": [
+          {
+            "Name": "Paragraph",
+            "DisplayName": "Paragraph",
+            "Settings": {
+              "Creatable": "False",
+              "Draftable": "False",
+              "Versionable": "False",
+              "Listable": "False",
+              "Securable": "False",
+              "Stereotype": "Widget"
+            },
+            "ContentTypePartDefinitionRecords": [
+              {
+                "PartName": "Paragraph",
+                "Name": "Paragraph",
+                "Settings": {
+                  "Position": "0"
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Html",
+            "DisplayName": "Html",
+            "Settings": {
+              "Creatable": "False",
+              "Draftable": "False",
+              "Versionable": "False",
+              "Listable": "False",
+              "Securable": "False",
+              "Stereotype": "Widget"
+            },
+            "ContentTypePartDefinitionRecords": [
+              {
+                "PartName": "Html",
+                "Name": "Html",
+                "Settings": {
+                  "Position": "0"
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Link",
+            "DisplayName": "Link",
+            "Settings": {
+              "Creatable": "False",
+              "Draftable": "False",
+              "Versionable": "False",
+              "Listable": "False",
+              "Securable": "False",
+              "Stereotype": "Widget"
+            },
+            "ContentTypePartDefinitionRecords": [
+              {
+                "PartName": "Link",
+                "Name": "Link",
+                "Settings": {
+                  "Position": "0"
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Section",
+            "DisplayName": "Section",
+            "Settings": {
+              "Creatable": "False",
+              "Draftable": "False",
+              "Versionable": "False",
+              "Listable": "False",
+              "Securable": "False",
+              "Stereotype": "Widget"
+            },
+            "ContentTypePartDefinitionRecords": [
+              {
+                "PartName": "Section",
+                "Name": "Section",
+                "Settings": {
+                  "Position": "1"
+                }
+              },
+              {
+                "PartName": "BagPart",
+                "Name": "Children",
+                "Settings": {
+                  "DisplayName": "Children",
+                  "Description": "Elements displayed within the section.",
+                  "Editor": null,
+                  "ContainedContentTypes": [
+                    "Heading",
+                    "Html",
+                    "Link",
+                    "Paragraph"
+                  ],
+                  "DisplayType": "Detail",
+                  "ContentIndexSettings": {},
+                  "Position": "2"
+                }
+              },
+              {
+                "PartName": "TitlePart",
+                "Name": "TitlePart",
+                "Settings": {
+                  "Position": "0"
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Heading",
+            "DisplayName": "Heading",
+            "Settings": {
+              "Creatable": "False",
+              "Draftable": "False",
+              "Versionable": "False",
+              "Listable": "False",
+              "Securable": "False",
+              "Stereotype": "Widget"
+            },
+            "ContentTypePartDefinitionRecords": [
+              {
+                "PartName": "Heading",
+                "Name": "Heading",
+                "Settings": {
+                  "Position": "0"
+                }
+              }
+            ]
+          }
+        ],
+        "ContentParts": [
+          {
+            "Name": "Paragraph",
+            "Settings": {},
+            "ContentPartFieldDefinitionRecords": [
+              {
+                "FieldName": "TextField",
+                "Name": "Text",
+                "Settings": {
+                  "DisplayName": "Text",
+                  "Editor": "TextArea",
+                  "DisplayMode": null,
+                  "Hint": null,
+                  "Required": false,
+                  "ContentIndexSettings": {
+                    "Included": false,
+                    "Stored": false,
+                    "Analyzed": false,
+                    "Sanitized": false,
+                    "Tokenized": false,
+                    "Template": null
+                  },
+                  "Position": "0"
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Html",
+            "Settings": {},
+            "ContentPartFieldDefinitionRecords": [
+              {
+                "FieldName": "HtmlField",
+                "Name": "Body",
+                "Settings": {
+                  "DisplayName": "Body",
+                  "Editor": "Wysiwyg",
+                  "DisplayMode": null,
+                  "Hint": null,
+                  "ContentIndexSettings": {
+                    "Included": false,
+                    "Stored": false,
+                    "Analyzed": false,
+                    "Sanitized": false,
+                    "Tokenized": false,
+                    "Template": null
+                  },
+                  "Position": "0"
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Link",
+            "Settings": {},
+            "ContentPartFieldDefinitionRecords": [
+              {
+                "FieldName": "TextField",
+                "Name": "Text",
+                "Settings": {
+                  "DisplayName": "Text",
+                  "Editor": null,
+                  "DisplayMode": null,
+                  "Hint": "Text to be displayed in link.",
+                  "Required": true,
+                  "ContentIndexSettings": {
+                    "Included": false,
+                    "Stored": false,
+                    "Analyzed": false,
+                    "Sanitized": false,
+                    "Tokenized": false,
+                    "Template": null
+                  }
+                }
+              },
+              {
+                "FieldName": "TextField",
+                "Name": "Url",
+                "Settings": {
+                  "DisplayName": "Url",
+                  "Editor": null,
+                  "DisplayMode": null,
+                  "Hint": "URL user is taken to when interacting with link.",
+                  "Required": true,
+                  "ContentIndexSettings": {
+                    "Included": false,
+                    "Stored": false,
+                    "Analyzed": false,
+                    "Sanitized": false,
+                    "Tokenized": false,
+                    "Template": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Heading",
+            "Settings": {},
+            "ContentPartFieldDefinitionRecords": [
+              {
+                "FieldName": "TextField",
+                "Name": "Text",
+                "Settings": {
+                  "DisplayName": "Text",
+                  "Editor": null,
+                  "DisplayMode": null,
+                  "Hint": "Text to be displayed in heading.",
+                  "Required": false,
+                  "ContentIndexSettings": {
+                    "Included": false,
+                    "Stored": false,
+                    "Analyzed": false,
+                    "Sanitized": false,
+                    "Tokenized": false,
+                    "Template": null
+                  }
+                }
+              },
+              {
+                "FieldName": "TextField",
+                "Name": "Level",
+                "Settings": {
+                  "DisplayName": "Level",
+                  "Editor": "PredefinedList",
+                  "DisplayMode": null,
+                  "Hint": "Importance of the heading, where the lower the value the more important the heading.",
+                  "Required": true,
+                  "TextFieldPredefinedListEditorSettings": {
+                    "Options": [
+                      {
+                        "name": "1",
+                        "value": "1"
+                      },
+                      {
+                        "name": "2",
+                        "value": "2"
+                      },
+                      {
+                        "name": "3",
+                        "value": "3"
+                      },
+                      {
+                        "name": "4",
+                        "value": "4"
+                      },
+                      {
+                        "name": "5",
+                        "value": "5"
+                      },
+                      {
+                        "name": "6",
+                        "value": "6"
+                      }
+                    ],
+                    "Editor": 1,
+                    "DefaultValue": null
+                  },
+                  "ContentIndexSettings": {
+                    "Included": false,
+                    "Stored": false,
+                    "Analyzed": false,
+                    "Sanitized": false,
+                    "Tokenized": false,
+                    "Template": null
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

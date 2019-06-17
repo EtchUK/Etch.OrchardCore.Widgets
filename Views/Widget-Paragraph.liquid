@@ -1,0 +1,9 @@
+{% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
+{% assign cssClasses = Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+{% assign text = Model.ContentItem.Content.Paragraph.Text.Text %}
+
+{% if Model.ContentItem.Content.HtmlAttributesPart != null %}
+    <p {% if id != null %} id="{{ id }}" {% endif %} {% if cssClasses != null %} class="{{ cssClasses }}" {% endif %}>{{ text }}</p>
+{% else %}
+    <p>{{ text }}</p>
+{% endif %}

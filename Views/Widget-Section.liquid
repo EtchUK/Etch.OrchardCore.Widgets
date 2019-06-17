@@ -1,0 +1,12 @@
+{% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
+{% assign cssClasses = "section" %}
+
+{% if Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+    {% assign cssClasses = "section " | append: Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+{% endif %}
+
+<section {% if id != null %}id="{{ id }}"{% endif %} class="{{ cssClasses }}">
+    <div class="section__content">
+        {{ Model.Content | shape_render }}
+    </div>
+</section>
