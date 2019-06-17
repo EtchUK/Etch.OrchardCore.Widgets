@@ -1,0 +1,10 @@
+{% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
+{% assign cssClasses = Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+{% assign linkUrl = Model.ContentItem.Content.Link.Url.Text %}
+{% assign text = Model.ContentItem.Content.Link.Text.Text %}
+
+{% if Model.ContentItem.Content.HtmlAttributesPart != null %}
+    <a href="{{ linkUrl }}" {% if id != null %} id="{{ id }}" {% endif %}{% if cssClasses != null %} class="{{ cssClasses }}" {% endif %}>{{ text }}</a>
+{% else %}
+    <a href="{{ linkUrl }}">{{ text }}</a>
+{% endif %}

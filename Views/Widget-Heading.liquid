@@ -1,0 +1,10 @@
+{% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
+{% assign cssClasses = Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+{% assign level = Model.ContentItem.Content.Heading.Level.Text %}
+{% assign text = Model.ContentItem.Content.Heading.Text.Text %}
+
+{% if Model.ContentItem.Content.HtmlAttributesPart != null %}
+    <h{{ level }} {% if id != null %} id="{{ id }}" {% endif %} {% if cssClasses != null %} class="{{ cssClasses }}" {% endif %}>{{ text }}</h{{ level }}>
+{% else %}
+    <h{{ level }}>{{ text }}</h{{ level }}>
+{% endif %}
