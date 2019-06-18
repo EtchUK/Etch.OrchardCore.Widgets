@@ -112,7 +112,8 @@
                     "Heading",
                     "Html",
                     "Link",
-                    "Paragraph"
+                    "Paragraph",
+                    "Image"
                   ],
                   "DisplayType": "Detail",
                   "ContentIndexSettings": {},
@@ -143,6 +144,27 @@
               {
                 "PartName": "Heading",
                 "Name": "Heading",
+                "Settings": {
+                  "Position": "0"
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Image",
+            "DisplayName": "Image",
+            "Settings": {
+              "Creatable": "False",
+              "Draftable": "False",
+              "Versionable": "False",
+              "Listable": "False",
+              "Securable": "False",
+              "Stereotype": "Widget"
+            },
+            "ContentTypePartDefinitionRecords": [
+              {
+                "PartName": "Image",
+                "Name": "Image",
                 "Settings": {
                   "Position": "0"
                 }
@@ -308,6 +330,51 @@
                     "Editor": 1,
                     "DefaultValue": null
                   },
+                  "ContentIndexSettings": {
+                    "Included": false,
+                    "Stored": false,
+                    "Analyzed": false,
+                    "Sanitized": false,
+                    "Tokenized": false,
+                    "Template": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Image",
+            "Settings": {},
+            "ContentPartFieldDefinitionRecords": [
+              {
+                "FieldName": "MediaField",
+                "Name": "Image",
+                "Settings": {
+                  "DisplayName": "Image",
+                  "Editor": null,
+                  "DisplayMode": null,
+                  "Hint": "Image to be displayed.",
+                  "Required": true,
+                  "Multiple": false,
+                  "ContentIndexSettings": {
+                    "Included": false,
+                    "Stored": false,
+                    "Analyzed": false,
+                    "Sanitized": false,
+                    "Tokenized": false,
+                    "Template": null
+                  }
+                }
+              },
+              {
+                "FieldName": "TextField",
+                "Name": "AlternateText",
+                "Settings": {
+                  "DisplayName": "Alternate Text",
+                  "Editor": null,
+                  "DisplayMode": null,
+                  "Hint": "Description of the appearance and function of the image.",
+                  "Required": false,
                   "ContentIndexSettings": {
                     "Included": false,
                     "Stored": false,

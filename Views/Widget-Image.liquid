@@ -1,0 +1,9 @@
+{% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
+{% assign cssClasses = Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+
+
+{% if Model.ContentItem.Content.HtmlAttributesPart != null %}
+    <img {% if id != null %} id="{{ id }}" {% endif %} {% if cssClasses != null %} class="{{ cssClasses }}" {% endif %} src="{{ Model.ContentItem.Content.Image.Image.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.Image.AlternateText.Text }}" />
+{% else %}
+    <img src="{{ Model.ContentItem.Content.Image.Image.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.Image.AlternateText.Text }}" />
+{% endif %}
