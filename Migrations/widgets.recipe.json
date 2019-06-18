@@ -49,6 +49,13 @@
                 "PartName": "Html",
                 "Name": "Html",
                 "Settings": {
+                  "Position": "1"
+                }
+              },
+              {
+                "PartName": "TitlePart",
+                "Name": "TitlePart",
+                "Settings": {
                   "Position": "0"
                 }
               }
