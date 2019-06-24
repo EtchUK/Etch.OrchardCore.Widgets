@@ -113,7 +113,10 @@
                     "Html",
                     "Link",
                     "Paragraph",
-                    "Image"
+                    "Image",
+                    "UnorderedList",
+                    "OrderedList",
+                    "Text"
                   ],
                   "DisplayType": "Detail",
                   "ContentIndexSettings": {},
@@ -167,6 +170,113 @@
                 "Name": "Image",
                 "Settings": {
                   "Position": "0"
+                }
+              }
+            ]
+          },
+          {
+            "Name": "UnorderedList",
+            "DisplayName": "Unordered List",
+            "Settings": {
+              "Creatable": "False",
+              "Draftable": "False",
+              "Versionable": "False",
+              "Listable": "False",
+              "Securable": "False",
+              "Stereotype": "Widget"
+            },
+            "ContentTypePartDefinitionRecords": [
+              {
+                "PartName": "UnorderedList",
+                "Name": "UnorderedList",
+                "Settings": {
+                  "Position": "0"
+                }
+              },
+              {
+                "PartName": "BagPart",
+                "Name": "Items",
+                "Settings": {
+                  "DisplayName": "Items",
+                  "Description": "Items within the unordered list.",
+                  "Position": "1",
+                  "Editor": null,
+                  "ContainedContentTypes": [
+                    "Heading",
+                    "Html",
+                    "Image",
+                    "Link",
+                    "OrderedList",
+                    "Paragraph",
+                    "Text",
+                    "UnorderedList"
+                  ],
+                  "DisplayType": "Detail",
+                  "ContentIndexSettings": {}
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Text",
+            "DisplayName": "Text",
+            "Settings": {
+              "Creatable": "False",
+              "Draftable": "False",
+              "Versionable": "False",
+              "Listable": "False",
+              "Securable": "False",
+              "Stereotype": "Widget"
+            },
+            "ContentTypePartDefinitionRecords": [
+              {
+                "PartName": "Text",
+                "Name": "Text",
+                "Settings": {
+                  "Position": "0"
+                }
+              }
+            ]
+          },
+          {
+            "Name": "OrderedList",
+            "DisplayName": "Ordered List",
+            "Settings": {
+              "Creatable": "False",
+              "Draftable": "False",
+              "Versionable": "False",
+              "Listable": "False",
+              "Securable": "False",
+              "Stereotype": "Widget"
+            },
+            "ContentTypePartDefinitionRecords": [
+              {
+                "PartName": "OrderedList",
+                "Name": "OrderedList",
+                "Settings": {
+                  "Position": "0"
+                }
+              },
+              {
+                "PartName": "BagPart",
+                "Name": "Items",
+                "Settings": {
+                  "DisplayName": "Items",
+                  "Description": "Items within the ordered list.",
+                  "Position": "1",
+                  "Editor": null,
+                  "ContainedContentTypes": [
+                    "Heading",
+                    "Html",
+                    "Image",
+                    "Link",
+                    "OrderedList",
+                    "Paragraph",
+                    "Text",
+                    "UnorderedList"
+                  ],
+                  "DisplayType": null,
+                  "ContentIndexSettings": {}
                 }
               }
             ]
@@ -374,6 +484,32 @@
                   "Editor": null,
                   "DisplayMode": null,
                   "Hint": "Description of the appearance and function of the image.",
+                  "Required": false,
+                  "ContentIndexSettings": {
+                    "Included": false,
+                    "Stored": false,
+                    "Analyzed": false,
+                    "Sanitized": false,
+                    "Tokenized": false,
+                    "Template": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Text",
+            "Settings": {},
+            "ContentPartFieldDefinitionRecords": [
+              {
+                "FieldName": "TextField",
+                "Name": "Text",
+                "Settings": {
+                  "DisplayName": "Text",
+                  "Position": "0",
+                  "Editor": "TextArea",
+                  "DisplayMode": null,
+                  "Hint": null,
                   "Required": false,
                   "ContentIndexSettings": {
                     "Included": false,

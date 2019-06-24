@@ -1,0 +1,3 @@
+{% for contentItem in Model.ContentItems %}
+    <li>{{ contentItem | shape_build_display: Model.BuildPartDisplayContext.DisplayType | shape_render }}</li>
+{% endfor %}
