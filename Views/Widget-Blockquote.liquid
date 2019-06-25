@@ -1,0 +1,11 @@
+{% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
+{% assign cssClasses = Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+{% assign source = Model.ContentItem.Content.Blockquote.Source.Text %}
+
+{% if Model.ContentItem.Content.HtmlAttributesPart != null %}
+<blockquote {% if id != null %} id="{{ id }}" {% endif %} {% if cssClasses != null %} class="{{ cssClasses }}" {% endif %} {% if source != null %} cite="{{ source }}" {% endif %} />
+{% else %}
+<blockquote {% if source != null %} cite="{{ source }}" {% endif %}>
+{% endif %}
+    {{ Model.Content.QuoteContent | shape_render }}
+</blockquote>
