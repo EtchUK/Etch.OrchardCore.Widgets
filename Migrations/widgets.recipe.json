@@ -109,6 +109,7 @@
                 "Description": "Elements displayed within the section.",
                 "Editor": null,
                 "ContainedContentTypes": [
+                  "Blockquote",
                   "Figure",
                   "Heading",
                   "Html",
@@ -203,6 +204,7 @@
                 "Position": "1",
                 "Editor": null,
                 "ContainedContentTypes": [
+                  "Blockquote",
                   "Figure",
                   "Heading",
                   "Html",
@@ -268,6 +270,7 @@
                 "Position": "1",
                 "Editor": null,
                 "ContainedContentTypes": [
+                  "Blockquote",
                   "Figure",
                   "Heading",
                   "Html",
@@ -301,6 +304,48 @@
               "Name": "Figure",
               "Settings": {
                 "Position": "0"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Blockquote",
+          "DisplayName": "Blockquote",
+          "Settings": {
+            "Creatable": "False",
+            "Draftable": "False",
+            "Versionable": "False",
+            "Listable": "False",
+            "Securable": "False",
+            "Stereotype": "Widget"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Blockquote",
+              "Name": "Blockquote",
+              "Settings": {
+                "Position": "0"
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "QuoteContent",
+              "Settings": {
+                "DisplayName": "Quote Content",
+                "Description": "Content that represents the quote.",
+                "Position": "1",
+                "Editor": null,
+                "ContainedContentTypes": [
+                  "Heading",
+                  "Html",
+                  "Link",
+                  "OrderedList",
+                  "Paragraph",
+                  "Text",
+                  "UnorderedList"
+                ],
+                "DisplayType": "Detail",
+                "ContentIndexSettings": {}
               }
             }
           ]
@@ -607,6 +652,20 @@
                   "Tokenized": false,
                   "Template": null
                 }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Blockquote",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "Source",
+              "Settings": {
+                "DisplayName": "Source",
+                "Position": "0"
               }
             }
           ]
