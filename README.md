@@ -13,3 +13,21 @@ This module is referencing the beta 3 build of Orchard Core ([`1.0.0-beta3-71077
 ## Installing
 
 This module is available on [NuGet](https://www.nuget.org/packages/Etch.OrchardCore.Widgets). Add a reference to your Orchard Core web project via the NuGet package manager. Search for "Etch.OrchardCore.Widgets", ensuring include prereleases is checked.
+
+### Configuration
+
+#### Hero
+
+The "Hero" widget uses a [responsive media field](https://github.com/EtchUK/Etch.OrchardCore.Fields#responsive-media) that represents the images displayed for the background. The responsive media field requires additional project configuration to cater for resizing images via the `width` query string when accessing the media. To make the hero breakpoints work with the image resize the various sizes need to be defined in the application settings. The below snippet should be included in the `appsettings.json` for your Orchard Core web project.
+
+```
+{
+  "OrchardCore": {
+    "OrchardCore.Media": {
+      "SupportedSizes": [ 375, 425, 600, 768, 1024, 1280, 1440, 1920, 2560 ]
+    }
+  }
+}
+```
+
+These breakpoints can be configured within the field settings, however any ammendments should also be applied to the `appsettings.json` file.

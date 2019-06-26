@@ -349,6 +349,27 @@
               }
             }
           ]
+        },
+        {
+          "Name": "Hero",
+          "DisplayName": "Hero",
+          "Settings": {
+            "Creatable": "False",
+            "Draftable": "False",
+            "Versionable": "False",
+            "Listable": "False",
+            "Securable": "False",
+            "Stereotype": "Widget"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Hero",
+              "Name": "Hero",
+              "Settings": {
+                "Position": "0"
+              }
+            }
+          ]
         }
       ],
       "ContentParts": [
@@ -666,6 +687,81 @@
               "Settings": {
                 "DisplayName": "Source",
                 "Position": "0"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Hero",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "ResponsiveMediaField",
+              "Name": "BackgroundImage",
+              "Settings": {
+                "DisplayName": "Background Image",
+                "Editor": null,
+                "DisplayMode": null,
+                "Breakpoints": "375, 425, 600, 768, 1024, 1280, 1440, 1920, 2560",
+                "Hint": "Image displayed as background of hero.",
+                "Required": true,
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Position": "0"
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "DisplayText",
+              "Settings": {
+                "DisplayName": "Display Text",
+                "Position": "1"
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "CTALabel",
+              "Settings": {
+                "DisplayName": "CTA Label",
+                "Editor": null,
+                "DisplayMode": null,
+                "Hint": "Text displayed on call to action link.",
+                "Required": false,
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Position": "2"
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "CTAUrl",
+              "Settings": {
+                "DisplayName": "CTA Url",
+                "Editor": null,
+                "DisplayMode": null,
+                "Hint": "Page user is navigated to when selecting call to action link.",
+                "Required": false,
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Position": "3"
               }
             }
           ]
