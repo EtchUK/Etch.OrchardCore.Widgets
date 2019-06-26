@@ -1,0 +1,10 @@
+{% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
+{% assign cssClasses = "embed" %}
+
+{% if Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+    {% assign cssClasses = "embed " | append: Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+{% endif %}
+
+<div {% if id != null %}id="{{ id }}"{% endif %} class="{{ cssClasses }}">
+    <iframe src="{{ Model.ContentItem.Content.Embed.Source.Text }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
