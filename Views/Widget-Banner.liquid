@@ -1,0 +1,18 @@
+{% assign mainMenu = Content.ContentItemId[Model.ContentItem.Content.Banner.Menu.ContentItemIds] %}
+
+{% assign mainMenuAlias = "alias:" | append: mainMenu.Content.AliasPart.Alias %}
+
+<header class="header" role="banner">
+    <div class="header__content">
+        <a class="header__logo" href="/">
+            <picture>
+                <source srcset="{{ Model.ContentItem.Content.Banner.Logo.Paths[0] | asset_url }}" media="(min-width: 768px)">
+                <img src="{{ Model.ContentItem.Content.Banner.LogoSmall.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.Banner.LogoAlternateText.Text }}" />
+            </picture>
+        </a>
+
+        <div class="header__nav-button js-nav-button">{{ Model.ContentItem.Content.Banner.MenuToggleButtonLabel.Text }}</div>
+
+        {% shape "menu", alias: mainMenuAlias %}
+    </div>
+</header>

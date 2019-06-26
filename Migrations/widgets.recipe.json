@@ -414,6 +414,27 @@
               }
             }
           ]
+        },
+        {
+          "Name": "Banner",
+          "DisplayName": "Banner",
+          "Settings": {
+            "Creatable": "False",
+            "Draftable": "False",
+            "Versionable": "False",
+            "Listable": "False",
+            "Securable": "False",
+            "Stereotype": "Widget"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Banner",
+              "Name": "Banner",
+              "Settings": {
+                "Position": "0"
+              }
+            }
+          ]
         }
       ],
       "ContentParts": [
@@ -847,6 +868,103 @@
                 "Editor": null,
                 "DisplayMode": null,
                 "Hint": "Description of the appearance and function of the image.",
+                "Required": false,
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Banner",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "ContentPickerField",
+              "Name": "Menu",
+              "Settings": {
+                "DisplayName": "Menu",
+                "Position": "3",
+                "Editor": null,
+                "DisplayMode": null,
+                "Hint": "Main menu used by users to navigate the main sections of the site.",
+                "Required": false,
+                "Multiple": false,
+                "DisplayedContentTypes": ["Menu"],
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                }
+              }
+            },
+            {
+              "FieldName": "MediaField",
+              "Name": "Logo",
+              "Settings": {
+                "DisplayName": "Logo",
+                "Position": "0"
+              }
+            },
+            {
+              "FieldName": "MediaField",
+              "Name": "LogoSmall",
+              "Settings": {
+                "DisplayName": "Logo Small",
+                "Editor": null,
+                "DisplayMode": null,
+                "Hint": "Logo displayed on smaller devices.",
+                "Required": false,
+                "Multiple": false,
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Position": "1"
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "LogoAlternateText",
+              "Settings": {
+                "DisplayName": "Logo Alternate Text",
+                "Editor": null,
+                "DisplayMode": null,
+                "Hint": "Description of the appearance and function of the image.",
+                "Required": false,
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Position": "2"
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "MenuToggleButtonLabel",
+              "Settings": {
+                "DisplayName": "Menu Toggle Button Label",
+                "Position": "4",
+                "Editor": null,
+                "DisplayMode": null,
+                "Hint": "Label for button that's displayed on smaller devices to toggle the visibility of the main menu.",
                 "Required": false,
                 "ContentIndexSettings": {
                   "Included": false,
