@@ -10,6 +10,6 @@
     Id = "Etch.OrchardCore.Widgets",
     Name = "Common Widgets",
     Description = "Provides widgets commonly found on web pages.",
-    Dependencies = new[] { "OrchardCore.Widgets", "OrchardCore.Flows", "OrchardCore.Html" },
+    Dependencies = new[] { "OrchardCore.Widgets", "OrchardCore.Flows", "OrchardCore.Html", "Etch.OrchardCore.Fields.ResponsiveMedia" },
     Category = "Content"
 )]

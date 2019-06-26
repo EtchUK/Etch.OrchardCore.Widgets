@@ -1,0 +1,6 @@
+<div class="hero">
+    <h2 class="hero__title">{{ Model.ContentItem.Content.Hero.DisplayText.Text }}</h2>
+    <a href="{{ Model.ContentItem.Content.Hero.CTAUrl.Text | href }}" class="hero__cta">{{ Model.ContentItem.Content.Hero.CTALabel.Text }}</a>
+
+    {{ Model.Content | shape_render }}
+</div>
