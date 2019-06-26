@@ -110,6 +110,7 @@
                 "Editor": null,
                 "ContainedContentTypes": [
                   "Blockquote",
+                  "Card",
                   "Figure",
                   "Heading",
                   "Html",
@@ -205,6 +206,7 @@
                 "Editor": null,
                 "ContainedContentTypes": [
                   "Blockquote",
+                  "Card",
                   "Figure",
                   "Heading",
                   "Html",
@@ -271,6 +273,7 @@
                 "Editor": null,
                 "ContainedContentTypes": [
                   "Blockquote",
+                  "Card",
                   "Figure",
                   "Heading",
                   "Html",
@@ -367,6 +370,47 @@
               "Name": "Hero",
               "Settings": {
                 "Position": "0"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Card",
+          "DisplayName": "Card",
+          "Settings": {
+            "Creatable": "False",
+            "Draftable": "False",
+            "Versionable": "False",
+            "Listable": "False",
+            "Securable": "False",
+            "Stereotype": "Widget"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Card",
+              "Name": "Card",
+              "Settings": {
+                "Position": "2"
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "Position": "0"
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "Body",
+              "Settings": {
+                "DisplayName": "Body",
+                "Description": "Content displayed after title.",
+                "Editor": null,
+                "ContainedContentTypes": ["Html", "Paragraph"],
+                "DisplayType": "Detail",
+                "ContentIndexSettings": {},
+                "Position": "1"
               }
             }
           ]
@@ -762,6 +806,56 @@
                   "Template": null
                 },
                 "Position": "3"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Card",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "MediaField",
+              "Name": "Image",
+              "Settings": {
+                "DisplayName": "Image",
+                "Position": "0"
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "CTALabel",
+              "Settings": {
+                "DisplayName": "CTA Label",
+                "Position": "2"
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "CTAUrl",
+              "Settings": {
+                "DisplayName": "CTA Url",
+                "Position": "3"
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "ImageAlternateText",
+              "Settings": {
+                "DisplayName": "Image Alternate Text",
+                "Position": "1",
+                "Editor": null,
+                "DisplayMode": null,
+                "Hint": "Description of the appearance and function of the image.",
+                "Required": false,
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                }
               }
             }
           ]

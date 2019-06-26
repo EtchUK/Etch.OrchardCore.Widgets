@@ -1,0 +1,16 @@
+{% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
+{% assign cssClasses = "card" %}
+
+{% if Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+    {% assign cssClasses = "card " | append: Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+{% endif %}
+
+<div {% if id != null %}id="{{ id }}"{% endif %} class="{{ cssClasses }}">
+    <img src="{{ Model.ContentItem.Content.Card.Image.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.Card.ImageAlternateText.Text }}" />
+
+    <div class="card__body">
+        <h3>{{ Model.ContentItem | display_text }}</h3>
+        {{ Model.Content.Body | shape_render }}
+        <p><a class="btn btn--secondary" href="{{ Model.ContentItem.Content.Card.CTAUrl.Text }}">{{ Model.ContentItem.Content.Card.CTALabel.Text }}</a></p>
+    </div>
+</div>
