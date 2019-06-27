@@ -1,6 +1,12 @@
-<div class="hero">
-    <h2 class="hero__title">{{ Model.ContentItem.Content.Hero.DisplayText.Text }}</h2>
-    <a href="{{ Model.ContentItem.Content.Hero.CTAUrl.Text | href }}" class="hero__cta">{{ Model.ContentItem.Content.Hero.CTALabel.Text }}</a>
+<section class="section section--hero section--center">
+    <div class="section__content">
+        <div class="hero">
+            <div class="hero__body">
+                <h1 class="hero__title">{{ Model.ContentItem.Content.Hero.DisplayText.Text }}</h1>
+                <a href="{{ Model.ContentItem.Content.Hero.CTAUrl.Text | href }}" class="btn__btn btn btn--primary">{{ Model.ContentItem.Content.Hero.CTALabel.Text }}</a>
+            </div>
 
-    {{ Model.Content | shape_render }}
-</div>
+            {{ Model.Content | shape_render }}
+        </div>
+    </div>
+</section>
