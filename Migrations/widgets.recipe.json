@@ -439,6 +439,84 @@
       ],
       "ContentParts": [
         {
+          "Name": "Section",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "BackgroundColour",
+              "Settings": {
+                "DisplayName": "Background Colour",
+                "Editor": "PredefinedList",
+                "DisplayMode": null,
+                "Hint": "Colour displayed as the background for the section.",
+                "Required": false,
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "Default",
+                      "value": "default"
+                    },
+                    {
+                      "name": "Grey",
+                      "value": "grey"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": null
+                },
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Position": "1"
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Alignment",
+              "Settings": {
+                "DisplayName": "Alignment",
+                "Editor": "PredefinedList",
+                "DisplayMode": null,
+                "Hint": "Control how section children are aligned.",
+                "Required": false,
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "Left",
+                      "value": "default"
+                    },
+                    {
+                      "name": "Center",
+                      "value": "center"
+                    },
+                    {
+                      "name": "Right",
+                      "value": "right"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": null
+                },
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                },
+                "Position": "0"
+              }
+            }
+          ]
+        },
+        {
           "Name": "Paragraph",
           "Settings": {},
           "ContentPartFieldDefinitionRecords": [

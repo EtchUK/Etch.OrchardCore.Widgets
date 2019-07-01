@@ -1,12 +1,24 @@
 {% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
 {% assign cssClasses = "section" %}
+{% assign alignment = Model.ContentItem.Content.Section.Alignment.Text %}
+{% assign backgroundColour = Model.ContentItem.Content.Section.BackgroundColour.Text %}
 
 {% if Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
     {% assign cssClasses = "section " | append: Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
 {% endif %}
 
+{% if alignment != null or alignment != 'default' %}
+    {% assign alignmentClass = ' section--' | append: alignment %}
+    {% assign cssClasses = alignmentClass | prepend: cssClasses %}
+{% endif %}
+
+{% if backgroundColour != null or backgroundColour != 'default' %}
+    {% assign backgroundColorClass = ' bg--color-' | append: backgroundColour %}
+    {% assign cssClasses = backgroundColorClass | prepend: cssClasses %}
+{% endif %}
+
 <section {% if id != null %}id="{{ id }}"{% endif %} class="{{ cssClasses }}">
     <div class="section__content">
-        {{ Model.Content | shape_render }}
+        {{ Model.Content.Children | shape_render }}
     </div>
 </section>
