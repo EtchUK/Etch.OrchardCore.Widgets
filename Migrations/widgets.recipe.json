@@ -817,6 +817,51 @@
                   "Template": null
                 }
               }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Alignment",
+              "Settings": {
+                "DisplayName": "Alignment",
+                "Editor": "PredefinedList",
+                "DisplayMode": null,
+                "Hint": "Control how images can be manipulated around text content.",
+                "Required": false,
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "Default",
+                      "value": "default"
+                    },
+                    {
+                      "name": "Wide",
+                      "value": "wide"
+                    },
+                    {
+                      "name": "Full",
+                      "value": "full"
+                    },
+                    {
+                      "name": "Left",
+                      "value": "left"
+                    },
+                    {
+                      "name": "Right",
+                      "value": "right"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": "default"
+                },
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                }
+              }
             }
           ]
         },
