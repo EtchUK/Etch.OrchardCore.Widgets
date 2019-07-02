@@ -901,7 +901,7 @@
                   "Tokenized": false,
                   "Template": null
                 },
-                "Position": "0"
+                "Position": "1"
               }
             },
             {
@@ -909,7 +909,7 @@
               "Name": "DisplayText",
               "Settings": {
                 "DisplayName": "Display Text",
-                "Position": "1"
+                "Position": "3"
               }
             },
             {
@@ -929,7 +929,7 @@
                   "Tokenized": false,
                   "Template": null
                 },
-                "Position": "2"
+                "Position": "4"
               }
             },
             {
@@ -949,7 +949,61 @@
                   "Tokenized": false,
                   "Template": null
                 },
-                "Position": "3"
+                "Position": "5"
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "BackgroundType",
+              "Settings": {
+                "DisplayName": "Background Type",
+                "Position": "0",
+                "Editor": "PredefinedList",
+                "DisplayMode": null,
+                "Hint": "Whether the background should be an image or a video embed.",
+                "Required": false,
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "Image",
+                      "value": "image"
+                    },
+                    {
+                      "name": "Video Embed",
+                      "value": "embed"
+                    }
+                  ],
+                  "Editor": 0,
+                  "DefaultValue": "image"
+                },
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "BackgroundEmbed",
+              "Settings": {
+                "DisplayName": "Background Embed Url",
+                "Position": "2",
+                "Editor": null,
+                "DisplayMode": null,
+                "Hint": "URL to third-party site that is hosting video (e.g. YouTube).",
+                "Required": false,
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                }
               }
             }
           ]
