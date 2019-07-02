@@ -4,7 +4,7 @@
   "description": "Provides common widgets used to put together web pages.",
   "author": "Etch",
   "website": "https://etchuk.com",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "issetuprecipe": false,
   "categories": ["Content"],
   "tags": ["etch"],
