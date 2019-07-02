@@ -4,7 +4,7 @@
     Name = "Common Widgets",
     Author = "Etch",
     Website = "https://etchuk.com",
-    Version = "0.4.2"
+    Version = "0.5.0"
 )]
 [assembly: Feature(
     Id = "Etch.OrchardCore.Widgets",
