@@ -30,7 +30,7 @@ namespace Etch.OrchardCore.Widgets
 
             #region Run Recipe
 
-            await _recipeMigrator.ExecuteAsync("widgets.recipe.json", this);
+            await _recipeMigrator.ExecuteAsync("create.recipe.json", this);
 
             #endregion Run Recipe
 
