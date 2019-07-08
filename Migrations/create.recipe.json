@@ -612,6 +612,25 @@
                   "Template": null
                 }
               }
+            },
+            {
+              "FieldName": "BooleanField",
+              "Name": "OpenInNewWindow",
+              "Settings": {
+                "DisplayName": "Open in new Window",
+                "Editor": null,
+                "DisplayMode": null,
+                "Hint": "Whether a new window is opened when user interacts with link.",
+                "Label": "Open in new Window",
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                }
+              }
             }
           ]
         },
