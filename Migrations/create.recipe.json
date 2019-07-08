@@ -488,8 +488,12 @@
                 "TextFieldPredefinedListEditorSettings": {
                   "Options": [
                     {
-                      "name": "Left",
+                      "name": "Default",
                       "value": "default"
+                    },
+                    {
+                      "name": "Left",
+                      "value": "left"
                     },
                     {
                       "name": "Center",
