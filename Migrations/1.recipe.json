@@ -1,0 +1,215 @@
+﻿{
+  "name": "Etch.OrchardCore.Widgets.Update1",
+  "displayName": "Widgets Update 1",
+  "description": "Updates widgets to provide Embed widget.",
+  "author": "Etch",
+  "website": "https://etchuk.com",
+  "version": "0.1.0",
+  "issetuprecipe": false,
+  "categories": ["Content"],
+  "tags": ["etch"],
+  "steps": [
+    {
+      "name": "ContentDefinition",
+      "ContentTypes": [
+        {
+          "Name": "Section",
+          "DisplayName": "Section",
+          "Settings": {
+            "Creatable": "False",
+            "Draftable": "False",
+            "Versionable": "False",
+            "Listable": "False",
+            "Securable": "False",
+            "Stereotype": "Widget"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Section",
+              "Name": "Section",
+              "Settings": {
+                "Position": "1"
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "Children",
+              "Settings": {
+                "DisplayName": "Children",
+                "Description": "Elements displayed within the section.",
+                "Editor": null,
+                "ContainedContentTypes": [
+                  "Blockquote",
+                  "Card",
+                  "Embed",
+                  "Figure",
+                  "Heading",
+                  "Html",
+                  "Link",
+                  "Paragraph",
+                  "Image",
+                  "UnorderedList",
+                  "OrderedList",
+                  "Text"
+                ],
+                "DisplayType": "Detail",
+                "ContentIndexSettings": {},
+                "Position": "2"
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "Position": "0"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "UnorderedList",
+          "DisplayName": "Unordered List",
+          "Settings": {
+            "Creatable": "False",
+            "Draftable": "False",
+            "Versionable": "False",
+            "Listable": "False",
+            "Securable": "False",
+            "Stereotype": "Widget"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "UnorderedList",
+              "Name": "UnorderedList",
+              "Settings": {
+                "Position": "0"
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "Items",
+              "Settings": {
+                "DisplayName": "Items",
+                "Description": "Items within the unordered list.",
+                "Position": "1",
+                "Editor": null,
+                "ContainedContentTypes": [
+                  "Blockquote",
+                  "Card",
+                  "Embed",
+                  "Figure",
+                  "Heading",
+                  "Html",
+                  "Image",
+                  "Link",
+                  "OrderedList",
+                  "Paragraph",
+                  "Text",
+                  "UnorderedList"
+                ],
+                "DisplayType": "Detail",
+                "ContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "OrderedList",
+          "DisplayName": "Ordered List",
+          "Settings": {
+            "Creatable": "False",
+            "Draftable": "False",
+            "Versionable": "False",
+            "Listable": "False",
+            "Securable": "False",
+            "Stereotype": "Widget"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "OrderedList",
+              "Name": "OrderedList",
+              "Settings": {
+                "Position": "0"
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "Items",
+              "Settings": {
+                "DisplayName": "Items",
+                "Description": "Items within the ordered list.",
+                "Position": "1",
+                "Editor": null,
+                "ContainedContentTypes": [
+                  "Blockquote",
+                  "Card",
+                  "Embed",
+                  "Figure",
+                  "Heading",
+                  "Html",
+                  "Image",
+                  "Link",
+                  "OrderedList",
+                  "Paragraph",
+                  "Text",
+                  "UnorderedList"
+                ],
+                "DisplayType": null,
+                "ContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Embed",
+          "DisplayName": "Embed",
+          "Settings": {
+            "Creatable": "False",
+            "Draftable": "False",
+            "Versionable": "False",
+            "Listable": "False",
+            "Securable": "False",
+            "Stereotype": "Widget"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Embed",
+              "Name": "Embed",
+              "Settings": {
+                "Position": "0"
+              }
+            }
+          ]
+        }
+      ],
+      "ContentParts": [
+        {
+          "Name": "Embed",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "Source",
+              "Settings": {
+                "DisplayName": "Source",
+                "Position": "0",
+                "Editor": null,
+                "DisplayMode": null,
+                "Hint": "URL to content that should be embedded (e.g. https://www.youtube.com/embed/TorVk3Hxm7Q).",
+                "Required": true,
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
