@@ -4,7 +4,7 @@
   "description": "Provides common widgets used to put together web pages.",
   "author": "Etch",
   "website": "https://etchuk.com",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "issetuprecipe": false,
   "categories": ["Content"],
   "tags": ["etch"],
@@ -111,6 +111,7 @@
                 "ContainedContentTypes": [
                   "Blockquote",
                   "Card",
+                  "Embed",
                   "Figure",
                   "Heading",
                   "Html",
@@ -207,6 +208,7 @@
                 "ContainedContentTypes": [
                   "Blockquote",
                   "Card",
+                  "Embed",
                   "Figure",
                   "Heading",
                   "Html",
@@ -274,6 +276,7 @@
                 "ContainedContentTypes": [
                   "Blockquote",
                   "Card",
+                  "Embed",
                   "Figure",
                   "Heading",
                   "Html",
@@ -430,6 +433,27 @@
             {
               "PartName": "Banner",
               "Name": "Banner",
+              "Settings": {
+                "Position": "0"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Embed",
+          "DisplayName": "Embed",
+          "Settings": {
+            "Creatable": "False",
+            "Draftable": "False",
+            "Versionable": "False",
+            "Listable": "False",
+            "Securable": "False",
+            "Stereotype": "Widget"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Embed",
+              "Name": "Embed",
               "Settings": {
                 "Position": "0"
               }
@@ -1166,6 +1190,32 @@
                 "DisplayMode": null,
                 "Hint": "Label for button that's displayed on smaller devices to toggle the visibility of the main menu.",
                 "Required": false,
+                "ContentIndexSettings": {
+                  "Included": false,
+                  "Stored": false,
+                  "Analyzed": false,
+                  "Sanitized": false,
+                  "Tokenized": false,
+                  "Template": null
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Embed",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "Source",
+              "Settings": {
+                "DisplayName": "Source",
+                "Position": "0",
+                "Editor": null,
+                "DisplayMode": null,
+                "Hint": "URL to content that should be embedded (e.g. https://www.youtube.com/embed/TorVk3Hxm7Q).",
+                "Required": true,
                 "ContentIndexSettings": {
                   "Included": false,
                   "Stored": false,
