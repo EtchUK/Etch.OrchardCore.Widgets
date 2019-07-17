@@ -939,7 +939,7 @@
                 "DisplayMode": null,
                 "Breakpoints": "375, 425, 600, 768, 1024, 1280, 1440, 1920, 2560",
                 "Hint": "Image displayed as background of hero.",
-                "Required": true,
+                "Required": false,
                 "ContentIndexSettings": {
                   "Included": false,
                   "Stored": false,
