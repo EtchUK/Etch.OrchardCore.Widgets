@@ -5,7 +5,9 @@
         <div class="hero">
             <div class="hero__body">
                 <h1 class="hero__title">{{ Model.ContentItem.Content.Hero.DisplayText.Text | raw }}</h1>
-                <a href="{{ Model.ContentItem.Content.Hero.CTAUrl.Text | href }}" class="btn__btn btn btn--primary">{{ Model.ContentItem.Content.Hero.CTALabel.Text | raw }}</a>
+                {% if Model.ContentItem.Content.Hero.CTALabel.Text != nil %}
+                    <a href="{{ Model.ContentItem.Content.Hero.CTAUrl.Text | href }}" class="btn__btn btn btn--primary">{{ Model.ContentItem.Content.Hero.CTALabel.Text | raw }}</a>
+                {% endif %}
             </div>
             
             {% if backgroundType == "embed" %}
