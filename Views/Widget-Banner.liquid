@@ -4,7 +4,7 @@
 
 <header class="header" role="banner">
     <div class="header__content">
-        <a class="header__logo" href="/">
+        <a class="header__logo" href="{{ Request.PathBase }}/">
             <picture>
                 <source srcset="{{ Model.ContentItem.Content.Banner.Logo.Paths[0] | asset_url }}" media="(min-width: 768px)">
                 <img src="{{ Model.ContentItem.Content.Banner.LogoSmall.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.Banner.LogoAlternateText.Text }}" />
