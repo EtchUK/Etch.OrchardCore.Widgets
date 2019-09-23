@@ -6,5 +6,11 @@
 {% endif %}
 
 <div {% if id != null %}id="{{ id }}"{% endif %} class="{{ cssClasses }}">
-    <iframe src="{{ Model.ContentItem.Content.Embed.Source.Text }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	<div class="embed__source">
+		<iframe src="{{ Model.ContentItem.Content.Embed.Source.Text }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+
+	{% if Model.ContentItem.Content.Embed.Caption.Text %}
+		<p class="embed__caption">{{ Model.ContentItem.Content.Embed.Caption.Text }}</p>
+	{% endif %}
 </div>

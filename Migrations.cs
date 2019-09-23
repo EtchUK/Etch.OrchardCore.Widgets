@@ -47,5 +47,16 @@ namespace Etch.OrchardCore.Widgets
 
             return 2;
         }
+
+        public async Task<int> UpdateFrom2Async()
+        {
+            #region Run Recipe
+
+            await _recipeMigrator.ExecuteAsync("2.recipe.json", this);
+
+            #endregion Run Recipe
+
+            return 3;
+        }
     }
 }
