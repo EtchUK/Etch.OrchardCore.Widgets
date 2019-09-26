@@ -1,10 +1,10 @@
 {
   "name": "Etch.OrchardCore.Widgets",
-  "displayName": "Widgets",
+  "displayName": "Widgets Update 3",
   "description": "Provides common widgets used to put together web pages.",
   "author": "Etch",
   "website": "https://etchuk.com",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "issetuprecipe": false,
   "categories": ["Content"],
   "tags": ["etch"],
@@ -16,19 +16,23 @@
           "Name": "Paragraph",
           "DisplayName": "Paragraph",
           "Settings": {
-            "Creatable": "False",
-            "Draftable": "False",
-            "Versionable": "False",
-            "Listable": "False",
-            "Securable": "False",
-            "Stereotype": "Widget"
+            "ContentTypeSettings": {
+              "Creatable": false,
+              "Draftable": false,
+              "Versionable": false,
+              "Listable": false,
+              "Securable": false,
+              "Stereotype": "Widget"
+            }
           },
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "Paragraph",
               "Name": "Paragraph",
               "Settings": {
-                "Position": "0"
+                "ContentTypeSettings": {
+                  "Position": "0"
+                }
               }
             }
           ]
@@ -37,26 +41,32 @@
           "Name": "Html",
           "DisplayName": "Html",
           "Settings": {
-            "Creatable": "False",
-            "Draftable": "False",
-            "Versionable": "False",
-            "Listable": "False",
-            "Securable": "False",
-            "Stereotype": "Widget"
+            "ContentTypeSettings": {
+              "Creatable": false,
+              "Draftable": false,
+              "Versionable": false,
+              "Listable": false,
+              "Securable": false,
+              "Stereotype": "Widget"
+            }
           },
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "Html",
               "Name": "Html",
               "Settings": {
-                "Position": "1"
+                "ContentTypeSettings": {
+                  "Position": "1"
+                }
               }
             },
             {
               "PartName": "TitlePart",
               "Name": "TitlePart",
               "Settings": {
-                "Position": "0"
+                "ContentTypeSettings": {
+                  "Position": "0"
+                }
               }
             }
           ]
@@ -65,19 +75,23 @@
           "Name": "Link",
           "DisplayName": "Link",
           "Settings": {
-            "Creatable": "False",
-            "Draftable": "False",
-            "Versionable": "False",
-            "Listable": "False",
-            "Securable": "False",
-            "Stereotype": "Widget"
+            "ContentTypeSettings": {
+              "Creatable": false,
+              "Draftable": false,
+              "Versionable": false,
+              "Listable": false,
+              "Securable": false,
+              "Stereotype": "Widget"
+            }
           },
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "Link",
               "Name": "Link",
               "Settings": {
-                "Position": "0"
+                "ContentTypeSettings": {
+                  "Position": "0"
+                }
               }
             }
           ]
@@ -86,52 +100,61 @@
           "Name": "Section",
           "DisplayName": "Section",
           "Settings": {
-            "Creatable": "False",
-            "Draftable": "False",
-            "Versionable": "False",
-            "Listable": "False",
-            "Securable": "False",
-            "Stereotype": "Widget"
+            "ContentTypeSettings": {
+              "Creatable": false,
+              "Draftable": false,
+              "Versionable": false,
+              "Listable": false,
+              "Securable": false,
+              "Stereotype": "Widget"
+            }
           },
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "Section",
               "Name": "Section",
               "Settings": {
-                "Position": "1"
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
               }
             },
             {
               "PartName": "BagPart",
               "Name": "Children",
               "Settings": {
-                "DisplayName": "Children",
-                "Description": "Elements displayed within the section.",
-                "Editor": null,
-                "ContainedContentTypes": [
-                  "Blockquote",
-                  "Card",
-                  "Embed",
-                  "Figure",
-                  "Heading",
-                  "Html",
-                  "Link",
-                  "Paragraph",
-                  "Image",
-                  "UnorderedList",
-                  "OrderedList",
-                  "Text"
-                ],
-                "DisplayType": "Detail",
-                "ContentIndexSettings": {},
-                "Position": "2"
+                "ContentTypePartSettings": {
+                  "DisplayName": "Children",
+                  "Description": "Elements displayed within the section.",
+                  "Position": "2"
+                },
+                "BagPartSettings": {
+                  "ContainedContentTypes": [
+                    "Blockquote",
+                    "Card",
+                    "Embed",
+                    "Figure",
+                    "Heading",
+                    "Html",
+                    "Link",
+                    "Paragraph",
+                    "Image",
+                    "UnorderedList",
+                    "OrderedList",
+                    "Text"
+                  ],
+                  "DisplayType": "Detail"
+                },
+                "ContentIndexSettings": {}
               }
             },
             {
               "PartName": "TitlePart",
               "Name": "TitlePart",
               "Settings": {
-                "Position": "0"
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
               }
             }
           ]
@@ -140,19 +163,23 @@
           "Name": "Heading",
           "DisplayName": "Heading",
           "Settings": {
-            "Creatable": "False",
-            "Draftable": "False",
-            "Versionable": "False",
-            "Listable": "False",
-            "Securable": "False",
-            "Stereotype": "Widget"
+            "ContentTypeSettings": {
+              "Creatable": false,
+              "Draftable": false,
+              "Versionable": false,
+              "Listable": false,
+              "Securable": false,
+              "Stereotype": "Widget"
+            }
           },
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "Heading",
               "Name": "Heading",
               "Settings": {
-                "Position": "0"
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
               }
             }
           ]
@@ -161,19 +188,23 @@
           "Name": "Image",
           "DisplayName": "Image",
           "Settings": {
-            "Creatable": "False",
-            "Draftable": "False",
-            "Versionable": "False",
-            "Listable": "False",
-            "Securable": "False",
-            "Stereotype": "Widget"
+            "ContentTypeSettings": {
+              "Creatable": false,
+              "Draftable": false,
+              "Versionable": false,
+              "Listable": false,
+              "Securable": false,
+              "Stereotype": "Widget"
+            }
           },
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "Image",
               "Name": "Image",
               "Settings": {
-                "Position": "0"
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
               }
             }
           ]
@@ -182,44 +213,51 @@
           "Name": "UnorderedList",
           "DisplayName": "Unordered List",
           "Settings": {
-            "Creatable": "False",
-            "Draftable": "False",
-            "Versionable": "False",
-            "Listable": "False",
-            "Securable": "False",
-            "Stereotype": "Widget"
+            "ContentTypeSettings": {
+              "Creatable": false,
+              "Draftable": false,
+              "Versionable": false,
+              "Listable": false,
+              "Securable": false,
+              "Stereotype": "Widget"
+            }
           },
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "UnorderedList",
               "Name": "UnorderedList",
               "Settings": {
-                "Position": "0"
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
               }
             },
             {
               "PartName": "BagPart",
               "Name": "Items",
               "Settings": {
-                "DisplayName": "Items",
-                "Description": "Items within the unordered list.",
-                "Position": "1",
-                "Editor": null,
-                "ContainedContentTypes": [
-                  "Blockquote",
-                  "Card",
-                  "Embed",
-                  "Figure",
-                  "Heading",
-                  "Html",
-                  "Image",
-                  "Link",
-                  "OrderedList",
-                  "Paragraph",
-                  "Text",
-                  "UnorderedList"
-                ],
-                "DisplayType": "Detail",
+                "ContentTypePartSettings": {
+                  "DisplayName": "Items",
+                  "Description": "Items within the unordered list.",
+                  "Position": "1"
+                },
+                "BagPartSettings": {
+                  "ContainedContentTypes": [
+                    "Blockquote",
+                    "Card",
+                    "Embed",
+                    "Figure",
+                    "Heading",
+                    "Html",
+                    "Image",
+                    "Link",
+                    "OrderedList",
+                    "Paragraph",
+                    "Text",
+                    "UnorderedList"
+                  ],
+                  "DisplayType": "Detail"
+                },
                 "ContentIndexSettings": {}
               }
             }
@@ -229,19 +267,23 @@
           "Name": "Text",
           "DisplayName": "Text",
           "Settings": {
-            "Creatable": "False",
-            "Draftable": "False",
-            "Versionable": "False",
-            "Listable": "False",
-            "Securable": "False",
-            "Stereotype": "Widget"
+            "ContentTypeSettings": {
+              "Creatable": false,
+              "Draftable": false,
+              "Versionable": false,
+              "Listable": false,
+              "Securable": false,
+              "Stereotype": "Widget"
+            }
           },
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "Text",
               "Name": "Text",
               "Settings": {
-                "Position": "0"
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
               }
             }
           ]
@@ -250,44 +292,51 @@
           "Name": "OrderedList",
           "DisplayName": "Ordered List",
           "Settings": {
-            "Creatable": "False",
-            "Draftable": "False",
-            "Versionable": "False",
-            "Listable": "False",
-            "Securable": "False",
-            "Stereotype": "Widget"
+            "ContentTypeSettings": {
+              "Creatable": false,
+              "Draftable": false,
+              "Versionable": false,
+              "Listable": false,
+              "Securable": false,
+              "Stereotype": "Widget"
+            }
           },
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "OrderedList",
               "Name": "OrderedList",
               "Settings": {
-                "Position": "0"
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
               }
             },
             {
               "PartName": "BagPart",
               "Name": "Items",
               "Settings": {
-                "DisplayName": "Items",
-                "Description": "Items within the ordered list.",
-                "Position": "1",
-                "Editor": null,
-                "ContainedContentTypes": [
-                  "Blockquote",
-                  "Card",
-                  "Embed",
-                  "Figure",
-                  "Heading",
-                  "Html",
-                  "Image",
-                  "Link",
-                  "OrderedList",
-                  "Paragraph",
-                  "Text",
-                  "UnorderedList"
-                ],
-                "DisplayType": null,
+                "ContentTypePartSettings": {
+                  "DisplayName": "Items",
+                  "Description": "Items within the ordered list.",
+                  "Position": "1"
+                },
+                "BagPartSettings": {
+                  "ContainedContentTypes": [
+                    "Blockquote",
+                    "Card",
+                    "Embed",
+                    "Figure",
+                    "Heading",
+                    "Html",
+                    "Image",
+                    "Link",
+                    "OrderedList",
+                    "Paragraph",
+                    "Text",
+                    "UnorderedList"
+                  ],
+                  "DisplayType": "Detail"
+                },
                 "ContentIndexSettings": {}
               }
             }
@@ -297,19 +346,23 @@
           "Name": "Figure",
           "DisplayName": "Figure",
           "Settings": {
-            "Creatable": "False",
-            "Draftable": "False",
-            "Versionable": "False",
-            "Listable": "False",
-            "Securable": "False",
-            "Stereotype": "Widget"
+            "ContentTypeSettings": {
+              "Creatable": false,
+              "Draftable": false,
+              "Versionable": false,
+              "Listable": false,
+              "Securable": false,
+              "Stereotype": "Widget"
+            }
           },
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "Figure",
               "Name": "Figure",
               "Settings": {
-                "Position": "0"
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
               }
             }
           ]
@@ -318,39 +371,46 @@
           "Name": "Blockquote",
           "DisplayName": "Blockquote",
           "Settings": {
-            "Creatable": "False",
-            "Draftable": "False",
-            "Versionable": "False",
-            "Listable": "False",
-            "Securable": "False",
-            "Stereotype": "Widget"
+            "ContentTypeSettings": {
+              "Creatable": false,
+              "Draftable": false,
+              "Versionable": false,
+              "Listable": false,
+              "Securable": false,
+              "Stereotype": "Widget"
+            }
           },
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "Blockquote",
               "Name": "Blockquote",
               "Settings": {
-                "Position": "0"
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
               }
             },
             {
               "PartName": "BagPart",
               "Name": "QuoteContent",
               "Settings": {
-                "DisplayName": "Quote Content",
-                "Description": "Content that represents the quote.",
-                "Position": "1",
-                "Editor": null,
-                "ContainedContentTypes": [
-                  "Heading",
-                  "Html",
-                  "Link",
-                  "OrderedList",
-                  "Paragraph",
-                  "Text",
-                  "UnorderedList"
-                ],
-                "DisplayType": "Detail",
+                "ContentTypePartSettings": {
+                  "DisplayName": "Quote Content",
+                  "Description": "Content that represents the quote.",
+                  "Position": "1"
+                },
+                "BagPartSettings": {
+                  "ContainedContentTypes": [
+                    "Heading",
+                    "Html",
+                    "Link",
+                    "OrderedList",
+                    "Paragraph",
+                    "Text",
+                    "UnorderedList"
+                  ],
+                  "DisplayType": "Detail"
+                },
                 "ContentIndexSettings": {}
               }
             }
@@ -360,19 +420,23 @@
           "Name": "Hero",
           "DisplayName": "Hero",
           "Settings": {
-            "Creatable": "False",
-            "Draftable": "False",
-            "Versionable": "False",
-            "Listable": "False",
-            "Securable": "False",
-            "Stereotype": "Widget"
+            "ContentTypeSettings": {
+              "Creatable": false,
+              "Draftable": false,
+              "Versionable": false,
+              "Listable": false,
+              "Securable": false,
+              "Stereotype": "Widget"
+            }
           },
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "Hero",
               "Name": "Hero",
               "Settings": {
-                "Position": "0"
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
               }
             }
           ]
@@ -381,39 +445,48 @@
           "Name": "Card",
           "DisplayName": "Card",
           "Settings": {
-            "Creatable": "False",
-            "Draftable": "False",
-            "Versionable": "False",
-            "Listable": "False",
-            "Securable": "False",
-            "Stereotype": "Widget"
+            "ContentTypeSettings": {
+              "Creatable": false,
+              "Draftable": false,
+              "Versionable": false,
+              "Listable": false,
+              "Securable": false,
+              "Stereotype": "Widget"
+            }
           },
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "Card",
               "Name": "Card",
               "Settings": {
-                "Position": "2"
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                }
               }
             },
             {
               "PartName": "TitlePart",
               "Name": "TitlePart",
               "Settings": {
-                "Position": "0"
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
               }
             },
             {
               "PartName": "BagPart",
               "Name": "Body",
               "Settings": {
-                "DisplayName": "Body",
-                "Description": "Content displayed after title.",
-                "Editor": null,
-                "ContainedContentTypes": ["Html", "Paragraph"],
-                "DisplayType": "Detail",
-                "ContentIndexSettings": {},
-                "Position": "1"
+                "ContentTypePartSettings": {
+                  "DisplayName": "Body",
+                  "Description": "Content displayed after title.",
+                  "Position": "1"
+                },
+                "BagPartSettings": {
+                  "ContainedContentTypes": ["Html", "Paragraph"],
+                  "DisplayType": "Detail"
+                },
+                "ContentIndexSettings": {}
               }
             }
           ]
@@ -422,19 +495,23 @@
           "Name": "Banner",
           "DisplayName": "Banner",
           "Settings": {
-            "Creatable": "False",
-            "Draftable": "False",
-            "Versionable": "False",
-            "Listable": "False",
-            "Securable": "False",
-            "Stereotype": "Widget"
+            "ContentTypeSettings": {
+              "Creatable": false,
+              "Draftable": false,
+              "Versionable": false,
+              "Listable": false,
+              "Securable": false,
+              "Stereotype": "Widget"
+            }
           },
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "Banner",
               "Name": "Banner",
               "Settings": {
-                "Position": "0"
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
               }
             }
           ]
@@ -443,19 +520,23 @@
           "Name": "Embed",
           "DisplayName": "Embed",
           "Settings": {
-            "Creatable": "False",
-            "Draftable": "False",
-            "Versionable": "False",
-            "Listable": "False",
-            "Securable": "False",
-            "Stereotype": "Widget"
+            "ContentTypeSettings": {
+              "Creatable": false,
+              "Draftable": false,
+              "Versionable": false,
+              "Listable": false,
+              "Securable": false,
+              "Stereotype": "Widget"
+            }
           },
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "Embed",
               "Name": "Embed",
               "Settings": {
-                "Position": "0"
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
               }
             }
           ]
@@ -470,11 +551,14 @@
               "FieldName": "TextField",
               "Name": "BackgroundColour",
               "Settings": {
-                "DisplayName": "Background Colour",
-                "Editor": "PredefinedList",
-                "DisplayMode": null,
-                "Hint": "Colour displayed as the background for the section.",
-                "Required": false,
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Background Colour",
+                  "Editor": "PredefinedList"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Colour displayed as the background for the section."
+                },
+                "ContentIndexSettings": {},
                 "TextFieldPredefinedListEditorSettings": {
                   "Options": [
                     {
@@ -487,28 +571,21 @@
                     }
                   ],
                   "Editor": 1,
-                  "DefaultValue": null
-                },
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                },
-                "Position": "1"
+                  "DefaultValue": "default"
+                }
               }
             },
             {
               "FieldName": "TextField",
               "Name": "Alignment",
               "Settings": {
-                "DisplayName": "Alignment",
-                "Editor": "PredefinedList",
-                "DisplayMode": null,
-                "Hint": "Control how section children are aligned.",
-                "Required": false,
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Alignment",
+                  "Editor": "PredefinedList"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Control how content is aligned within section."
+                },
                 "TextFieldPredefinedListEditorSettings": {
                   "Options": [
                     {
@@ -531,15 +608,7 @@
                   "Editor": 1,
                   "DefaultValue": null
                 },
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                },
-                "Position": "0"
+                "ContentIndexSettings": {}
               }
             }
           ]
@@ -552,20 +621,11 @@
               "FieldName": "TextField",
               "Name": "Text",
               "Settings": {
-                "DisplayName": "Text",
-                "Editor": "TextArea",
-                "DisplayMode": null,
-                "Hint": null,
-                "Required": false,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Text",
+                  "Editor": "TextArea"
                 },
-                "Position": "0"
+                "ContentIndexSettings": {}
               }
             }
           ]
@@ -578,19 +638,11 @@
               "FieldName": "HtmlField",
               "Name": "Body",
               "Settings": {
-                "DisplayName": "Body",
-                "Editor": "Wysiwyg",
-                "DisplayMode": null,
-                "Hint": null,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Body",
+                  "Editor": "Wysiwyg"
                 },
-                "Position": "0"
+                "ContentIndexSettings": {}
               }
             }
           ]
@@ -603,57 +655,42 @@
               "FieldName": "TextField",
               "Name": "Text",
               "Settings": {
-                "DisplayName": "Text",
-                "Editor": null,
-                "DisplayMode": null,
-                "Hint": "Text to be displayed in link.",
-                "Required": true,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                }
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Text"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Text to be displayed in link.",
+                  "Required": true
+                },
+                "ContentIndexSettings": {}
               }
             },
             {
               "FieldName": "TextField",
               "Name": "Url",
               "Settings": {
-                "DisplayName": "Url",
-                "Editor": null,
-                "DisplayMode": null,
-                "Hint": "URL user is taken to when interacting with link.",
-                "Required": true,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                }
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Url"
+                },
+                "TextFieldSettings": {
+                  "Hint": "URL user is taken to when interacting with link.",
+                  "Required": true
+                },
+                "ContentIndexSettings": {}
               }
             },
             {
               "FieldName": "BooleanField",
               "Name": "OpenInNewWindow",
               "Settings": {
-                "DisplayName": "Open in new Window",
-                "Editor": null,
-                "DisplayMode": null,
-                "Hint": "Whether a new window is opened when user interacts with link.",
-                "Label": "Open in new Window",
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                }
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Open in new Window"
+                },
+                "BooleanFieldSettings": {
+                  "Hint": "Whether a new window is opened when user interacts with link.",
+                  "Label": "Open in new Window"
+                },
+                "ContentIndexSettings": {}
               }
             }
           ]
@@ -666,30 +703,28 @@
               "FieldName": "TextField",
               "Name": "Text",
               "Settings": {
-                "DisplayName": "Text",
-                "Editor": null,
-                "DisplayMode": null,
-                "Hint": "Text to be displayed in heading.",
-                "Required": false,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                }
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Text"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Text to be displayed in heading.",
+                  "Required": true
+                },
+                "ContentIndexSettings": {}
               }
             },
             {
               "FieldName": "TextField",
               "Name": "Level",
               "Settings": {
-                "DisplayName": "Level",
-                "Editor": "PredefinedList",
-                "DisplayMode": null,
-                "Hint": "Importance of the heading, where the lower the value the more important the heading.",
-                "Required": true,
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Level",
+                  "Editor": "PredefinedList"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Importance of the heading, where the lower the value the more important the heading.",
+                  "Required": true
+                },
                 "TextFieldPredefinedListEditorSettings": {
                   "Options": [
                     {
@@ -720,14 +755,7 @@
                   "Editor": 1,
                   "DefaultValue": null
                 },
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                }
+                "ContentIndexSettings": {}
               }
             }
           ]
@@ -740,39 +768,29 @@
               "FieldName": "MediaField",
               "Name": "Image",
               "Settings": {
-                "DisplayName": "Image",
-                "Editor": null,
-                "DisplayMode": null,
-                "Hint": "Image to be displayed.",
-                "Required": true,
-                "Multiple": false,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                }
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Image"
+                },
+                "MediaFieldSettings": {
+                  "Hint": "Image to be displayed.",
+                  "Required": true,
+                  "Multiple": false
+                },
+                "ContentIndexSettings": {}
               }
             },
             {
               "FieldName": "TextField",
               "Name": "AlternateText",
               "Settings": {
-                "DisplayName": "Alternate Text",
-                "Editor": null,
-                "DisplayMode": null,
-                "Hint": "Description of the appearance and function of the image.",
-                "Required": false,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                }
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Alternate Text"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Description of the appearance and function of the image.",
+                  "Required": true
+                },
+                "ContentIndexSettings": {}
               }
             }
           ]
@@ -785,20 +803,11 @@
               "FieldName": "TextField",
               "Name": "Text",
               "Settings": {
-                "DisplayName": "Text",
-                "Position": "0",
-                "Editor": "TextArea",
-                "DisplayMode": null,
-                "Hint": null,
-                "Required": false,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                }
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Text",
+                  "Editor": "TextArea"
+                },
+                "ContentIndexSettings": {}
               }
             }
           ]
@@ -811,69 +820,56 @@
               "FieldName": "MediaField",
               "Name": "Image",
               "Settings": {
-                "DisplayName": "Image",
-                "Editor": null,
-                "DisplayMode": null,
-                "Hint": null,
-                "Required": true,
-                "Multiple": false,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                }
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Image"
+                },
+                "MediaFieldSettings": {
+                  "Required": true,
+                  "Multiple": false
+                },
+                "ContentIndexSettings": {}
               }
             },
             {
               "FieldName": "TextField",
               "Name": "AlternateText",
               "Settings": {
-                "DisplayName": "Alternate Text",
-                "Editor": null,
-                "DisplayMode": null,
-                "Hint": "Description of the appearance and function of the image.",
-                "Required": false,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                }
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Alternate Text"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Description of the appearance and function of the image.",
+                  "Required": true
+                },
+                "ContentIndexSettings": {}
               }
             },
             {
               "FieldName": "TextField",
               "Name": "Caption",
               "Settings": {
-                "DisplayName": "Caption",
-                "Editor": "TextArea",
-                "DisplayMode": null,
-                "Hint": "Caption displayed alongside image.",
-                "Required": false,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                }
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Caption",
+                  "Editor": "TextArea"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Caption displayed alongside image.",
+                  "Required": true
+                },
+                "ContentIndexSettings": {}
               }
             },
             {
               "FieldName": "TextField",
               "Name": "Alignment",
               "Settings": {
-                "DisplayName": "Alignment",
-                "Editor": "PredefinedList",
-                "DisplayMode": null,
-                "Hint": "Control how images can be manipulated around text content.",
-                "Required": false,
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Alignment",
+                  "Editor": "PredefinedList"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Control how images can be manipulated around text content."
+                },
                 "TextFieldPredefinedListEditorSettings": {
                   "Options": [
                     {
@@ -900,14 +896,7 @@
                   "Editor": 1,
                   "DefaultValue": "default"
                 },
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                }
+                "ContentIndexSettings": {}
               }
             }
           ]
@@ -920,8 +909,9 @@
               "FieldName": "TextField",
               "Name": "Source",
               "Settings": {
-                "DisplayName": "Source",
-                "Position": "0"
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Source"
+                }
               }
             }
           ]
@@ -931,84 +921,16 @@
           "Settings": {},
           "ContentPartFieldDefinitionRecords": [
             {
-              "FieldName": "ResponsiveMediaField",
-              "Name": "BackgroundImage",
-              "Settings": {
-                "DisplayName": "Background Image",
-                "Editor": null,
-                "DisplayMode": null,
-                "Breakpoints": "375, 425, 600, 768, 1024, 1280, 1440, 1920, 2560",
-                "Hint": "Image displayed as background of hero.",
-                "Required": false,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                },
-                "Position": "1"
-              }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "DisplayText",
-              "Settings": {
-                "DisplayName": "Display Text",
-                "Position": "3"
-              }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "CTALabel",
-              "Settings": {
-                "DisplayName": "CTA Label",
-                "Editor": null,
-                "DisplayMode": null,
-                "Hint": "Text displayed on call to action link.",
-                "Required": false,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                },
-                "Position": "4"
-              }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "CTAUrl",
-              "Settings": {
-                "DisplayName": "CTA Url",
-                "Editor": null,
-                "DisplayMode": null,
-                "Hint": "Page user is navigated to when selecting call to action link.",
-                "Required": false,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                },
-                "Position": "5"
-              }
-            },
-            {
               "FieldName": "TextField",
               "Name": "BackgroundType",
               "Settings": {
-                "DisplayName": "Background Type",
-                "Position": "0",
-                "Editor": "PredefinedList",
-                "DisplayMode": null,
-                "Hint": "Whether the background should be an image or a video embed.",
-                "Required": false,
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Background Type",
+                  "Editor": "PredefinedList"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Whether the background should be an image or a video embed."
+                },
                 "TextFieldPredefinedListEditorSettings": {
                   "Options": [
                     {
@@ -1023,34 +945,70 @@
                   "Editor": 0,
                   "DefaultValue": "image"
                 },
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                }
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "ResponsiveMediaField",
+              "Name": "BackgroundImage",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Background Image"
+                },
+                "ResponsiveMediaFieldSettings": {
+                  "Breakpoints": "375, 425, 600, 768, 1024, 1280, 1440, 1920, 2560",
+                  "Hint": "Image displayed as background of hero.",
+                  "Required": false
+                },
+                "ContentIndexSettings": {}
               }
             },
             {
               "FieldName": "TextField",
               "Name": "BackgroundEmbed",
               "Settings": {
-                "DisplayName": "Background Embed Url",
-                "Position": "2",
-                "Editor": null,
-                "DisplayMode": null,
-                "Hint": "URL to third-party site that is hosting video (e.g. YouTube).",
-                "Required": false,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Background Embed Url"
+                },
+                "TextFieldSettings": {
+                  "Hint": "URL to third-party site that is hosting video (e.g. YouTube)."
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "DisplayText",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Display Text"
                 }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "CTALabel",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "CTA Label"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Text displayed on call to action link."
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "CTAUrl",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "CTA Url"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Page user is navigated to when selecting call to action link."
+                },
+                "ContentIndexSettings": {}
               }
             }
           ]
@@ -1063,43 +1021,39 @@
               "FieldName": "MediaField",
               "Name": "Image",
               "Settings": {
-                "DisplayName": "Image",
-                "Position": "0"
-              }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "CTALabel",
-              "Settings": {
-                "DisplayName": "CTA Label",
-                "Position": "2"
-              }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "CTAUrl",
-              "Settings": {
-                "DisplayName": "CTA Url",
-                "Position": "3"
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Image"
+                }
               }
             },
             {
               "FieldName": "TextField",
               "Name": "ImageAlternateText",
               "Settings": {
-                "DisplayName": "Image Alternate Text",
-                "Position": "1",
-                "Editor": null,
-                "DisplayMode": null,
-                "Hint": "Description of the appearance and function of the image.",
-                "Required": false,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Image Alternate Text"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Description of the appearance and function of the image."
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "CTALabel",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "CTA Label"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "CTAUrl",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "CTA Url"
                 }
               }
             }
@@ -1110,94 +1064,65 @@
           "Settings": {},
           "ContentPartFieldDefinitionRecords": [
             {
-              "FieldName": "ContentPickerField",
-              "Name": "Menu",
-              "Settings": {
-                "DisplayName": "Menu",
-                "Position": "3",
-                "Editor": null,
-                "DisplayMode": null,
-                "Hint": "Main menu used by users to navigate the main sections of the site.",
-                "Required": false,
-                "Multiple": false,
-                "DisplayedContentTypes": ["Menu"],
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                }
-              }
-            },
-            {
               "FieldName": "MediaField",
               "Name": "Logo",
               "Settings": {
-                "DisplayName": "Logo",
-                "Position": "0"
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Logo"
+                }
               }
             },
             {
               "FieldName": "MediaField",
               "Name": "LogoSmall",
               "Settings": {
-                "DisplayName": "Logo Small",
-                "Editor": null,
-                "DisplayMode": null,
-                "Hint": "Logo displayed on smaller devices.",
-                "Required": false,
-                "Multiple": false,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Logo Small"
                 },
-                "Position": "1"
+                "MediaFieldSettings": {
+                  "Hint": "Logo displayed on smaller devices."
+                },
+                "ContentIndexSettings": {}
               }
             },
             {
               "FieldName": "TextField",
               "Name": "LogoAlternateText",
               "Settings": {
-                "DisplayName": "Logo Alternate Text",
-                "Editor": null,
-                "DisplayMode": null,
-                "Hint": "Description of the appearance and function of the image.",
-                "Required": false,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Logo Alternate Text"
                 },
-                "Position": "2"
+                "TextFieldSettings": {
+                  "Hint": "Description of the appearance and function of the image."
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "ContentPickerField",
+              "Name": "Menu",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Menu"
+                },
+                "ContentPickerFieldSettings": {
+                  "Hint": "Main menu used by users to navigate the main sections of the site.",
+                  "DisplayedContentTypes": ["Menu"]
+                },
+                "ContentIndexSettings": {}
               }
             },
             {
               "FieldName": "TextField",
               "Name": "MenuToggleButtonLabel",
               "Settings": {
-                "DisplayName": "Menu Toggle Button Label",
-                "Position": "4",
-                "Editor": null,
-                "DisplayMode": null,
-                "Hint": "Label for button that's displayed on smaller devices to toggle the visibility of the main menu.",
-                "Required": false,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                }
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Menu Toggle Button Label"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Label for button that's displayed on smaller devices to toggle the visibility of the main menu."
+                },
+                "ContentIndexSettings": {}
               }
             }
           ]
@@ -1210,20 +1135,28 @@
               "FieldName": "TextField",
               "Name": "Source",
               "Settings": {
-                "DisplayName": "Source",
-                "Position": "0",
-                "Editor": null,
-                "DisplayMode": null,
-                "Hint": "URL to content that should be embedded (e.g. https://www.youtube.com/embed/TorVk3Hxm7Q).",
-                "Required": true,
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                }
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Source"
+                },
+                "TextFieldSettings": {
+                  "Hint": "URL to content that should be embedded (e.g. https://www.youtube.com/embed/TorVk3Hxm7Q).",
+                  "Required": true
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Caption",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Caption",
+                  "Editor": "TextArea"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Caption displayed to give description of embedded content."
+                },
+                "ContentIndexSettings": {}
               }
             }
           ]
