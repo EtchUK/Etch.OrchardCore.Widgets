@@ -854,7 +854,7 @@
                 },
                 "TextFieldSettings": {
                   "Hint": "Caption displayed alongside image.",
-                  "Required": true
+                  "Required": false
                 },
                 "ContentIndexSettings": {}
               }
