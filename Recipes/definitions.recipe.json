@@ -59,15 +59,6 @@
                   "Position": "1"
                 }
               }
-            },
-            {
-              "PartName": "TitlePart",
-              "Name": "TitlePart",
-              "Settings": {
-                "ContentTypeSettings": {
-                  "Position": "0"
-                }
-              }
             }
           ]
         },
