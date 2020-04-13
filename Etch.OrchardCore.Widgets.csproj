@@ -4,7 +4,7 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.6.0-rc1</Version>
+    <Version>0.6.1-rc1</Version>
     <PackageId>Etch.OrchardCore.Widgets</PackageId>
     <Title>Etch OrchardCore Widgets</Title>
     <Authors>Etch</Authors>
@@ -15,7 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Etch.OrchardCore.Fields" Version="0.7.0-rc1" />
+    <PackageReference Include="Etch.OrchardCore.Fields" Version="0.8.0-rc1" />
     <PackageReference Include="OrchardCore.ContentManagement" Version="1.0.0-rc1-10004" />
     <PackageReference Include="OrchardCore.ContentManagement.Display" Version="1.0.0-rc1-10004" />
     <PackageReference Include="OrchardCore.Flows" Version="1.0.0-rc1-10004" />
