@@ -1,13 +1,13 @@
 {
-  "name": "Etch.OrchardCore.Widgets",
-  "displayName": "Widgets Update 3",
-  "description": "Provides common widgets used to put together web pages.",
+  "name": "Create Content Definitions",
+  "displayName": "Create Content Definitions",
+  "description": "Creates content definitions for common widgets used to put together web pages.",
   "author": "Etch",
   "website": "https://etchuk.com",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "issetuprecipe": false,
-  "categories": ["Content"],
-  "tags": ["etch"],
+  "categories": [ "Content" ],
+  "tags": [ "etch" ],
   "steps": [
     {
       "name": "ContentDefinition",
@@ -483,7 +483,7 @@
                   "Position": "1"
                 },
                 "BagPartSettings": {
-                  "ContainedContentTypes": ["Html", "Paragraph"],
+                  "ContainedContentTypes": [ "Html", "Paragraph" ],
                   "DisplayType": "Detail"
                 },
                 "ContentIndexSettings": {}
@@ -1107,7 +1107,7 @@
                 },
                 "ContentPickerFieldSettings": {
                   "Hint": "Main menu used by users to navigate the main sections of the site.",
-                  "DisplayedContentTypes": ["Menu"]
+                  "DisplayedContentTypes": [ "Menu" ]
                 },
                 "ContentIndexSettings": {}
               }
