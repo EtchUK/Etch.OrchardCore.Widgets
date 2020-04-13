@@ -16,6 +16,10 @@ This module is available on [NuGet](https://www.nuget.org/packages/Etch.OrchardC
 
 ### Configuration
 
+#### Content Definitions
+
+Content definitions provided by this module have to be manually by either running the content definitions recipe, adding the content definitions to your own setup recipe or running the content definitions recipe in this module within a custom setup recipe.
+
 #### Hero
 
 The "Hero" widget uses a [responsive media field](https://github.com/EtchUK/Etch.OrchardCore.Fields#responsive-media) that represents the images displayed for the background. The responsive media field requires additional project configuration to cater for resizing images via the `width` query string when accessing the media. To make the hero breakpoints work with the image resize the various sizes need to be defined in the application settings. The below snippet should be included in the `appsettings.json` for your Orchard Core web project.
