@@ -13,6 +13,8 @@
 
         <div class="header__nav-button js-nav-button">{{ Model.ContentItem.Content.Banner.MenuToggleButtonLabel.Text }}</div>
 
-        {% shape "menu", alias: mainMenuAlias %}
+        <nav class="nav" role="navigation">
+            {% shape "menu", alias: mainMenuAlias %}
+        </nav>
     </div>
 </header>
