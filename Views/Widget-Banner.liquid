@@ -3,7 +3,7 @@
 {% assign mainMenuAlias = "alias:" | append: mainMenu.Content.AliasPart.Alias %}
 
 <header class="header" role="banner">
-    <div class="header__content">
+    <div class="header__content constrain constrain--wide">
         <a class="header__logo" href="{{ Request.PathBase }}/">
             <picture>
                 <source srcset="{{ Model.ContentItem.Content.Banner.Logo.Paths[0] | asset_url }}" media="(min-width: 768px)">
@@ -13,8 +13,10 @@
 
         <div class="header__nav-button js-nav-button">{{ Model.ContentItem.Content.Banner.MenuToggleButtonLabel.Text }}</div>
 
-        <nav class="nav" role="navigation">
-            {% shape "menu", alias: mainMenuAlias %}
-        </nav>
+        <div class="header__nav">
+            <nav class="nav" role="navigation">
+                {% shape "menu", alias: mainMenuAlias %}
+            </nav>
+        </div>
     </div>
 </header>
