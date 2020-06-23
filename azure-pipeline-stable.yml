@@ -1,6 +1,9 @@
 pool:
   vmImage: 'windows-2019'
 
+trigger: none
+pr: none
+
 variables:
   BuildConfiguration: 'Release'
 
