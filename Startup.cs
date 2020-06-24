@@ -20,9 +20,8 @@ namespace Etch.OrchardCore.Widgets
         {
             services.AddMvc();
             
-            services.AddScoped<IContentPartDisplayDriver, HtmlAttributesPartDisplay>();
-            
-            services.AddSingleton<ContentPart, HtmlAttributesPart>();
+            services.AddContentPart<HtmlAttributesPart>()
+                .UseDisplayDriver<HtmlAttributesPartDisplay>();
 
             services.AddScoped<IDataMigration, Migrations>();
         }
