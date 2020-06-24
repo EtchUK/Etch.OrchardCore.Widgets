@@ -6,5 +6,5 @@
 {% if Model.ContentItem.Content.HtmlAttributesPart != null %}
     <h{{ level }} {% if id != null %} id="{{ id }}" {% endif %} {% if cssClasses != null %} class="{{ cssClasses }}" {% endif %}>{{ text }}</h{{ level }}>
 {% else %}
-    <h{{ level }}>{{ text }}</h{{ level }}>
+    <h{{ level }} id="{{ text | slugify }}">{{ text }}</h{{ level }}>
 {% endif %}
