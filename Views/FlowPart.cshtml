@@ -1,0 +1,24 @@
+﻿@using OrchardCore.ContentManagement
+@using OrchardCore.Flows.Models
+@using OrchardCore.Flows.ViewModels
+
+@model FlowPartViewModel
+@inject OrchardCore.ContentManagement.Display.IContentItemDisplayManager ContentItemDisplayManager
+
+
+@foreach (var widget in Model.FlowPart.Widgets)
+{
+    var widgetContent = await ContentItemDisplayManager.BuildDisplayAsync(widget, Model.BuildPartDisplayContext.Updater, Model.BuildPartDisplayContext.DisplayType, Model.BuildPartDisplayContext.GroupId);
+    var flowMetadata = widget.As<FlowMetadata>();
+    var widgetClasses = new List<string>();
+
+    if (flowMetadata != null)
+    {
+        widgetClasses.Add($"align--{flowMetadata.Alignment.ToString().ToLowerInvariant()}");
+        widgetClasses.Add($"width--{flowMetadata.Size}");
+    }
+
+    <div class="@string.Join(" ", widgetClasses.ToArray())">
+        @await DisplayAsync(widgetContent)
+    </div>
+}
