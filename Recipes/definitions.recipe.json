@@ -17,11 +17,6 @@
           "DisplayName": "Paragraph",
           "Settings": {
             "ContentTypeSettings": {
-              "Creatable": false,
-              "Draftable": false,
-              "Versionable": false,
-              "Listable": false,
-              "Securable": false,
               "Stereotype": "Widget"
             }
           },
@@ -42,11 +37,6 @@
           "DisplayName": "Html",
           "Settings": {
             "ContentTypeSettings": {
-              "Creatable": false,
-              "Draftable": false,
-              "Versionable": false,
-              "Listable": false,
-              "Securable": false,
               "Stereotype": "Widget"
             }
           },
@@ -67,11 +57,6 @@
           "DisplayName": "Link",
           "Settings": {
             "ContentTypeSettings": {
-              "Creatable": false,
-              "Draftable": false,
-              "Versionable": false,
-              "Listable": false,
-              "Securable": false,
               "Stereotype": "Widget"
             }
           },
@@ -92,11 +77,6 @@
           "DisplayName": "Section",
           "Settings": {
             "ContentTypeSettings": {
-              "Creatable": false,
-              "Draftable": false,
-              "Versionable": false,
-              "Listable": false,
-              "Securable": false,
               "Stereotype": "Widget"
             }
           },
@@ -111,15 +91,16 @@
               }
             },
             {
-              "PartName": "BagPart",
-              "Name": "Children",
+              "PartName": "FlowPart",
+              "Name": "Content",
               "Settings": {
                 "ContentTypePartSettings": {
-                  "DisplayName": "Children",
-                  "Description": "Elements displayed within the section.",
+                  "DisplayName": "Content",
+                  "Description": "Content for section.",
                   "Position": "2"
                 },
-                "BagPartSettings": {
+                "LinkableContentTypes": [],
+                "FlowPartSettings": {
                   "ContainedContentTypes": [
                     "Blockquote",
                     "Card",
@@ -133,8 +114,7 @@
                     "UnorderedList",
                     "OrderedList",
                     "Text"
-                  ],
-                  "DisplayType": "Detail"
+                  ]
                 },
                 "ContentIndexSettings": {}
               }
@@ -155,11 +135,6 @@
           "DisplayName": "Heading",
           "Settings": {
             "ContentTypeSettings": {
-              "Creatable": false,
-              "Draftable": false,
-              "Versionable": false,
-              "Listable": false,
-              "Securable": false,
               "Stereotype": "Widget"
             }
           },
@@ -180,11 +155,6 @@
           "DisplayName": "Image",
           "Settings": {
             "ContentTypeSettings": {
-              "Creatable": false,
-              "Draftable": false,
-              "Versionable": false,
-              "Listable": false,
-              "Securable": false,
               "Stereotype": "Widget"
             }
           },
@@ -205,11 +175,6 @@
           "DisplayName": "Unordered List",
           "Settings": {
             "ContentTypeSettings": {
-              "Creatable": false,
-              "Draftable": false,
-              "Versionable": false,
-              "Listable": false,
-              "Securable": false,
               "Stereotype": "Widget"
             }
           },
@@ -259,11 +224,6 @@
           "DisplayName": "Text",
           "Settings": {
             "ContentTypeSettings": {
-              "Creatable": false,
-              "Draftable": false,
-              "Versionable": false,
-              "Listable": false,
-              "Securable": false,
               "Stereotype": "Widget"
             }
           },
@@ -284,11 +244,6 @@
           "DisplayName": "Ordered List",
           "Settings": {
             "ContentTypeSettings": {
-              "Creatable": false,
-              "Draftable": false,
-              "Versionable": false,
-              "Listable": false,
-              "Securable": false,
               "Stereotype": "Widget"
             }
           },
@@ -338,11 +293,6 @@
           "DisplayName": "Figure",
           "Settings": {
             "ContentTypeSettings": {
-              "Creatable": false,
-              "Draftable": false,
-              "Versionable": false,
-              "Listable": false,
-              "Securable": false,
               "Stereotype": "Widget"
             }
           },
@@ -363,11 +313,6 @@
           "DisplayName": "Blockquote",
           "Settings": {
             "ContentTypeSettings": {
-              "Creatable": false,
-              "Draftable": false,
-              "Versionable": false,
-              "Listable": false,
-              "Securable": false,
               "Stereotype": "Widget"
             }
           },
@@ -412,11 +357,6 @@
           "DisplayName": "Hero",
           "Settings": {
             "ContentTypeSettings": {
-              "Creatable": false,
-              "Draftable": false,
-              "Versionable": false,
-              "Listable": false,
-              "Securable": false,
               "Stereotype": "Widget"
             }
           },
@@ -437,11 +377,6 @@
           "DisplayName": "Card",
           "Settings": {
             "ContentTypeSettings": {
-              "Creatable": false,
-              "Draftable": false,
-              "Versionable": false,
-              "Listable": false,
-              "Securable": false,
               "Stereotype": "Widget"
             }
           },
@@ -487,11 +422,6 @@
           "DisplayName": "Banner",
           "Settings": {
             "ContentTypeSettings": {
-              "Creatable": false,
-              "Draftable": false,
-              "Versionable": false,
-              "Listable": false,
-              "Securable": false,
               "Stereotype": "Widget"
             }
           },
@@ -512,11 +442,6 @@
           "DisplayName": "Embed",
           "Settings": {
             "ContentTypeSettings": {
-              "Creatable": false,
-              "Draftable": false,
-              "Versionable": false,
-              "Listable": false,
-              "Securable": false,
               "Stereotype": "Widget"
             }
           },
