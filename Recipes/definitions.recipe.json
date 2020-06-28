@@ -114,7 +114,8 @@
                     "Image",
                     "UnorderedList",
                     "OrderedList",
-                    "Text"
+                    "Text",
+                    "WYSIWYG"
                   ]
                 },
                 "ContentIndexSettings": {}
@@ -211,7 +212,8 @@
                     "OrderedList",
                     "Paragraph",
                     "Text",
-                    "UnorderedList"
+                    "UnorderedList",
+                    "WYSIWYG"
                   ],
                   "DisplayType": "Detail"
                 },
@@ -280,7 +282,8 @@
                     "OrderedList",
                     "Paragraph",
                     "Text",
-                    "UnorderedList"
+                    "UnorderedList",
+                    "WYSIWYG"
                   ],
                   "DisplayType": "Detail"
                 },
@@ -344,7 +347,8 @@
                     "OrderedList",
                     "Paragraph",
                     "Text",
-                    "UnorderedList"
+                    "UnorderedList",
+                    "WYSIWYG"
                   ],
                   "DisplayType": "Detail"
                 },
@@ -410,7 +414,7 @@
                   "Position": "1"
                 },
                 "BagPartSettings": {
-                  "ContainedContentTypes": [ "Html", "Paragraph" ],
+                  "ContainedContentTypes": [ "Html", "Paragraph", "WYSIWYG" ],
                   "DisplayType": "Detail"
                 },
                 "ContentIndexSettings": {}
@@ -516,6 +520,27 @@
             {
               "PartName": "CarouselItem",
               "Name": "CarouselItem",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "WYSIWYG",
+          "DisplayName": "WYSIWYG",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget"
+            },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "WYSIWYG",
+              "Name": "WYSIWYG",
               "Settings": {
                 "ContentTypePartSettings": {
                   "Position": "0"
@@ -1226,6 +1251,25 @@
                     "Page"
                   ]
                 },
+                "ContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "WYSIWYG",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "HtmlField",
+              "Name": "Content",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Content",
+                  "Editor": "Wysiwyg",
+                  "Position": "0"
+                },
+                "HtmlFieldSettings": {},
                 "ContentIndexSettings": {}
               }
             }
