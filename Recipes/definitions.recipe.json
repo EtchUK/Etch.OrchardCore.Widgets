@@ -104,6 +104,7 @@
                 "FlowPartSettings": {
                   "ContainedContentTypes": [
                     "Blockquote",
+                    "Blocks",
                     "Card",
                     "Embed",
                     "Figure",
@@ -202,6 +203,7 @@
                 "BagPartSettings": {
                   "ContainedContentTypes": [
                     "Blockquote",
+                    "Blocks",
                     "Card",
                     "Embed",
                     "Figure",
@@ -272,6 +274,7 @@
                 "BagPartSettings": {
                   "ContainedContentTypes": [
                     "Blockquote",
+                    "Blocks",
                     "Card",
                     "Embed",
                     "Figure",
@@ -341,6 +344,7 @@
                 },
                 "BagPartSettings": {
                   "ContainedContentTypes": [
+                    "Blocks",
                     "Heading",
                     "Html",
                     "Link",
@@ -414,7 +418,7 @@
                   "Position": "1"
                 },
                 "BagPartSettings": {
-                  "ContainedContentTypes": [ "Html", "Paragraph", "WYSIWYG" ],
+                  "ContainedContentTypes": [ "Blocks", "Html", "Paragraph", "WYSIWYG" ],
                   "DisplayType": "Detail"
                 },
                 "ContentIndexSettings": {}
@@ -541,6 +545,27 @@
             {
               "PartName": "WYSIWYG",
               "Name": "WYSIWYG",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Blocks",
+          "DisplayName": "Blocks",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget"
+            },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Blocks",
+              "Name": "Blocks",
               "Settings": {
                 "ContentTypePartSettings": {
                   "Position": "0"
@@ -1270,6 +1295,26 @@
                   "Position": "0"
                 },
                 "HtmlFieldSettings": {},
+                "ContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Blocks",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "BlockField",
+              "Name": "Content",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Content",
+                  "Editor": "EditorJS"
+                },
+                "BlockFieldSettings": {
+                  "LinkableContentTypes": []
+                },
                 "ContentIndexSettings": {}
               }
             }
