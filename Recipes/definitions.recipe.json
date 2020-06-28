@@ -38,7 +38,8 @@
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
-            }
+            },
+            "FullTextAspectSettings": {}
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -617,12 +618,15 @@
           "Settings": {},
           "ContentPartFieldDefinitionRecords": [
             {
-              "FieldName": "HtmlField",
-              "Name": "Body",
+              "FieldName": "CodeField",
+              "Name": "Content",
               "Settings": {
                 "ContentPartFieldSettings": {
-                  "DisplayName": "Body",
-                  "Editor": "Wysiwyg"
+                  "DisplayName": "Content",
+                  "Position": "0"
+                },
+                "CodeFieldSettings": {
+                  "Language": "html"
                 },
                 "ContentIndexSettings": {}
               }
