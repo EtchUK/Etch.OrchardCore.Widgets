@@ -6,8 +6,12 @@
   "website": "https://etchuk.com",
   "version": "0.7.0",
   "issetuprecipe": false,
-  "categories": [ "Content" ],
-  "tags": [ "etch" ],
+  "categories": [
+    "Content"
+  ],
+  "tags": [
+    "etch"
+  ],
   "steps": [
     {
       "name": "ContentDefinition",
@@ -18,7 +22,10 @@
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
-            }
+            },
+            "Category": "Content",
+            "Description": "Display a paragraph of text.",
+            "Icon": "paragraph"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -39,7 +46,10 @@
             "ContentTypeSettings": {
               "Stereotype": "Widget"
             },
-            "FullTextAspectSettings": {}
+            "FullTextAspectSettings": {},
+            "Category": "Content",
+            "Description": "Displays content defined with raw HTML.",
+            "Icon": "code"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -59,7 +69,10 @@
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
-            }
+            },
+            "Category": "Content",
+            "Description": "Link to another page using a URL.",
+            "Icon": "link"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -79,7 +92,10 @@
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
-            }
+            },
+            "Category": "Container",
+            "Description": "Represents a generic section of a page, i.e., a thematic grouping of content.",
+            "Icon": "puzzle-piece"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -139,7 +155,10 @@
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
-            }
+            },
+            "Category": "Content",
+            "Description": "Display text as a heading.",
+            "Icon": "heading"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -159,7 +178,10 @@
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
-            }
+            },
+            "Category": "Content",
+            "Description": "Display an image.",
+            "Icon": "image"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -179,7 +201,10 @@
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
-            }
+            },
+            "Category": "Content",
+            "Description": "Displays a bulleted list.",
+            "Icon": "list-ul"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -230,7 +255,10 @@
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
-            }
+            },
+            "Category": "Content",
+            "Description": "Display raw text.",
+            "Icon": "pen"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -250,7 +278,10 @@
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
-            }
+            },
+            "Category": "Content",
+            "Description": "Displays a numbered list.",
+            "Icon": "list-ul"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -301,7 +332,10 @@
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
-            }
+            },
+            "Category": "Content",
+            "Description": "Displays an image with a caption.",
+            "Icon": "portrait"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -321,7 +355,10 @@
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
-            }
+            },
+            "Category": "Content",
+            "Description": "Display a quote from an individual or organisation.",
+            "Icon": "quote-right"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -367,7 +404,10 @@
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
-            }
+            },
+            "Category": "Content",
+            "Description": "Prominent section of page for sign posting to featured content.",
+            "Icon": "mask"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -387,7 +427,10 @@
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
-            }
+            },
+            "Category": "Content",
+            "Description": "Flexible content container.",
+            "Icon": "address-card"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -418,7 +461,12 @@
                   "Position": "1"
                 },
                 "BagPartSettings": {
-                  "ContainedContentTypes": [ "Blocks", "Html", "Paragraph", "WYSIWYG" ],
+                  "ContainedContentTypes": [
+                    "Blocks",
+                    "Html",
+                    "Paragraph",
+                    "WYSIWYG"
+                  ],
                   "DisplayType": "Detail"
                 },
                 "ContentIndexSettings": {}
@@ -432,7 +480,10 @@
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
-            }
+            },
+            "Category": "Miscellaneous",
+            "Description": "Header section of site.",
+            "Icon": "toolbox"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -452,7 +503,10 @@
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
-            }
+            },
+            "Category": "Content",
+            "Description": "Embed content from another site (e.g. YouTube video, Google Maps, etc...).",
+            "Icon": "youtube"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -473,7 +527,10 @@
             "ContentTypeSettings": {
               "Stereotype": "Widget"
             },
-            "FullTextAspectSettings": {}
+            "FullTextAspectSettings": {},
+            "Category": "Content",
+            "Description": "Slideshow for cycling through a series of content.",
+            "Icon": "layer-group"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -539,7 +596,10 @@
             "ContentTypeSettings": {
               "Stereotype": "Widget"
             },
-            "FullTextAspectSettings": {}
+            "FullTextAspectSettings": {},
+            "Category": "Content",
+            "Description": "Use visual editor for defining content.",
+            "Icon": "eye"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -560,7 +620,10 @@
             "ContentTypeSettings": {
               "Stereotype": "Widget"
             },
-            "FullTextAspectSettings": {}
+            "FullTextAspectSettings": {},
+            "Category": "Content",
+            "Description": "Visual editor ideal for sections of large copy.",
+            "Icon": "cubes"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -1143,7 +1206,9 @@
                 },
                 "ContentPickerFieldSettings": {
                   "Hint": "Main menu used by users to navigate the main sections of the site.",
-                  "DisplayedContentTypes": [ "Menu" ]
+                  "DisplayedContentTypes": [
+                    "Menu"
+                  ]
                 },
                 "ContentIndexSettings": {}
               }
@@ -1219,7 +1284,6 @@
             }
           ]
         },
-
         {
           "Name": "CarouselItem",
           "Settings": {},
