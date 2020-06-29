@@ -18,7 +18,9 @@
 {% endif %}
 
 <section {% if id != null %}id="{{ id }}"{% endif %} class="{{ cssClasses }}">
-    <div class="section__content constrain flow">
-        {{ Model.Content.Content | shape_render }}
+    <div class="section__content constrain">
+        <div class="flow">
+            {{ Model.Content.Content | shape_render }}
+        </div>
     </div>
 </section>
