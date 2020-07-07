@@ -120,7 +120,7 @@
                 "FlowPartSettings": {
                   "ContainedContentTypes": [
                     "Blockquote",
-                    "Blocks",
+                    "VisualEditor",
                     "Card",
                     "Embed",
                     "Figure",
@@ -132,7 +132,7 @@
                     "UnorderedList",
                     "OrderedList",
                     "Text",
-                    "WYSIWYG"
+                    "LegacyVisualEditor"
                   ]
                 },
                 "ContentIndexSettings": {}
@@ -228,7 +228,7 @@
                 "BagPartSettings": {
                   "ContainedContentTypes": [
                     "Blockquote",
-                    "Blocks",
+                    "VisualEditor",
                     "Card",
                     "Embed",
                     "Figure",
@@ -240,7 +240,7 @@
                     "Paragraph",
                     "Text",
                     "UnorderedList",
-                    "WYSIWYG"
+                    "LegacyVisualEditor"
                   ],
                   "DisplayType": "Detail"
                 },
@@ -305,7 +305,7 @@
                 "BagPartSettings": {
                   "ContainedContentTypes": [
                     "Blockquote",
-                    "Blocks",
+                    "VisualEditor",
                     "Card",
                     "Embed",
                     "Figure",
@@ -317,7 +317,7 @@
                     "Paragraph",
                     "Text",
                     "UnorderedList",
-                    "WYSIWYG"
+                    "LegacyVisualEditor"
                   ],
                   "DisplayType": "Detail"
                 },
@@ -381,7 +381,7 @@
                 },
                 "BagPartSettings": {
                   "ContainedContentTypes": [
-                    "Blocks",
+                    "VisualEditor",
                     "Heading",
                     "Html",
                     "Link",
@@ -389,7 +389,7 @@
                     "Paragraph",
                     "Text",
                     "UnorderedList",
-                    "WYSIWYG"
+                    "LegacyVisualEditor"
                   ],
                   "DisplayType": "Detail"
                 },
@@ -462,10 +462,10 @@
                 },
                 "BagPartSettings": {
                   "ContainedContentTypes": [
-                    "Blocks",
+                    "VisualEditor",
                     "Html",
                     "Paragraph",
-                    "WYSIWYG"
+                    "LegacyVisualEditor"
                   ],
                   "DisplayType": "Detail"
                 },
@@ -590,8 +590,8 @@
           ]
         },
         {
-          "Name": "WYSIWYG",
-          "DisplayName": "WYSIWYG",
+          "Name": "LegacyVisualEditor",
+          "DisplayName": "Legacy Visual Editor",
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
@@ -603,8 +603,8 @@
           },
           "ContentTypePartDefinitionRecords": [
             {
-              "PartName": "WYSIWYG",
-              "Name": "WYSIWYG",
+              "PartName": "LegacyVisualEditor",
+              "Name": "LegacyVisualEditor",
               "Settings": {
                 "ContentTypePartSettings": {
                   "Position": "0"
@@ -614,8 +614,8 @@
           ]
         },
         {
-          "Name": "Blocks",
-          "DisplayName": "Blocks",
+          "Name": "VisualEditor",
+          "DisplayName": "Visual Editor",
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
@@ -627,8 +627,8 @@
           },
           "ContentTypePartDefinitionRecords": [
             {
-              "PartName": "Blocks",
-              "Name": "Blocks",
+              "PartName": "VisualEditor",
+              "Name": "VisualEditor",
               "Settings": {
                 "ContentTypePartSettings": {
                   "Position": "0"
@@ -1346,7 +1346,7 @@
           ]
         },
         {
-          "Name": "WYSIWYG",
+          "Name": "LegacyVisualEditor",
           "Settings": {},
           "ContentPartFieldDefinitionRecords": [
             {
@@ -1355,7 +1355,7 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Content",
-                  "Editor": "Wysiwyg",
+                  "Editor": "LegacyVisualEditor",
                   "Position": "0"
                 },
                 "HtmlFieldSettings": {},
@@ -1365,7 +1365,7 @@
           ]
         },
         {
-          "Name": "Blocks",
+          "Name": "VisualEditor",
           "Settings": {},
           "ContentPartFieldDefinitionRecords": [
             {
