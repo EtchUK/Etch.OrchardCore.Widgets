@@ -1,7 +1,7 @@
 {% assign backgroundType = Model.ContentItem.Content.Hero.BackgroundType.Text %}
 
 <section class="hero">
-    <div class="hero__body">
+    <div class="hero__body constrain constrain--wide">
         <h1 class="hero__title">{{ Model.ContentItem.Content.Hero.DisplayText.Text | raw }}</h1>
         {% if Model.ContentItem.Content.Hero.CTALabel.Text != nil %}
             <a href="{{ Model.ContentItem.Content.Hero.CTAUrl.Text | href }}" class="btn__btn btn btn--primary">{{ Model.ContentItem.Content.Hero.CTALabel.Text | raw }}</a>
