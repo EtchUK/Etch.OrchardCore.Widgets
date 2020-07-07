@@ -19,8 +19,6 @@
 
 <section {% if id != null %}id="{{ id }}"{% endif %} class="{{ cssClasses }}">
     <div class="section__content constrain">
-        <div class="flow">
-            {{ Model.Content.Content | shape_render }}
-        </div>
+        {{ Model.Content.Content | shape_render }}
     </div>
 </section>
