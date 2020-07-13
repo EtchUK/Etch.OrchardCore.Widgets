@@ -3,6 +3,15 @@
 {% assign linkUrl = Model.ContentItem.Content.Link.Url.Text %}
 {% assign text = Model.ContentItem.Content.Link.Text.Text %}
 {% assign openInNewWindow = Model.ContentItem.Content.Link.OpenInNewWindow.Value %}
+{% assign style = Model.ContentItem.Content.Link.Style.Text %}
+
+{% if style %}
+{% assign cssClasses = Model.ContentItem.Content.Link.Style.Text | prepend: cssClasses %}
+
+{% if style != null and style != 'default' %}
+    {% assign styleClass = ' ' | append: style %}
+    {% assign cssClasses = styleClass | prepend: cssClasses %}
+{% endif %}
 
 {% if Model.ContentItem.Content.HtmlAttributesPart != null %}
     <a href="{{ linkUrl }}" {% if id != null %} id="{{ id }}" {% endif %}{% if cssClasses != null %} class="{{ cssClasses }}" {% endif %}{% if openInNewWindow %} target="_blank" {% endif %}>{{ text }}</a>
