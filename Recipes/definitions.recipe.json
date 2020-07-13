@@ -791,6 +791,37 @@
                 },
                 "ContentIndexSettings": {}
               }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Style",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Style",
+                  "Editor": "PredefinedList"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Define appearance of link."
+                },
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "Default",
+                      "value": "default"
+                    },
+                    {
+                      "name": "Primary Button",
+                      "value": "btn--primary"
+                    },
+                    {
+                      "name": "Secondary Button",
+                      "value": "btn--secondary"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": "default"
+                }
+              }
             }
           ]
         },
