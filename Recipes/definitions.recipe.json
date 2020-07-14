@@ -124,6 +124,7 @@
                     "Card",
                     "Embed",
                     "Figure",
+                    "Group",
                     "Heading",
                     "Html",
                     "Link",
@@ -632,6 +633,64 @@
               "Settings": {
                 "ContentTypePartSettings": {
                   "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Group",
+          "DisplayName": "Group",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget"
+            },
+            "FullTextAspectSettings": {},
+            "Category": "Container",
+            "Description": "Group a collection of widgets.",
+            "Icon": "object-group"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Group",
+              "Name": "Group",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "Content",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Content",
+                  "Description": "Content for group",
+                  "Position": "1"
+                },
+                "LinkableContentTypes": [],
+                "BagPartSettings": {
+                  "ContainedContentTypes": [
+                    "Blockquote",
+                    "Card",
+                    "Carousel",
+                    "Embed",
+                    "Figure",
+                    "Heading",
+                    "Hero",
+                    "Html",
+                    "Image",
+                    "LegacyVisualEditor",
+                    "Link",
+                    "OrderedList",
+                    "Paragraph",
+                    "Section",
+                    "Text",
+                    "UnorderedList",
+                    "VisualEditor"
+                  ],
+                  "DisplayType": "Detail"
                 }
               }
             }
