@@ -1,24 +1,59 @@
 {% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
 {% assign cssClasses = "section" %}
+{% assign constrainClasses = "constrain" %}
+
 {% assign alignment = Model.ContentItem.Content.Section.Alignment.Text %}
 {% assign backgroundColour = Model.ContentItem.Content.Section.BackgroundColour.Text %}
+{% assign contentWidth = Model.ContentItem.Content.Section.ContentWidth.Text %}
+{% assign spacingAfter = Model.ContentItem.Content.Section.SpacingAfter.Text %}
 
 {% if Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
     {% assign cssClasses = "section " | append: Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
 {% endif %}
 
-{% if alignment != null or alignment != 'default' %}
+{% if spacingAfter != null and spacingAfter != 'none' %}
+    {% assign spacingAfterClasses = ' section--' | append: spacingAfter %}
+    {% assign cssClasses = spacingAfterClasses | prepend: cssClasses %}
+{% endif %}
+
+{% if alignment != null and alignment != 'default' %}
     {% assign alignmentClass = ' section--' | append: alignment %}
     {% assign cssClasses = alignmentClass | prepend: cssClasses %}
 {% endif %}
 
-{% if backgroundColour != null or backgroundColour != 'default' %}
+{% if backgroundColour != null and backgroundColour != 'default' %}
     {% assign backgroundColorClass = ' bg--color-' | append: backgroundColour %}
     {% assign cssClasses = backgroundColorClass | prepend: cssClasses %}
 {% endif %}
 
-<section {% if id != null %}id="{{ id }}"{% endif %} class="{{ cssClasses }}">
-    <div class="section__content constrain">
+{% if backgroundColour == 'black' %}
+    {% assign cssClasses = ' color--white' | prepend: cssClasses %}
+{% endif %}
+
+{% if contentWidth == 'full' %}
+    {% assign cssClasses = ' padding--bottom-none padding--top-none' | prepend: cssClasses %}
+{% endif %}
+
+{% if contentWidth == 'wide' %}
+    {% assign constrainClasses = ' constrain--wide' | prepend: constrainClasses %}
+{% endif %}
+
+{% if Model.ContentItem.Content.Section.BackgroundImage.HasData %}
+    {% assign cssClasses = ' section--feature' | prepend: cssClasses %}
+{% endif %}
+
+<section class="{{ cssClasses }}">
+    {% if contentWidth != 'full' %}
+    <div class="section__content {{ constrainClasses }}">
         {{ Model.Content.Content | shape_render }}
     </div>
+    {% else %}
+       {{ Model.Content.Content | shape_render }}
+    {% endif %}
+
+    {% if Model.ContentItem.Content.Section.BackgroundImage.HasData %}
+    <div class="section__media">
+        {{ Model.Background | shape_render }}
+    </div>
+    {% endif %}
 </section>

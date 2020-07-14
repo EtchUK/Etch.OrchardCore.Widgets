@@ -1,0 +1,39 @@
+{
+  "TextField_Edit": [
+    {
+      "place": "Parts#Layout:1",
+      "differentiator": "Section-BackgroundColour",
+      "contentType": [ "Section" ]
+    },
+    {
+      "place": "Parts#Layout:3",
+      "differentiator": "Section-Alignment",
+      "contentType": [ "Section" ]
+    },
+    {
+      "place": "Parts#Layout:4",
+      "differentiator": "Section-ContentWidth",
+      "contentType": [ "Section" ]
+    },
+    {
+      "place": "Parts#Layout:5",
+      "differentiator": "Section-SpacingAfter",
+      "contentType": [ "Section" ]
+    }
+  ],
+  "ResponsiveMediaField_Edit": [
+    {
+      "place": "Parts#Layout:2",
+      "differentiator": "Section-BackgroundImage",
+      "contentType": [ "Section" ]
+    }
+  ],
+  "ResponsiveMediaField": [
+    {
+      "contentType": [
+        "Section"
+      ],
+      "place": "Background"
+    }
+  ]
+}
