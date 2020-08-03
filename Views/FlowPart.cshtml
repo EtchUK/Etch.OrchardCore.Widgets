@@ -16,7 +16,11 @@
 
             if (flowMetadata != null)
             {
-                widgetClasses.Add($"align--{flowMetadata.Alignment.ToString().ToLowerInvariant()}");
+                if (flowMetadata.Alignment.ToString().ToLowerInvariant() != "justify")
+                {
+                    widgetClasses.Add($"align--{flowMetadata.Alignment.ToString().ToLowerInvariant()}");
+                }
+
                 widgetClasses.Add($"width--{flowMetadata.Size}");
             }
 
