@@ -4,7 +4,7 @@
     <div class="hero__body constrain constrain--wide">
         <h1 class="hero__title"><span>{{ Model.ContentItem.Content.Hero.DisplayText.Text | raw }}</span></h1>
         {% if Model.ContentItem.Content.Hero.CTALabel.Text != nil %}
-            <a href="{{ Model.ContentItem.Content.Hero.CTAUrl.Text | href }}" class="btn__btn btn btn--primary">{{ Model.ContentItem.Content.Hero.CTALabel.Text | raw }}</a>
+            <a href="{{ Model.ContentItem.Content.Hero.CTAUrl.Text | href }}" class="btn btn--primary">{{ Model.ContentItem.Content.Hero.CTALabel.Text | raw }}</a>
         {% endif %}
     </div>
             
