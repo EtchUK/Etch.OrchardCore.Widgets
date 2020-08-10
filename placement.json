@@ -35,5 +35,13 @@
       ],
       "place": "Background"
     }
+  ],
+  "TitlePart": [
+    {
+      "contentType": [
+        "Label"
+      ],
+      "place": "-"
+    }
   ]
 }
