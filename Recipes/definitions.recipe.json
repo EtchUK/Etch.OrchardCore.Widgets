@@ -1546,6 +1546,38 @@
               }
             }
           ]
+        },
+        {
+          "Name": "Group",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "Style",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Style",
+                  "Editor": "PredefinedList",
+                  "Position": "0"
+                },
+                "TextFieldSettings": {},
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "None",
+                      "value": "none"
+                    },
+                    {
+                      "name": "Form Group",
+                      "value": "form-group"
+                    }
+                  ],
+                  "Editor": 1
+                },
+                "ContentIndexSettings": {}
+              }
+            }
+          ]
         }
       ]
     }
