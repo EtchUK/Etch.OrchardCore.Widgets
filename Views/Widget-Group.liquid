@@ -1,0 +1,9 @@
+﻿{% assign groupStyle = Model.ContentItem.Content.Group.Style.Text %}
+
+{% if groupStyle != null and groupStyle != "none" %}
+	<div class="{{ groupStyle }}">
+		{{ Model.Content | shape_render }}
+	</div>
+{% else %}
+	{{ Model.Content | shape_render }}
+{% endif %}

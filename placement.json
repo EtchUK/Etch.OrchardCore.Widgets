@@ -1,4 +1,10 @@
 {
+  "TextField": [
+    {
+      "contentType": [ "Group" ],
+      "place": "-"
+    }
+  ],
   "TextField_Edit": [
     {
       "place": "Parts#Layout:1",
