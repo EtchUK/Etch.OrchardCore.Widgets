@@ -45,6 +45,7 @@
   "TitlePart": [
     {
       "contentType": [
+        "Form",
         "Label"
       ],
       "place": "-"
