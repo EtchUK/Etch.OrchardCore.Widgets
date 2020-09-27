@@ -35,3 +35,7 @@ The "Hero" widget uses a [responsive media field](https://github.com/EtchUK/Etch
 ```
 
 These breakpoints can be configured within the field settings, however any ammendments should also be applied to the `appsettings.json` file.
+
+## Theming
+
+All templates associated to content types defined within this module render HTML that's tightly coupled to scripts and styles defined within [our theme boilerplate project](https://github.com/EtchUK/Etch.OrchardCore.ThemeBoilerplate).
