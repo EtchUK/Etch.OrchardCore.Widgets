@@ -25,6 +25,11 @@
       "place": "Parts#Layout:5",
       "differentiator": "Section-SpacingAfter",
       "contentType": [ "Section" ]
+    },
+    {
+      "place": "Parts#Layout:1",
+      "differentiator": "Group-Style",
+      "contentType": [ "Group" ]
     }
   ],
   "ResponsiveMediaField_Edit": [
