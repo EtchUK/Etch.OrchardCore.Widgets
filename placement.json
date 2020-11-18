@@ -7,6 +7,16 @@
   ],
   "TextField_Edit": [
     {
+      "place": "Parts#Background:1",
+      "differentiator": "Hero-BackgroundType",
+      "contentType": [ "Hero" ]
+    },
+    {
+      "place": "Parts#Background:3",
+      "differentiator": "Hero-BackgroundEmbed",
+      "contentType": [ "Hero" ]
+    },
+    {
       "place": "Parts#Layout:1",
       "differentiator": "Section-BackgroundColour",
       "contentType": [ "Section" ]
@@ -33,6 +43,11 @@
     }
   ],
   "ResponsiveMediaField_Edit": [
+    {
+      "place": "Parts#Background:2",
+      "differentiator": "Hero-BackgroundImage",
+      "contentType": [ "Hero" ]
+    },
     {
       "place": "Parts#Layout:2",
       "differentiator": "Section-BackgroundImage",
