@@ -1059,6 +1059,19 @@
                 },
                 "ContentIndexSettings": {}
               }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "LinkTo",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Link To"
+                },
+                "TextFieldSettings": {
+                  "Hint": "URL user is navigated to when clicking image."
+                },
+                "ContentIndexSettings": {}
+              }
             }
           ]
         },
