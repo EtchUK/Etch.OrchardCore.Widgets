@@ -1425,6 +1425,35 @@
                 },
                 "ContentIndexSettings": {}
               }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Ratio",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Ratio",
+                  "Editor": "PredefinedList"
+                },
+                "TextFieldSettings": {},
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "None",
+                      "value": ""
+                    },
+                    {
+                      "name": "4:3",
+                      "value": "4-3"
+                    },
+                    {
+                      "name": "16:9",
+                      "value": "16-9"
+                    }
+                  ],
+                  "Editor": 1
+                },
+                "ContentIndexSettings": {}
+              }
             }
           ]
         },
