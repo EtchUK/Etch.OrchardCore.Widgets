@@ -1,6 +1,11 @@
 {% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
 {% assign cssClasses = "embed" %}
 
+{% if Model.ContentItem.Content.Embed.Ratio.Text != "" %}
+	{% assign ratioClass = ' embed--ratio-' | append: Model.ContentItem.Content.Embed.Ratio.Text %}
+	{% assign cssClasses = ratioClass | prepend: cssClasses %}
+{% endif %}
+
 {% if Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
     {% assign cssClasses = "embed " | append: Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
 {% endif %}
