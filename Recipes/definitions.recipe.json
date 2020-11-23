@@ -6,8 +6,12 @@
   "website": "https://etchuk.com",
   "version": "0.7.0",
   "issetuprecipe": false,
-  "categories": ["Content"],
-  "tags": ["etch"],
+  "categories": [
+    "Content"
+  ],
+  "tags": [
+    "etch"
+  ],
   "steps": [
     {
       "name": "ContentDefinition",
@@ -559,7 +563,9 @@
                   "Position": "2"
                 },
                 "BagPartSettings": {
-                  "ContainedContentTypes": ["CarouselItem"]
+                  "ContainedContentTypes": [
+                    "CarouselItem"
+                  ]
                 },
                 "ContentIndexSettings": {}
               }
@@ -687,6 +693,61 @@
                   ],
                   "DisplayType": "Detail"
                 }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Footer",
+          "DisplayName": "Footer",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget"
+            },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Footer",
+              "Name": "Footer",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "Content",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Content",
+                  "Description": "Content display beneath logo & navigation.",
+                  "Position": "1"
+                },
+                "BagPartSettings": {
+                  "ContainedContentTypes": [
+                    "Blockquote",
+                    "Card",
+                    "Carousel",
+                    "Embed",
+                    "Figure",
+                    "Heading",
+                    "Hero",
+                    "Html",
+                    "Image",
+                    "LegacyVisualEditor",
+                    "Link",
+                    "OrderedList",
+                    "Paragraph",
+                    "Section",
+                    "Text",
+                    "UnorderedList",
+                    "VisualEditor"
+                  ],
+                  "DisplayType": "Detail"
+                },
+                "ContentIndexSettings": {}
               }
             }
           ]
@@ -1387,7 +1448,9 @@
                 },
                 "ContentPickerFieldSettings": {
                   "Hint": "Main menu used by users to navigate the main sections of the site.",
-                  "DisplayedContentTypes": ["Menu"]
+                  "DisplayedContentTypes": [
+                    "Menu"
+                  ]
                 },
                 "ContentIndexSettings": {}
               }
@@ -1543,7 +1606,10 @@
                 },
                 "ContentPickerFieldSettings": {
                   "Hint": "Select a content item within the site that the user will be navigated to.",
-                  "DisplayedContentTypes": ["Homepage", "Page"]
+                  "DisplayedContentTypes": [
+                    "Homepage",
+                    "Page"
+                  ]
                 },
                 "ContentIndexSettings": {}
               }
@@ -1615,6 +1681,62 @@
                     }
                   ],
                   "Editor": 1
+                },
+                "ContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Footer",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "MediaField",
+              "Name": "Logo",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Logo",
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "FieldName": "MediaField",
+              "Name": "LogoSmall",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Logo Small",
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "FieldName": "ContentPickerField",
+              "Name": "Menu",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Menu",
+                  "Position": "3"
+                },
+                "ContentPickerFieldSettings": {
+                  "DisplayedContentTypes": [
+                    "Menu"
+                  ]
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "LogoAlternateText",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Logo Alternate Text",
+                  "Position": "2"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Description of image for website visitors who are unable to see the image and tell the search engine crawlers about the image."
                 },
                 "ContentIndexSettings": {}
               }
