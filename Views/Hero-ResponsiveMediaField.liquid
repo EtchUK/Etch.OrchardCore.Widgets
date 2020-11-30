@@ -5,7 +5,7 @@
                 <source srcset="{{ source.Url }}" media="(min-width: {{ source.Breakpoint }}px)" />
             {% endfor %}
 
-            <img src="{{ item.SmallestImageUrl }}" />
+            <img src="{{ item.SmallestImageUrl }}" alt="{{ item.MediaText }}" />
         </picture>
     {% endfor %}
 {% endif %}
