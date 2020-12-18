@@ -42,7 +42,7 @@
     {% assign cssClasses = ' section--feature' | prepend: cssClasses %}
 {% endif %}
 
-<section class="{{ cssClasses }}">
+<section {% if id != nil %} id="{{ id }}" {% endif %} class="{{ cssClasses }}">
     {% if contentWidth != 'full' %}
     <div class="section__content {{ constrainClasses }}">
         {{ Model.Content.Content | shape_render }}
