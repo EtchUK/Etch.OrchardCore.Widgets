@@ -1,8 +1,6 @@
 ﻿using OrchardCore.ContentManagement.Metadata;
 using OrchardCore.ContentManagement.Metadata.Settings;
 using OrchardCore.Data.Migration;
-using OrchardCore.Recipes.Services;
-using System.Threading.Tasks;
 
 namespace Etch.OrchardCore.Widgets
 {
@@ -10,12 +8,12 @@ namespace Etch.OrchardCore.Widgets
     {
         private readonly IContentDefinitionManager _contentDefinitionManager;
 
-        public Migrations(IContentDefinitionManager contentDefinitionManager, IRecipeMigrator recipeMigrator)
+        public Migrations(IContentDefinitionManager contentDefinitionManager)
         {
             _contentDefinitionManager = contentDefinitionManager;
         }
 
-        public int CreateAsync()
+        public int Create()
         {
             #region Html Attributes
 
