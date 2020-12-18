@@ -16,7 +16,7 @@ namespace Etch.OrchardCore.Widgets.Drivers
             {
                 m.CssClasses = part.CssClasses;
                 m.Id = part.Id;
-            });
+            }).Location("Parts#HTML:25");
         }
 
         public async override Task<IDisplayResult> UpdateAsync(HtmlAttributesPart part, IUpdateModel updater)
