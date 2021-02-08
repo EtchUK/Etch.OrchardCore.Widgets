@@ -1,4 +1,34 @@
 {
+  "BackgroundPart": [
+    {
+      "place": "-"
+    }
+  ],
+  "BooleanField_Edit": [
+    {
+      "place": "Parts#Background:17",
+      "differentiator": "BackgroundPart-InvertTextColour",
+      "contentPart": [
+        "BackgroundPart"
+      ]
+    },
+    {
+      "place": "Parts#Background:17",
+      "differentiator": "BackgroundPart-BackgroundFixed",
+      "contentPart": [
+        "BackgroundPart"
+      ]
+    }
+  ],
+  "ColourField_Edit": [
+    {
+      "place": "Parts#Background:15",
+      "differentiator": "BackgroundPart-BackgroundColour",
+      "contentPart": [
+        "BackgroundPart"
+      ]
+    }
+  ],
   "TextField": [
     {
       "contentType": [ "Group" ],
@@ -6,6 +36,13 @@
     }
   ],
   "TextField_Edit": [
+    {
+      "place": "Parts#Background:16",
+      "differentiator": "BackgroundPart-BackgroundPattern",
+      "contentPart": [
+        "BackgroundPart"
+      ]
+    },
     {
       "place": "Parts#Background:1",
       "differentiator": "Hero-BackgroundType",
@@ -49,7 +86,7 @@
       "contentType": [ "Hero" ]
     },
     {
-      "place": "Parts#Layout:2",
+      "place": "Parts#Background:12",
       "differentiator": "Section-BackgroundImage",
       "contentType": [ "Section" ]
     }
