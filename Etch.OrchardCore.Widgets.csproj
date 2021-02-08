@@ -15,7 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Etch.OrchardCore.Fields" Version="0.11.2-rc2" />
+    <PackageReference Include="Etch.OrchardCore.Fields" Version="0.11.3-rc2" />
     <PackageReference Include="OrchardCore.ContentManagement" Version="1.0.0-rc2-13450" />
     <PackageReference Include="OrchardCore.ContentManagement.Display" Version="1.0.0-rc2-13450" />
     <PackageReference Include="OrchardCore.Flows" Version="1.0.0-rc2-13450" />
