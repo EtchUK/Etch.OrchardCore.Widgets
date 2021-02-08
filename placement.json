@@ -44,6 +44,11 @@
       ]
     },
     {
+      "place": "Parts#Layout:1",
+      "differentiator": "Group-Style",
+      "contentType": [ "Group" ]
+    },
+    {
       "place": "Parts#Background:1",
       "differentiator": "Hero-BackgroundType",
       "contentType": [ "Hero" ]
@@ -64,9 +69,30 @@
       "contentType": [ "Section" ]
     },
     {
+      "place": "Parts#Layout:6",
+      "differentiator": "Section-BottomPadding",
+      "contentType": [
+        "Section"
+      ]
+    },
+    {
       "place": "Parts#Layout:4",
       "differentiator": "Section-ContentWidth",
       "contentType": [ "Section" ]
+    },
+    {
+      "place": "Parts#Layout:4",
+      "differentiator": "Section-Gutter",
+      "contentType": [
+        "Section"
+      ]
+    },
+    {
+      "place": "Parts#Layout:5",
+      "differentiator": "Section-TopPadding",
+      "contentType": [
+        "Section"
+      ]
     },
     {
       "place": "Parts#Layout:5",
@@ -74,9 +100,11 @@
       "contentType": [ "Section" ]
     },
     {
-      "place": "Parts#Layout:1",
-      "differentiator": "Group-Style",
-      "contentType": [ "Group" ]
+      "place": "Parts#Layout:3",
+      "differentiator": "Section-VerticalAlignment",
+      "contentType": [
+        "Section"
+      ]
     }
   ],
   "ResponsiveMediaField_Edit": [

@@ -2,58 +2,78 @@
 {% assign cssClasses = "section" %}
 {% assign constrainClasses = "constrain" %}
 
+{% assign backgroundColour = Model.ContentItem.Content.BackgroundPart.BackgroundColour.Value %}
+{% assign backgroundFixed = Model.ContentItem.Content.BackgroundPart.BackgroundFixed.Value %}
+{% assign backgroundPattern = Model.ContentItem.Content.BackgroundPart.BackgroundPattern.Text %}
+{% assign invertColour = Model.ContentItem.Content.BackgroundPart.InvertTextColour.Value %}
+
 {% assign alignment = Model.ContentItem.Content.Section.Alignment.Text %}
-{% assign backgroundColour = Model.ContentItem.Content.Section.BackgroundColour.Text %}
+{% assign verticalAlignment = Model.ContentItem.Content.Section.VerticalAlignment.Text %}
 {% assign contentWidth = Model.ContentItem.Content.Section.ContentWidth.Text %}
+{% assign gutterClass = Model.ContentItem.Content.Section.Gutter.Text %}
+{% assign topPadding = Model.ContentItem.Content.Section.TopPadding.Text %}
+{% assign bottomPadding = Model.ContentItem.Content.Section.BottomPadding.Text %}
 {% assign spacingAfter = Model.ContentItem.Content.Section.SpacingAfter.Text %}
 
 {% if Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
-    {% assign cssClasses = "section " | append: Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+    {% assign cssClasses = cssClasses | append: " " | append: Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
 {% endif %}
 
-{% if spacingAfter != null and spacingAfter != 'none' %}
-    {% assign spacingAfterClasses = ' section--' | append: spacingAfter %}
-    {% assign cssClasses = spacingAfterClasses | prepend: cssClasses %}
+{% if spacingAfter != nil and spacingAfter != "default" %}
+    {% assign cssClasses = cssClasses | append: " section--spaced-after-" | append: spacingAfter %}
 {% endif %}
 
-{% if alignment != null and alignment != 'default' %}
-    {% assign alignmentClass = ' section--' | append: alignment %}
-    {% assign cssClasses = alignmentClass | prepend: cssClasses %}
+{% if topPadding != nil and topPadding != "default" %}
+    {% assign cssClasses = cssClasses | append: " section--padding-top-" | append: topPadding %}
 {% endif %}
 
-{% if backgroundColour != null and backgroundColour != 'default' %}
-    {% assign backgroundColorClass = ' bg--color-' | append: backgroundColour %}
-    {% assign cssClasses = backgroundColorClass | prepend: cssClasses %}
+{% if bottomPadding != nil and bottomPadding != "default" %}
+    {% assign cssClasses = cssClasses | append: " section--padding-bottom-" | append: bottomPadding %}
 {% endif %}
 
-{% if backgroundColour == 'black' %}
-    {% assign cssClasses = ' color--white' | prepend: cssClasses %}
+{% if alignment != nil and alignment != "default" %}
+    {% assign cssClasses = cssClasses | append: " section--" | append: alignment %}
 {% endif %}
 
-{% if contentWidth == 'full' %}
-    {% assign cssClasses = ' padding--bottom-none padding--top-none' | prepend: cssClasses %}
+{% if verticalAlignment != nil and verticalAlignment != "default" %}
+    {% assign cssClasses = cssClasses | append: " section--vertical-" | append: verticalAlignment %}
 {% endif %}
 
-{% if contentWidth == 'wide' %}
-    {% assign constrainClasses = ' constrain--wide' | prepend: constrainClasses %}
+{% if gutterClass != nil and gutterClass != "default" %}
+    {% assign cssClasses = cssClasses | append: " section--flow-gutter-" | append: gutterClass %}
 {% endif %}
 
-{% if Model.ContentItem.Content.Section.BackgroundImage.HasData %}
-    {% assign cssClasses = ' section--feature' | prepend: cssClasses %}
+{% if contentWidth != nil %}
+    {% assign constrainClasses = constrainClasses | append: " constrain--" | append: contentWidth %}
 {% endif %}
 
-<section {% if id != nil %} id="{{ id }}" {% endif %} class="{{ cssClasses }}">
-    {% if contentWidth != 'full' %}
-    <div class="section__content {{ constrainClasses }}">
-        {{ Model.Content.Content | shape_render }}
-    </div>
+{% if backgroundFixed %}
+    {% assign cssClasses = cssClasses | append: " section--with-background-fixed" %}
+{% endif %}
+
+{% if invertColour %}
+    {% assign cssClasses = cssClasses | append: " section--inverted" %}
+{% endif %}
+
+{% assign styles = "" %}
+
+{% if backgroundColour != nil %}
+    {% assign backgroundColour = "--sectionBackgroundColor:" | append: backgroundColour | append:"; " %}
+    {% assign styles = styles | append: backgroundColour %}
+{% endif %}
+
+{% if backgroundPattern != nil and backgroundPattern != "" %}
+    {% assign backgroundPatternURL = backgroundPattern | asset_url %}
+    {% assign backgroundPattern = "--sectionBackgroundPattern: url(" | append: backgroundPatternURL | append:"); " %}
+    {% assign styles = styles | append: backgroundPattern %}
+{% endif %}
+
+<section {% if id != nil %} id="{{ id }}" {% endif %} class="{{ cssClasses }}" style="{{ styles }}">
+    {% if contentWidth != "full" or hasBackgroundImage %}
+        <div class="section__content {{ constrainClasses }}">
+            {{ Model.Content.Content | shape_render }}
+        </div>
     {% else %}
        {{ Model.Content.Content | shape_render }}
-    {% endif %}
-
-    {% if Model.ContentItem.Content.Section.BackgroundImage.HasData %}
-    <div class="section__media">
-        {{ Model.Background | shape_render }}
-    </div>
     {% endif %}
 </section>
