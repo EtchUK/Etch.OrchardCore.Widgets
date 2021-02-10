@@ -1,0 +1,6 @@
+{% assign menu = Content.ContentItemId[Model.ContentItem.Content.Navigation.Menu.ContentItemIds] %}
+{% assign menuAlias = "alias:" | append: menu.Content.AliasPart.Alias %}
+
+<nav class="nav" role="navigation">
+    {% shape "menu", alias: menuAlias %}
+</nav>
