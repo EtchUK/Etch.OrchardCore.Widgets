@@ -1,0 +1,12 @@
+{% assign linkTo = Model.ContentItem.Content.ResponsiveImage.LinkTo.Text %}
+{% assign image = Model.Content.ResponsiveImage-Image %}
+
+{% if linkTo != nil %}
+    <a class="image image--link image--responsive" href="{{ linkTo }}">
+        {{ image | shape_render }}
+    </a>
+{% else %}
+    <span class="image image--responsive">
+        {{ image | shape_render }}
+    </span>
+{% endif %}
