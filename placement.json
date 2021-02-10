@@ -48,6 +48,22 @@
       "contentPart": [
         "BackgroundPart"
       ]
+    },
+    {
+      "place": "Parts#Background:20",
+      "differentiator": "Banner-MobileBackgroundColour",
+      "contentPart": [
+        "Banner"
+      ]
+    }
+  ],
+  "ContentPickerField_Edit": [
+    {
+      "place": "Parts#Menu:6",
+      "differentiator": "Banner-Menu",
+      "contentType": [
+        "Banner"
+      ]
     }
   ],
   "TextField": [
@@ -64,6 +80,34 @@
       "differentiator": "BackgroundPart-BackgroundPattern",
       "contentPart": [
         "BackgroundPart"
+      ]
+    },
+    {
+      "place": "Parts#Menu:8",
+      "differentiator": "Banner-MenuCloseButtonLabel",
+      "contentType": [
+        "Banner"
+      ]
+    },
+    {
+      "place": "Parts#Menu:7",
+      "differentiator": "Banner-MenuToggleButtonLabel",
+      "contentType": [
+        "Banner"
+      ]
+    },
+    {
+      "place": "Parts#Background:22",
+      "differentiator": "Banner-MobileBackgroundPattern",
+      "contentPart": [
+        "Banner"
+      ]
+    },
+    {
+      "place": "Parts#Style:10",
+      "differentiator": "Banner-Position",
+      "contentType": [
+        "Banner"
       ]
     },
     {
