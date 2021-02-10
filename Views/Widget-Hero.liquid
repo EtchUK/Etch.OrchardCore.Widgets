@@ -1,11 +1,40 @@
+{% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
+
 {% assign backgroundType = Model.ContentItem.Content.Hero.BackgroundType.Text %}
 
-<section class="hero">
-    <div class="hero__body constrain constrain--wide">
-        <h1 class="hero__title"><span>{{ Model.ContentItem.Content.Hero.DisplayText.Text | raw }}</span></h1>
-        {% if Model.ContentItem.Content.Hero.CTALabel.Text != nil %}
-            <a href="{{ Model.ContentItem.Content.Hero.CTAUrl.Text | href }}" class="btn btn--primary">{{ Model.ContentItem.Content.Hero.CTALabel.Text | raw }}</a>
-        {% endif %}
+{% assign cssClasses = "hero" %}
+
+{% if Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+    {% assign cssClasses = cssClasses | append: " " | append: Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+{% endif %}
+
+{% assign horzAlignment = Model.ContentItem.Content.Hero.HorizontalAlignment.Text %}
+{% if horzAlignment != nil %}
+    {% assign horzAlignmentClass = " hero--horizontal-" | append: horzAlignment %}
+    {% assign cssClasses = cssClasses | append: horzAlignmentClass %}
+{% endif %}
+
+{% assign vertAlignment = Model.ContentItem.Content.Hero.VerticalAlignment.Text %}
+{% if vertAlignment != nil %}
+    {% assign vertAlignmentClass = " hero--vertical-" | append: vertAlignment %}
+    {% assign cssClasses = cssClasses | append: vertAlignmentClass %}
+{% endif %}
+
+{% if Model.ContentItem.Content.Hero.PullUp.Value %}
+    {% assign cssClasses = cssClasses | append: " hero--pull-up" %}
+{% endif %}
+
+{% if Model.ContentItem.Content.Hero.InvertColour.Value %}
+    {% assign cssClasses = cssClasses | append: " hero--inverted" %}
+{% endif %}
+
+{% if Model.ContentItem.Content.Hero.AddGradient.Value %}
+    {% assign cssClasses = cssClasses | append: " hero--with-media-gradient" %}
+{% endif %}
+
+<section {% if id != nil %} id="{{ id }}" {% endif %} class="{{ cssClasses }}">
+    <div class="hero__body constrain">
+        {{ Model.Content.Content | shape_render }}
     </div>
             
     {% if backgroundType == "embed" %}
@@ -17,6 +46,6 @@
             </div>
         </div>
     {% else %}
-        {{ Model.Content | shape_render }}
+        {{ Model.Background | shape_render }}
     {% endif %}
 </section>
