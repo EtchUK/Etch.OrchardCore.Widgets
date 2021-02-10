@@ -1,22 +1,28 @@
-{% assign menu = Content.ContentItemId[Model.ContentItem.Content.Footer.Menu.ContentItemIds] %}
-{% assign menu = Content.ContentItemId[Model.ContentItem.Content.Footer.Menu.ContentItemIds] %}
-{% assign menuAlias = "alias:" | append: menu.Content.AliasPart.Alias %}
+{% assign css = "footer" %}
 
-<footer class="footer">
-    <div class="footer__content constrain constrain--wide">
-        <div class="footer__meta">
-            <a class="footer__logo" href="{{ Request.PathBase }}">
-                <picture>
-                    <source srcset="{{ Model.ContentItem.Content.Footer.Logo.Paths[0] | asset_url }}" media="(min-width: 768px)">
-                    <img src="{{ Model.ContentItem.Content.Footer.LogoSmall.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.Footer.LogoAlternateText.Text }}" />
-                </picture>
-            </a>
+{% assign backgroundColour = Model.ContentItem.Content.BackgroundPart.BackgroundColour.Value %}
+{% assign backgroundPattern = Model.ContentItem.Content.BackgroundPart.BackgroundPattern.Text %}
+{% assign inverted = Model.ContentItem.Content.BackgroundPart.InvertTextColour.Value %}
 
-            {{ Model.Content.Content | shape_render }}
-        </div>
+{% if inverted %}
+    {% assign css = css | append: " footer--inverted" %}
+{% endif %}
 
-        <nav class="nav nav--footer">
-            {% shape "menu", alias: menuAlias %}
-        </nav>
+{% assign styles = "" %}
+
+{% if backgroundColour != nil %}
+    {% assign backgroundColour = "--footerBackgroundColor:" | append: backgroundColour | append:"; " %}
+    {% assign styles = styles | append: backgroundColour %}
+{% endif %}
+
+{% if backgroundPattern != nil and backgroundPattern != "" %}
+    {% assign backgroundPatternURL = backgroundPattern | asset_url %}
+    {% assign backgroundPattern = "--footerBackgroundPattern: url(" | append: backgroundPatternURL | append:"); " %}
+    {% assign styles = styles | append: backgroundPattern %}
+{% endif %}
+
+<footer class="{{ css }}" style="{{ styles }}">
+    <div class="footer__content constrain">
+        {{ Model.Content.Content | shape_render }}
     </div>
 </footer>
