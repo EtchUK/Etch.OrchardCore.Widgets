@@ -18,6 +18,27 @@
       "contentPart": [
         "BackgroundPart"
       ]
+    },
+    {
+      "place": "Parts#Background:18",
+      "differentiator": "Hero-AddGradient",
+      "contentType": [
+        "Hero"
+      ]
+    },
+    {
+      "place": "Parts#Background:17",
+      "differentiator": "Hero-InvertColour",
+      "contentType": [
+        "Hero"
+      ]
+    },
+    {
+      "place": "Parts#Layout:1",
+      "differentiator": "Hero-PullUp",
+      "contentType": [
+        "Hero"
+      ]
     }
   ],
   "ColourField_Edit": [
@@ -31,7 +52,9 @@
   ],
   "TextField": [
     {
-      "contentType": [ "Group" ],
+      "contentType": [
+        "Group"
+      ],
       "place": "-"
     }
   ],
@@ -46,27 +69,51 @@
     {
       "place": "Parts#Layout:1",
       "differentiator": "Group-Style",
-      "contentType": [ "Group" ]
+      "contentType": [
+        "Group"
+      ]
     },
     {
       "place": "Parts#Background:1",
       "differentiator": "Hero-BackgroundType",
-      "contentType": [ "Hero" ]
+      "contentType": [
+        "Hero"
+      ]
     },
     {
       "place": "Parts#Background:3",
       "differentiator": "Hero-BackgroundEmbed",
-      "contentType": [ "Hero" ]
+      "contentType": [
+        "Hero"
+      ]
+    },
+    {
+      "place": "Parts#Layout:2",
+      "differentiator": "Hero-HorizontalAlignment",
+      "contentType": [
+        "Hero"
+      ]
+    },
+    {
+      "place": "Parts#Layout:3",
+      "differentiator": "Hero-VerticalAlignment",
+      "contentType": [
+        "Hero"
+      ]
     },
     {
       "place": "Parts#Layout:1",
       "differentiator": "Section-BackgroundColour",
-      "contentType": [ "Section" ]
+      "contentType": [
+        "Section"
+      ]
     },
     {
       "place": "Parts#Layout:3",
       "differentiator": "Section-Alignment",
-      "contentType": [ "Section" ]
+      "contentType": [
+        "Section"
+      ]
     },
     {
       "place": "Parts#Layout:6",
@@ -78,7 +125,9 @@
     {
       "place": "Parts#Layout:4",
       "differentiator": "Section-ContentWidth",
-      "contentType": [ "Section" ]
+      "contentType": [
+        "Section"
+      ]
     },
     {
       "place": "Parts#Layout:4",
@@ -97,7 +146,9 @@
     {
       "place": "Parts#Layout:5",
       "differentiator": "Section-SpacingAfter",
-      "contentType": [ "Section" ]
+      "contentType": [
+        "Section"
+      ]
     },
     {
       "place": "Parts#Layout:3",
@@ -111,12 +162,16 @@
     {
       "place": "Parts#Background:2",
       "differentiator": "Hero-BackgroundImage",
-      "contentType": [ "Hero" ]
+      "contentType": [
+        "Hero"
+      ]
     },
     {
       "place": "Parts#Background:12",
       "differentiator": "Section-BackgroundImage",
-      "contentType": [ "Section" ]
+      "contentType": [
+        "Section"
+      ]
     }
   ],
   "ResponsiveMediaField": [
