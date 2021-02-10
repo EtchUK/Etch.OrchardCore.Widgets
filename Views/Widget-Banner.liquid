@@ -1,8 +1,50 @@
 {% assign mainMenu = Content.ContentItemId[Model.ContentItem.Content.Banner.Menu.ContentItemIds] %}
-
 {% assign mainMenuAlias = "alias:" | append: mainMenu.Content.AliasPart.Alias %}
 
-<header class="header">
+{% assign css = "header" %}
+
+{% assign backgroundColour = Model.ContentItem.Content.BackgroundPart.BackgroundColour.Value %}
+{% assign backgroundPattern = Model.ContentItem.Content.BackgroundPart.BackgroundPattern.Text %}
+{% assign inverted = Model.ContentItem.Content.BackgroundPart.InvertTextColour.Value %}
+
+{% assign mobileBackgroundColour = Model.ContentItem.Content.Banner.MobileBackgroundColour.Value %}
+{% assign mobileBackgroundPattern = Model.ContentItem.Content.Banner.MobileBackgroundPattern.Text %}
+{% assign position = Model.ContentItem.Content.Banner.Position.Text %}
+
+{% if inverted %}
+    {% assign css = css | append: " header--inverted" %}
+{% endif %}
+
+{% if position != nil and position != "" %}
+    {% assign positionCss = position | prepend: " header--" %}
+    {% assign css = css | append: positionCss %}
+{% endif %}
+
+{% assign styles = "" %}
+
+{% if backgroundColour != nil %}
+    {% assign backgroundColour = "--headerBackgroundColor:" | append: backgroundColour | append:"; " %}
+    {% assign styles = styles | append: backgroundColour %}
+{% endif %}
+
+{% if backgroundPattern != nil and backgroundPattern != "" %}
+    {% assign backgroundPatternURL = backgroundPattern | asset_url %}
+    {% assign backgroundPattern = "--headerBackgroundPattern: url(" | append: backgroundPatternURL | append:"); " %}
+    {% assign styles = styles | append: backgroundPattern %}
+{% endif %}
+
+{% if mobileBackgroundColour != nil %}
+    {% assign mobileBackgroundColour = "--headerMobileBackgroundColor:" | append: mobileBackgroundColour | append:"; " %}
+    {% assign styles = styles | append: mobileBackgroundColour %}
+{% endif %}
+
+{% if mobileBackgroundPattern != nil and mobileBackgroundPattern != "" %}
+    {% assign mobileBackgroundPatternURL = mobileBackgroundPattern | asset_url %}
+    {% assign mobileBackgroundPattern = "--headerMobileBackgroundPattern: url(" | append: mobileBackgroundPatternURL | append:"); " %}
+    {% assign styles = styles | append: mobileBackgroundPattern %}
+{% endif %}
+
+<header class="{{ css }}" style="{{ styles }}">
     <div class="header__content constrain constrain--wide">
         <a class="header__logo" href="{{ Request.PathBase }}/">
             <picture>
@@ -11,9 +53,10 @@
             </picture>
         </a>
 
-        <div class="header__nav-button js-nav-button">{{ Model.ContentItem.Content.Banner.MenuToggleButtonLabel.Text }}</div>
+        <button class="header__nav-button js-nav-button">{{ Model.ContentItem.Content.Banner.MenuToggleButtonLabel.Text }}</button>
+        <button class="header__nav-button header__nav-button--close js-nav-button">{{ Model.ContentItem.Content.Banner.MenuCloseButtonLabel.Text }}</button>
 
-        <div class="header__nav">
+        <div class="header__nav" aria-label="{{ "Main navigation" | t }}">
             <nav class="nav nav--primary" role="navigation">
                 {% shape "menu", alias: mainMenuAlias %}
             </nav>
