@@ -1,0 +1,41 @@
+﻿{% assign backgroundColour = Model.ContentItem.Content.BackgroundPart.BackgroundColour.Value %}
+{% assign backgroundPattern = Model.ContentItem.Content.BackgroundPart.BackgroundPattern.Text %}
+{% assign invertColour = Model.ContentItem.Content.BackgroundPart.InvertTextColour.Value %}
+
+{% assign cols = Model.ContentItem.Content.Tiles.Columns.Text %}
+
+{% assign cssClasses = "tiles" %}
+
+{% if invertColour %}
+    {% assign cssClasses = cssClasses | append: " tiles--inverted" %}
+{% endif %}
+
+{% if cols %}
+    {% assign colsCss = cols | prepend: " tiles--" | append: "-cols" %}
+    {% assign cssClasses = cssClasses | append: colsCss %}
+{% endif %}
+
+{% assign styles = "" %}
+
+{% if backgroundColour != nil %}
+    {% assign backgroundColour = "--tilesBackgroundColor:" | append: backgroundColour | append:"; " %}
+    {% assign styles = styles | append: backgroundColour %}
+{% endif %}
+
+{% if backgroundPattern != nil and backgroundPattern != "" %}
+    {% assign backgroundPatternURL = backgroundPattern | asset_url %}
+    {% assign backgroundPattern = "--tilesBackgroundPattern: url(" | append: backgroundPatternURL | append:"); " %}
+    {% assign styles = styles | append: backgroundPattern %}
+{% endif %}
+
+<div class="{{ cssClasses }}" style="{{ styles }}">
+    {% for contentItem in Model.ContentItem.Content.Content.ContentItems %}
+        <div class="tiles__item">
+            <div class="tiles__item-skeleton"></div>
+
+            <div class="tiles__item-children">
+                {{ contentItem | shape_build_display: "Detail" | shape_render }}
+            </div>
+        </div>
+    {% endfor %}
+</div>
