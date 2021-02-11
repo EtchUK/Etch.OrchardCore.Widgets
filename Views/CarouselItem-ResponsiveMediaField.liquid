@@ -1,0 +1,11 @@
+﻿{% if Model.HasMedia %}
+    {% for item in Model.Media %}
+        <picture class="card__background">
+            {% for source in item.Sources %}
+                <source srcset="{{ source.Url }}" media="(min-width: {{ source.Breakpoint }}px)" />
+            {% endfor %}
+
+            <img src="{{ item.SmallestImageUrl }}" />
+        </picture>
+    {% endfor %}
+{% endif %}
