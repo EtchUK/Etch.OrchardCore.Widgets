@@ -1,0 +1,81 @@
+﻿{% assign pageSize = Model.ContentItem.Content.ContentFeed.PageSize.Value %}
+{% assign fetchCount = pageSize | plus: 1 %}
+
+{% assign paging = Model.ContentItem.Content.ContentFeed.Paging.Value %}
+
+{% assign page = Request.Query["page"] | first | at_least: 1 %}
+{% assign from = page | times: pageSize | minus: pageSize  | at_least: 0 %}
+
+{% assign query = Model.ContentItem.Content.ContentFeed.Items.Value %}
+{% assign items = Queries[query] | query: size: fetchCount, from: from %}
+{% assign pageUrl = Request.PathBase | append: Request.Path %}
+
+{% assign hideHeader = Model.ContentItem.Content.ContentFeed.HideWidgetHeader.Value %}
+
+{% assign backgroundColour = Model.ContentItem.Content.BackgroundPart.BackgroundColour.Value %}
+{% assign backgroundPattern = Model.ContentItem.Content.BackgroundPart.BackgroundPattern.Text %}
+{% assign invertColour = Model.ContentItem.Content.BackgroundPart.InvertTextColour.Value %}
+
+{% assign cols = Model.ContentItem.Content.ContentFeed.Columns.Text %}
+
+{% assign cssClasses = "content-feed" %}
+{% if invertColour %}
+    {% assign cssClasses = cssClasses | append: " content-feed--inverted" %}
+{% endif %}
+
+{% assign styles = "" %}
+
+{% if backgroundColour != nil %}
+    {% assign backgroundColour = "--cardBackground:" | append: backgroundColour | append:"; " %}
+    {% assign styles = styles | append: backgroundColour %}
+{% endif %}
+
+{% if backgroundPattern != nil and backgroundPattern != "" %}
+    {% assign backgroundPatternURL = backgroundPattern | asset_url %}
+    {% assign backgroundPattern = "--cardBackgroundPattern: url(" | append: backgroundPatternURL | append:"); " %}
+    {% assign styles = styles | append: backgroundPattern %}
+{% endif %}
+
+{% if items.size > 0 %}
+    <div class="{{ cssClasses }}" style="{{ styles }}">
+
+        {% if hideHeader == false %}
+            <header class="content-feed__header">
+                <h2 class="content-feed__title">{{ Model.ContentItem | displayText }}</h2>
+                <div class="content-feed__links">
+                    {% for child in Model.ContentItem.Content.Links.ContentItems %}
+                        {{ child | shape_build_display: "Detail" | shape_render }}
+                    {% endfor %}
+                </div>
+            </header>
+        {% endif %}
+
+        <div class="content-feed__list content-feed__list--{{cols}}-cols">
+            {% for item in items %}
+                {% if forloop.last == false or items.size <= pageSize %}
+                    <div class="content-feed__item">
+                        {{ item | shape_build_display: "Summary" | shape_render }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        {% if paging %}
+            <ul class="content-feed__pager pager margin--bottom-large">
+                {% if from > 0 %}
+                    {% assign prevPage = page | minus: 1 %}
+                    <li>
+                        <a href="{{ pageUrl | append: "?page=" | append: prevPage }}">{{ "Newer posts" | t}}</a>
+                    </li>
+                {% endif %}
+
+                {% if items.size > pageSize %}
+                    {% assign nextPage = page | plus: 1 %}
+                    <li>
+                        <a href="{{ pageUrl | append: "?page=" | append: nextPage }}">{{ "Older posts" | t }}</a>
+                    </li>
+                {% endif %}
+            </ul>
+        {% endif %}
+    </div>
+{% endif %}

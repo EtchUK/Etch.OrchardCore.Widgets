@@ -20,6 +20,13 @@
       ]
     },
     {
+      "place": "Parts#Paging:9",
+      "differentiator": "ContentFeed-Paging",
+      "contentType": [
+        "ContentFeed"
+      ]
+    },
+    {
       "place": "Parts#Background:18",
       "differentiator": "Hero-AddGradient",
       "contentType": [
@@ -66,6 +73,15 @@
       ]
     }
   ],
+  "NumericField_Edit": [
+    {
+      "place": "Parts#Paging:8",
+      "differentiator": "ContentFeed-PageSize",
+      "contentType": [
+        "ContentFeed"
+      ]
+    }
+  ],
   "TextField": [
     {
       "contentType": [
@@ -108,6 +124,13 @@
       "differentiator": "Banner-Position",
       "contentType": [
         "Banner"
+      ]
+    },
+    {
+      "place": "Parts#Layout:12",
+      "differentiator": "ContentFeed-Columns",
+      "contentType": [
+        "ContentFeed"
       ]
     },
     {
