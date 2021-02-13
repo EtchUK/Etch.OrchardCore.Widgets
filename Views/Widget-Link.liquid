@@ -3,9 +3,12 @@
 {% assign openInNewWindow = Model.ContentItem.Content.Link.OpenInNewWindow.Value %}
 {% assign style = Model.ContentItem.Content.Link.Style.Text %}
 {% assign cssClasses = '' %}
+{% assign onClickEvent = Model.ContentItem.Content.JavaScriptEventsPart.OnClick.Value %}
 
 {% if style != null and style != 'default' %}
     {% assign cssClasses = 'btn ' | append: style %}
 {% endif %}
 
-<a href="{{ linkUrl }}" {% if openInNewWindow %} target="_blank" {% endif %} class="{{ cssClasses }}">{{ text }}</a>
+<a href="{{ linkUrl }}" {% if openInNewWindow %} target="_blank" {% endif %} class="{{ cssClasses }}" {% if onClickEvent != nil %} onClick="{{ onClickEvent }}" {% endif %}>
+    {{ text }}
+</a>

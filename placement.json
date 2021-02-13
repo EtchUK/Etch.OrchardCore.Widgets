@@ -48,6 +48,15 @@
       ]
     }
   ],
+  "CodeField_Edit": [
+    {
+      "place": "Parts#Events:25",
+      "differentiator": "JavaScriptEventsPart-OnClick",
+      "contentPart": [
+        "JavaScriptEventsPart"
+      ]
+    }
+  ],
   "ColourField_Edit": [
     {
       "place": "Parts#Background:15",
