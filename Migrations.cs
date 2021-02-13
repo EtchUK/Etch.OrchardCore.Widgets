@@ -1,4 +1,6 @@
-﻿using Etch.OrchardCore.Fields.Colour.Fields;
+﻿using Etch.OrchardCore.Fields.Code.Fields;
+using Etch.OrchardCore.Fields.Code.Settings;
+using Etch.OrchardCore.Fields.Colour.Fields;
 using Etch.OrchardCore.Fields.Colour.Settings;
 using OrchardCore.ContentFields.Fields;
 using OrchardCore.ContentFields.Settings;
@@ -82,6 +84,25 @@ namespace Etch.OrchardCore.Widgets
                 ));
 
             return 2;
+        }
+
+        public int UpdateFrom2()
+        {
+            _contentDefinitionManager.AlterPartDefinition("JavaScriptEventsPart", part => part
+                .Attachable()
+                .WithDescription("Define handlers for JavaScript events.")
+                .WithDisplayName("JavaScript Events")
+                .WithField("OnClick", field => field
+                    .OfType(nameof(CodeField))
+                    .WithDisplayName("Click")
+                    .WithPosition("1")
+                    .WithSettings(new CodeFieldSettings
+                    {
+                        Language = "javascript"
+                    })
+                ));
+
+            return 3;
         }
     }
 }
