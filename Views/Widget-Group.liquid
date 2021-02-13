@@ -1,9 +1,32 @@
 ﻿{% assign groupStyle = Model.ContentItem.Content.Group.Style.Text %}
 
+{% assign backgroundColour = Model.ContentItem.Content.BackgroundPart.BackgroundColour.Value %}
+{% assign backgroundPattern = Model.ContentItem.Content.BackgroundPart.BackgroundPattern.Text %}
+{% assign invertColour = Model.ContentItem.Content.BackgroundPart.InvertTextColour.Value %}
+
+{% assign cssClasses = "group" %}
+
 {% if groupStyle != null and groupStyle != "none" %}
-	<div class="{{ groupStyle }}">
-		{{ Model.Content | shape_render }}
-	</div>
-{% else %}
-	{{ Model.Content | shape_render }}
+    {% assign cssClasses = cssClasses | append: " " | append: groupStyle %}
 {% endif %}
+
+{% if invertColour %}
+    {% assign cssClasses = cssClasses | append: " group--inverted" %}
+{% endif %}
+
+{% assign styles = "" %}
+
+{% if backgroundColour != nil %}
+    {% assign backgroundColour = "--groupBackgroundColor:" | append: backgroundColour | append:"; " %}
+    {% assign styles = styles | append: backgroundColour %}
+{% endif %}
+
+{% if backgroundPattern != nil and backgroundPattern != "" %}
+    {% assign backgroundPatternURL = backgroundPattern | asset_url %}
+    {% assign backgroundPattern = "--groupBackgroundPattern: url(" | append: backgroundPatternURL | append:"); " %}
+    {% assign styles = styles | append: backgroundPattern %}
+{% endif %}
+
+<div class="{{ cssClasses }}" style="{{ styles }}">
+    {{ Model.Content["Content"] | shape_render }}
+</div>
