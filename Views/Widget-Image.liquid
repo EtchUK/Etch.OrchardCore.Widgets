@@ -1,20 +1,21 @@
+{% assign tag = "span" %}
 {% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
-{% assign cssClasses = Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+{% assign cssClasses = "image" %}
 
 {% assign linkTo = Model.ContentItem.Content.Image.LinkTo.Text %}
+{% assign imagePath = Model.ContentItem.Content.Image.Image.Paths[0] | asset_url | resize_url: width: 2560, mode:'max' %}
 
 {% if linkTo != nil %}
-    <a href="{{ linkTo }}">
-        {% if Model.ContentItem.Content.HtmlAttributesPart != null %}
-            <img {% if id != null %} id="{{ id }}" {% endif %} {% if cssClasses != null %} class="{{ cssClasses }}" {% endif %} src="{{ Model.ContentItem.Content.Image.Image.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.Image.AlternateText.Text }}" />
-        {% else %}
-            <img src="{{ Model.ContentItem.Content.Image.Image.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.Image.AlternateText.Text }}" />
-        {% endif %}
-    </a>
-{% else %}
-    {% if Model.ContentItem.Content.HtmlAttributesPart != null %}
-        <img {% if id != null %} id="{{ id }}" {% endif %} {% if cssClasses != null %} class="{{ cssClasses }}" {% endif %} src="{{ Model.ContentItem.Content.Image.Image.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.Image.AlternateText.Text }}" />
-    {% else %}
-        <img src="{{ Model.ContentItem.Content.Image.Image.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.Image.AlternateText.Text }}" />
-    {% endif %}
+    {% assign tag = "a" %}
+    {% assign cssClasses = cssClasses | append: " image--link" %}
 {% endif %}
+
+{% if Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+    {% assign cssClasses = cssClasses | append: " " | append: Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+{% endif %}
+
+<{{tag}} {% if linkTo != nil %}href="{{ linkTo }}"{% endif %} {% if id != null %}id="{{ id }}"{% endif %} class="{{ cssClasses }}">
+    <img src="{{ imagePath }}" alt="{{ Model.ContentItem.Content.Image.AlternateText.Text }}" loading="lazy" />
+</{{tag}}>
+
+
