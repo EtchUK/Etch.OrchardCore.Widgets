@@ -1,19 +1,59 @@
+{% assign url = Model.ContentItem.Content.Card.URL.Text %}
 {% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
-{% assign cssClasses = "card" %}
 {% assign mediaUrl = Model.ContentItem.Content.Card.Image.Paths[0] %}
+{% assign meta = Model.ContentItem.Content.Card.MetaText.Text %}
 
-{% if Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
-    {% assign cssClasses = "card " | append: Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+{% assign backgroundColour = Model.ContentItem.Content.BackgroundPart.BackgroundColour.Value %}
+{% assign backgroundPattern = Model.ContentItem.Content.BackgroundPart.BackgroundPattern.Text %}
+{% assign invertColour = Model.ContentItem.Content.BackgroundPart.InvertTextColour.Value %}
+
+{% assign tag = "div" %}
+{% if url != nil %}
+    {% assign tag = "a" %}
 {% endif %}
 
-<div {% if id != null %}id="{{ id }}"{% endif %} class="{{ cssClasses }}">
+{% assign cssClasses = "card card--equal-height" %}
+
+{% if Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+    {% assign cssClasses = cssClasses | append: " " | append: Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+{% endif %}
+
+{% if mediaUrl %}
+    {% assign cssClasses = cssClasses | append: " card--has-media" %}
+{% endif %}
+
+{% if invertColour %}
+    {% assign cssClasses = cssClasses | append: " card--inverted" %}
+{% endif %}
+
+{% assign styles = "" %}
+
+{% if backgroundColour != nil %}
+    {% assign backgroundColour = "--cardBackground:" | append: backgroundColour | append:"; " %}
+    {% assign styles = styles | append: backgroundColour %}
+{% endif %}
+
+{% if backgroundPattern != nil and backgroundPattern != "" %}
+    {% assign backgroundPatternURL = backgroundPattern | asset_url %}
+    {% assign backgroundPattern = "--cardBackgroundPattern: url(" | append: backgroundPatternURL | append:"); " %}
+    {% assign styles = styles | append: backgroundPattern %}
+{% endif %}
+
+<{{tag}} {% if url != nil %}href="{{ url }}"{% endif %} {% if id != null %}id="{{ id }}"{% endif %} class="{{ cssClasses }}" style="{{ styles }}">
     {% if mediaUrl %}
-    <img src="{{ Model.ContentItem.Content.Card.Image.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.Card.ImageAlternateText.Text }}" />
+        <div class="card__media">
+            <img class="card__media-image" src="{{ Model.ContentItem.Content.Card.Image.Paths[0] | asset_url | resize_url: width: 1024, height: 768, mode:'max'  }}" alt="{{ Model.ContentItem.Content.Card.ImageAlternateText.Text }}" loading="lazy" />
+        </div>
     {% endif %}
 
     <div class="card__body">
-        <h3>{{ Model.ContentItem | display_text }}</h3>
+        <header class="card__header">
+            <h3 class="card__title">{{ Model.ContentItem | display_text }}</h3>
+            {% if meta != nil %}
+                <span class="card__meta">{{ meta }}</span>
+            {% endif %}
+        </header>
+        
         {{ Model.Content.Body | shape_render }}
-        <p><a class="btn btn--secondary" href="{{ Model.ContentItem.Content.Card.CTAUrl.Text }}">{{ Model.ContentItem.Content.Card.CTALabel.Text }}</a></p>
     </div>
-</div>
+</{{tag}}>
