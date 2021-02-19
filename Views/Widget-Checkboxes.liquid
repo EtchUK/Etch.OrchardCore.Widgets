@@ -1,0 +1,36 @@
+{% assign overallLabel = Model.ContentItem.Content.Checkboxes.OverallLabel.Text %}
+{% assign fieldName = Model.ContentItem.Content.Checkboxes.FieldName.Text %}
+{% assign hint = Model.ContentItem.Content.Checkboxes.Hint.Text %}
+{% assign hintId = "hint--" | append: Model.ContentItem.ContentItemId %}
+
+{% assign style = Model.ContentItem.Content.Checkboxes.Style.Text | default: "default" %}
+
+
+<fieldset class="fieldset" {% if hint != nil %} aria-describedby="{{ hintId }}" {% endif %}>
+    <label>{{ overallLabel }}</label>
+    {% if hint != nil %}
+    <span id="{{ hintId }}" class="hint">
+        {{ hint }}
+    </span>
+    {% endif %}
+    <div class="checkboxes checkboxes--{{style}}">
+        {% for checkboxItem in Model.ContentItem.Content.CheckboxItems.ContentItems %}
+
+            {% assign label = checkboxItem.CheckboxItem.Label.Text %}
+            {% assign value = checkboxItem.CheckboxItem.Value.Text %}
+            {% assign id = "checkbox--" | append: checkboxItem.ContentItemId %}
+            {% if checkboxItem.CheckboxItem.ID.Text != nil %}
+                {% assign id = checkboxItem.CheckboxItem.ID.Text %}
+            {% endif %}
+
+            <div class="checkboxes__item">
+                <input class="checkboxes__input" id="{{ id }}" name="{{ fieldName }}" type="checkbox" value="{{ value }}">
+                <label class="label checkboxes__label" for="{{ id }}">
+                    {{ label }}
+                </label>
+            </div>
+
+        {% endfor %}
+    </div>
+</fieldset>
+
