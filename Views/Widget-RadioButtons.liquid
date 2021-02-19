@@ -1,0 +1,36 @@
+{% assign overallLabel = Model.ContentItem.Content.RadioButtons.OverallLabel.Text %}
+{% assign fieldName = Model.ContentItem.Content.RadioButtons.FieldName.Text %}
+{% assign hint = Model.ContentItem.Content.RadioButtons.Hint.Text %}
+{% assign hintId = "hint--" | append: Model.ContentItem.ContentItemId %}
+
+{% assign style = Model.ContentItem.Content.RadioButtons.Style.Text | default: "default" %}
+
+
+<fieldset class="fieldset" {% if hint != nil %} aria-describedby="{{ hintId }}" {% endif %}>
+    <label>{{ overallLabel }}</label>
+    {% if hint != nil %}
+    <span id="{{ hintId }}" class="hint">
+        {{ hint }}
+    </span>
+    {% endif %}
+    <div class="radios radios--{{style}}">
+        {% for radioButtonItem in Model.ContentItem.Content.RadioButtonItems.ContentItems %}
+
+            {% assign label = radioButtonItem.RadioButtonItem.Label.Text %}
+            {% assign value = radioButtonItem.RadioButtonItem.Value.Text %}
+            {% assign id = "radio-button--" | append: radioButtonItem.ContentItemId %}
+            {% if radioButtonItem.RadioButtonItem.ID.Text != nil %}
+                {% assign id = radioButtonItem.RadioButtonItem.ID.Text %}
+            {% endif %}
+
+            <div class="radios__item">
+                <input class="radios__input" id="{{ id }}" name="{{ fieldName }}" type="radio" value="{{ value }}">
+                <label class="label radios__label" for="{{ id }}">
+                    {{ label }}
+                </label>
+            </div>
+
+        {% endfor %}
+    </div>
+</fieldset>
+
