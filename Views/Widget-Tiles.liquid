@@ -2,7 +2,7 @@
 {% assign backgroundPattern = Model.ContentItem.Content.BackgroundPart.BackgroundPattern.Text %}
 {% assign invertColour = Model.ContentItem.Content.BackgroundPart.InvertTextColour.Value %}
 
-{% assign cols = Model.ContentItem.Content.Tiles.Columns.Text %}
+{% assign cols = Model.ContentItem.Content.ColumnablePart.Columns.Text %}
 
 {% assign cssClasses = "tiles" %}
 
@@ -12,6 +12,9 @@
 
 {% if cols %}
     {% assign colsCss = cols | prepend: " tiles--" | append: "-cols" %}
+    {% assign cssClasses = cssClasses | append: colsCss %}
+
+    {% assign colsCss = cols | prepend: " columns--" %}
     {% assign cssClasses = cssClasses | append: colsCss %}
 {% endif %}
 

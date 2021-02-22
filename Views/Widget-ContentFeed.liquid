@@ -16,7 +16,7 @@
 {% assign backgroundPattern = Model.ContentItem.Content.BackgroundPart.BackgroundPattern.Text %}
 {% assign invertColour = Model.ContentItem.Content.BackgroundPart.InvertTextColour.Value %}
 
-{% assign cols = Model.ContentItem.Content.ContentFeed.Columns.Text %}
+{% assign cols = Model.ContentItem.Content.ColumnablePart.Columns.Text %}
 
 {% assign cssClasses = "content-feed" %}
 {% if invertColour %}
@@ -50,7 +50,7 @@
             </header>
         {% endif %}
 
-        <div class="content-feed__list content-feed__list--{{cols}}-cols">
+        <div class="content-feed__list content-feed__list--{{cols}}-cols columns--{{cols}}">
             {% for item in items %}
                 {% if forloop.last == false or items.size <= pageSize %}
                     <div class="content-feed__item">

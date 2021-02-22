@@ -73,6 +73,11 @@
       ]
     }
   ],
+  "ColumnablePart": [
+    {
+      "place": "-"
+    }
+  ],
   "ContentPickerField_Edit": [
     {
       "place": "Parts#Menu:6",
@@ -133,6 +138,13 @@
       "differentiator": "Banner-Position",
       "contentType": [
         "Banner"
+      ]
+    },
+    {
+      "place": "Parts#Layout:14",
+      "differentiator": "ColumnablePart-Columns",
+      "contentPart": [
+        "ColumnablePart"
       ]
     },
     {

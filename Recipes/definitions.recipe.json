@@ -911,6 +911,15 @@
                 },
                 "ContentIndexSettings": {}
               }
+            },
+            {
+              "PartName": "ColumnablePart",
+              "Name": "ColumnablePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "4"
+                }
+              }
             }
           ]
         },
@@ -968,6 +977,15 @@
                   "ContainedContentTypes": [
                     "Link"
                   ]
+                }
+              }
+            },
+            {
+              "PartName": "ColumnablePart",
+              "Name": "ColumnablePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "4"
                 }
               }
             }
@@ -2237,49 +2255,6 @@
           ]
         },
         {
-          "Name": "Tiles",
-          "Settings": {},
-          "ContentPartFieldDefinitionRecords": [
-            {
-              "FieldName": "TextField",
-              "Name": "Columns",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Columns",
-                  "Editor": "PredefinedList",
-                  "Position": "0"
-                },
-                "TextFieldSettings": {
-                  "Hint": "Specify how many columns to display the items in on desktop devices."
-                },
-                "TextFieldPredefinedListEditorSettings": {
-                  "Options": [
-                    {
-                      "name": "Four",
-                      "value": "four"
-                    },
-                    {
-                      "name": "Three",
-                      "value": "three"
-                    },
-                    {
-                      "name": "Two",
-                      "value": "two"
-                    },
-                    {
-                      "name": "One",
-                      "value": "one"
-                    }
-                  ],
-                  "Editor": 1,
-                  "DefaultValue": "three"
-                },
-                "ContentIndexSettings": {}
-              }
-            }
-          ]
-        },
-        {
           "Name": "ContentFeed",
           "Settings": {},
           "ContentPartFieldDefinitionRecords": [
@@ -2330,43 +2305,6 @@
                   "DisplayName": "Items",
                   "Position": "1"
                 }
-              }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "Columns",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Columns",
-                  "Editor": "PredefinedList",
-                  "Position": "2"
-                },
-                "TextFieldSettings": {
-                  "Hint": "Specify how many columns to display the items in on desktop devices"
-                },
-                "TextFieldPredefinedListEditorSettings": {
-                  "Options": [
-                    {
-                      "name": "Four",
-                      "value": "four"
-                    },
-                    {
-                      "name": "Three",
-                      "value": "three"
-                    },
-                    {
-                      "name": "Two",
-                      "value": "two"
-                    },
-                    {
-                      "name": "One",
-                      "value": "one"
-                    }
-                  ],
-                  "Editor": 1,
-                  "DefaultValue": "four"
-                },
-                "ContentIndexSettings": {}
               }
             }
           ]
