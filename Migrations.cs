@@ -104,5 +104,36 @@ namespace Etch.OrchardCore.Widgets
 
             return 3;
         }
+
+        public int UpdateFrom3()
+        {
+            _contentDefinitionManager.AlterPartDefinition("ColumnablePart", part => part
+               .Attachable()
+               .WithDescription("Define properties for controlling column layout.")
+               .WithDisplayName("Columnable")
+               .WithField("Columns", field => field
+                    .OfType(nameof(TextField))
+                    .WithDisplayName("Columns")
+                    .WithPosition("1")
+                    .WithEditor("PredefinedList")
+                    .WithSettings(new TextFieldSettings
+                    {
+                        Hint = "Specify how many columns to display the items in on desktop devices."
+                    })
+                    .WithSettings(new TextFieldPredefinedListEditorSettings
+                    {
+                        DefaultValue = "three",
+                        Editor = EditorOption.Dropdown,
+                        Options = new ListValueOption[] { 
+                            new ListValueOption { Name = "Four", Value = "four" }, 
+                            new ListValueOption { Name = "Three", Value = "three" }, 
+                            new ListValueOption { Name = "Two", Value = "two" }, 
+                            new ListValueOption { Name = "One", Value = "one" } 
+                        }
+                    })
+                ));
+
+            return 4;
+        }
     }
 }
