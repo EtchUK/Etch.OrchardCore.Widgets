@@ -155,6 +155,13 @@
       ]
     },
     {
+      "place": "Parts#Layout:4",
+      "differentiator": "Footer-ContentWidth",
+      "contentType": [
+        "Footer"
+      ]
+    },
+    {
       "place": "Parts#Layout:1",
       "differentiator": "Group-Style",
       "contentType": [

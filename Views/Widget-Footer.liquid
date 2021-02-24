@@ -1,8 +1,10 @@
 {% assign css = "footer" %}
+{% assign constrainClasses = "constrain" %}
 
 {% assign backgroundColour = Model.ContentItem.Content.BackgroundPart.BackgroundColour.Value %}
 {% assign backgroundPattern = Model.ContentItem.Content.BackgroundPart.BackgroundPattern.Text %}
 {% assign inverted = Model.ContentItem.Content.BackgroundPart.InvertTextColour.Value %}
+{% assign contentWidth = Model.ContentItem.Content.Footer.ContentWidth.Text %}
 
 {% if inverted %}
     {% assign css = css | append: " footer--inverted" %}
@@ -21,8 +23,12 @@
     {% assign styles = styles | append: backgroundPattern %}
 {% endif %}
 
+{% if contentWidth != nil and contentWidth != "default" %}
+    {% assign constrainClasses = constrainClasses | append: ' constrain--' | append: contentWidth %}
+{% endif %}
+
 <footer class="{{ css }}" style="{{ styles }}">
-    <div class="footer__content constrain">
+    <div class="footer__content {{ constrainClasses }}">
         {{ Model.Content.Content | shape_render }}
     </div>
 </footer>
