@@ -1,13 +1,12 @@
 ﻿{% assign linkedContent = Content.ContentItemId[Model.ContentItem.Content.CarouselItem.CTALinkTo.ContentItemIds[0]] %}
 
-<div class="card card--carousel">
-    <div class="card__body">
-        <h2 class="text--size-h1">{{ Model.ContentItem.Content.CarouselItem.Heading.Text | raw }}</h2>
 
-        {% if linkedContent %}
-            <p><a class="btn btn--secondary" href="{{ linkedContent | display_url }}">{{ Model.ContentItem.Content.CarouselItem.CTALabel.Text | raw }}</a></p>
-        {% endif %}
-    </div>
+<div class="carousel__item-body">
+    <h2 class="text--size-h1">{{ Model.ContentItem.Content.CarouselItem.Heading.Text | raw }}</h2>
 
-    {{ Model.Background | shape_render }}
+    {% if linkedContent %}
+        <p><a class="btn btn--secondary" href="{{ linkedContent | display_url }}">{{ Model.ContentItem.Content.CarouselItem.CTALabel.Text | raw }}</a></p>
+    {% endif %}
 </div>
+
+{{ Model.Background | shape_render }}
