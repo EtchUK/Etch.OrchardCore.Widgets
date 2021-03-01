@@ -40,7 +40,7 @@
 {% endif %}
 
 {% if gutterClass != nil and gutterClass != "default" %}
-    {% assign cssClasses = cssClasses | append: " section--flow-gutter-" | append: gutterClass %}
+    {% assign cssClasses = cssClasses | append: " gutter--" | append: gutterClass %}
 {% endif %}
 
 {% if contentWidth != nil %}
