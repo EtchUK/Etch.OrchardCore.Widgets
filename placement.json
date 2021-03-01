@@ -183,6 +183,20 @@
       ]
     },
     {
+      "place": "Parts#Layout:4",
+      "differentiator": "Hero-ContentWidth",
+      "contentType": [
+        "Hero"
+      ]
+    },
+    {
+      "place": "Parts#Layout:4",
+      "differentiator": "Hero-Gutter",
+      "contentType": [
+        "Hero"
+      ]
+    },
+    {
       "place": "Parts#Layout:2",
       "differentiator": "Hero-HorizontalAlignment",
       "contentType": [

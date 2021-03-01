@@ -3,9 +3,17 @@
 {% assign backgroundType = Model.ContentItem.Content.Hero.BackgroundType.Text %}
 
 {% assign cssClasses = "hero" %}
+{% assign constrainClasses = "constrain" %}
+
+{% assign contentWidth = Model.ContentItem.Content.Hero.ContentWidth.Text %}
+{% assign gutterClass = Model.ContentItem.Content.Hero.Gutter.Text %}
 
 {% if Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
     {% assign cssClasses = cssClasses | append: " " | append: Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+{% endif %}
+
+{% if contentWidth != nil %}
+    {% assign constrainClasses = constrainClasses | append: ' constrain--' | append: contentWidth %}
 {% endif %}
 
 {% assign horzAlignment = Model.ContentItem.Content.Hero.HorizontalAlignment.Text %}
@@ -32,8 +40,12 @@
     {% assign cssClasses = cssClasses | append: " hero--with-media-gradient" %}
 {% endif %}
 
+{% if gutterClass != nil and gutterClass != "default" %}
+    {% assign cssClasses = cssClasses | append: " gutter--" | append: gutterClass %}
+{% endif %}
+
 <section {% if id != nil %} id="{{ id }}" {% endif %} class="{{ cssClasses }}">
-    <div class="hero__body constrain">
+    <div class="hero__body {{ constrainClasses }}">
         {{ Model.Content.Content | shape_render }}
     </div>
             
