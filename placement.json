@@ -53,6 +53,13 @@
       ]
     },
     {
+      "place": "Parts#Background:16",
+      "differentiator": "Hero-LazyLoad",
+      "contentType": [
+        "Hero"
+      ]
+    },
+    {
       "place": "Parts#Layout:1",
       "differentiator": "Hero-PullUp",
       "contentType": [
