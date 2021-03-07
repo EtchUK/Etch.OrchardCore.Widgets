@@ -6,6 +6,8 @@ using OrchardCore.ContentManagement;
 using OrchardCore.ContentManagement.Display.ContentDisplay;
 using OrchardCore.Data.Migration;
 using OrchardCore.Modules;
+using Etch.OrchardCore.Widgets.Filters;
+using OrchardCore.Liquid;
 
 namespace Etch.OrchardCore.Widgets
 {
@@ -24,6 +26,10 @@ namespace Etch.OrchardCore.Widgets
                 .UseDisplayDriver<HtmlAttributesPartDisplay>();
 
             services.AddScoped<IDataMigration, Migrations>();
+
+            services.AddLiquidFilter<AnimationCssFilter>("animation_css");
+            services.AddLiquidFilter<AnimationDataAttributesFilter>("animation_data_attributes");
+            services.AddLiquidFilter<AnimationStyles>("animation_styles");
         }
     }
 }
