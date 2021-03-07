@@ -6,6 +6,13 @@
   ],
   "BooleanField_Edit": [
     {
+      "place": "Parts#Animation:35",
+      "differentiator": "AnimationPart-Repeat",
+      "contentPart": [
+        "AnimationPart"
+      ]
+    },
+    {
       "place": "Parts#Background:17",
       "differentiator": "BackgroundPart-InvertTextColour",
       "contentPart": [
@@ -89,6 +96,20 @@
   ],
   "NumericField_Edit": [
     {
+      "place": "Parts#Animation:33",
+      "differentiator": "AnimationPart-Delay",
+      "contentPart": [
+        "AnimationPart"
+      ]
+    },
+    {
+      "place": "Parts#Animation:31",
+      "differentiator": "AnimationPart-Duration",
+      "contentPart": [
+        "AnimationPart"
+      ]
+    },
+    {
       "place": "Parts#Paging:8",
       "differentiator": "ContentFeed-PageSize",
       "contentType": [
@@ -105,6 +126,20 @@
     }
   ],
   "TextField_Edit": [
+    {
+      "place": "Parts#Animation:30",
+      "differentiator": "AnimationPart-Type",
+      "contentPart": [
+        "AnimationPart"
+      ]
+    },
+    {
+      "place": "Parts#Animation:32",
+      "differentiator": "AnimationPart-Timing",
+      "contentPart": [
+        "AnimationPart"
+      ]
+    },
     {
       "place": "Parts#Background:16",
       "differentiator": "BackgroundPart-BackgroundPattern",

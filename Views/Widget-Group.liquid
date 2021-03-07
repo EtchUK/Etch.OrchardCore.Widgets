@@ -27,6 +27,6 @@
     {% assign styles = styles | append: backgroundPattern %}
 {% endif %}
 
-<div class="{{ cssClasses }}" style="{{ styles }}">
+<div class="{{ cssClasses }} {{ Model.ContentItem | animation_css }}" style="{{ styles }} {{ Model.ContentItem | animation_styles }}" {{ Model.ContentItem | animation_data_attributes }}>
     {{ Model.Content["Content"] | shape_render }}
 </div>

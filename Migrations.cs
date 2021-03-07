@@ -135,5 +135,94 @@ namespace Etch.OrchardCore.Widgets
 
             return 4;
         }
+
+        public int UpdateFrom4()
+        {
+            _contentDefinitionManager.AlterPartDefinition("AnimationPart", part => part
+                .Attachable()
+                .WithDescription("Define settings for animating widget.")
+                .WithDisplayName("Animation")
+                .WithField("Type", field => field
+                    .OfType(nameof(TextField))
+                    .WithDisplayName("Type")
+                    .WithPosition("1")
+                    .WithEditor("PredefinedList")
+                    .WithSettings(new TextFieldSettings
+                    {
+                        Hint = "Define type of animation."
+                    })
+                    .WithSettings(new TextFieldPredefinedListEditorSettings
+                    {
+                        DefaultValue = "none",
+                        Editor = EditorOption.Dropdown,
+                        Options = new ListValueOption[] {
+                            new ListValueOption { Name = "None", Value = "none" },
+                            new ListValueOption { Name = "Fade in", Value = "fade-in" },
+                            new ListValueOption { Name = "Fade in from left", Value = "fade-in fade-in--from-left" },
+                            new ListValueOption { Name = "Fade in from right", Value = "fade-in fade-in--from-right" }
+                        }
+                    })
+                )
+                .WithField("Duration", field => field
+                    .OfType(nameof(NumericField))
+                    .WithDisplayName("Duration")
+                    .WithPosition("2")
+                    .WithEditor("Number")
+                    .WithSettings(new NumericFieldSettings
+                    {
+                        DefaultValue = "600",
+                        Minimum = 0,
+                        Hint = "Length of animation in seconds.",
+                        Scale = 2
+                    })
+                )
+                .WithField("Timing", field => field
+                    .OfType(nameof(TextField))
+                    .WithDisplayName("Timing")
+                    .WithPosition("3")
+                    .WithEditor("PredefinedList")
+                    .WithSettings(new TextFieldSettings
+                    {
+                        Hint = "Define how animation progresses through the duration of each cycle."
+                    })
+                    .WithSettings(new TextFieldPredefinedListEditorSettings
+                    {
+                        DefaultValue = "ease-in-out",
+                        Editor = EditorOption.Dropdown,
+                        Options = new ListValueOption[] {
+                            new ListValueOption { Name = "Ease", Value = "ease" },
+                            new ListValueOption { Name = "Ease in", Value = "ease-in" },
+                            new ListValueOption { Name = "Ease out", Value = "ease-out" },
+                            new ListValueOption { Name = "Ease in out", Value = "ease-in-out" },
+                            new ListValueOption { Name = "Linear", Value = "linear" }
+                        }
+                    })
+                )
+                .WithField("Delay", field => field
+                    .OfType(nameof(NumericField))
+                    .WithDisplayName("Delay")
+                    .WithPosition("4")
+                    .WithEditor("Number")
+                    .WithSettings(new NumericFieldSettings
+                    {
+                        DefaultValue = "0",
+                        Minimum = 0,
+                        Hint = "Number of seconds to delay start of animation.",
+                        Scale = 2
+                    })
+                )
+                .WithField("Repeat", field => field
+                    .OfType(nameof(BooleanField))
+                    .WithDisplayName("Repeat")
+                    .WithPosition("5")
+                    .WithSettings(new BooleanFieldSettings
+                    {
+                        Hint = "Repeat animation every time widget is scrolled in to view.",
+                        Label = "Repeat"
+                    })
+                ));
+
+            return 5;
+        }
     }
 }

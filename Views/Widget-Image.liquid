@@ -14,7 +14,7 @@
     {% assign cssClasses = cssClasses | append: " " | append: Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
 {% endif %}
 
-<{{tag}} {% if linkTo != nil %}href="{{ linkTo }}"{% endif %} {% if id != null %}id="{{ id }}"{% endif %} class="{{ cssClasses }}">
+<{{tag}} {% if linkTo != nil %}href="{{ linkTo }}"{% endif %} {% if id != null %}id="{{ id }}"{% endif %} class="{{ cssClasses }} {{ Model.ContentItem | animation_css }}" style="{{ Model.ContentItem | animation_styles }}" {{ Model.ContentItem | animation_data_attributes }}>
     <img src="{{ imagePath }}" alt="{{ Model.ContentItem.Content.Image.AlternateText.Text }}" loading="lazy" />
 </{{tag}}>
 
