@@ -1,4 +1,4 @@
-﻿using Fluid;
+using Fluid;
 using Microsoft.Extensions.DependencyInjection;
 using Etch.OrchardCore.Widgets.Drivers;
 using Etch.OrchardCore.Widgets.Models;
@@ -13,11 +13,6 @@ namespace Etch.OrchardCore.Widgets
 {
     public class Startup : StartupBase
     {
-        static Startup()
-        {
-            TemplateContext.GlobalMemberAccessStrategy.Register<HtmlAttributesPart>();
-        }
-
         public override void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
@@ -25,11 +20,15 @@ namespace Etch.OrchardCore.Widgets
             services.AddContentPart<HtmlAttributesPart>()
                 .UseDisplayDriver<HtmlAttributesPartDisplay>();
 
-            services.AddScoped<IDataMigration, Migrations>();
+            services.Configure<TemplateOptions>(o =>
+            {
+                o.MemberAccessStrategy.Register<HtmlAttributesPart>();
+            })
+                .AddLiquidFilter<AnimationCssFilter>("animation_css")
+                .AddLiquidFilter<AnimationDataAttributesFilter>("animation_data_attributes")
+                .AddLiquidFilter<AnimationStyles>("animation_styles");
 
-            services.AddLiquidFilter<AnimationCssFilter>("animation_css");
-            services.AddLiquidFilter<AnimationDataAttributesFilter>("animation_data_attributes");
-            services.AddLiquidFilter<AnimationStyles>("animation_styles");
+            services.AddScoped<IDataMigration, Migrations>();
         }
     }
 }
