@@ -286,6 +286,7 @@
   "ResponsiveMediaField": [
     {
       "contentType": [
+        "Hero",
         "Section"
       ],
       "place": "Background"
