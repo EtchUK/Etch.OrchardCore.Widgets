@@ -159,7 +159,12 @@ namespace Etch.OrchardCore.Widgets
                             new ListValueOption { Name = "None", Value = "none" },
                             new ListValueOption { Name = "Fade in", Value = "fade-in" },
                             new ListValueOption { Name = "Fade in from left", Value = "fade-in fade-in--from-left" },
-                            new ListValueOption { Name = "Fade in from right", Value = "fade-in fade-in--from-right" }
+                            new ListValueOption { Name = "Fade in from right", Value = "fade-in fade-in--from-right" },
+                            new ListValueOption { Name = "Grow in from centre", Value = "grow-in" },
+                            new ListValueOption { Name = "Grow in from top", Value = "grow-in grow-in--from-top" },
+                            new ListValueOption { Name = "Grow in from right", Value = "grow-in grow-in--from-right" },
+                            new ListValueOption { Name = "Grow in from bottom", Value = "grow-in grow-in--from-bottom" },
+                            new ListValueOption { Name = "Grow in from left", Value = "grow-in grow-in--from-left" }
                         }
                     })
                 )
@@ -194,7 +199,8 @@ namespace Etch.OrchardCore.Widgets
                             new ListValueOption { Name = "Ease in", Value = "ease-in" },
                             new ListValueOption { Name = "Ease out", Value = "ease-out" },
                             new ListValueOption { Name = "Ease in out", Value = "ease-in-out" },
-                            new ListValueOption { Name = "Linear", Value = "linear" }
+                            new ListValueOption { Name = "Linear", Value = "linear" },
+                            new ListValueOption { Name = "Overshoot", Value = "cubic-bezier(0.175, 0.885, 0.32, 1.275)" }
                         }
                     })
                 )
