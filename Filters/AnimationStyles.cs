@@ -30,17 +30,17 @@ namespace Etch.OrchardCore.Widgets.Filters
 
             if (!string.IsNullOrWhiteSpace(animationPart.Timing))
             {
-                styles.Add($"--animationFadeTiming: {animationPart.Timing};");
+                styles.Add($"--animationTiming: {animationPart.Timing};");
             }
 
             if (animationPart.Delay.HasValue)
             {
-                styles.Add($"--animationFadeDelay: {animationPart.Delay}s;");
+                styles.Add($"--animationDelay: {animationPart.Delay}s;");
             }
 
             if (animationPart.Duration.HasValue)
             {
-                styles.Add($"--animationFadeDuration: {animationPart.Duration}s;");
+                styles.Add($"--animationDuration: {animationPart.Duration}s;");
             }
 
             return new ValueTask<FluidValue>(new StringValue(string.Join(" ", styles)));
