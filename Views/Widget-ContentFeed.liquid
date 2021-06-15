@@ -37,7 +37,7 @@
 {% endif %}
 
 {% if items.size > 0 %}
-    <div class="{{ cssClasses }}" style="{{ styles }}">
+    <div class="{{ cssClasses }} {{ Model.ContentItem | animation_css }}" style="{{ styles }} {{ Model.ContentItem | animation_styles }}" {{ Model.ContentItem | animation_data_attributes }}>
 
         {% if hideHeader == false %}
             <header class="content-feed__header">

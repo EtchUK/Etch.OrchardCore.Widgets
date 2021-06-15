@@ -8,9 +8,9 @@
 {% endif %}
 
 {% if Model.ContentItem.Content.HtmlAttributesPart != null %}
-<figure {% if id != null %} id="{{ id }}" {% endif %} {% if cssClasses != null %} class="{{ cssClasses }}" {% endif %} />
+<figure {% if id != null %} id="{{ id }}" {% endif %} class="{{ cssClasses }} {{ Model.ContentItem | animation_css }}" style="{{ styles }} {{ Model.ContentItem | animation_styles }}" {{ Model.ContentItem | animation_data_attributes }}>
 {% else %}
-<figure {% if cssClasses != null %} class="{{ cssClasses }}" {% endif %}>
+<figure {% if cssClasses != null %} class="{{ cssClasses }} {{ Model.ContentItem | animation_css }}" style="{{ styles }} {{ Model.ContentItem | animation_styles }}" {{ Model.ContentItem | animation_data_attributes }} {% endif %}>
 {% endif %}
     <img src="{{ Model.ContentItem.Content.Figure.Image.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.Figure.AlternateText.Text }}" />
     <figcaption>{{ Model.ContentItem.Content.Figure.Caption.Text }}</figcaption>
