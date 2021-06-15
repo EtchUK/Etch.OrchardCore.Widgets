@@ -39,7 +39,7 @@
     {% assign styles = styles | append: backgroundPattern %}
 {% endif %}
 
-<{{tag}} {% if url != nil %}href="{{ url }}"{% endif %} {% if id != null %}id="{{ id }}"{% endif %} class="{{ cssClasses }}" style="{{ styles }}">
+<{{tag}} {% if url != nil %}href="{{ url }}"{% endif %} {% if id != null %}id="{{ id }}"{% endif %} class="{{ cssClasses }} {{ Model.ContentItem | animation_css }}" style="{{ styles }} {{ Model.ContentItem | animation_styles }}" {{ Model.ContentItem | animation_data_attributes }}>
     {% if mediaUrl %}
         <div class="card__media">
             <img class="card__media-image" src="{{ Model.ContentItem.Content.Card.Image.Paths[0] | asset_url | resize_url: width: 1024, height: 768, mode:'max'  }}" alt="{{ Model.ContentItem.Content.Card.ImageAlternateText.Text }}" loading="lazy" />
