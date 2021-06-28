@@ -1,6 +1,7 @@
 {% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
 
 {% assign backgroundType = Model.ContentItem.Content.Hero.BackgroundType.Text %}
+{% assign backgroundColour = Model.ContentItem.Content.Hero.BackgroundColour.Value %}
 
 {% assign cssClasses = "hero" %}
 {% assign constrainClasses = "constrain" %}
@@ -32,6 +33,10 @@
     {% assign cssClasses = cssClasses | append: " hero--pull-up" %}
 {% endif %}
 
+{% if Model.ContentItem.Content.Hero.ShowScrollEncouragement.Value %}
+    {% assign cssClasses = cssClasses | append: " hero--encourage-scrolling" %}
+{% endif %}
+
 {% if Model.ContentItem.Content.Hero.InvertColour.Value %}
     {% assign cssClasses = cssClasses | append: " hero--inverted" %}
 {% endif %}
@@ -42,6 +47,13 @@
 
 {% if gutterClass != nil and gutterClass != "default" %}
     {% assign cssClasses = cssClasses | append: " gutter--" | append: gutterClass %}
+{% endif %}
+
+{% assign styles = "" %}
+
+{% if backgroundColour != nil %}
+    {% assign backgroundColour = "--heroBackgroundColor:" | append: backgroundColour | append:"; " %}
+    {% assign styles = styles | append: backgroundColour %}
 {% endif %}
 
 <section {% if id != nil %} id="{{ id }}" {% endif %} class="{{ cssClasses }} {{ Model.ContentItem | animation_css }}" style="{{ styles }} {{ Model.ContentItem | animation_styles }}" {{ Model.ContentItem | animation_data_attributes }}>
@@ -60,4 +72,6 @@
     {% else %}
         {{ Model.Background | shape_render }}
     {% endif %}
+
+    {{ Model.Content.Bleed | shape_render }}
 </section>
