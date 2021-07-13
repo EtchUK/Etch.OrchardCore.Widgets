@@ -10,7 +10,11 @@
 {% assign alignment = Model.ContentItem.Content.Section.Alignment.Text %}
 {% assign verticalAlignment = Model.ContentItem.Content.Section.VerticalAlignment.Text %}
 {% assign contentWidth = Model.ContentItem.Content.Section.ContentWidth.Text %}
+
 {% assign gutterClass = Model.ContentItem.Content.Section.Gutter.Text %}
+{% assign verticalGutterClass = Model.ContentItem.Content.Section.VerticalGutter.Text %}
+{% assign stackedVerticalGutterClass = Model.ContentItem.Content.Section.StackedVerticalGutter.Text %}
+
 {% assign topPadding = Model.ContentItem.Content.Section.TopPadding.Text %}
 {% assign bottomPadding = Model.ContentItem.Content.Section.BottomPadding.Text %}
 {% assign spacingAfter = Model.ContentItem.Content.Section.SpacingAfter.Text %}
@@ -55,6 +59,11 @@
     {% assign cssClasses = cssClasses | append: " section--inverted" %}
 {% endif %}
 
+{% assign cssClasses = cssClasses | append: " " | append: gutterClass %}
+
+{% assign cssClasses = cssClasses | append: " " | append: verticalGutterClass %}
+{% assign cssClasses = cssClasses | append: " " | append: stackedVerticalGutterClass %}
+
 {% assign styles = "" %}
 
 {% if backgroundColour != nil %}
@@ -76,4 +85,6 @@
     {% else %}
        {{ Model.Content.Content | shape_render }}
     {% endif %}
+
+    {{ Model.Content.Bleed | shape_render }}
 </section>
