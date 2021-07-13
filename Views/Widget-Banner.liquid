@@ -1,6 +1,9 @@
 {% assign mainMenu = Content.ContentItemId[Model.ContentItem.Content.Banner.Menu.ContentItemIds] %}
 {% assign mainMenuAlias = "alias:" | append: mainMenu.Content.AliasPart.Alias %}
 
+{% assign socialMenu = Content.ContentItemId[Model.ContentItem.Content.Banner.SocialMenu.ContentItemIds] %}
+{% assign socialMenuAlias = "alias:" | append: socialMenu.Content.AliasPart.Alias %}
+
 {% assign css = "header" %}
 
 {% assign backgroundColour = Model.ContentItem.Content.BackgroundPart.BackgroundColour.Value %}
@@ -63,13 +66,26 @@
             </picture>
         </a>
 
-        <button class="header__nav-button js-nav-button">{{ Model.ContentItem.Content.Banner.MenuToggleButtonLabel.Text }}</button>
-        <button class="header__nav-button header__nav-button--close js-nav-button">{{ Model.ContentItem.Content.Banner.MenuCloseButtonLabel.Text }}</button>
+        {% if mainMenu != nil or socialMenu != nil %}
 
-        <div class="header__nav" aria-label="{{ "Main navigation" | t }}">
-            <nav class="nav nav--primary" role="navigation">
-                {% shape "menu", alias: mainMenuAlias %}
-            </nav>
-        </div>
+            <button class="header__nav-button js-nav-button">{{ Model.ContentItem.Content.Banner.MenuToggleButtonLabel.Text }}</button>
+            <button class="header__nav-button header__nav-button--close js-nav-button">{{ Model.ContentItem.Content.Banner.MenuCloseButtonLabel.Text }}</button>
+
+            <div class="header__nav" aria-label="{{ "Main navigation" | t }}">
+
+                {% if mainMenu != nil %}
+                <nav class="nav nav--primary" role="navigation">
+                    {% shape "menu", alias: mainMenuAlias %}
+                </nav>
+                {% endif %}
+
+                {% if socialMenu != nil %}
+                    <nav class="nav nav--social" role="navigation">
+                        {% shape "menu", alias: socialMenuAlias %}
+                    </nav>
+                {% endif %}
+            </div>
+
+        {% endif %}
     </div>
 </header>
