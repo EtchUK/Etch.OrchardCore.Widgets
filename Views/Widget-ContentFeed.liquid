@@ -14,11 +14,17 @@
 
 {% assign backgroundColour = Model.ContentItem.Content.BackgroundPart.BackgroundColour.Value %}
 {% assign backgroundPattern = Model.ContentItem.Content.BackgroundPart.BackgroundPattern.Text %}
+{% assign backgroundFixed = Model.ContentItem.Content.BackgroundPart.BackgroundFixed.Value %}
 {% assign invertColour = Model.ContentItem.Content.BackgroundPart.InvertTextColour.Value %}
 
 {% assign cols = Model.ContentItem.Content.ColumnablePart.Columns.Text %}
 
 {% assign cssClasses = "content-feed" %}
+
+{% if backgroundFixed %}
+    {% assign cssClasses = cssClasses | append: " bg--fixed" %}
+{% endif %}
+
 {% if invertColour %}
     {% assign cssClasses = cssClasses | append: " content-feed--inverted" %}
 {% endif %}
