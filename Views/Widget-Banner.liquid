@@ -6,6 +6,7 @@
 {% assign backgroundColour = Model.ContentItem.Content.BackgroundPart.BackgroundColour.Value %}
 {% assign backgroundPattern = Model.ContentItem.Content.BackgroundPart.BackgroundPattern.Text %}
 {% assign backgroundFixed = Model.ContentItem.Content.BackgroundPart.BackgroundFixed.Value %}
+{% assign backgroundFill = Model.ContentItem.Content.BackgroundPart.BackgroundFill.Value %}
 {% assign inverted = Model.ContentItem.Content.BackgroundPart.InvertTextColour.Value %}
 
 {% assign mobileBackgroundColour = Model.ContentItem.Content.Banner.MobileBackgroundColour.Value %}
@@ -14,6 +15,10 @@
 
 {% if backgroundFixed %}
     {% assign css = css | append: " bg--fixed" %}
+{% endif %}
+
+{% if backgroundFill %}
+    {% assign css = css | append: " bg--fill" %}
 {% endif %}
 
 {% if inverted %}
