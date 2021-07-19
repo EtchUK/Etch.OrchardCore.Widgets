@@ -1,10 +1,20 @@
 ﻿{% assign backgroundColour = Model.ContentItem.Content.BackgroundPart.BackgroundColour.Value %}
 {% assign backgroundPattern = Model.ContentItem.Content.BackgroundPart.BackgroundPattern.Text %}
+{% assign backgroundFixed = Model.ContentItem.Content.BackgroundPart.BackgroundFixed.Value %}
+{% assign backgroundFill = Model.ContentItem.Content.BackgroundPart.BackgroundFill.Value %}
 {% assign invertColour = Model.ContentItem.Content.BackgroundPart.InvertTextColour.Value %}
 
 {% assign cols = Model.ContentItem.Content.ColumnablePart.Columns.Text %}
 
 {% assign cssClasses = "tiles" %}
+
+{% if backgroundFixed %}
+    {% assign cssClasses = cssClasses | append: " bg--fixed" %}
+{% endif %}
+
+{% if backgroundFill %}
+    {% assign cssClasses = cssClasses | append: " bg--fill" %}
+{% endif %}
 
 {% if invertColour %}
     {% assign cssClasses = cssClasses | append: " tiles--inverted" %}

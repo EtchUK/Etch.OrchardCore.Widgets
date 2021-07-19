@@ -2,6 +2,8 @@
 
 {% assign backgroundColour = Model.ContentItem.Content.BackgroundPart.BackgroundColour.Value %}
 {% assign backgroundPattern = Model.ContentItem.Content.BackgroundPart.BackgroundPattern.Text %}
+{% assign backgroundFixed = Model.ContentItem.Content.BackgroundPart.BackgroundFixed.Value %}
+{% assign backgroundFill = Model.ContentItem.Content.BackgroundPart.BackgroundFill.Value %}
 {% assign invertColour = Model.ContentItem.Content.BackgroundPart.InvertTextColour.Value %}
 
 {% assign cssClasses = "group" %}
@@ -12,6 +14,14 @@
 
 {% if invertColour %}
     {% assign cssClasses = cssClasses | append: " group--inverted" %}
+{% endif %}
+
+{% if backgroundFixed %}
+    {% assign cssClasses = cssClasses | append: " bg--fixed" %}
+{% endif %}
+
+{% if backgroundFill %}
+    {% assign cssClasses = cssClasses | append: " bg--fill" %}
 {% endif %}
 
 {% assign styles = "" %}

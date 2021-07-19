@@ -53,7 +53,7 @@ namespace Etch.OrchardCore.Widgets
                 )
                 .WithField("BackgroundPattern", field => field
                     .OfType(nameof(TextField))
-                    .WithDisplayName("Background Pattern")
+                    .WithDisplayName("Background Style")
                     .WithPosition("1")
                     .WithEditor("PredefinedList")
                     .WithSettings(new TextFieldPredefinedListEditorSettings
@@ -68,7 +68,7 @@ namespace Etch.OrchardCore.Widgets
                     .WithPosition("2")
                     .WithSettings(new BooleanFieldSettings
                     {
-                        Hint = "Change text colour to light, recommended when using a dark background.",
+                        Hint = "For example, if the text is currently a dark colour, this will make it light, and vice versa.",
                         Label = "Invert Text Colour"
                     })
                 )
@@ -229,6 +229,22 @@ namespace Etch.OrchardCore.Widgets
                 ));
 
             return 5;
+        }
+
+        public int UpdateFrom5()
+        {
+            _contentDefinitionManager.AlterPartDefinition("BackgroundPart", part => part
+                .WithField("BackgroundFill", field => field
+                    .OfType(nameof(BooleanField))
+                    .WithDisplayName("Background Fill")
+                    .WithPosition("4")
+                    .WithSettings(new BooleanFieldSettings
+                    {
+                        Hint = "By default, background styles will tile and repeat. In some cases, you may want to force the background to fill the available space and not repeat. To do so, tick this box. Please note that depending on the chosen background and content, this option may result in backgrounds being 'stretched'.",
+                        Label = "Background Fill"
+                    })
+                ));
+            return 6;
         }
     }
 }
