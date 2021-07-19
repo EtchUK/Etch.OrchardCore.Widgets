@@ -81,16 +81,6 @@ namespace Etch.OrchardCore.Widgets
                         Hint = "Fix background in place to give a faux parallax effect.",
                         Label = "Fix Background Pattern"
                     })
-                )
-                .WithField("BackgroundFill", field => field
-                    .OfType(nameof(BooleanField))
-                    .WithDisplayName("Background Fill")
-                    .WithPosition("4")
-                    .WithSettings(new BooleanFieldSettings
-                    {
-                        Hint = "By default, background styles will tile and repeat. In some cases, you may want to force the background to fill the available space and not repeat. To do so, tick this box. Please note that depending on the chosen background and content, this option may result in backgrounds being 'stretched'.",
-                        Label = "Background Fill"
-                    })
                 ));
 
             return 2;
@@ -239,6 +229,22 @@ namespace Etch.OrchardCore.Widgets
                 ));
 
             return 5;
+        }
+
+        public int UpdateFrom5()
+        {
+            _contentDefinitionManager.AlterPartDefinition("BackgroundPart", part => part
+                .WithField("BackgroundFill", field => field
+                    .OfType(nameof(BooleanField))
+                    .WithDisplayName("Background Fill")
+                    .WithPosition("4")
+                    .WithSettings(new BooleanFieldSettings
+                    {
+                        Hint = "By default, background styles will tile and repeat. In some cases, you may want to force the background to fill the available space and not repeat. To do so, tick this box. Please note that depending on the chosen background and content, this option may result in backgrounds being 'stretched'.",
+                        Label = "Background Fill"
+                    })
+                ));
+            return 6;
         }
     }
 }
