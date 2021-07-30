@@ -4,7 +4,7 @@
     Name = "Common Widgets",
     Author = "Etch",
     Website = "https://etchuk.com",
-    Version = "0.13.2"
+    Version = "0.14.0"
 )]
 
 [assembly: Feature(
