@@ -2,6 +2,8 @@
 using Etch.OrchardCore.Fields.Code.Settings;
 using Etch.OrchardCore.Fields.Colour.Fields;
 using Etch.OrchardCore.Fields.Colour.Settings;
+using Etch.OrchardCore.Fields.ResponsiveMedia.Fields;
+using Etch.OrchardCore.Fields.ResponsiveMedia.Settings;
 using OrchardCore.ContentFields.Fields;
 using OrchardCore.ContentFields.Settings;
 using OrchardCore.ContentManagement.Metadata;
@@ -245,6 +247,40 @@ namespace Etch.OrchardCore.Widgets
                     })
                 ));
             return 6;
+        }
+
+        public int UpdateFrom6()
+        {
+            _contentDefinitionManager.AlterPartDefinition("BleedPart", part => part
+                .Attachable()
+                .WithDescription("Adds \"bleed\" imagery options to make this area appear to blend in to adjacent ones")
+                .WithDisplayName("Bleed")
+                .WithField("BleedIn", field => field
+                    .OfType(nameof(ResponsiveMediaField))
+                    .WithDisplayName("Bleed In")
+                    .WithPosition("1")
+                    .WithSettings(new ResponsiveMediaFieldSettings
+                    {
+                        AllowMediaText = false,
+                        Breakpoints = "375, 425, 600, 768, 1024, 1280, 1440, 1920, 2560",
+                        Hint = "Image displayed at top of area, used to create a 'bleed' effect that blends this area with an adjacent one.",
+                        Multiple = false,
+                    })
+                )
+                .WithField("BleedOut", field => field
+                    .OfType(nameof(ResponsiveMediaField))
+                    .WithDisplayName("Bleed Out")
+                    .WithPosition("2")
+                    .WithSettings(new ResponsiveMediaFieldSettings
+                    {
+                        AllowMediaText = false,
+                        Breakpoints = "375, 425, 600, 768, 1024, 1280, 1440, 1920, 2560",
+                        Hint = "Image displayed at bottom of area, used to create a 'bleed' effect that blends this area with an adjacent one.",
+                        Multiple = false,
+                    })
+                ));
+
+            return 7;
         }
     }
 }

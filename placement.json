@@ -321,6 +321,20 @@
       "contentType": [
         "Section"
       ]
+    },
+    {
+      "place": "Parts#Bleed:20",
+      "differentiator": "BleedPart-BleedIn",
+      "contentPart": [
+        "BleedPart"
+      ]
+    },
+    {
+      "place": "Parts#Bleed:21",
+      "differentiator": "BleedPart-BleedOut",
+      "contentPart": [
+        "BleedPart"
+      ]
     }
   ],
   "ResponsiveMediaField": [
