@@ -39,21 +39,21 @@
       ]
     },
     {
-      "place": "Parts#Background:18",
+      "place": "Parts#Background:8",
       "differentiator": "Hero-AddGradient",
       "contentType": [
         "Hero"
       ]
     },
     {
-      "place": "Parts#Background:17",
+      "place": "Parts#Background:7",
       "differentiator": "Hero-InvertColour",
       "contentType": [
         "Hero"
       ]
     },
     {
-      "place": "Parts#Background:16",
+      "place": "Parts#Background:6",
       "differentiator": "Hero-LazyLoad",
       "contentType": [
         "Hero"
@@ -62,6 +62,13 @@
     {
       "place": "Parts#Layout:1",
       "differentiator": "Hero-PullUp",
+      "contentType": [
+        "Hero"
+      ]
+    },
+    {
+      "place": "Parts#Misc:40",
+      "differentiator": "Hero-ShowScrollEncouragement",
       "contentType": [
         "Hero"
       ]
@@ -89,6 +96,13 @@
       "differentiator": "Banner-MobileBackgroundColour",
       "contentPart": [
         "Banner"
+      ]
+    },
+    {
+      "place": "Parts#Background:1",
+      "differentiator": "Hero-BackgroundColour",
+      "contentType": [
+        "Hero"
       ]
     }
   ],
@@ -216,7 +230,7 @@
       ]
     },
     {
-      "place": "Parts#Background:1",
+      "place": "Parts#Background:2",
       "differentiator": "Hero-BackgroundType",
       "contentType": [
         "Hero"
@@ -316,7 +330,7 @@
   ],
   "ResponsiveMediaField_Edit": [
     {
-      "place": "Parts#Background:2",
+      "place": "Parts#Background:3",
       "differentiator": "Hero-BackgroundImage",
       "contentType": [
         "Hero"
