@@ -32,6 +32,13 @@
       ]
     },
     {
+      "place": "Parts#Background:20",
+      "differentiator": "BackgroundPart-BackgroundFill",
+      "contentPart": [
+        "BackgroundPart"
+      ]
+    },
+    {
       "place": "Parts#Paging:9",
       "differentiator": "ContentFeed-Paging",
       "contentType": [
@@ -323,6 +330,20 @@
     {
       "place": "Parts#Layout:3",
       "differentiator": "Section-VerticalAlignment",
+      "contentType": [
+        "Section"
+      ]
+    },
+    {
+      "place": "Parts#Layout:20",
+      "differentiator": "Section-VerticalGutter",
+      "contentType": [
+        "Section"
+      ]
+    },
+    {
+      "place": "Parts#Layout:21",
+      "differentiator": "Section-StackedVerticalGutter",
       "contentType": [
         "Section"
       ]
