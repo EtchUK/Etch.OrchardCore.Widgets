@@ -9,6 +9,14 @@
 {% assign contentWidth = Model.ContentItem.Content.Hero.ContentWidth.Text %}
 {% assign gutterClass = Model.ContentItem.Content.Hero.Gutter.Text %}
 
+{% assign desktopRatio = Model.ContentItem.Content.Hero.AspectRatio.Text | default: "16-9" %}
+{% assign tabletRatio = Model.ContentItem.Content.Hero.AspectRatioTablet.Text | default: "3-2" %}
+{% assign mobileRatio = Model.ContentItem.Content.Hero.AspectRatioMobile.Text | default: "9-16" %}
+
+{% assign cssClasses = cssClasses | append: " hero--desktop-ratio-" | append: desktopRatio %}
+{% assign cssClasses = cssClasses | append: " hero--tablet-ratio-" | append: tabletRatio %}
+{% assign cssClasses = cssClasses | append: " hero--mobile-ratio-" | append: mobileRatio %}
+
 {% if Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
     {% assign cssClasses = cssClasses | append: " " | append: Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
 {% endif %}
@@ -78,4 +86,6 @@
     {% endif %}
 
     {{ Model.Content.BleedPart | shape_render }}
+
+    <div class="hero__space"></div>
 </section>
