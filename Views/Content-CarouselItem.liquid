@@ -1,12 +1,35 @@
-﻿{% assign linkedContent = Content.ContentItemId[Model.ContentItem.Content.CarouselItem.CTALinkTo.ContentItemIds[0]] %}
+﻿{% assign backgroundColour = Model.ContentItem.Content.BackgroundPart.BackgroundColour.Value %}
+{% assign backgroundFixed = Model.ContentItem.Content.BackgroundPart.BackgroundFixed.Value %}
+{% assign backgroundPattern = Model.ContentItem.Content.BackgroundPart.BackgroundPattern.Text %}
+{% assign invertColour = Model.ContentItem.Content.BackgroundPart.InvertTextColour.Value %}
 
+{% assign cssClasses = "carousel__item-body" %}
 
-<div class="carousel__item-body">
-    <h2 class="text--size-h1">{{ Model.ContentItem.Content.CarouselItem.Heading.Text | raw }}</h2>
+{% if backgroundFixed %}
+    {% assign cssClasses = cssClasses | append: " carousel__item-body--with-background-fixed" %}
+{% endif %}
 
-    {% if linkedContent %}
-        <p><a class="btn btn--secondary" href="{{ linkedContent | display_url }}">{{ Model.ContentItem.Content.CarouselItem.CTALabel.Text | raw }}</a></p>
-    {% endif %}
+{% if invertColour %}
+    {% assign cssClasses = cssClasses | append: " carousel__item-body--inverted" %}
+{% endif %}
+
+{% assign styles = "" %}
+
+{% if backgroundColour != nil %}
+    {% assign backgroundColour = "--carouselItemBackground:" | append: backgroundColour | append:"; " %}
+    {% assign styles = styles | append: backgroundColour %}
+{% endif %}
+
+{% if backgroundPattern != nil and backgroundPattern != "" %}
+    {% assign backgroundPatternURL = backgroundPattern | asset_url %}
+    {% assign backgroundPattern = "--carouselItemBackgroundPattern: url(" | append: backgroundPatternURL | append:"); " %}
+    {% assign styles = styles | append: backgroundPattern %}
+{% endif %}
+
+<div class="{{ cssClasses }}" style="{{ styles }}">
+    <div class="carousel__item-content">
+        {{ Model.Content.Content | shape_render }}
+    </div>
+
+    {{ Model.Background | shape_render }}
 </div>
-
-{{ Model.Background | shape_render }}

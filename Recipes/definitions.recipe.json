@@ -6,12 +6,8 @@
   "website": "https://etchuk.com",
   "version": "1.0.2",
   "issetuprecipe": false,
-  "categories": [
-    "Content"
-  ],
-  "tags": [
-    "etch"
-  ],
+  "categories": ["Content"],
+  "tags": ["etch"],
   "steps": [
     {
       "name": "ContentDefinition",
@@ -589,9 +585,7 @@
                   "Position": "2"
                 },
                 "BagPartSettings": {
-                  "ContainedContentTypes": [
-                    "CarouselItem"
-                  ]
+                  "ContainedContentTypes": ["CarouselItem"]
                 },
                 "ContentIndexSettings": {}
               }
@@ -603,7 +597,10 @@
           "DisplayName": "Carousel Item",
           "Settings": {
             "ContentTypeSettings": {},
-            "FullTextAspectSettings": {}
+            "FullTextAspectSettings": {},
+            "Category": "Content",
+            "Description": "A single slide on a carousel.",
+            "Icon": "sticky-note"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -620,6 +617,17 @@
               "Name": "BackgroundPart",
               "Settings": {
                 "ContentTypePartSettings": {
+                  "Position": "2"
+                }
+              }
+            },
+            {
+              "PartName": "FlowPart",
+              "Name": "Content",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Content",
+                  "Description": "Content for this slide of the carousel",
                   "Position": "1"
                 }
               }
@@ -994,9 +1002,7 @@
                 },
                 "ContentIndexSettings": {},
                 "BagPartSettings": {
-                  "ContainedContentTypes": [
-                    "Link"
-                  ]
+                  "ContainedContentTypes": ["Link"]
                 }
               }
             },
@@ -1043,9 +1049,7 @@
                   "Position": "1"
                 },
                 "BagPartSettings": {
-                  "ContainedContentTypes": [
-                    "CheckboxItem"
-                  ]
+                  "ContainedContentTypes": ["CheckboxItem"]
                 },
                 "ContentIndexSettings": {}
               }
@@ -1102,9 +1106,7 @@
                   "Position": "1"
                 },
                 "BagPartSettings": {
-                  "ContainedContentTypes": [
-                    "RadioButtonItem"
-                  ]
+                  "ContainedContentTypes": ["RadioButtonItem"]
                 },
                 "ContentIndexSettings": {}
               }
@@ -1987,6 +1989,184 @@
                 },
                 "ContentIndexSettings": {}
               }
+            },
+            {
+              "FieldName": "BooleanField",
+              "Name": "ShowScrollEncouragement",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Show Scroll Encouragement",
+                  "Position": "9"
+                },
+                "BooleanFieldSettings": {
+                  "Hint": ""
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "AspectRatio",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Aspect Ratio",
+                  "Editor": "PredefinedList"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Select what shape hero to use"
+                },
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "16:9 (Landscape Device)",
+                      "value": "16-9"
+                    },
+                    {
+                      "name": "9:16 (Portrait Device)",
+                      "value": "9-16"
+                    },
+                    {
+                      "name": "4:3",
+                      "value": "4-3"
+                    },
+                    {
+                      "name": "3:2",
+                      "value": "3-2"
+                    },
+                    {
+                      "name": "2:3",
+                      "value": "2-3"
+                    },
+                    {
+                      "name": "1:1 (Square)",
+                      "value": "1-1"
+                    },
+                    {
+                      "name": "2:1",
+                      "value": "2-1"
+                    },
+                    {
+                      "name": "3:1",
+                      "value": "3-1"
+                    },
+                    {
+                      "name": "4:1 (Ultrawide)",
+                      "value": "4-1"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": "16-9"
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "AspectRatioTablet",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Aspect Ratio Tablet",
+                  "Editor": "PredefinedList"
+                },
+                "TextFieldSettings": {},
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "16:9 (Landscape Device)",
+                      "value": "16-9"
+                    },
+                    {
+                      "name": "9:16 (Portrait Device)",
+                      "value": "9-16"
+                    },
+                    {
+                      "name": "4:3",
+                      "value": "4-3"
+                    },
+                    {
+                      "name": "3:2",
+                      "value": "3-2"
+                    },
+                    {
+                      "name": "2:3",
+                      "value": "2-3"
+                    },
+                    {
+                      "name": "1:1 (Square)",
+                      "value": "1-1"
+                    },
+                    {
+                      "name": "2:1",
+                      "value": "2-1"
+                    },
+                    {
+                      "name": "3:1",
+                      "value": "3-1"
+                    },
+                    {
+                      "name": "4:1 (Ultrawide)",
+                      "value": "4-1"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": "3-2"
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "AspectRatioMobile",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Aspect Ratio Mobile",
+                  "Editor": "PredefinedList"
+                },
+                "TextFieldSettings": {},
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "16:9 (Landscape Device)",
+                      "value": "16-9"
+                    },
+                    {
+                      "name": "9:16 (Portrait Device)",
+                      "value": "9-16"
+                    },
+                    {
+                      "name": "4:3",
+                      "value": "4-3"
+                    },
+                    {
+                      "name": "3:2",
+                      "value": "3-2"
+                    },
+                    {
+                      "name": "2:3",
+                      "value": "2-3"
+                    },
+                    {
+                      "name": "1:1 (Square)",
+                      "value": "1-1"
+                    },
+                    {
+                      "name": "2:1",
+                      "value": "2-1"
+                    },
+                    {
+                      "name": "3:1",
+                      "value": "3-1"
+                    },
+                    {
+                      "name": "4:1 (Ultrawide)",
+                      "value": "4-1"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": "9-16"
+                },
+                "ContentIndexSettings": {}
+              }
             }
           ]
         },
@@ -2088,9 +2268,7 @@
                 },
                 "ContentPickerFieldSettings": {
                   "Hint": "Main menu used by users to navigate the main sections of the site.",
-                  "DisplayedContentTypes": [
-                    "Menu"
-                  ]
+                  "DisplayedContentTypes": ["Menu"]
                 },
                 "ContentIndexSettings": {}
               }
@@ -2298,44 +2476,6 @@
                 },
                 "ContentIndexSettings": {}
               }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "Heading",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Heading",
-                  "Position": "1"
-                }
-              }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "CTALabel",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "CTA Label",
-                  "Position": "2"
-                }
-              }
-            },
-            {
-              "FieldName": "ContentPickerField",
-              "Name": "CTALinkTo",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "CTA Link To",
-                  "Position": "3"
-                },
-                "ContentPickerFieldSettings": {
-                  "Hint": "Select a content item within the site that the user will be navigated to.",
-                  "DisplayedContentTypes": [
-                    "Homepage",
-                    "Page"
-                  ]
-                },
-                "ContentIndexSettings": {}
-              }
             }
           ]
         },
@@ -2434,9 +2574,7 @@
                 "ContentPickerFieldSettings": {
                   "Hint": "Menu to display.",
                   "Required": true,
-                  "DisplayedContentTypes": [
-                    "Menu"
-                  ]
+                  "DisplayedContentTypes": ["Menu"]
                 },
                 "ContentIndexSettings": {}
               }

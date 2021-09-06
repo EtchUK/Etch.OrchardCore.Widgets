@@ -13,104 +13,76 @@
     {
       "place": "Parts#Animation:35",
       "differentiator": "AnimationPart-Repeat",
-      "contentPart": [
-        "AnimationPart"
-      ]
+      "contentPart": ["AnimationPart"]
     },
     {
       "place": "Parts#Background:17",
       "differentiator": "BackgroundPart-InvertTextColour",
-      "contentPart": [
-        "BackgroundPart"
-      ]
+      "contentPart": ["BackgroundPart"]
     },
     {
       "place": "Parts#Background:17",
       "differentiator": "BackgroundPart-BackgroundFixed",
-      "contentPart": [
-        "BackgroundPart"
-      ]
+      "contentPart": ["BackgroundPart"]
     },
     {
       "place": "Parts#Background:20",
       "differentiator": "BackgroundPart-BackgroundFill",
-      "contentPart": [
-        "BackgroundPart"
-      ]
+      "contentPart": ["BackgroundPart"]
     },
     {
       "place": "Parts#Paging:9",
       "differentiator": "ContentFeed-Paging",
-      "contentType": [
-        "ContentFeed"
-      ]
+      "contentType": ["ContentFeed"]
     },
     {
       "place": "Parts#Background:8",
       "differentiator": "Hero-AddGradient",
-      "contentType": [
-        "Hero"
-      ]
+      "contentType": ["Hero"]
     },
     {
       "place": "Parts#Background:7",
       "differentiator": "Hero-InvertColour",
-      "contentType": [
-        "Hero"
-      ]
+      "contentType": ["Hero"]
     },
     {
       "place": "Parts#Background:6",
       "differentiator": "Hero-LazyLoad",
-      "contentType": [
-        "Hero"
-      ]
+      "contentType": ["Hero"]
     },
     {
       "place": "Parts#Layout:1",
       "differentiator": "Hero-PullUp",
-      "contentType": [
-        "Hero"
-      ]
+      "contentType": ["Hero"]
     },
     {
       "place": "Parts#Misc:40",
       "differentiator": "Hero-ShowScrollEncouragement",
-      "contentType": [
-        "Hero"
-      ]
+      "contentType": ["Hero"]
     }
   ],
   "CodeField_Edit": [
     {
       "place": "Parts#Events:25",
       "differentiator": "JavaScriptEventsPart-OnClick",
-      "contentPart": [
-        "JavaScriptEventsPart"
-      ]
+      "contentPart": ["JavaScriptEventsPart"]
     }
   ],
   "ColourField_Edit": [
     {
       "place": "Parts#Background:15",
       "differentiator": "BackgroundPart-BackgroundColour",
-      "contentPart": [
-        "BackgroundPart"
-      ]
+      "contentPart": ["BackgroundPart"]
     },
     {
       "place": "Parts#Background:20",
       "differentiator": "Banner-MobileBackgroundColour",
-      "contentPart": [
-        "Banner"
-      ]
+      "contentPart": ["Banner"]
     },
     {
       "place": "Parts#Background:1",
       "differentiator": "Hero-BackgroundColour",
-      "contentType": [
-        "Hero"
-      ]
+      "contentType": ["Hero"]
     }
   ],
   "ColumnablePart": [
@@ -122,39 +94,29 @@
     {
       "place": "Parts#Menu:6",
       "differentiator": "Banner-Menu",
-      "contentType": [
-        "Banner"
-      ]
+      "contentType": ["Banner"]
     }
   ],
   "NumericField_Edit": [
     {
       "place": "Parts#Animation:33",
       "differentiator": "AnimationPart-Delay",
-      "contentPart": [
-        "AnimationPart"
-      ]
+      "contentPart": ["AnimationPart"]
     },
     {
       "place": "Parts#Animation:31",
       "differentiator": "AnimationPart-Duration",
-      "contentPart": [
-        "AnimationPart"
-      ]
+      "contentPart": ["AnimationPart"]
     },
     {
       "place": "Parts#Paging:8",
       "differentiator": "ContentFeed-PageSize",
-      "contentType": [
-        "ContentFeed"
-      ]
+      "contentType": ["ContentFeed"]
     }
   ],
   "TextField": [
     {
-      "contentType": [
-        "Group"
-      ],
+      "contentType": ["Group"],
       "place": "-"
     }
   ],
@@ -162,238 +124,185 @@
     {
       "place": "Parts#Animation:30",
       "differentiator": "AnimationPart-Type",
-      "contentPart": [
-        "AnimationPart"
-      ]
+      "contentPart": ["AnimationPart"]
     },
     {
       "place": "Parts#Animation:32",
       "differentiator": "AnimationPart-Timing",
-      "contentPart": [
-        "AnimationPart"
-      ]
+      "contentPart": ["AnimationPart"]
     },
     {
       "place": "Parts#Background:16",
       "differentiator": "BackgroundPart-BackgroundPattern",
-      "contentPart": [
-        "BackgroundPart"
-      ]
+      "contentPart": ["BackgroundPart"]
     },
     {
       "place": "Parts#Menu:8",
       "differentiator": "Banner-MenuCloseButtonLabel",
-      "contentType": [
-        "Banner"
-      ]
+      "contentType": ["Banner"]
     },
     {
       "place": "Parts#Menu:7",
       "differentiator": "Banner-MenuToggleButtonLabel",
-      "contentType": [
-        "Banner"
-      ]
+      "contentType": ["Banner"]
     },
     {
       "place": "Parts#Background:22",
       "differentiator": "Banner-MobileBackgroundPattern",
-      "contentPart": [
-        "Banner"
-      ]
+      "contentPart": ["Banner"]
     },
     {
       "place": "Parts#Style:10",
       "differentiator": "Banner-Position",
-      "contentType": [
-        "Banner"
-      ]
+      "contentType": ["Banner"]
     },
     {
       "place": "Parts#Layout:14",
       "differentiator": "ColumnablePart-Columns",
-      "contentPart": [
-        "ColumnablePart"
-      ]
+      "contentPart": ["ColumnablePart"]
     },
     {
       "place": "Parts#Layout:12",
       "differentiator": "ContentFeed-Columns",
-      "contentType": [
-        "ContentFeed"
-      ]
+      "contentType": ["ContentFeed"]
     },
     {
       "place": "Parts#Layout:4",
       "differentiator": "Footer-ContentWidth",
-      "contentType": [
-        "Footer"
-      ]
+      "contentType": ["Footer"]
     },
     {
       "place": "Parts#Layout:1",
       "differentiator": "Group-Style",
-      "contentType": [
-        "Group"
-      ]
+      "contentType": ["Group"]
     },
     {
       "place": "Parts#Background:2",
       "differentiator": "Hero-BackgroundType",
-      "contentType": [
-        "Hero"
-      ]
+      "contentType": ["Hero"]
     },
     {
       "place": "Parts#Background:3",
       "differentiator": "Hero-BackgroundEmbed",
-      "contentType": [
-        "Hero"
-      ]
+      "contentType": ["Hero"]
     },
     {
       "place": "Parts#Layout:4",
       "differentiator": "Hero-ContentWidth",
-      "contentType": [
-        "Hero"
-      ]
+      "contentType": ["Hero"]
     },
     {
       "place": "Parts#Layout:4",
       "differentiator": "Hero-Gutter",
-      "contentType": [
-        "Hero"
-      ]
+      "contentType": ["Hero"]
     },
     {
       "place": "Parts#Layout:2",
       "differentiator": "Hero-HorizontalAlignment",
-      "contentType": [
-        "Hero"
-      ]
+      "contentType": ["Hero"]
     },
     {
       "place": "Parts#Layout:3",
       "differentiator": "Hero-VerticalAlignment",
-      "contentType": [
-        "Hero"
-      ]
+      "contentType": ["Hero"]
+    },
+    {
+      "place": "Parts#Size:1",
+      "differentiator": "Hero-AspectRatio",
+      "contentType": ["Hero"]
+    },
+    {
+      "place": "Parts#Size:2",
+      "differentiator": "Hero-AspectRatioTablet",
+      "contentType": ["Hero"]
+    },
+    {
+      "place": "Parts#Size:3",
+      "differentiator": "Hero-AspectRatioMobile",
+      "contentType": ["Hero"]
     },
     {
       "place": "Parts#Layout:1",
       "differentiator": "Section-BackgroundColour",
-      "contentType": [
-        "Section"
-      ]
+      "contentType": ["Section"]
     },
     {
       "place": "Parts#Layout:3",
       "differentiator": "Section-Alignment",
-      "contentType": [
-        "Section"
-      ]
+      "contentType": ["Section"]
     },
     {
       "place": "Parts#Layout:6",
       "differentiator": "Section-BottomPadding",
-      "contentType": [
-        "Section"
-      ]
+      "contentType": ["Section"]
     },
     {
       "place": "Parts#Layout:4",
       "differentiator": "Section-ContentWidth",
-      "contentType": [
-        "Section"
-      ]
+      "contentType": ["Section"]
     },
     {
       "place": "Parts#Layout:4",
       "differentiator": "Section-Gutter",
-      "contentType": [
-        "Section"
-      ]
+      "contentType": ["Section"]
     },
     {
       "place": "Parts#Layout:5",
       "differentiator": "Section-TopPadding",
-      "contentType": [
-        "Section"
-      ]
+      "contentType": ["Section"]
     },
     {
       "place": "Parts#Layout:5",
       "differentiator": "Section-SpacingAfter",
-      "contentType": [
-        "Section"
-      ]
+      "contentType": ["Section"]
     },
     {
       "place": "Parts#Layout:3",
       "differentiator": "Section-VerticalAlignment",
-      "contentType": [
-        "Section"
-      ]
+      "contentType": ["Section"]
     },
     {
       "place": "Parts#Layout:20",
       "differentiator": "Section-VerticalGutter",
-      "contentType": [
-        "Section"
-      ]
+      "contentType": ["Section"]
     },
     {
       "place": "Parts#Layout:21",
       "differentiator": "Section-StackedVerticalGutter",
-      "contentType": [
-        "Section"
-      ]
+      "contentType": ["Section"]
     }
   ],
   "ResponsiveMediaField_Edit": [
     {
       "place": "Parts#Background:3",
       "differentiator": "Hero-BackgroundImage",
-      "contentType": [
-        "Hero"
-      ]
+      "contentType": ["Hero"]
     },
     {
       "place": "Parts#Background:12",
       "differentiator": "Section-BackgroundImage",
-      "contentType": [
-        "Section"
-      ]
+      "contentType": ["Section"]
     },
     {
       "place": "Parts#Bleed:20",
       "differentiator": "BleedPart-BleedIn",
-      "contentPart": [
-        "BleedPart"
-      ]
+      "contentPart": ["BleedPart"]
     },
     {
       "place": "Parts#Bleed:21",
       "differentiator": "BleedPart-BleedOut",
-      "contentPart": [
-        "BleedPart"
-      ]
+      "contentPart": ["BleedPart"]
     }
   ],
   "ResponsiveMediaField": [
     {
-      "contentType": [
-        "Hero",
-        "Section"
-      ],
+      "contentType": ["Hero", "Section", "Carousel", "CarouselItem"],
       "place": "Background"
     }
   ],
   "TitlePart": [
     {
-      "contentType": [
-        "Form",
-        "Label"
-      ],
+      "contentType": ["Form", "Label"],
       "place": "-"
     }
   ]
