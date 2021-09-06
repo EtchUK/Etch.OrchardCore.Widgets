@@ -296,7 +296,7 @@
   ],
   "ResponsiveMediaField": [
     {
-      "contentType": ["Hero", "Section"],
+      "contentType": ["Hero", "Section", "Carousel", "CarouselItem"],
       "place": "Background"
     }
   ],

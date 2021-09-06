@@ -597,7 +597,10 @@
           "DisplayName": "Carousel Item",
           "Settings": {
             "ContentTypeSettings": {},
-            "FullTextAspectSettings": {}
+            "FullTextAspectSettings": {},
+            "Category": "Content",
+            "Description": "A single slide on a carousel.",
+            "Icon": "sticky-note"
           },
           "ContentTypePartDefinitionRecords": [
             {
@@ -614,6 +617,17 @@
               "Name": "BackgroundPart",
               "Settings": {
                 "ContentTypePartSettings": {
+                  "Position": "2"
+                }
+              }
+            },
+            {
+              "PartName": "FlowPart",
+              "Name": "Content",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Content",
+                  "Description": "Content for this slide of the carousel",
                   "Position": "1"
                 }
               }
@@ -2459,41 +2473,6 @@
                   "Hint": "Ensure all background images for each carousel item has the same dimensions to ensure the height of the carousel remains the same when changing the active item.",
                   "FallbackData": "[]",
                   "IsConfigured": true
-                },
-                "ContentIndexSettings": {}
-              }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "Heading",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Heading",
-                  "Position": "1"
-                }
-              }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "CTALabel",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "CTA Label",
-                  "Position": "2"
-                }
-              }
-            },
-            {
-              "FieldName": "ContentPickerField",
-              "Name": "CTALinkTo",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "CTA Link To",
-                  "Position": "3"
-                },
-                "ContentPickerFieldSettings": {
-                  "Hint": "Select a content item within the site that the user will be navigated to.",
-                  "DisplayedContentTypes": ["Homepage", "Page"]
                 },
                 "ContentIndexSettings": {}
               }
