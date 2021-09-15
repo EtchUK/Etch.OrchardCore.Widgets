@@ -68,19 +68,19 @@
 
         {% if mainMenu != nil or socialMenu != nil %}
 
-            <button class="header__nav-button js-nav-button">{{ Model.ContentItem.Content.Banner.MenuToggleButtonLabel.Text }}</button>
-            <button class="header__nav-button header__nav-button--close js-nav-button">{{ Model.ContentItem.Content.Banner.MenuCloseButtonLabel.Text }}</button>
+            <button type="button" class="header__nav-button js-nav-button">{{ Model.ContentItem.Content.Banner.MenuToggleButtonLabel.Text }}</button>
+            <button type="button" class="header__nav-button header__nav-button--close js-nav-button">{{ Model.ContentItem.Content.Banner.MenuCloseButtonLabel.Text }}</button>
 
-            <div class="header__nav" aria-label="{{ "Main navigation" | t }}">
+            <div class="header__nav">
 
                 {% if mainMenu != nil %}
-                <nav class="nav nav--primary" role="navigation">
+                <nav class="nav nav--primary">
                     {% shape "menu", alias: mainMenuAlias %}
                 </nav>
                 {% endif %}
 
                 {% if socialMenu != nil %}
-                    <nav class="nav nav--social" role="navigation">
+                    <nav class="nav nav--social">
                         {% shape "menu", alias: socialMenuAlias %}
                     </nav>
                 {% endif %}
