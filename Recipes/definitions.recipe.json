@@ -2547,15 +2547,6 @@
                 },
                 "ContentIndexSettings": {}
               }
-            },
-            {
-              "PartName": "BackgroundPart",
-              "Name": "BackgroundPart",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "Position": "1"
-                }
-              }
             }
           ]
         },
