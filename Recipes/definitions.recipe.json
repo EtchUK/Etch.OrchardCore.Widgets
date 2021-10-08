@@ -2318,6 +2318,46 @@
             },
             {
               "FieldName": "TextField",
+              "Name": "ContentWidth",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Content Width",
+                  "Editor": "PredefinedList",
+                  "Position": "3"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Determines the width of content within banner."
+                },
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "Default",
+                      "value": "default"
+                    },
+                    {
+                      "name": "Wide",
+                      "value": "wide"
+                    },
+                    {
+                      "name": "Full",
+                      "value": "full"
+                    },
+                    {
+                      "name": "Thin",
+                      "value": "thin"
+                    },
+                    {
+                      "name": "Extra Thin",
+                      "value": "extra-thin"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": "default"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
               "Name": "MenuCloseButtonLabel",
               "Settings": {
                 "ContentPartFieldSettings": {

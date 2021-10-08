@@ -5,6 +5,9 @@
 {% assign socialMenuAlias = "alias:" | append: socialMenu.Content.AliasPart.Alias %}
 
 {% assign css = "header" %}
+{% assign constrainClasses = "constrain" %}
+
+{% assign contentWidth = Model.ContentItem.Content.Banner.ContentWidth.Text %}
 
 {% assign backgroundColour = Model.ContentItem.Content.BackgroundPart.BackgroundColour.Value %}
 {% assign backgroundPattern = Model.ContentItem.Content.BackgroundPart.BackgroundPattern.Text %}
@@ -33,6 +36,10 @@
     {% assign css = css | append: positionCss %}
 {% endif %}
 
+{% if contentWidth != nil %}
+    {% assign constrainClasses = constrainClasses | append: " constrain--" | append: contentWidth %}
+{% endif %}
+
 {% assign styles = "" %}
 
 {% if backgroundColour != nil %}
@@ -58,7 +65,7 @@
 {% endif %}
 
 <header class="{{ css }}" style="{{ styles }}">
-    <div class="header__content constrain constrain--full">
+    <div class="header__content {{ constrainClasses }}">
         {% if Model.ContentItem.Content.Banner.Logo.Paths[0] != nil %}
             <a class="header__logo" href="{{ Request.PathBase }}/">
                 <picture>

@@ -168,6 +168,11 @@
     },
     {
       "place": "Parts#Layout:4",
+      "differentiator": "Banner-ContentWidth",
+      "contentType": ["Banner"]
+    },
+    {
+      "place": "Parts#Layout:4",
       "differentiator": "Footer-ContentWidth",
       "contentType": ["Footer"]
     },
