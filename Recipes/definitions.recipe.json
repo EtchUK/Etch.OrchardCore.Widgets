@@ -66,7 +66,7 @@
             "ContentTypeSettings": {
               "Stereotype": "Widget"
             },
-            "Category": "Content",
+            "Category": "Common,Content",
             "Description": "Link to another page using a URL.",
             "Icon": "link"
           },
@@ -397,7 +397,7 @@
             "ContentTypeSettings": {
               "Stereotype": "Widget"
             },
-            "Category": "Content",
+            "Category": "Common,Content",
             "Description": "Prominent section of page for sign posting to featured content.",
             "Icon": "mask"
           },
@@ -530,7 +530,7 @@
             "ContentTypeSettings": {
               "Stereotype": "Widget"
             },
-            "Category": "Content",
+            "Category": "Common,Content",
             "Description": "Embed content from another site (e.g. YouTube video, Google Maps, etc...).",
             "Icon": "youtube"
           },
@@ -847,7 +847,7 @@
               "Stereotype": "Widget"
             },
             "FullTextAspectSettings": {},
-            "Category": "Content",
+            "Category": "Common,Content",
             "Description": "Display an image that can change at various screen sizes",
             "Icon": "compress-arrows-alt"
           },
