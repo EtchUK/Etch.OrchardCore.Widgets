@@ -1744,7 +1744,7 @@
                 "ContentPartFieldSettings": {
                   "DisplayName": "Background Type",
                   "Editor": "PredefinedList",
-                  "Position": "0"
+                  "Position": "1"
                 },
                 "TextFieldSettings": {
                   "Hint": "Whether the background should be an image or a video embed."
@@ -1767,12 +1767,29 @@
               }
             },
             {
+              "FieldName": "ColourField",
+              "Name": "BackgroundColour",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Background Colour",
+                  "Position": "0"
+                },
+                "ColourFieldSettings": {
+                  "AllowCustom": true,
+                  "AllowTransparent": true,
+                  "Colours": [],
+                  "DefaultValue": "transparent",
+                  "UseGlobalColours": true
+                }
+              }
+            },
+            {
               "FieldName": "ResponsiveMediaField",
               "Name": "BackgroundImage",
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Background Image",
-                  "Position": "3"
+                  "Position": "4"
                 },
                 "ResponsiveMediaFieldSettings": {
                   "Breakpoints": "375, 425, 600, 768, 1024, 1280, 1440, 1920, 2560",
@@ -1788,7 +1805,7 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Background Embed Url",
-                  "Position": "4"
+                  "Position": "5"
                 },
                 "TextFieldSettings": {
                   "Hint": "URL to third-party site that is hosting video (e.g. YouTube)."
@@ -1868,7 +1885,7 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Invert Colour",
-                  "Position": "1"
+                  "Position": "2"
                 },
                 "BooleanFieldSettings": {
                   "Hint": "By default, this component uses dark text. Tick this box to invert the colour and use light text."
@@ -1882,7 +1899,7 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Pull Up",
-                  "Position": "2"
+                  "Position": "3"
                 },
                 "BooleanFieldSettings": {
                   "Hint": "Tick this to pull the hero up so that it goes behind the element above (e.g a transparent header)"
@@ -1896,7 +1913,7 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Add Gradient",
-                  "Position": "13"
+                  "Position": "14"
                 },
                 "BooleanFieldSettings": {
                   "Hint": "Tick to add a gradient to the background media, which will make the header more legible"
@@ -1983,7 +2000,7 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Lazy Load",
-                  "Position": "8"
+                  "Position": "9"
                 },
                 "BooleanFieldSettings": {
                   "Hint": "Load iframe when it's scrolled in to view which saves data, speeds up the loading of other parts of the page, and reduces memory usage however can cause layout shifts.",
@@ -1998,7 +2015,7 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Show Scroll Encouragement",
-                  "Position": "9"
+                  "Position": "10"
                 },
                 "BooleanFieldSettings": {
                   "Hint": ""
