@@ -3,7 +3,7 @@
 {% assign cssClasses = "image" %}
 
 {% assign linkTo = Model.ContentItem.Content.Image.LinkTo.Text %}
-{% assign imagePath = Model.ContentItem.Content.Image.Image.Paths[0] | asset_url | resize_url: width: 2560, mode:'max' %}
+{% assign imagePath = Model.ContentItem.Content.Image.Image.Paths[0] | asset_url | resize_url: width: 2560, mode:'min' %}
 
 {% if linkTo != nil %}
     {% assign tag = "a" %}
