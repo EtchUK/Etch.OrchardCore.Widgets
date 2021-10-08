@@ -1380,6 +1380,82 @@
                 },
                 "ContentIndexSettings": {}
               }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "VerticalGutter",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Vertical Gutter",
+                  "Editor": "PredefinedList"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Specify how much vertical space to show between items of content when they run onto multiple lines"
+                },
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "None",
+                      "value": "section--no-vertical-flow-gutter"
+                    },
+                    {
+                      "name": "Small",
+                      "value": "section--small-vertical-flow-gutter"
+                    },
+                    {
+                      "name": "Medium",
+                      "value": "section--medium-vertical-flow-gutter"
+                    },
+                    {
+                      "name": "Large",
+                      "value": "section--large-vertical-flow-gutter"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": "section--no-vertical-flow-gutter"
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "StackedVerticalGutter",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Stacked Vertical Gutter",
+                  "Editor": "PredefinedList"
+                },
+                "TextFieldSettings": {
+                  "Hint": "On smaller screens, side-by-side items are forced into a single column stack. By default, the vertical gutter is used as the space between these stacked items. If you'd like to override this and force a different size when items are stacked due to screen size, select an alternative gutter."
+                },
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "Use existing Vertical Gutter",
+                      "value": "section--stacked-vertical-flow-gutter-not-specified"
+                    },
+                    {
+                      "name": "None",
+                      "value": "section--no-stacked-vertical-flow-gutter"
+                    },
+                    {
+                      "name": "Small",
+                      "value": "section--small-stacked-vertical-flow-gutter"
+                    },
+                    {
+                      "name": "Medium",
+                      "value": "section--medium-stacked-vertical-flow-gutter"
+                    },
+                    {
+                      "name": "Large",
+                      "value": "section--large-stacked-vertical-flow-gutter"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": "section--stacked-vertical-flow-gutter-not-specified"
+                },
+                "ContentIndexSettings": {}
+              }
             }
           ]
         },
