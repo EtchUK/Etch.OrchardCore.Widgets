@@ -51,6 +51,8 @@
     {% assign backgroundPatternURL = backgroundPattern | asset_url %}
     {% assign backgroundPattern = "--headerBackgroundPattern: url(" | append: backgroundPatternURL | append:"); " %}
     {% assign styles = styles | append: backgroundPattern %}
+
+    {% link rel:"preload", as:"image", src: backgroundPatternURL %}
 {% endif %}
 
 {% if mobileBackgroundColour != nil %}
