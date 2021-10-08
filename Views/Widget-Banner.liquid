@@ -58,13 +58,19 @@
 {% endif %}
 
 <header class="{{ css }}" style="{{ styles }}">
-    <div class="header__content constrain constrain--wide">
-        <a class="header__logo" href="{{ Request.PathBase }}/">
-            <picture>
-                <source srcset="{{ Model.ContentItem.Content.Banner.Logo.Paths[0] | asset_url }}" media="(min-width: 768px)">
-                <img src="{{ Model.ContentItem.Content.Banner.LogoSmall.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.Banner.LogoAlternateText.Text }}" />
-            </picture>
-        </a>
+    <div class="header__content constrain constrain--full">
+        {% if Model.ContentItem.Content.Banner.Logo.Paths[0] != nil %}
+            <a class="header__logo" href="{{ Request.PathBase }}/">
+                <picture>
+                    {% if Model.ContentItem.Content.Banner.LogoSmall.Paths[0] != nil %}
+                        <source srcset="{{ Model.ContentItem.Content.Banner.Logo.Paths[0] | asset_url }}" media="(min-width: 768px)">
+                        <img src="{{ Model.ContentItem.Content.Banner.LogoSmall.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.Banner.LogoAlternateText.Text }}" />
+                    {% else %}
+                        <img src="{{ Model.ContentItem.Content.Banner.Logo.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.Banner.LogoAlternateText.Text }}" />
+                    {% endif %}
+                </picture>
+            </a>
+        {% endif %}
 
         {% if mainMenu != nil or socialMenu != nil %}
 
