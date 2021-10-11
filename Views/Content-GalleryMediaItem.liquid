@@ -1,0 +1,5 @@
+<li class="gallery__item gallery__item--media">
+    <a class="gallery__item-link" href="{{ Model.ContentItem.Content.GalleryMediaItem.Image.Paths[0] | asset_url| resize_url: width: 2560 }}">
+        <img class="gallery__item-thumb" src="{{ Model.ContentItem.Content.GalleryMediaItem.Image.Paths[0] | asset_url| resize_url: width: 1280 }}" title="{{ Model.ContentItem.Content.GalleryMediaItem.AltText.Text }}" alt="{{ Model.ContentItem.Content.GalleryMediaItem.AltText.Text }}" />
+    </a>
+</li>

@@ -1,0 +1,11 @@
+{% assign items = Model.ContentItem.Content.Items.ContentItems %}
+{% assign itemCount = items | size %}
+{% assign cols = Model.ContentItem.Content.ColumnablePart.Columns.Text %}
+
+{% if itemCount > 0 %}
+    <ul class="gallery gallery--{{cols}}-cols js-gallery">
+        {% for item in items %}
+            {{ item | shape_build_display: "Detail" | shape_render }}
+        {% endfor %}
+    </ul>
+{% endif %}

@@ -1,0 +1,5 @@
+<li class="gallery__item gallery__item--embed">
+    <a class="gallery__item-link" href="{{ Model.ContentItem.Content.GalleryEmbedItem.EmbedURL.Text }}">
+        <img class="gallery__item-thumb" src="{{ Model.ContentItem.Content.GalleryEmbedItem.ThumbnailImage.Paths[0] | asset_url | resize_url: width: 1280 }}" title="{{ Model.ContentItem.Content.GalleryEmbedItem.Title.Text }}" alt="{{ Model.ContentItem.Content.GalleryEmbedItem.ThumbnailAltText.Text }}" />
+    </a>
+</li>
