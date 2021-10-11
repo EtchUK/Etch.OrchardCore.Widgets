@@ -1132,6 +1132,110 @@
               }
             }
           ]
+        },
+        {
+          "Name": "Gallery",
+          "DisplayName": "Gallery",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget"
+            },
+            "FullTextAspectSettings": {},
+            "Category": "Content",
+            "Description": "Display a gallery of media items (images and videos)",
+            "Icon": "images"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Gallery",
+              "Name": "Gallery",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                }
+              }
+            },
+            {
+              "PartName": "ColumnablePart",
+              "Name": "ColumnablePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "3"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "Items",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Items",
+                  "Description": "Specify items for this gallery",
+                  "Position": "1"
+                },
+                "BagPartSettings": {
+                  "ContainedContentTypes": [
+                    "GalleryEmbedItem",
+                    "GalleryMediaItem"
+                  ]
+                },
+                "ContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "GalleryMediaItem",
+          "DisplayName": "Gallery Media Item",
+          "Settings": {
+            "ContentTypeSettings": {},
+            "FullTextAspectSettings": {},
+            "Category": "Content",
+            "Description": "Add an image to a gallery",
+            "Icon": "image"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "GalleryMediaItem",
+              "Name": "GalleryMediaItem",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "GalleryEmbedItem",
+          "DisplayName": "Gallery Embed Item",
+          "Settings": {
+            "ContentTypeSettings": {},
+            "FullTextAspectSettings": {},
+            "Category": "Content",
+            "Description": "Add a video to a gallery",
+            "Icon": "video"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "GalleryEmbedItem",
+              "Name": "GalleryEmbedItem",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
         }
       ],
       "ContentParts": [
@@ -3061,6 +3165,88 @@
                   "Hint": "Specify a unique ID for this item (Optional)"
                 },
                 "ContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "GalleryMediaItem",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "MediaField",
+              "Name": "Image",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Image",
+                  "Position": "0"
+                },
+                "MediaFieldSettings": {
+                  "Multiple": false
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "AltText",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Alt Text",
+                  "Position": "1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "GalleryEmbedItem",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "EmbedURL",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Embed URL",
+                  "Position": "0"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Specify a Vimeo or YouTube Embed URL, e.g https://www.youtube.com/embed/TorVk3Hxm7Q"
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "MediaField",
+              "Name": "ThumbnailImage",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Thumbnail Image",
+                  "Position": "2"
+                },
+                "MediaFieldSettings": {
+                  "Multiple": false
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Title",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Title",
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "ThumbnailAltText",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Thumbnail Alt Text",
+                  "Position": "3"
+                }
               }
             }
           ]
