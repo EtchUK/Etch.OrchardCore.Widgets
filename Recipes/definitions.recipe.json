@@ -1207,6 +1207,10 @@
                       "value": "thin"
                     },
                     {
+                      "name": "Thinner",
+                      "value": "thinner"
+                    },
+                    {
                       "name": "Extra Thin",
                       "value": "extra-thin"
                     }
@@ -1274,6 +1278,10 @@
                     {
                       "name": "Large",
                       "value": "large"
+                    },
+                    {
+                      "name": "Extra Large",
+                      "value": "extra-large"
                     }
                   ],
                   "Editor": 1,
@@ -1307,6 +1315,10 @@
                     {
                       "name": "Large",
                       "value": "large"
+                    },
+                    {
+                      "name": "Extra Large",
+                      "value": "extra-large"
                     }
                   ],
                   "Editor": 1,
