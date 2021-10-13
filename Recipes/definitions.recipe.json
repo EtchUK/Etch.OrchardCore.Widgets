@@ -1334,6 +1334,10 @@
                       "value": "none"
                     },
                     {
+                      "name": "Small",
+                      "value": "small"
+                    },
+                    {
                       "name": "Default",
                       "value": "default"
                     },
