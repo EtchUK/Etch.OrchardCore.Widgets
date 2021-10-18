@@ -35,12 +35,12 @@ namespace Etch.OrchardCore.Widgets.Filters
 
             if (animationPart.Delay.HasValue)
             {
-                styles.Add($"--animationDelay: {animationPart.Delay}s;");
+                styles.Add($"--animationDelay: {animationPart.Delay}ms;");
             }
 
             if (animationPart.Duration.HasValue)
             {
-                styles.Add($"--animationDuration: {animationPart.Duration}s;");
+                styles.Add($"--animationDuration: {animationPart.Duration}ms;");
             }
 
             return new ValueTask<FluidValue>(new StringValue(string.Join(" ", styles)));
