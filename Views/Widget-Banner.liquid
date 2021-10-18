@@ -66,10 +66,16 @@
     {% assign styles = styles | append: mobileBackgroundPattern %}
 {% endif %}
 
+{% assign logoUrl = Request.PathBase | append: "/" %}
+
+{% if Model.ContentItem.Content.Banner.LogoUrl.Text != nil %}
+    {% assign logoUrl = Model.ContentItem.Content.Banner.LogoUrl.Text | liquid %}
+{% endif %}
+
 <header class="{{ css }}" style="{{ styles }}">
     <div class="header__content {{ constrainClasses }}">
         {% if Model.ContentItem.Content.Banner.Logo.Paths[0] != nil %}
-            <a class="header__logo" href="{{ Request.PathBase }}/">
+            <a class="header__logo" href="{{ logoUrl }}">
                 <picture>
                     {% if Model.ContentItem.Content.Banner.LogoSmall.Paths[0] != nil %}
                         <source srcset="{{ Model.ContentItem.Content.Banner.Logo.Paths[0] | asset_url }}" media="(min-width: 768px)">
