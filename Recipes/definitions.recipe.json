@@ -6,8 +6,12 @@
   "website": "https://etchuk.com",
   "version": "1.1.0",
   "issetuprecipe": false,
-  "categories": ["Content"],
-  "tags": ["etch"],
+  "categories": [
+    "Content"
+  ],
+  "tags": [
+    "etch"
+  ],
   "steps": [
     {
       "name": "ContentDefinition",
@@ -587,7 +591,9 @@
                   "Position": "2"
                 },
                 "BagPartSettings": {
-                  "ContainedContentTypes": ["CarouselItem"]
+                  "ContainedContentTypes": [
+                    "CarouselItem"
+                  ]
                 },
                 "ContentIndexSettings": {}
               }
@@ -1004,7 +1010,9 @@
                 },
                 "ContentIndexSettings": {},
                 "BagPartSettings": {
-                  "ContainedContentTypes": ["Link"]
+                  "ContainedContentTypes": [
+                    "Link"
+                  ]
                 }
               }
             },
@@ -1051,7 +1059,9 @@
                   "Position": "1"
                 },
                 "BagPartSettings": {
-                  "ContainedContentTypes": ["CheckboxItem"]
+                  "ContainedContentTypes": [
+                    "CheckboxItem"
+                  ]
                 },
                 "ContentIndexSettings": {}
               }
@@ -1108,7 +1118,9 @@
                   "Position": "1"
                 },
                 "BagPartSettings": {
-                  "ContainedContentTypes": ["RadioButtonItem"]
+                  "ContainedContentTypes": [
+                    "RadioButtonItem"
+                  ]
                 },
                 "ContentIndexSettings": {}
               }
@@ -2463,11 +2475,13 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Menu",
-                  "Position": "3"
+                  "Position": "4"
                 },
                 "ContentPickerFieldSettings": {
                   "Hint": "Main menu used by users to navigate the main sections of the site.",
-                  "DisplayedContentTypes": ["Menu"]
+                  "DisplayedContentTypes": [
+                    "Menu"
+                  ]
                 },
                 "ContentIndexSettings": {}
               }
@@ -2478,7 +2492,7 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Menu Toggle Button Label",
-                  "Position": "4"
+                  "Position": "5"
                 },
                 "TextFieldSettings": {
                   "Hint": "Label for button that's displayed on smaller devices to toggle the visibility of the main menu."
@@ -2493,7 +2507,7 @@
                 "ContentPartFieldSettings": {
                   "DisplayName": "Position",
                   "Editor": "PredefinedList",
-                  "Position": "6"
+                  "Position": "7"
                 },
                 "TextFieldSettings": {
                   "Hint": "Default will display at the header at the top and disappear out of view when the user scrolls. Fixed will position header will always be visible, even when the visitor scrolls."
@@ -2559,7 +2573,7 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Menu Close Button Label",
-                  "Position": "5"
+                  "Position": "6"
                 },
                 "TextFieldSettings": {
                   "Hint": "Label for button that's displayed on smaller devices to close the main menu."
@@ -2574,7 +2588,7 @@
                 "ContentPartFieldSettings": {
                   "DisplayName": "Mobile Background Pattern",
                   "Editor": "PredefinedList",
-                  "Position": "8"
+                  "Position": "9"
                 },
                 "TextFieldSettings": {},
                 "TextFieldPredefinedListEditorSettings": {
@@ -2595,7 +2609,7 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Mobile Background Colour",
-                  "Position": "7"
+                  "Position": "8"
                 },
                 "ColourFieldSettings": {
                   "AllowCustom": true,
@@ -2603,6 +2617,20 @@
                   "Colours": [],
                   "DefaultValue": "transparent",
                   "UseGlobalColours": true
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "LogoUrl",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Logo Url",
+                  "Position": "3"
+                },
+                "TextFieldSettings": {
+                  "Hint": "URL user is navigated to when clicking the logo. If left blank, will default to the homepage. Supports liquid."
                 },
                 "ContentIndexSettings": {}
               }
@@ -2804,7 +2832,9 @@
                 "ContentPickerFieldSettings": {
                   "Hint": "Menu to display.",
                   "Required": true,
-                  "DisplayedContentTypes": ["Menu"]
+                  "DisplayedContentTypes": [
+                    "Menu"
+                  ]
                 },
                 "ContentIndexSettings": {}
               }
