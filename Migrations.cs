@@ -179,8 +179,8 @@ namespace Etch.OrchardCore.Widgets
                     {
                         DefaultValue = "600",
                         Minimum = 0,
-                        Hint = "Length of animation in seconds.",
-                        Scale = 2
+                        Hint = "Length of animation in milliseconds.",
+                        Scale = 0
                     })
                 )
                 .WithField("Timing", field => field
@@ -215,8 +215,8 @@ namespace Etch.OrchardCore.Widgets
                     {
                         DefaultValue = "0",
                         Minimum = 0,
-                        Hint = "Number of seconds to delay start of animation.",
-                        Scale = 2
+                        Hint = "Number of milliseconds to delay start of animation.",
+                        Scale = 0
                     })
                 )
                 .WithField("Repeat", field => field
