@@ -1028,6 +1028,73 @@
           ]
         },
         {
+          "Name": "FeaturedContent",
+          "DisplayName": "Featured Content",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget"
+            },
+            "FullTextAspectSettings": {},
+            "Category": "Content",
+            "Description": "Pick specific content, to display in a static feed.",
+            "Icon": "highlighter"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "FeaturedContent",
+              "Name": "FeaturedContent",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                }
+              }
+            },
+            {
+              "PartName": "BackgroundPart",
+              "Name": "BackgroundPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "3"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "Links",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Links",
+                  "Description": "Provides a collection behavior for your content item.",
+                  "Position": "1"
+                },
+                "LinkableContentTypes": [],
+                "BagPartSettings": {
+                  "ContainedContentTypes": ["Link"]
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "PartName": "ColumnablePart",
+              "Name": "ColumnablePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "4"
+                }
+              }
+            }
+          ]
+        },
+        {
           "Name": "Checkboxes",
           "DisplayName": "Checkboxes",
           "Settings": {
@@ -2929,6 +2996,36 @@
                   "DisplayName": "Items",
                   "Position": "1"
                 }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "FeaturedContent",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "BooleanField",
+              "Name": "HideWidgetHeader",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Hide Widget Header",
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "FieldName": "ContentPickerField",
+              "Name": "Items",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Items"
+                },
+                "ContentPickerFieldSettings": {
+                  "Multiple": true,
+                  "DisplayedContentTypes": ["NewsPost"]
+                },
+                "ContentIndexSettings": {}
               }
             }
           ]
