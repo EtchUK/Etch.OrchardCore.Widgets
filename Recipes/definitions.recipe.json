@@ -3304,7 +3304,7 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Thumbnail Video",
-                  "Position": "2"
+                  "Position": "1"
                 },
                 "TextFieldSettings": {
                   "Hint": "For example, a Vimeo embed URL with the background property. If populated, this will override the thumbnail image."
@@ -3327,12 +3327,26 @@
               }
             },
             {
+              "FieldName": "TextField",
+              "Name": "Text",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Thumbnail Text",
+                  "Position": "4"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Text to display over the thumbnail, if any."
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
               "FieldName": "CodeField",
               "Name": "OnClickEvent",
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "On Click Event",
-                  "Position": "4"
+                  "Position": "5"
                 },
                 "CodeFieldSettings": {
                   "Language": "javascript"
@@ -3346,7 +3360,7 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Thumbnail Alt Text",
-                  "Position": "1"
+                  "Position": "2"
                 },
                 "TextFieldSettings": {
                   "Hint": "Specify descriptive alt text for the thumbnail image/video"
