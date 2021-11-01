@@ -19,7 +19,7 @@
             <div class="video-modal__cover"></div>
         {% elsif imagePath != nil %}
             <div class="video-modal__media">
-                <img class="video-modal__thumbnail" src="{{ imagePath | asset_url | resize_url: width: 300, height:168 }}"
+                <img class="video-modal__thumbnail" src="{{ imagePath | asset_url | resize_url: width: 425, height: 240 }}"
                     alt="{{ altText }}" loading="lazy" />
             </div>
         {% endif %}
