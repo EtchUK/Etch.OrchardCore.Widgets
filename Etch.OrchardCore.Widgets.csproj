@@ -4,7 +4,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.1.1</Version>
+    <Version>1.2.0</Version>
     <PackageId>Etch.OrchardCore.Widgets</PackageId>
     <Title>Etch OrchardCore Widgets</Title>
     <Authors>Etch</Authors>
@@ -15,12 +15,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Etch.OrchardCore.Fields" Version="1.0.0" />
-    <PackageReference Include="OrchardCore.ContentManagement" Version="1.0.0" />
-    <PackageReference Include="OrchardCore.ContentManagement.Display" Version="1.0.0" />
-    <PackageReference Include="OrchardCore.Flows" Version="1.0.0" />
-    <PackageReference Include="OrchardCore.Lists" Version="1.0.0" />
-    <PackageReference Include="OrchardCore.Module.Targets" Version="1.0.0" />
+    <PackageReference Include="Etch.OrchardCore.Fields" Version="1.1.0" />
+    <PackageReference Include="OrchardCore.ContentManagement" Version="1.1.0" />
+    <PackageReference Include="OrchardCore.ContentManagement.Display" Version="1.1.0" />
+    <PackageReference Include="OrchardCore.Flows" Version="1.1.0" />
+    <PackageReference Include="OrchardCore.Lists" Version="1.1.0" />
+    <PackageReference Include="OrchardCore.Module.Targets" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>
