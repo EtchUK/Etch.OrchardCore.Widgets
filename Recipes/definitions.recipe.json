@@ -1315,6 +1315,39 @@
               }
             }
           ]
+        },
+        {
+          "Name": "VideoModal",
+          "DisplayName": "Video Modal",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget"
+            },
+            "FullTextAspectSettings": {},
+            "Category": "Content",
+            "Description": "Displays a image/video thumbnail that opens a video in a modal when clicked",
+            "Icon": "film"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "VideoModal",
+              "Name": "VideoModal",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
         }
       ],
       "ContentParts": [
@@ -3374,6 +3407,78 @@
                   "DisplayName": "Thumbnail Alt Text",
                   "Position": "3"
                 }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "VideoModal",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "MediaField",
+              "Name": "ThumbnailImage",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Thumbnail Image",
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "ThumbnailVideo",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Thumbnail Video",
+                  "Position": "2"
+                },
+                "TextFieldSettings": {
+                  "Hint": "For example, a Vimeo embed URL with the background property. If populated, this will override the thumbnail image."
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "LinkField",
+              "Name": "Video",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Video",
+                  "Position": "3"
+                },
+                "LinkFieldSettings": {
+                  "Hint": "e.g a YouTube URL"
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "CodeField",
+              "Name": "OnClickEvent",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "On Click Event",
+                  "Position": "4"
+                },
+                "CodeFieldSettings": {
+                  "Language": "javascript"
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "AltText",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Thumbnail Alt Text",
+                  "Position": "1"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Specify descriptive alt text for the thumbnail image/video"
+                },
+                "ContentIndexSettings": {}
               }
             }
           ]
