@@ -1,9 +1,10 @@
 {% assign altText = Model.ContentItem.Content.VideoModal.AltText.Text %}
 {% assign embedURL = Model.ContentItem.Content.VideoModal.ThumbnailVideo.Text %}
 {% assign imagePath = Model.ContentItem.Content.VideoModal.ThumbnailImage.Paths[0] %}
-{% assign onClickEvent = Model.ContentItem.Content.VideoModal.OnClickEvent.Value %}
 {% assign text = Model.ContentItem.Content.VideoModal.Video.Text %}
 {% assign url = Model.ContentItem.Content.VideoModal.Video.Url %}
+
+{% assign onClickEvent = Model.ContentItem.Content.JavaScriptEventsPart.OnClick.Value %}
 
 {% if url != nil %}
 <div class="video-modal js-gallery">
