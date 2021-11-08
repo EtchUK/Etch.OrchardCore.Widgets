@@ -1346,6 +1346,15 @@
                   "Position": "0"
                 }
               }
+            },
+            {
+              "PartName": "JavaScriptEventsPart",
+              "Name": "JavaScriptEventsPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                }
+              }
             }
           ]
         }
@@ -3463,20 +3472,6 @@
                 },
                 "TextFieldSettings": {
                   "Hint": "Text to display over the thumbnail, if any."
-                },
-                "ContentIndexSettings": {}
-              }
-            },
-            {
-              "FieldName": "CodeField",
-              "Name": "OnClickEvent",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "On Click Event",
-                  "Position": "5"
-                },
-                "CodeFieldSettings": {
-                  "Language": "javascript"
                 },
                 "ContentIndexSettings": {}
               }
