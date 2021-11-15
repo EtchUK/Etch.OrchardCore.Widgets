@@ -1,10 +1,12 @@
 ﻿{% assign pageSize = Model.ContentItem.Content.ContentFeed.PageSize.Value %}
+{% assign skip = Model.ContentItem.Content.ContentFeed.Skip.Value %}
 {% assign fetchCount = pageSize | plus: 1 %}
 
 {% assign paging = Model.ContentItem.Content.ContentFeed.Paging.Value %}
 
 {% assign page = Request.Query["page"] | first | at_least: 1 %}
-{% assign from = page | times: pageSize | minus: pageSize  | at_least: 0 %}
+{% assign from = page | times: pageSize | minus: pageSize | plus: skip | at_least: 0 %}
+{% assign paginationStartPoint = 0 | plus: skip %}
 
 {% assign query = Model.ContentItem.Content.ContentFeed.Items.Value %}
 {% assign items = Queries[query] | query: size: fetchCount, from: from %}
@@ -73,7 +75,7 @@
 
         {% if paging %}
             <ul class="content-feed__pager pager margin--bottom-large">
-                {% if from > 0 %}
+                {% if from > paginationStartPoint %}
                     {% assign prevPage = page | minus: 1 %}
                     <li>
                         <a href="{{ pageUrl | append: "?page=" | append: prevPage }}">{{ "Newer posts" | t}}</a>
