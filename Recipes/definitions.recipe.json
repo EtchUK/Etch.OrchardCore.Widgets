@@ -6,12 +6,8 @@
   "website": "https://etchuk.com",
   "version": "1.1.1",
   "issetuprecipe": false,
-  "categories": [
-    "Content"
-  ],
-  "tags": [
-    "etch"
-  ],
+  "categories": ["Content"],
+  "tags": ["etch"],
   "steps": [
     {
       "name": "ContentDefinition",
@@ -591,9 +587,7 @@
                   "Position": "2"
                 },
                 "BagPartSettings": {
-                  "ContainedContentTypes": [
-                    "CarouselItem"
-                  ]
+                  "ContainedContentTypes": ["CarouselItem"]
                 },
                 "ContentIndexSettings": {}
               }
@@ -1010,9 +1004,7 @@
                 },
                 "ContentIndexSettings": {},
                 "BagPartSettings": {
-                  "ContainedContentTypes": [
-                    "Link"
-                  ]
+                  "ContainedContentTypes": ["Link"]
                 }
               }
             },
@@ -1126,9 +1118,7 @@
                   "Position": "1"
                 },
                 "BagPartSettings": {
-                  "ContainedContentTypes": [
-                    "CheckboxItem"
-                  ]
+                  "ContainedContentTypes": ["CheckboxItem"]
                 },
                 "ContentIndexSettings": {}
               }
@@ -1185,9 +1175,7 @@
                   "Position": "1"
                 },
                 "BagPartSettings": {
-                  "ContainedContentTypes": [
-                    "RadioButtonItem"
-                  ]
+                  "ContainedContentTypes": ["RadioButtonItem"]
                 },
                 "ContentIndexSettings": {}
               }
@@ -2588,9 +2576,7 @@
                 },
                 "ContentPickerFieldSettings": {
                   "Hint": "Main menu used by users to navigate the main sections of the site.",
-                  "DisplayedContentTypes": [
-                    "Menu"
-                  ]
+                  "DisplayedContentTypes": ["Menu"]
                 },
                 "ContentIndexSettings": {}
               }
@@ -2600,11 +2586,11 @@
               "Name": "MenuToggleButtonLabel",
               "Settings": {
                 "ContentPartFieldSettings": {
-                  "DisplayName": "Menu Toggle Button Label",
+                  "DisplayName": "Menu Open Button Label",
                   "Position": "5"
                 },
                 "TextFieldSettings": {
-                  "Hint": "Label for button that's displayed on smaller devices to toggle the visibility of the main menu."
+                  "Hint": "Label for button that's displayed on smaller devices to open the main menu."
                 },
                 "ContentIndexSettings": {}
               }
@@ -2740,6 +2726,20 @@
                 },
                 "TextFieldSettings": {
                   "Hint": "URL user is navigated to when clicking the logo. If left blank, will default to the homepage. Supports liquid."
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "ContentPickerField",
+              "Name": "SocialMenu",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Social Menu"
+                },
+                "ContentPickerFieldSettings": {
+                  "Hint": "Select a menu of social links to be displayed in the header",
+                  "DisplayedContentTypes": ["Menu"]
                 },
                 "ContentIndexSettings": {}
               }
@@ -2941,9 +2941,7 @@
                 "ContentPickerFieldSettings": {
                   "Hint": "Menu to display.",
                   "Required": true,
-                  "DisplayedContentTypes": [
-                    "Menu"
-                  ]
+                  "DisplayedContentTypes": ["Menu"]
                 },
                 "ContentIndexSettings": {}
               }
