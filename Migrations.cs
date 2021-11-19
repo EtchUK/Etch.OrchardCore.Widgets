@@ -282,5 +282,44 @@ namespace Etch.OrchardCore.Widgets
 
             return 7;
         }
+
+        public int UpdateFrom7()
+        {
+            _contentDefinitionManager.AlterPartDefinition("LinkVisualPart", part => part
+               .Attachable()
+               .WithDescription("Define visual properties for a link.")
+               .WithDisplayName("Link Visual")
+               .WithField("Style", field => field
+                   .OfType(nameof(TextField))
+                   .WithDisplayName("Style")
+                   .WithPosition("1")
+                   .WithEditor("PredefinedList")
+                   .WithSettings(new TextFieldSettings
+                   {
+                       Hint = "Control the style of the link"
+                   })
+                   .WithSettings(new TextFieldPredefinedListEditorSettings
+                   {
+                       Editor = EditorOption.Dropdown,
+                       Options = new ListValueOption[] {
+                           new ListValueOption {
+                               Name = "Default",
+                               Value = string.Empty
+                           },
+                           new ListValueOption {
+                               Name = "Primary Button",
+                               Value = "btn--primary"
+                           },
+                           new ListValueOption {
+                               Name = "Secondary Button",
+                               Value = "btn--secondary"
+                           }
+                       }
+                   })
+               )
+            );
+
+            return 8;
+        }
     }
 }

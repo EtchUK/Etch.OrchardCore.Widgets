@@ -1,9 +1,15 @@
 {% assign linkUrl = Model.ContentItem.Content.Link.Url.Text %}
 {% assign text = Model.ContentItem.Content.Link.Text.Text %}
 {% assign openInNewWindow = Model.ContentItem.Content.Link.OpenInNewWindow.Value %}
-{% assign style = Model.ContentItem.Content.Link.Style.Text %}
 {% assign cssClasses = '' %}
 {% assign onClickEvent = Model.ContentItem.Content.JavaScriptEventsPart.OnClick.Value %}
+
+{% comment %} "Style" field is obsolete but remains for backwards compatibility {% endcomment %}
+{% assign style = Model.ContentItem.Content.Link.Style.Text %}
+
+{% if Model.ContentItem.Content.LinkVisualPart.Style.Text %}
+    {% assign style = Model.ContentItem.Content.LinkVisualPart.Style.Text %}
+{% endif %}
 
 {% if style != null and style != 'default' %}
     {% assign cssClasses = 'btn ' | append: style %}
