@@ -275,6 +275,11 @@
       "place": "Parts#Layout:21",
       "differentiator": "Section-StackedVerticalGutter",
       "contentType": ["Section"]
+    },
+    {
+      "place": "Parts#Layout:1",
+      "differentiator": "Gallery-ThumbnailAspectRatio",
+      "contentType": ["Gallery"]
     }
   ],
   "ResponsiveMediaField_Edit": [
