@@ -2147,6 +2147,38 @@
               }
             },
             {
+              "FieldName": "TextField",
+              "Name": "VerticalAlignmentMobile",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Vertical Alignment (Mobile)",
+                  "Editor": "PredefinedList",
+                  "Position": "10"
+                },
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "Match Desktop (Default)",
+                      "value": "none"
+                    },
+                    {
+                      "name": "Top",
+                      "value": "top"
+                    },
+                    {
+                      "name": "Center",
+                      "value": "center"
+                    },
+                    {
+                      "name": "Bottom",
+                      "value": "bottom"
+                    }
+                  ],
+                  "Editor": 1
+                }
+              }
+            },
+            {
               "FieldName": "BooleanField",
               "Name": "InvertColour",
               "Settings": {
