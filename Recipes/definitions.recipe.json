@@ -3064,6 +3064,47 @@
           ]
         },
         {
+          "Name": "Gallery",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "ThumbnailAspectRatio",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Thumbnail Aspect Ratio",
+                  "Editor": "PredefinedList",
+                  "Position": "10"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Enforce an aspect ratio on thumbnail imagery in this gallery, if desired"
+                },
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "None",
+                      "value": "none"
+                    },
+                    {
+                      "name": "16:9 (Landscape)",
+                      "value": "16-9"
+                    },
+                    {
+                      "name": "1:1 (Square)",
+                      "value": "1-1"
+                    },
+                    {
+                      "name": "9:16 (Portrait)",
+                      "value": "16-9"
+                    }
+                  ],
+                  "Editor": 1
+                }
+              }
+            }
+          ]
+        },
+        {
           "Name": "Footer",
           "Settings": {},
           "ContentPartFieldDefinitionRecords": [

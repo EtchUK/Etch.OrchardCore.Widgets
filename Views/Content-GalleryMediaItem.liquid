@@ -1,5 +1,16 @@
-<li class="gallery__item gallery__item--media">
+{% assign thumb = Model.ContentItem.Content.GalleryMediaItem.Image.Paths[0] | asset_url %}
+{% if Model.Properties.ThumbnailAspectRatio == "16-9" %}
+    {% assign thumb = thumb | resize_url: width: 1280, height: 720, mode:'crop' %}
+{% elsif Model.Properties.ThumbnailAspectRatio == "1-1" %}
+    {% assign thumb = thumb  | resize_url: width: 1280, height: 1280, mode:'crop' %}
+{% elsif Model.Properties.ThumbnailAspectRatio == "9-16" %}
+    {% assign thumb = thumb  | resize_url: width: 1280, height: 2276, mode:'crop' %}
+{% else %}
+    {% assign thumb = thumb  | resize_url: width: 1280 %}
+{% endif %}
+
+<li class="gallery__item gallery__item--media gallery__item--thumbnail-force-{{ Model.Properties.ThumbnailAspectRatio }}">
     <a class="gallery__item-link" href="{{ Model.ContentItem.Content.GalleryMediaItem.Image.Paths[0] | asset_url| resize_url: width: 2560 }}">
-        <img class="gallery__item-thumb" src="{{ Model.ContentItem.Content.GalleryMediaItem.Image.Paths[0] | asset_url| resize_url: width: 1280 }}" title="{{ Model.ContentItem.Content.GalleryMediaItem.AltText.Text }}" alt="{{ Model.ContentItem.Content.GalleryMediaItem.AltText.Text }}" />
+        <img class="gallery__item-thumb" src="{{ thumb }}" title="{{ Model.ContentItem.Content.GalleryMediaItem.AltText.Text }}" alt="{{ Model.ContentItem.Content.GalleryMediaItem.AltText.Text }}" />
     </a>
 </li>
