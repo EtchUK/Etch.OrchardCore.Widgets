@@ -5,7 +5,9 @@
 {% if itemCount > 0 %}
     <ul class="gallery gallery--{{cols}}-cols js-gallery">
         {% for item in items %}
-            {{ item | shape_build_display: "Detail" | shape_render }}
+            {% assign itemShape = item | shape_build_display: "Detail" %}
+            {% shape_add_properties itemShape ThumbnailAspectRatio: Model.ContentItem.Content.Gallery.ThumbnailAspectRatio.Text %}
+            {{ itemShape | shape_render }}
         {% endfor %}
     </ul>
 {% endif %}
