@@ -212,6 +212,11 @@
       "contentType": ["Hero"]
     },
     {
+      "place": "Parts#Layout:4",
+      "differentiator": "Hero-VerticalAlignmentMobile",
+      "contentType": ["Hero"]
+    },
+    {
       "place": "Parts#Size:1",
       "differentiator": "Hero-AspectRatio",
       "contentType": ["Hero"]
