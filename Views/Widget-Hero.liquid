@@ -37,6 +37,12 @@
     {% assign cssClasses = cssClasses | append: vertAlignmentClass %}
 {% endif %}
 
+{% assign vertAlignmentMobile = Model.ContentItem.Content.Hero.VerticalAlignmentMobile.Text %}
+{% if vertAlignmentMobile != nil %}
+    {% assign vertAlignmentMobileClass = " hero--vertical-mobile-" | append: vertAlignmentMobile %}
+    {% assign cssClasses = cssClasses | append: vertAlignmentMobileClass %}
+{% endif %}
+
 {% if Model.ContentItem.Content.Hero.PullUp.Value %}
     {% assign cssClasses = cssClasses | append: " hero--pull-up" %}
 {% endif %}
