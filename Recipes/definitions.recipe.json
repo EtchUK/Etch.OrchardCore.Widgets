@@ -145,6 +145,15 @@
                   "Position": "3"
                 }
               }
+            },
+            {
+              "PartName": "BleedPart",
+              "Name": "BleedPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "4"
+                }
+              }
             }
           ]
         },
