@@ -1687,6 +1687,19 @@
                 },
                 "ContentIndexSettings": {}
               }
+            },
+            {
+              "FieldName": "BooleanField",
+              "Name": "ReverseStackingOrder",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Reverse Stacking Order"
+                },
+                "BooleanFieldSettings": {
+                  "Hint": "On smaller screens, adjacent widgets will stack on top of each other. Tick this box to reverse the order in which they stack."
+                },
+                "ContentIndexSettings": {}
+              }
             }
           ]
         },
