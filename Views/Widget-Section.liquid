@@ -14,6 +14,8 @@
 
 {% assign gutterClass = Model.ContentItem.Content.Section.Gutter.Text %}
 {% assign verticalGutterClass = Model.ContentItem.Content.Section.VerticalGutter.Text %}
+
+{% assign reverseStackingOrder = Model.ContentItem.Content.Section.ReverseStackingOrder.Value %}
 {% assign stackedVerticalGutterClass = Model.ContentItem.Content.Section.StackedVerticalGutter.Text %}
 
 {% assign topPadding = Model.ContentItem.Content.Section.TopPadding.Text %}
@@ -68,6 +70,10 @@
 
 {% assign cssClasses = cssClasses | append: " " | append: verticalGutterClass %}
 {% assign cssClasses = cssClasses | append: " " | append: stackedVerticalGutterClass %}
+
+{% if reverseStackingOrder %}
+    {% assign cssClasses = cssClasses | append: " section--reverse-stacking-order" %}
+{% endif %}
 
 {% assign styles = "" %}
 
