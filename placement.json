@@ -59,6 +59,11 @@
       "place": "Parts#Misc:40",
       "differentiator": "Hero-ShowScrollEncouragement",
       "contentType": ["Hero"]
+    },
+    {
+      "place": "Parts#Layout:6",
+      "differentiator": "Section-ReverseStackingOrder",
+      "contentType": ["Section"]
     }
   ],
   "CodeField_Edit": [
@@ -192,7 +197,7 @@
       "contentType": ["Hero"]
     },
     {
-      "place": "Parts#Layout:4",
+      "place": "Parts#Size:4",
       "differentiator": "Hero-ContentWidth",
       "contentType": ["Hero"]
     },
@@ -232,52 +237,47 @@
       "contentType": ["Hero"]
     },
     {
-      "place": "Parts#Layout:1",
-      "differentiator": "Section-BackgroundColour",
-      "contentType": ["Section"]
-    },
-    {
-      "place": "Parts#Layout:3",
-      "differentiator": "Section-Alignment",
-      "contentType": ["Section"]
-    },
-    {
-      "place": "Parts#Layout:6",
-      "differentiator": "Section-BottomPadding",
-      "contentType": ["Section"]
-    },
-    {
-      "place": "Parts#Layout:4",
+      "place": "Parts#Size:1",
       "differentiator": "Section-ContentWidth",
       "contentType": ["Section"]
     },
     {
-      "place": "Parts#Layout:4",
-      "differentiator": "Section-Gutter",
-      "contentType": ["Section"]
-    },
-    {
-      "place": "Parts#Layout:5",
+      "place": "Parts#Size:2",
       "differentiator": "Section-TopPadding",
       "contentType": ["Section"]
     },
     {
-      "place": "Parts#Layout:5",
+      "place": "Parts#Size:3",
+      "differentiator": "Section-BottomPadding",
+      "contentType": ["Section"]
+    },
+    {
+      "place": "Parts#Size:4",
       "differentiator": "Section-SpacingAfter",
       "contentType": ["Section"]
     },
     {
-      "place": "Parts#Layout:3",
+      "place": "Parts#Layout:1",
+      "differentiator": "Section-Alignment",
+      "contentType": ["Section"]
+    },
+    {
+      "place": "Parts#Layout:2",
       "differentiator": "Section-VerticalAlignment",
       "contentType": ["Section"]
     },
     {
-      "place": "Parts#Layout:20",
+      "place": "Parts#Layout:3",
+      "differentiator": "Section-Gutter",
+      "contentType": ["Section"]
+    },
+    {
+      "place": "Parts#Layout:4",
       "differentiator": "Section-VerticalGutter",
       "contentType": ["Section"]
     },
     {
-      "place": "Parts#Layout:21",
+      "place": "Parts#Layout:5",
       "differentiator": "Section-StackedVerticalGutter",
       "contentType": ["Section"]
     },
@@ -311,11 +311,11 @@
   ],
   "ResponsiveMediaField": [
     {
-      "contentType": [ "Hero", "Section", "Carousel", "CarouselItem" ],
+      "contentType": ["Hero", "Section", "Carousel", "CarouselItem"],
       "place": "Background"
     },
     {
-      "contentPart": [ "BleedPart" ],
+      "contentPart": ["BleedPart"],
       "place": "Content"
     }
   ],
