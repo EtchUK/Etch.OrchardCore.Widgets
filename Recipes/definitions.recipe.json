@@ -1815,7 +1815,7 @@
                   "Editor": "PredefinedList"
                 },
                 "TextFieldSettings": {
-                  "Hint": "Importance of the heading, where the lower the value the more important the heading.",
+                  "Hint": "Importance of the heading. The lower the value, the more important the heading.",
                   "Required": true
                 },
                 "TextFieldPredefinedListEditorSettings": {
@@ -1847,6 +1847,55 @@
                   ],
                   "Editor": 1,
                   "DefaultValue": null
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "VisualLevel",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Visual Level",
+                  "Editor": "PredefinedList"
+                },
+                "TextFieldSettings": {
+                  "Hint": "By default, headings are styled according to their level. You can use this field to make them look like an alternative level of importance if necessary.",
+                  "Required": true
+                },
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "Match Level",
+                      "value": ""
+                    },
+                    {
+                      "name": "1",
+                      "value": "1"
+                    },
+                    {
+                      "name": "2",
+                      "value": "2"
+                    },
+                    {
+                      "name": "3",
+                      "value": "3"
+                    },
+                    {
+                      "name": "4",
+                      "value": "4"
+                    },
+                    {
+                      "name": "5",
+                      "value": "5"
+                    },
+                    {
+                      "name": "6",
+                      "value": "6"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": ""
                 },
                 "ContentIndexSettings": {}
               }
