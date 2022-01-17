@@ -1380,7 +1380,7 @@
                   "Position": "2"
                 },
                 "TextFieldSettings": {
-                  "Hint": "Control how content is aligned within section."
+                  "Hint": "Control how content is aligned within section overall. Widgets within this section can also have their content aligned individually."
                 },
                 "TextFieldPredefinedListEditorSettings": {
                   "Options": [
