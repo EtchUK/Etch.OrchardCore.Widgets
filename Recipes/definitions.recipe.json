@@ -1860,8 +1860,7 @@
                   "Editor": "PredefinedList"
                 },
                 "TextFieldSettings": {
-                  "Hint": "By default, headings are styled according to their level. You can use this field to make them look like an alternative level of importance if necessary.",
-                  "Required": true
+                  "Hint": "By default, headings are styled according to their level. You can use this field to make them look like an alternative level of importance if necessary."
                 },
                 "TextFieldPredefinedListEditorSettings": {
                   "Options": [
