@@ -1,5 +1,5 @@
 ﻿{% assign itemCount = Model.ContentItem.Content.Items.ContentItems | size %}
-{% assign loopMaxIndex = itemCount - 1 %}
+{% assign loopMaxIndex = itemCount | minus: 1 %}
 
 <div class="carousel js-carousel" data-duration="{{ Model.ContentItem.Content.Carousel.SlideDuration.Value * 1000 }}">
     {% if itemCount > 1 %}
