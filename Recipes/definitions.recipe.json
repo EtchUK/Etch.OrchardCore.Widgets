@@ -2440,6 +2440,10 @@
                     {
                       "name": "4:1 (Ultrawide)",
                       "value": "4-1"
+                    },
+                    {
+                      "name": "100% (Use 16:9 asset)",
+                      "value": "100vh"
                     }
                   ],
                   "Editor": 1,
@@ -2494,6 +2498,10 @@
                     {
                       "name": "4:1 (Ultrawide)",
                       "value": "4-1"
+                    },
+                    {
+                      "name": "100% (Use 16:9 asset)",
+                      "value": "100vh"
                     }
                   ],
                   "Editor": 1,
@@ -2548,6 +2556,10 @@
                     {
                       "name": "4:1 (Ultrawide)",
                       "value": "4-1"
+                    },
+                    {
+                      "name": "100% (Use 16:9 asset)",
+                      "value": "100vh"
                     }
                   ],
                   "Editor": 1,
