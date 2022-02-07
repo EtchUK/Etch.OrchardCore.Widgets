@@ -1,4 +1,5 @@
-{% assign url = Model.ContentItem.Content.Card.URL.Text %}
+{% assign url = Model.ContentItem.Content.Card.CTAUrl.Text %}
+{% assign ctaLabel = Model.ContentItem.Content.Card.CTALabel.Text %}
 {% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
 {% assign mediaUrl = Model.ContentItem.Content.Card.Image.Paths[0] %}
 {% assign meta = Model.ContentItem.Content.Card.MetaText.Text %}
@@ -14,7 +15,7 @@
     {% assign tag = "a" %}
 {% endif %}
 
-{% assign cssClasses = "card card--equal-height" %}
+{% assign cssClasses = "card" %}
 
 {% if Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
     {% assign cssClasses = cssClasses | append: " " | append: Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
@@ -65,5 +66,11 @@
         </header>
         
         {{ Model.Content.Body | shape_render }}
+
+        {% if url != nil and ctaLabel != nil %}
+            <span class="btn btn--fake btn--primary">
+                {{ ctaLabel }}
+            </span>
+        {% endif %}
     </div>
 </{{tag}}>

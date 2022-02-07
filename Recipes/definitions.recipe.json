@@ -2613,6 +2613,15 @@
                   "DisplayName": "CTA Url"
                 }
               }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "MetaText",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Meta Text"
+                }
+              }
             }
           ]
         },
