@@ -64,6 +64,11 @@
       "place": "Parts#Layout:6",
       "differentiator": "Section-ReverseStackingOrder",
       "contentType": ["Section"]
+    },
+    {
+      "place": "Parts#Advanced:2",
+      "differentiator": "Link-OpenInNewWindow",
+      "contentType": ["Link"]
     }
   ],
   "CodeField_Edit": [
@@ -97,7 +102,7 @@
   ],
   "ContentPickerField_Edit": [
     {
-      "place": "Parts#Menu:6",
+      "place": "Parts#Menu:10",
       "differentiator": "Banner-Menu",
       "contentType": ["Banner"]
     }
@@ -285,6 +290,11 @@
       "place": "Parts#Layout:1",
       "differentiator": "Gallery-ThumbnailAspectRatio",
       "contentType": ["Gallery"]
+    },
+    {
+      "place": "Parts#Advanced:3",
+      "differentiator": "Heading-VisualLevel",
+      "contentType": ["Heading"]
     }
   ],
   "ResponsiveMediaField_Edit": [
