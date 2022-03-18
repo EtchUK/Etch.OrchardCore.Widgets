@@ -752,6 +752,8 @@
                     "Label",
                     "LegacyVisualEditor",
                     "Link",
+                    "Logo",
+                    "Logos",
                     "OrderedList",
                     "Paragraph",
                     "RadioButtons",
@@ -1359,6 +1361,77 @@
               "Settings": {
                 "ContentTypePartSettings": {
                   "Position": "2"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Logo",
+          "DisplayName": "Logo",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget"
+            },
+            "Category": "Content",
+            "Description": "Display a small image, e.g a platform logo such as Steam or Xbox",
+            "Icon": "portrait"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "Logo",
+              "Name": "Logo",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Logos",
+          "DisplayName": "Logos",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget"
+            },
+            "Category": "Content",
+            "Description": "Display a collection of Logo widgets.",
+            "Icon": "icons"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "Items",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Logos",
+                  "Description": "Logos to be displayed in this widget",
+                  "Position": "1"
+                },
+                "BagPartSettings": {
+                  "ContainedContentTypes": [
+                    "Logo"
+                  ]
                 }
               }
             }
@@ -3643,6 +3716,53 @@
                   "Hint": "Specify descriptive alt text for the thumbnail image/video"
                 },
                 "ContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Logo",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "MediaField",
+              "Name": "Logo",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Logo",
+                  "Position": "1"
+                },
+                "MediaFieldSettings": {
+                  "Hint": "Image to be displayed",
+                  "Multiple": false
+                }
+              }
+            },
+            {
+              "FieldName": "LinkField",
+              "Name": "Link",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Link",
+                  "Position": "2"
+                },
+                "LinkFieldSettings": {
+                  "Hint": "Optionally add a link to this image"
+                }
+              }
+            },
+            {
+              "FieldName": "BooleanField",
+              "Name": "OpenInNewTab",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Open in new tab",
+                  "Position": "3"
+                },
+                "BooleanFieldSettings": {
+                  "Hint": "Whether a new tab is opened when user interacts with link.",
+                  "Label": "Open in new tab"
+                }
               }
             }
           ]
