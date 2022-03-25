@@ -1434,6 +1434,15 @@
                   ]
                 }
               }
+            },
+            {
+              "PartName": "Logos",
+              "Name": "Logos",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
             }
           ]
         }
