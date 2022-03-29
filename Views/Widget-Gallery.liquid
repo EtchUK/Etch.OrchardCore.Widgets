@@ -3,7 +3,7 @@
 {% assign cols = Model.ContentItem.Content.ColumnablePart.Columns.Text %}
 
 {% if itemCount > 0 %}
-    <ul class="gallery gallery--{{cols}}-cols js-gallery">
+    <ul class="gallery gallery--{{cols}}-cols columns--{{cols}} js-gallery">
         {% for item in items %}
             {% assign itemShape = item | shape_build_display: "Detail" %}
             {% shape_add_properties itemShape ThumbnailAspectRatio: Model.ContentItem.Content.Gallery.ThumbnailAspectRatio.Text %}
