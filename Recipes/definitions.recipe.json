@@ -1897,34 +1897,38 @@
                   "Editor": "PredefinedList"
                 },
                 "TextFieldSettings": {
-                  "Hint": "Importance of the heading. The lower the value, the more important the heading.",
+                  "Hint": "Importance of the heading. The lower the value, the more important the heading. 'Paragraph' may be used to fake a heading, creating something which looks like a heading, but conveys no additional importance compared to other content on the page.",
                   "Required": true
                 },
                 "TextFieldPredefinedListEditorSettings": {
                   "Options": [
                     {
                       "name": "1",
-                      "value": "1"
+                      "value": "h1"
                     },
                     {
                       "name": "2",
-                      "value": "2"
+                      "value": "h2"
                     },
                     {
                       "name": "3",
-                      "value": "3"
+                      "value": "h3"
                     },
                     {
                       "name": "4",
-                      "value": "4"
+                      "value": "h4"
                     },
                     {
                       "name": "5",
-                      "value": "5"
+                      "value": "h5"
                     },
                     {
                       "name": "6",
-                      "value": "6"
+                      "value": "h6"
+                    },
+                    {
+                      "name": "Paragraph",
+                      "value": "p"
                     }
                   ],
                   "Editor": 1,
@@ -1942,7 +1946,7 @@
                   "Editor": "PredefinedList"
                 },
                 "TextFieldSettings": {
-                  "Hint": "By default, headings are styled according to their level. You can use this field to make them look like an alternative level of importance if necessary."
+                  "Hint": "By default, headings are styled according to their level. You can use this field to make them look like an alternative level of importance if necessary. 'Hidden' headings aren't visible to users, but are useful to screen readers and search engines"
                 },
                 "TextFieldPredefinedListEditorSettings": {
                   "Options": [
@@ -1952,27 +1956,31 @@
                     },
                     {
                       "name": "1",
-                      "value": "1"
+                      "value": "text--h1"
                     },
                     {
                       "name": "2",
-                      "value": "2"
+                      "value": "text--h2"
                     },
                     {
                       "name": "3",
-                      "value": "3"
+                      "value": "text--h3"
                     },
                     {
                       "name": "4",
-                      "value": "4"
+                      "value": "text--h4"
                     },
                     {
                       "name": "5",
-                      "value": "5"
+                      "value": "text--h5"
                     },
                     {
                       "name": "6",
-                      "value": "6"
+                      "value": "text--h6"
+                    },
+                    {
+                      "name": "Hidden",
+                      "value": "visually-hidden"
                     }
                   ],
                   "Editor": 1,
