@@ -60,6 +60,39 @@
           ]
         },
         {
+          "Name": "Liquid",
+          "DisplayName": "Liquid",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget"
+            },
+            "FullTextAspectSettings": {},
+            "Category": "Content",
+            "Description": "Displays content defined with raw Liquid.",
+            "Icon": "code"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Liquid",
+              "Name": "Liquid",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "LiquidPart",
+              "Name": "Content",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Content"
+                }
+              }
+            }
+          ]
+        },
+        {
           "Name": "Link",
           "DisplayName": "Link",
           "Settings": {
@@ -3783,6 +3816,16 @@
               }
             }
           ]
+        },
+        {
+          "Name": "LiquidPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Reusable": true,
+              "Description": "Provides a Liquid formatted body for your content item."
+            }
+          }
         }
       ]
     }
