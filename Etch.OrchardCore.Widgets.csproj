@@ -20,6 +20,7 @@
     <PackageReference Include="OrchardCore.ContentManagement.Display" Version="1.1.0" />
     <PackageReference Include="OrchardCore.Flows" Version="1.1.0" />
     <PackageReference Include="OrchardCore.Lists" Version="1.1.0" />
+    <PackageReference Include="OrchardCore.Sitemaps" Version="1.1.0" />
     <PackageReference Include="OrchardCore.Module.Targets" Version="1.1.0" />
   </ItemGroup>
 

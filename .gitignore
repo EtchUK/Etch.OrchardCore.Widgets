@@ -230,6 +230,9 @@ orleans.codegen.cs
 # (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
 #bower_components/
 
+# Orchard sitemap cache
+**/wwwroot/sm-cache/
+
 # RIA/Silverlight projects
 Generated_Code/
 
