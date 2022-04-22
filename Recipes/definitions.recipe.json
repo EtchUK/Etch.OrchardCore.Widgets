@@ -554,11 +554,20 @@
           },
           "ContentTypePartDefinitionRecords": [
             {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
               "PartName": "Embed",
               "Name": "Embed",
               "Settings": {
                 "ContentTypePartSettings": {
-                  "Position": "0"
+                  "Position": "1"
                 }
               }
             }

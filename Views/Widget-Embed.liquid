@@ -1,7 +1,7 @@
 {% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
 {% assign cssClasses = "embed" %}
 
-{% if Model.ContentItem.Content.Embed.Ratio.Text != "" %}
+{% if Model.ContentItem.Content.Embed.Ratio.Text != nil %}
 	{% assign ratioClass = ' embed--ratio-' | append: Model.ContentItem.Content.Embed.Ratio.Text %}
 	{% assign cssClasses = ratioClass | prepend: cssClasses %}
 {% endif %}
@@ -12,10 +12,10 @@
 
 <div {% if id != null %}id="{{ id }}"{% endif %} class="{{ cssClasses }} {{ Model.ContentItem | animation_css }}" style="{{ styles }} {{ Model.ContentItem | animation_styles }}" {{ Model.ContentItem | animation_data_attributes }}>
 	<div class="embed__source">
-		<iframe src="{{ Model.ContentItem.Content.Embed.Source.Text }}" loading="lazy" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<iframe title="{{ Model.ContentItem | display_text }}" src="{{ Model.ContentItem.Content.Embed.Source.Text }}" loading="lazy" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 	</div>
 
-	{% if Model.ContentItem.Content.Embed.Caption.Text %}
+	{% if Model.ContentItem.Content.Embed.Caption.Text != nil %}
 		<p class="embed__caption">{{ Model.ContentItem.Content.Embed.Caption.Text }}</p>
 	{% endif %}
 </div>
