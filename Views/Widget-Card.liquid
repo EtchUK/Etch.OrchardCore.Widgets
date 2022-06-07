@@ -67,7 +67,7 @@
         
         {{ Model.Content.Body | shape_render }}
 
-        {% if url != nil and ctaLabel != nil %}
+        {% if url != blank and ctaLabel != blank %}
             <span class="btn btn--fake btn--primary">
                 {{ ctaLabel }}
             </span>
