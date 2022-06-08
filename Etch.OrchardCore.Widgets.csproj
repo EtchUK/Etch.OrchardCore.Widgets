@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.7.0</Version>
+    <Version>1.7.1</Version>
     <PackageId>Etch.OrchardCore.Widgets</PackageId>
     <Title>Etch OrchardCore Widgets</Title>
     <Authors>Etch UK Ltd</Authors>
