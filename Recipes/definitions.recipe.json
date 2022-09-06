@@ -1438,9 +1438,7 @@
                   "Position": "1"
                 },
                 "BagPartSettings": {
-                  "ContainedContentTypes": [
-                    "Logo"
-                  ]
+                  "ContainedContentTypes": ["Logo"]
                 }
               }
             },
@@ -1513,6 +1511,14 @@
                 "TextFieldPredefinedListEditorSettings": {
                   "Options": [
                     {
+                      "name": "Thin",
+                      "value": "thin"
+                    },
+                    {
+                      "name": "Extra Thin",
+                      "value": "extra-thin"
+                    },
+                    {
                       "name": "Default",
                       "value": "default"
                     },
@@ -1521,16 +1527,12 @@
                       "value": "wide"
                     },
                     {
+                      "name": "Full (with gutter)",
+                      "value": "full-with-gutter"
+                    },
+                    {
                       "name": "Full",
                       "value": "full"
-                    },
-                    {
-                      "name": "Thin",
-                      "value": "thin"
-                    },
-                    {
-                      "name": "Extra Thin",
-                      "value": "extra-thin"
                     }
                   ],
                   "Editor": 1,
@@ -2399,10 +2401,18 @@
                   "Position": "3"
                 },
                 "TextFieldSettings": {
-                  "Hint": "Determines the width of content within section."
+                  "Hint": "Determines the width of content within hero."
                 },
                 "TextFieldPredefinedListEditorSettings": {
                   "Options": [
+                    {
+                      "name": "Thin",
+                      "value": "thin"
+                    },
+                    {
+                      "name": "Extra Thin",
+                      "value": "extra-thin"
+                    },
                     {
                       "name": "Default",
                       "value": "default"
@@ -2412,16 +2422,12 @@
                       "value": "wide"
                     },
                     {
+                      "name": "Full (with gutter)",
+                      "value": "full-with-gutter"
+                    },
+                    {
                       "name": "Full",
                       "value": "full"
-                    },
-                    {
-                      "name": "Thin",
-                      "value": "thin"
-                    },
-                    {
-                      "name": "Extra Thin",
-                      "value": "extra-thin"
                     }
                   ],
                   "Editor": 1,
@@ -2837,6 +2843,14 @@
                 "TextFieldPredefinedListEditorSettings": {
                   "Options": [
                     {
+                      "name": "Thin",
+                      "value": "thin"
+                    },
+                    {
+                      "name": "Extra Thin",
+                      "value": "extra-thin"
+                    },
+                    {
                       "name": "Default",
                       "value": "default"
                     },
@@ -2845,16 +2859,12 @@
                       "value": "wide"
                     },
                     {
+                      "name": "Full (with gutter)",
+                      "value": "full-with-gutter"
+                    },
+                    {
                       "name": "Full",
                       "value": "full"
-                    },
-                    {
-                      "name": "Thin",
-                      "value": "thin"
-                    },
-                    {
-                      "name": "Extra Thin",
-                      "value": "extra-thin"
                     }
                   ],
                   "Editor": 1,
@@ -3340,10 +3350,18 @@
                   "Position": "3"
                 },
                 "TextFieldSettings": {
-                  "Hint": "Determines the width of content within section."
+                  "Hint": "Determines the width of content within footer."
                 },
                 "TextFieldPredefinedListEditorSettings": {
                   "Options": [
+                    {
+                      "name": "Thin",
+                      "value": "thin"
+                    },
+                    {
+                      "name": "Extra Thin",
+                      "value": "extra-thin"
+                    },
                     {
                       "name": "Default",
                       "value": "default"
@@ -3353,16 +3371,12 @@
                       "value": "wide"
                     },
                     {
+                      "name": "Full (with gutter)",
+                      "value": "full-with-gutter"
+                    },
+                    {
                       "name": "Full",
                       "value": "full"
-                    },
-                    {
-                      "name": "Thin",
-                      "value": "thin"
-                    },
-                    {
-                      "name": "Extra Thin",
-                      "value": "extra-thin"
                     }
                   ],
                   "Editor": 1,
