@@ -3,12 +3,12 @@
 
 <div class="carousel js-carousel" data-duration="{{ Model.ContentItem.Content.Carousel.SlideDuration.Value | times: 1000 }}">
     {% if itemCount > 1 %}
-        <button class="btn btn--icon carousel__previous-btn js-prev-btn">
+        <button class="carousel__prev-next carousel__previous-btn js-prev-btn">
             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path clip-rule="evenodd" d="M1.541 26.414L25.127 50l1.415-1.414L2.956 25 26.54 1.414 25.127 0 1.541 23.586l-.126-.127-1.414 1.415.126.126-.126.126 1.414 1.415.126-.127z" /></svg>
             <span class="visually-hidden">{{ "Previous" | t }}</span>
         </button>
 
-        <button class="btn btn--icon carousel__next-btn js-next-btn">
+        <button class="carousel__prev-next carousel__next-btn js-next-btn">
             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path clip-rule="evenodd" d="M1.541 26.414L25.127 50l1.415-1.414L2.956 25 26.54 1.414 25.127 0 1.541 23.586l-.126-.127-1.414 1.415.126.126-.126.126 1.414 1.415.126-.127z" /></svg>
             <span class="visually-hidden">{{ "Next" | t }}</span>
         </button>
@@ -20,7 +20,7 @@
                 {% else %}
                 <li class="carousel__indicator">
                 {% endif %}
-                    <button class="btn btn--icon js-change-to-btn" data-index="{{ i }}">
+                    <button class="carousel__indicator-button js-change-to-btn" data-index="{{ i }}">
                         <span class="visually-hidden">{{ "Change item to index" | t }} {{ i }}</span>
                     </button>
                 </li>
@@ -28,17 +28,15 @@
         </ul>
     {% endif %}
 
-    <ul class="carousel__items js-carousel-items">
+    <div class="carousel__items">
+        <ul class="carousel__track js-carousel-track">
         {% for i in (0..loopMaxIndex) %}
-            {% if i == 0 %}
-            <li class="carousel__item is-active">
-            {% else %}
-            <li class="carousel__item">
-            {% endif %}
+            <li class="carousel__item js-carousel-item {% if i == 0 %}is-active{% endif %}">
                 {{ Model.ContentItem.Content.Items.ContentItems[i] | shape_build_display: "Detail" | shape_render }}
             </li>
         {% endfor %}
-    </ul>
+        </ul>
+    </div>
 
     {{ Model.Background | shape_render }}
 </div>
