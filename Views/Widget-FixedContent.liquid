@@ -1,0 +1,16 @@
+{% assign fixedContentLocation = Model.ContentItem.Content.FixedContent.Location.Text %}
+{% assign revealOnScroll = Model.ContentItem.Content.FixedContent.RevealOnScroll.Value %}
+
+{% assign cssClasses = "fixed-content" %}
+
+{% if fixedContentLocation != blank %}
+    {% assign cssClasses = cssClasses | append: " fixed-content--" | append: fixedContentLocation %}
+{% endif %}
+
+{% if revealOnScroll %}
+    {% assign cssClasses = cssClasses | append: " fixed-content--reveal-on-scroll js-add-class-on-scroll" %}
+{% endif %}
+
+<div class="{{ cssClasses }}">
+    {{ Model.Content["Content"] | shape_render }}
+</div>
