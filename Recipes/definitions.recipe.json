@@ -2727,6 +2727,19 @@
                   "DisplayName": "Meta Text"
                 }
               }
+            },
+            {
+              "FieldName": "BooleanField",
+              "Name": "MediaOverlay",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Use Image as Background",
+                  "Position": "10"
+                },
+                "BooleanFieldSettings": {
+                  "Hint": "If ticked, a media overlay style will be used, and content will display on top of the Card's specified image. Please provide a 4:3 image, and be aware that any Background Style pattern, as well as any associated options, will be overridden. When using this style, the background colour is the colour of an optional gradient that appears behind the content to improve readability."
+                }
+              }
             }
           ]
         },
