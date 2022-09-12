@@ -1452,6 +1452,62 @@
               }
             }
           ]
+        },
+        {
+          "Name": "FixedContent",
+          "DisplayName": "Fixed Content",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget"
+            },
+            "Category": "Content",
+            "Description": "Display content in a fixed location on the screen",
+            "Icon": "users"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "FixedContent",
+              "Name": "FixedContent",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "Content",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Content",
+                  "Description": "Content to be displayed in fixed location",
+                  "Position": "2"
+                },
+                "BagPartSettings": {
+                  "ContainedContentTypes": [
+                    "Heading",
+                    "Html",
+                    "Link",
+                    "Navigation",
+                    "OrderedList",
+                    "Paragraph",
+                    "Text",
+                    "VisualEditor",
+                    "UnorderedList"
+                  ]
+                }
+              }
+            }
+          ]
         }
       ],
       "ContentParts": [
@@ -3815,6 +3871,60 @@
                 "BooleanFieldSettings": {
                   "Hint": "Whether a new tab is opened when user interacts with link.",
                   "Label": "Open in new tab"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "FixedContent",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "Location",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Fixed Content Location",
+                  "Position": "1"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Specify where this fixed content should sit"
+                },
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "Top Left",
+                      "value": "top-left"
+                    },
+                    {
+                      "name": "Top Right",
+                      "value": "top-right"
+                    },
+                    {
+                      "name": "Bottom Right",
+                      "value": "bottom-right"
+                    },
+                    {
+                      "name": "Bottom Left",
+                      "value": "bottom-left"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": "bottom-right"
+                }
+              }
+            },
+            {
+              "FieldName": "BooleanField",
+              "Name": "RevealOnScroll",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Reveal On Scroll",
+                  "Position": "2"
+                },
+                "BooleanFieldSettings": {
+                  "Hint": "By default, fixed content is always visible. Tick this to hide it until a user has scrolled away from the top. This may be useful for important elements near the top of the page, which you don't want users to see twice at once, but you do want users to continue to see after scrolling down."
                 }
               }
             }
