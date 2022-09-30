@@ -122,6 +122,11 @@
       "place": "Parts#Paging:8",
       "differentiator": "ContentFeed-PageSize",
       "contentType": ["ContentFeed"]
+    },
+    {
+      "place": "Parts#Advanced:1",
+      "differentiator": "Space-CustomSize",
+      "contentType": ["Space"]
     }
   ],
   "TextField": [

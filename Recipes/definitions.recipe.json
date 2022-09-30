@@ -1508,6 +1508,29 @@
               }
             }
           ]
+        },
+        {
+          "Name": "Space",
+          "DisplayName": "Space",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget"
+            },,
+            "Category": "Miscellaneous",
+            "Description": "Add empty vertical space between content",
+            "Icon": "arrows-alt-v"
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Space",
+              "Name": "Space",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
         }
       ],
       "ContentParts": [
@@ -3926,6 +3949,61 @@
                 "BooleanFieldSettings": {
                   "Hint": "By default, fixed content is always visible. Tick this to hide it until a user has scrolled away from the top. This may be useful for important elements near the top of the page, which you don't want users to see twice at once, but you do want users to continue to see after scrolling down."
                 }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Space",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "SpaceSize",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Space Size",
+                  "Editor": "PredefinedList"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Specify how large this space should be"
+                },
+                "ContentIndexSettings": {},
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "Small",
+                      "value": "small"
+                    },
+                    {
+                      "name": "Default",
+                      "value": "default"
+                    },
+                    {
+                      "name": "Large",
+                      "value": "large"
+                    },
+                    {
+                      "name": "Extra Large",
+                      "value": "x-large"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": "default"
+                }
+              }
+            },
+            {
+              "FieldName": "NumericField",
+              "Name": "CustomSize",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Custom Size"
+                },
+                "NumericFieldSettings": {
+                  "Hint": "Override the size setting with a bespoke custom size, in pixels"
+                },
+                "ContentIndexSettings": {}
               }
             }
           ]

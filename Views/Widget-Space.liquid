@@ -1,0 +1,13 @@
+{% assign space = Model.ContentItem.Content.Space.SpaceSize.Text %}
+{% assign spaceOverride = Model.ContentItem.Content.Space.CustomSize.Value %}
+{% assign cssClasses = "space" %}
+
+{% if space != blank %}
+	{% assign cssClasses = cssClasses | append:" space--" | append: space %}
+{% endif %}
+
+{% if spaceOverride != blank %}
+	{% assign cssClasses = cssClasses | append:" space--custom" %}
+{% endif %}
+
+<div class="{{ cssClasses }}" {% if spaceOverride != blank %}style="height:{{spaceOverride}}px;"{% endif %}>&nbsp;</div>
