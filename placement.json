@@ -300,6 +300,11 @@
       "place": "Parts#Advanced:3",
       "differentiator": "Heading-VisualLevel",
       "contentType": ["Heading"]
+    },
+    {
+      "place": "Parts#Advanced:1",
+      "differentiator": "RenderContent-ShapeDisplayOverride",
+      "contentType": ["RenderContent"]
     }
   ],
   "ResponsiveMediaField_Edit": [

@@ -1,0 +1,13 @@
+{% assign contentItem = Model.ContentItem.Content.RenderContent.Content.ContentItemIds[0] | content_item_id %}
+{% assign shapeDisplayOverride = Model.ContentItem.Content.RenderContent.ShapeDisplayOverride.Text %}
+{% assign shape = "Detail" %}
+
+{% if shapeDisplayOverride != blank %}
+	{% assign shape = shapeDisplayOverride %}
+{% endif %}
+
+{% if contentItem != null %}
+	<div class="render-content render-content--{{ shape | downcase}}">
+		{{ contentItem | shape_build_display: shape | shape_render }}
+	</div>
+{% endif %}

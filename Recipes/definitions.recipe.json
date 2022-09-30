@@ -1531,6 +1531,36 @@
               }
             }
           ]
+        },
+        {
+          "Name": "RenderContent",
+          "DisplayName": "Render Content",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget"
+            },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "RenderContent",
+              "Name": "RenderContent",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
         }
       ],
       "ContentParts": [
@@ -4002,6 +4032,42 @@
                 },
                 "NumericFieldSettings": {
                   "Hint": "Override the size setting with a bespoke custom size, in pixels"
+                },
+                "ContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "RenderContent",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "ContentPickerField",
+              "Name": "Content",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Content",
+                  "Position": "0"
+                },
+                "ContentPickerFieldSettings": {
+                  "Hint": "Specify content item to render",
+                  "DisplayAllContentTypes": true,
+                  "DisplayedContentTypes": []
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "ShapeDisplayOverride",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Shape Display Override",
+                  "Position": "1"
+                },
+                "TextFieldSettings": {
+                  "Hint": "By default, \"Detail\" will be used to display the full content item. If desired, enter a preferred shape display name, e.g Summary"
                 },
                 "ContentIndexSettings": {}
               }
