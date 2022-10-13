@@ -514,20 +514,20 @@
           ]
         },
         {
-          "Name": "Banner",
-          "DisplayName": "Banner",
+          "Name": "PageHeader",
+          "DisplayName": "Page Header",
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
             },
             "Category": "Miscellaneous",
-            "Description": "Header section of site.",
+            "Description": "Header section for page(s)",
             "Icon": "toolbox"
           },
           "ContentTypePartDefinitionRecords": [
             {
-              "PartName": "Banner",
-              "Name": "Banner",
+              "PartName": "PageHeader",
+              "Name": "PageHeader",
               "Settings": {
                 "ContentTypePartSettings": {
                   "Position": "0"
@@ -791,21 +791,21 @@
           ]
         },
         {
-          "Name": "Footer",
-          "DisplayName": "Footer",
+          "Name": "PageFooter",
+          "DisplayName": "Page Footer",
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
             },
             "FullTextAspectSettings": {},
             "Category": "Miscellaneous",
-            "Description": "Footer section for the site.",
+            "Description": "Footer section for page(s)",
             "Icon": "flag-checkered"
           },
           "ContentTypePartDefinitionRecords": [
             {
-              "PartName": "Footer",
-              "Name": "Footer",
+              "PartName": "PageFooter",
+              "Name": "PageFooter",
               "Settings": {
                 "ContentTypePartSettings": {
                   "Position": "0"
@@ -2800,7 +2800,7 @@
           ]
         },
         {
-          "Name": "Banner",
+          "Name": "PageHeader",
           "Settings": {},
           "ContentPartFieldDefinitionRecords": [
             {
@@ -3406,7 +3406,7 @@
           ]
         },
         {
-          "Name": "Footer",
+          "Name": "PageFooter",
           "Settings": {},
           "ContentPartFieldDefinitionRecords": [
             {
