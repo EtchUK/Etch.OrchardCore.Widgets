@@ -2123,23 +2123,10 @@
                   "DisplayName": "Image"
                 },
                 "MediaFieldSettings": {
+                  "AllowMediaText": true,
                   "Hint": "Image to be displayed.",
                   "Required": true,
                   "Multiple": false
-                },
-                "ContentIndexSettings": {}
-              }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "AlternateText",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Alternate Text"
-                },
-                "TextFieldSettings": {
-                  "Hint": "Description of the appearance and function of the image.",
-                  "Required": true
                 },
                 "ContentIndexSettings": {}
               }
@@ -2794,20 +2781,13 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Image"
+                },
+                "MediaFieldSettings": {
+                  "AllowMediaText": true,
+                  "Hint": "Image to be displayed on the card",
+                  "Required": false,
+                  "Multiple": false
                 }
-              }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "ImageAlternateText",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Image Alternate Text"
-                },
-                "TextFieldSettings": {
-                  "Hint": "Description of the appearance and function of the image."
-                },
-                "ContentIndexSettings": {}
               }
             },
             {
@@ -3744,16 +3724,6 @@
                   "Multiple": false
                 }
               }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "AltText",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Alt Text",
-                  "Position": "1"
-                }
-              }
             }
           ]
         },
@@ -3795,16 +3765,6 @@
                 "ContentPartFieldSettings": {
                   "DisplayName": "Title",
                   "Position": "1"
-                }
-              }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "ThumbnailAltText",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Thumbnail Alt Text",
-                  "Position": "3"
                 }
               }
             }

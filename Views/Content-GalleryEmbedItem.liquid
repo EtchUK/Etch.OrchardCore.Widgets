@@ -9,8 +9,10 @@
     {% assign thumb = thumb  | resize_url: width: 1280 %}
 {% endif %}
 
+{% assign altText = Model.ContentItem.Content.GalleryEmbedItem.ThumbnailAltText.Text | default: Model.ContentItem.Content.GalleryEmbedItem.ThumbnailImage.MediaTexts[0] %}
+
 <li class="gallery__item gallery__item--embed gallery__item--thumbnail-force-{{ Model.Properties.ThumbnailAspectRatio }}">
     <a class="gallery__item-link" href="{{ Model.ContentItem.Content.GalleryEmbedItem.EmbedURL.Text }}">
-        <img class="gallery__item-thumb" src="{{ thumb }}" title="{{ Model.ContentItem.Content.GalleryEmbedItem.Title.Text }}" alt="{{ Model.ContentItem.Content.GalleryEmbedItem.ThumbnailAltText.Text }}" />
+        <img class="gallery__item-thumb" src="{{ thumb }}" title="{{ Model.ContentItem.Content.GalleryEmbedItem.Title.Text }}" alt="{{ altText }}" loading="lazy" />
     </a>
 </li>
