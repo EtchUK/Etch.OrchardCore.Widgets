@@ -3125,7 +3125,7 @@
                 "ResponsiveMediaFieldSettings": {
                   "AllowMediaText": true,
                   "Breakpoints": "375, 425, 600, 768, 1024, 1280, 1440, 1920, 2560",
-                  "Hint": "Ensure all background images for each carousel item has the same dimensions to ensure the height of the carousel remains the same when changing the active item.",
+                  "Hint": "Ensure all background images are tall enough to cover the entire backgound, which is dictated by the height of the tallest slide content",
                   "FallbackData": "[]",
                   "IsConfigured": true
                 },
