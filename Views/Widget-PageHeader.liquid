@@ -1,13 +1,13 @@
-{% assign mainMenu = Content.ContentItemId[Model.ContentItem.Content.Banner.Menu.ContentItemIds] %}
+{% assign mainMenu = Content.ContentItemId[Model.ContentItem.Content.PageHeader.Menu.ContentItemIds] %}
 {% assign mainMenuAlias = "alias:" | append: mainMenu.Content.AliasPart.Alias %}
 
-{% assign socialMenu = Content.ContentItemId[Model.ContentItem.Content.Banner.SocialMenu.ContentItemIds] %}
+{% assign socialMenu = Content.ContentItemId[Model.ContentItem.Content.PageHeader.SocialMenu.ContentItemIds] %}
 {% assign socialMenuAlias = "alias:" | append: socialMenu.Content.AliasPart.Alias %}
 
 {% assign css = "header" %}
 {% assign constrainClasses = "constrain" %}
 
-{% assign contentWidth = Model.ContentItem.Content.Banner.ContentWidth.Text %}
+{% assign contentWidth = Model.ContentItem.Content.PageHeader.ContentWidth.Text %}
 
 {% assign backgroundColour = Model.ContentItem.Content.BackgroundPart.BackgroundColour.Value %}
 {% assign backgroundPattern = Model.ContentItem.Content.BackgroundPart.BackgroundPattern.Text %}
@@ -15,9 +15,9 @@
 {% assign backgroundFill = Model.ContentItem.Content.BackgroundPart.BackgroundFill.Value %}
 {% assign inverted = Model.ContentItem.Content.BackgroundPart.InvertTextColour.Value %}
 
-{% assign mobileBackgroundColour = Model.ContentItem.Content.Banner.MobileBackgroundColour.Value %}
-{% assign mobileBackgroundPattern = Model.ContentItem.Content.Banner.MobileBackgroundPattern.Text %}
-{% assign position = Model.ContentItem.Content.Banner.Position.Text %}
+{% assign mobileBackgroundColour = Model.ContentItem.Content.PageHeader.MobileBackgroundColour.Value %}
+{% assign mobileBackgroundPattern = Model.ContentItem.Content.PageHeader.MobileBackgroundPattern.Text %}
+{% assign position = Model.ContentItem.Content.PageHeader.Position.Text %}
 
 {% if backgroundFixed %}
     {% assign css = css | append: " bg--fixed" %}
@@ -68,20 +68,20 @@
 
 {% assign logoUrl = Request.PathBase | append: "/" %}
 
-{% if Model.ContentItem.Content.Banner.LogoUrl.Text != nil %}
-    {% assign logoUrl = Model.ContentItem.Content.Banner.LogoUrl.Text | liquid %}
+{% if Model.ContentItem.Content.PageHeader.LogoUrl.Text != nil %}
+    {% assign logoUrl = Model.ContentItem.Content.PageHeader.LogoUrl.Text | liquid %}
 {% endif %}
 
 <header class="{{ css }}" style="{{ styles }}">
     <div class="header__content {{ constrainClasses }}">
-        {% if Model.ContentItem.Content.Banner.Logo.Paths[0] != nil %}
+        {% if Model.ContentItem.Content.PageHeader.Logo.Paths[0] != nil %}
             <a class="header__logo" href="{{ logoUrl }}">
                 <picture>
-                    {% if Model.ContentItem.Content.Banner.LogoSmall.Paths[0] != nil %}
-                        <source srcset="{{ Model.ContentItem.Content.Banner.Logo.Paths[0] | asset_url }}" media="(min-width: 768px)">
-                        <img src="{{ Model.ContentItem.Content.Banner.LogoSmall.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.Banner.LogoAlternateText.Text }}" />
+                    {% if Model.ContentItem.Content.PageHeader.LogoSmall.Paths[0] != nil %}
+                        <source srcset="{{ Model.ContentItem.Content.PageHeader.Logo.Paths[0] | asset_url }}" media="(min-width: 768px)">
+                        <img src="{{ Model.ContentItem.Content.PageHeader.LogoSmall.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.PageHeader.LogoAlternateText.Text }}" />
                     {% else %}
-                        <img src="{{ Model.ContentItem.Content.Banner.Logo.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.Banner.LogoAlternateText.Text }}" />
+                        <img src="{{ Model.ContentItem.Content.PageHeader.Logo.Paths[0] | asset_url }}" alt="{{ Model.ContentItem.Content.PageHeader.LogoAlternateText.Text }}" />
                     {% endif %}
                 </picture>
             </a>
@@ -89,8 +89,8 @@
 
         {% if mainMenu != nil or socialMenu != nil %}
 
-            <button type="button" class="header__nav-button js-nav-button">{{ Model.ContentItem.Content.Banner.MenuToggleButtonLabel.Text }}</button>
-            <button type="button" class="header__nav-button header__nav-button--close js-nav-button">{{ Model.ContentItem.Content.Banner.MenuCloseButtonLabel.Text }}</button>
+            <button type="button" class="header__nav-button js-nav-button">{{ Model.ContentItem.Content.PageHeader.MenuToggleButtonLabel.Text }}</button>
+            <button type="button" class="header__nav-button header__nav-button--close js-nav-button">{{ Model.ContentItem.Content.PageHeader.MenuCloseButtonLabel.Text }}</button>
 
             <div class="header__nav">
 
