@@ -1515,7 +1515,7 @@
           "Settings": {
             "ContentTypeSettings": {
               "Stereotype": "Widget"
-            },,
+            },
             "Category": "Miscellaneous",
             "Description": "Add empty vertical space between content",
             "Icon": "arrows-alt-v"
