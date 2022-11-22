@@ -12,7 +12,7 @@
 {% endif %}
 
 {% if embedUrl contains "vimeo" %}
-    {% script name:"vimeo", src:"https://player.vimeo.com/api/player.js", at:"Head" %}
+    {% script name:"vimeo", src:"https://player.vimeo.com/api/player.js", at:"Head", async: "true" %}
 {% endif %}
 
 {% assign altText = Model.ContentItem.Content.GalleryEmbedItem.ThumbnailAltText.Text | default: Model.ContentItem.Content.GalleryEmbedItem.ThumbnailImage.MediaTexts[0] %}
