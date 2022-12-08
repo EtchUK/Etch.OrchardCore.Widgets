@@ -1,5 +1,10 @@
+{% assign title = Model.ContentItem | display_text %}
+
 <div class="logos">
-    <span class="logos__title">{{ Model.ContentItem | display_text }}</span>
+    {% if title != blank %}
+        <span class="logos__title">{{ title }}</span>
+    {% endif %}
+
     <div class="logos__items">
         {{ Model.Content | shape_render }}
     </div>
