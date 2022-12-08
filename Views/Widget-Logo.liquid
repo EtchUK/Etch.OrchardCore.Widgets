@@ -16,6 +16,6 @@
 	{% if url != nil %} href="{{url}}" {% endif %}
 	{% if openInNewTab == true %} target="_blank" {% endif %}
 	{% if linkText != nil %} title="{{linkText}}" {% endif %}>
-		<img class="logo__image" src="{{ logo | asset_url | resize_url: width:100 }}" alt="{{ logoAltText }}" />
+		<img class="logo__image" src="{{ logo | asset_url | resize_url: width:200 }}" alt="{{ logoAltText }}" />
 	</{{tag}}>
 {% endif %}
