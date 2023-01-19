@@ -26,7 +26,8 @@ namespace Etch.OrchardCore.Widgets
             })
                 .AddLiquidFilter<AnimationCssFilter>("animation_css")
                 .AddLiquidFilter<AnimationDataAttributesFilter>("animation_data_attributes")
-                .AddLiquidFilter<AnimationStyles>("animation_styles");
+                .AddLiquidFilter<AnimationStyles>("animation_styles")
+                .AddLiquidFilter<EmbedUrlFilter>("embed_url");
 
             services.AddScoped<IDataMigration, Migrations>();
         }
