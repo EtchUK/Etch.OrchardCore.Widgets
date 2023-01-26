@@ -16,6 +16,8 @@ namespace Etch.OrchardCore.Widgets
         public override void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddContentPart<VisibilityPart>();
             
             services.AddContentPart<HtmlAttributesPart>()
                 .UseDisplayDriver<HtmlAttributesPartDisplay>();
@@ -23,6 +25,7 @@ namespace Etch.OrchardCore.Widgets
             services.Configure<TemplateOptions>(o =>
             {
                 o.MemberAccessStrategy.Register<HtmlAttributesPart>();
+                o.MemberAccessStrategy.Register<VisibilityPart>();
             })
                 .AddLiquidFilter<AnimationCssFilter>("animation_css")
                 .AddLiquidFilter<AnimationDataAttributesFilter>("animation_data_attributes")

@@ -1,4 +1,5 @@
 {% assign altText = Model.ContentItem.Content.VideoModal.AltText.Text %}
+{% assign cssClasses = "video-modal js-gallery" %}
 {% assign embedURL = Model.ContentItem.Content.VideoModal.ThumbnailVideo.Text %}
 {% assign imagePath = Model.ContentItem.Content.VideoModal.ThumbnailImage.Paths[0] %}
 {% assign text = Model.ContentItem.Content.VideoModal.Video.Text %}
@@ -6,8 +7,12 @@
 
 {% assign onClickEvent = Model.ContentItem.Content.JavaScriptEventsPart.OnClick.Value %}
 
+{% if Model.ContentItem.Content.VisibilityPart.ResponsiveVisibility.Text != blank %}
+    {% assign cssClasses = cssClasses | append:" " | append: Model.ContentItem.Content.VisibilityPart.ResponsiveVisibility.Text %}
+{% endif %}
+
 {% if url != nil %}
-<div class="video-modal js-gallery">
+<div class="{{ cssClasses }}">
     <a class="video-modal__link" href="{{ url }}" {% if onClickEvent !=nil%} onClick="{{ onClickEvent }}" {% endif %}>
         {% if embedURL != nil %}
             <div class="video-modal__media">
