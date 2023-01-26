@@ -4,6 +4,7 @@ using Etch.OrchardCore.Fields.Colour.Fields;
 using Etch.OrchardCore.Fields.Colour.Settings;
 using Etch.OrchardCore.Fields.ResponsiveMedia.Fields;
 using Etch.OrchardCore.Fields.ResponsiveMedia.Settings;
+using Etch.OrchardCore.Widgets.Models;
 using OrchardCore.ContentFields.Fields;
 using OrchardCore.ContentFields.Settings;
 using OrchardCore.ContentManagement.Metadata;
@@ -320,6 +321,44 @@ namespace Etch.OrchardCore.Widgets
             );
 
             return 8;
+        }
+
+        public int UpdateFrom8()
+        {
+            _contentDefinitionManager.AlterPartDefinition(nameof(VisibilityPart), builder => builder
+                 .Attachable()
+                 .WithDisplayName("Visibility")
+                 .WithDescription("Control when a content item is visible based on factors like screen size.")
+                 .WithDefaultPosition("20")
+                 .WithField(nameof(VisibilityPart.ResponsiveVisibility), field => field
+                    .WithDisplayName("Responsive Visibility")
+                    .OfType(nameof(TextField))
+                    .WithEditor("PredefinedList")
+                    .WithSettings(new TextFieldPredefinedListEditorSettings
+                    {
+                        DefaultValue = "",
+                        Editor = EditorOption.Dropdown,
+                        Options = new[]
+                        {
+                            new ListValueOption
+                            {
+                                Name = "Show at all sizes",
+                                Value = "",
+                            },
+                            new ListValueOption
+                            {
+                                Name = "Large screens only",
+                                Value = "responsive-display--large-only",
+                            },
+                            new ListValueOption
+                            {
+                                Name = "Small screens only",
+                                Value = "responsive-display--small-only",
+                            },
+                        },
+                    })));
+
+            return 9;
         }
     }
 }
