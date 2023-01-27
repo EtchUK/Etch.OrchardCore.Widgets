@@ -76,6 +76,11 @@
       "place": "Parts#Events:25",
       "differentiator": "JavaScriptEventsPart-OnClick",
       "contentPart": ["JavaScriptEventsPart"]
+    },
+    {
+      "place": "Parts#Link:3",
+      "differentiator": "LinkBehaviourPart-ClickEvent",
+      "contentPart": ["LinkBehaviourPart"]
     }
   ],
   "ColourField_Edit": [
@@ -246,6 +251,16 @@
       "differentiator": "Hero-AspectRatioMobile",
       "contentType": ["Hero"]
     },
+    {
+      "place": "Parts#Link:1",
+      "differentiator": "LinkDestinationPart-DestinationURL",
+      "contentPart": ["LinkDestinationPart"]
+    },
+    {
+      "place": "Parts#Link:2",
+      "differentiator": "LinkBehaviourPart-OpenIn",
+      "contentPart": ["LinkBehaviourPart"]
+    },        
     {
       "place": "Parts#Size:1",
       "differentiator": "Section-ContentWidth",
