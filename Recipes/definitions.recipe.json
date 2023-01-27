@@ -761,6 +761,7 @@
                     "Label",
                     "LegacyVisualEditor",
                     "Link",
+                    "Navigation",
                     "Logo",
                     "Logos",
                     "OrderedList",
@@ -773,6 +774,7 @@
                     "UnorderedList",
                     "Validation",
                     "ValidationSummary",
+                    "VideoModal",
                     "VisualEditor"
                   ],
                   "DisplayType": "Detail"
