@@ -11,10 +11,10 @@
     {% assign cssClasses = cssClasses | append:" " | append: Model.ContentItem.Content.VisibilityPart.ResponsiveVisibility.Text %}
 {% endif %}
 
-{% if url != nil %}
+{% if url != blank %}
 <div class="{{ cssClasses }}">
-    <a class="video-modal__link" href="{{ url }}" {% if onClickEvent !=nil%} onClick="{{ onClickEvent }}" {% endif %}>
-        {% if embedURL != nil %}
+    <a class="video-modal__link" href="{{ url }}" {% if onClickEvent != blank %} onClick="{{ onClickEvent }}" {% endif %}>
+        {% if embedURL != blank %}
             <div class="video-modal__media">
                 <div class="embed embed--ratio-16-9">
                     <div class="embed__source">
@@ -23,13 +23,13 @@
                 </div>
             </div>
             <div class="video-modal__cover"></div>
-        {% elsif imagePath != nil %}
+        {% elsif imagePath != blank %}
             <div class="video-modal__media">
                 <img class="video-modal__thumbnail" src="{{ imagePath | asset_url | resize_url: width: 425, height: 240 }}"
                     alt="{{ altText }}" loading="lazy" />
             </div>
         {% endif %}
-        {% if text != nil %}
+        {% if text != blank %}
             <div class="video-modal__link-text">
                 {{ text }}
             </div>
