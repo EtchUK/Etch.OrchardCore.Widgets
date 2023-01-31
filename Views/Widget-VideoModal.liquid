@@ -2,7 +2,7 @@
 {% assign cssClasses = "video-modal js-gallery" %}
 {% assign embedURL = Model.ContentItem.Content.VideoModal.ThumbnailVideo.Text %}
 {% assign imagePath = Model.ContentItem.Content.VideoModal.ThumbnailImage.Paths[0] %}
-{% assign text = Model.ContentItem.Content.VideoModal.Video.Text %}
+{% assign text = Model.ContentItem.Content.VideoModal.Text.Text %}
 {% assign url = Model.ContentItem.Content.VideoModal.Video.Url %}
 
 {% assign onClickEvent = Model.ContentItem.Content.JavaScriptEventsPart.OnClick.Value %}
@@ -13,7 +13,7 @@
 
 {% if url != blank %}
 <div class="{{ cssClasses }}">
-    <a class="video-modal__link" href="{{ url }}" {% if onClickEvent != blank %} onClick="{{ onClickEvent }}" {% endif %}>
+    <a class="video-modal__link" href="{{ url }}" {% if onClickEvent != blank %} onClick="{{ onClickEvent }}" {% endif %} {% if Model.ContentItem.Content.VideoModal.Video.Text != blank %} title="{{ Model.ContentItem.Content.VideoModal.Video.Text }} "{% endif %}>
         {% if embedURL != blank %}
             <div class="video-modal__media">
                 <div class="embed embed--ratio-16-9">
