@@ -3,7 +3,7 @@
 {% assign logo =  Model.ContentItem.Content.Logo.Logo.Paths[0] %}
 {% assign logoAltText =  Model.ContentItem.Content.Logo.Logo.MediaTexts[0] %}
 
-{% assign linkUrl = Model.ContentItem.Content.LinkDestinationPart.DestinationURL.Text %}
+{% assign linkUrl = Model.ContentItem.Content.LinkDestinationPart.DestinationUrl.Text %}
 {% assign openIn = Model.ContentItem.Content.LinkBehaviourPart.OpenIn.Text %}
 {% assign isModal = openIn == 'modal' or openIn == 'modal-wide' %}
 {% assign onClickEvent = Model.ContentItem.Content.LinkBehaviourPart.ClickEvent.Value %}
@@ -18,19 +18,14 @@
 {% endif %}
 
 {% if logo != null %}
-	<{{tag}} class="{{ cssClasses }}" 
-	{% if linkUrl != blank %} href="{{linkUrl}}" {% endif %}
-	{% if openIn != null and isModal == false %}
-	 target="{{ openIn }}"
-	{% elsif isModal %}
-	 data-iframe="true"
-	{% endif %}
-	{% if openIn == 'modal-wide' %}
-	 data-wide="true"
-	{% endif %}
-	{% if onClickEvent != blank %}
-	 onClick="{{ onClickEvent }}" 
-	{% endif %}>
-		<img class="logo__image" src="{{ logo | asset_url | resize_url: width:200 }}" alt="{{ logoAltText }}" />
-	</{{tag}}>
+
+<{{tag}} class="{{ cssClasses }}" 
+{% if linkUrl != blank %} href="{{linkUrl}}" {% endif %}
+{% if openIn != null and isModal == false %} target="{{ openIn }}" {% endif %}
+{% if isModal %} data-iframe="true" {% endif %}
+{% if openIn == 'modal-wide' %} data-wide="true" {% endif %}
+{% if onClickEvent != blank %} onClick="{{ onClickEvent }}" {% endif %}>
+	<img class="logo__image" src="{{ logo | asset_url | resize_url: width:200 }}" alt="{{ logoAltText }}" />
+</{{tag}}>
+
 {% endif %}
