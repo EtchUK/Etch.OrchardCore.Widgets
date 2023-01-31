@@ -360,5 +360,72 @@ namespace Etch.OrchardCore.Widgets
 
             return 9;
         }
+
+        public int UpdateFrom9()
+        {
+            _contentDefinitionManager.AlterPartDefinition(nameof(LinkBehaviourPart), builder => builder
+                .Attachable()
+                .WithDisplayName("Link Behaviour")
+                .WithDescription("Define behaviour when user interacts with link.")
+                .WithDefaultPosition("15")
+                .WithField(nameof(LinkBehaviourPart.OpenIn), field => field
+                    .WithDisplayName("Open In")
+                    .OfType(nameof(TextField))
+                    .WithSettings(new TextFieldSettings
+                    {
+                        Hint = "Define how you would like the link to open."
+                    })
+                    .WithEditor("PredefinedList")
+                    .WithSettings(new TextFieldPredefinedListEditorSettings
+                    {
+                        DefaultValue = "_self",
+                        Editor = EditorOption.Dropdown,
+                        Options = new[]
+                        {
+                            new ListValueOption
+                            {
+                                Name = "Current window",
+                                Value = "_self"
+                            },
+                            new ListValueOption
+                            {
+                                Name = "New window",
+                                Value = "_blank",
+                            },
+                            new ListValueOption
+                            {
+                                Name = "Portrait Modal",
+                                Value = "modal"
+                            },
+                            new ListValueOption
+                            {
+                                Name = "Landscape Modal",
+                                Value = "modal-wide"
+                            }
+                        }
+                    }))
+                .WithField(nameof(LinkBehaviourPart.ClickEvent), field => field
+                    .WithDisplayName("Click Event")
+                    .OfType(nameof(CodeField))
+                    .WithSettings(new CodeFieldSettings
+                    {
+                        Language= "javascript"
+                    })));
+
+            _contentDefinitionManager.AlterPartDefinition(nameof(LinkDestinationPart), builder => builder
+                .Attachable()
+                .WithDisplayName("Link Destination")
+                .WithDescription("Define location user is navigated to when interacting with a linkable element.")
+                .WithDefaultPosition("10")
+                .WithField(nameof(LinkDestinationPart.DestinationUrl), field => field
+                    .WithDisplayName("Destination Url")
+                    .OfType(nameof(TextField))
+                    .WithSettings(new TextFieldSettings
+                    {
+                        Hint = "Define URL user is navigated to when selecting link."
+                    })));
+
+            return 10;
+        }
     }
 }

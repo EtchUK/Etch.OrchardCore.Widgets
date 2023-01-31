@@ -22,10 +22,15 @@ namespace Etch.OrchardCore.Widgets
             services.AddContentPart<HtmlAttributesPart>()
                 .UseDisplayDriver<HtmlAttributesPartDisplay>();
 
+            services.AddContentPart<LinkBehaviourPart>();
+            services.AddContentPart<LinkDestinationPart>();
+
             services.Configure<TemplateOptions>(o =>
             {
                 o.MemberAccessStrategy.Register<HtmlAttributesPart>();
                 o.MemberAccessStrategy.Register<VisibilityPart>();
+                o.MemberAccessStrategy.Register<LinkBehaviourPart>();
+                o.MemberAccessStrategy.Register<LinkDestinationPart>();
             })
                 .AddLiquidFilter<AnimationCssFilter>("animation_css")
                 .AddLiquidFilter<AnimationDataAttributesFilter>("animation_data_attributes")
