@@ -1,4 +1,9 @@
-{% assign linkUrl = Model.ContentItem.Content.LinkDestinationPart.DestinationURL.Text %}
+{% assign linkUrl = Model.ContentItem.Content.Link.Url.Text %}
+
+{% if Model.ContentItem.Content.LinkDestinationPart.DestinationUrl.Text != blank %}
+    {% assign linkUrl = Model.ContentItem.Content.LinkDestinationPart.DestinationUrl.Text %}
+{% endif %}
+
 {% assign openIn = Model.ContentItem.Content.LinkBehaviourPart.OpenIn.Text %}
 {% assign isModal = openIn == 'modal' or openIn == 'modal-wide' %}
 
@@ -8,13 +13,13 @@
 {% assign onClickEvent = Model.ContentItem.Content.LinkBehaviourPart.ClickEvent.Value %}
 
 {% comment %} "Style" field is obsolete but remains for backwards compatibility {% endcomment %}
-{% assign oldStyle = Model.ContentItem.Content.Link.Style.Text %}
+{% assign style = Model.ContentItem.Content.Link.Style.Text %}
 
 {% if Model.ContentItem.Content.LinkVisualPart.Style.Text %}
     {% assign style = Model.ContentItem.Content.LinkVisualPart.Style.Text %}
 {% endif %}
 
-{% if oldStyle != null and oldStyle != 'default' %}
+{% if style != null and style != 'default' %}
     {% assign cssClasses = 'btn ' | append: style %}
 {% endif %}
 
@@ -23,19 +28,12 @@
 {% endif %}
 
 <a href="{{ linkUrl | liquid }}"
- {% if openIn != null and isModal == false %}
-  target="{{ openIn }}"
- {% elsif isModal %}
-  data-iframe="true"
- {% endif %}
- {% if openIn == 'modal-wide' %}
-  data-wide="true"
- {% endif %} 
+ {% if openIn != null and isModal == false %} target="{{ openIn }}" {% endif %}
+ {% if isModal %} data-iframe="true" {% endif %}
+ {% if openIn == 'modal-wide' %} data-wide="true" {% endif %} 
   class="{{ cssClasses }} {{ Model.ContentItem | animation_css }}" 
   style="{{ Model.ContentItem | animation_styles }}"
  {{ Model.ContentItem | animation_data_attributes }} 
- {% if onClickEvent != blank %}
-  onClick="{{ onClickEvent }}" 
- {% endif %}>
+ {% if onClickEvent != blank %} onClick="{{ onClickEvent }}" {% endif %}>
    <span>{{ text }}</span>
 </a>

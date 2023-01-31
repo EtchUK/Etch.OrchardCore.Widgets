@@ -253,7 +253,7 @@
     },
     {
       "place": "Parts#Link:1",
-      "differentiator": "LinkDestinationPart-DestinationURL",
+      "differentiator": "LinkDestinationPart-DestinationUrl",
       "contentPart": ["LinkDestinationPart"]
     },
     {
