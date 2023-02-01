@@ -13,7 +13,7 @@
 
 {% if url != blank %}
 <div class="{{ cssClasses }}">
-    <a class="video-modal__link" href="{{ url }}" {% if onClickEvent != blank %} onClick="{{ onClickEvent }}" {% endif %} {% if Model.ContentItem.Content.VideoModal.Video.Text != blank %} title="{{ Model.ContentItem.Content.VideoModal.Video.Text }} "{% endif %}>
+    <a class="video-modal__link" href="{{ url }}" {% if onClickEvent != blank %} onClick="{{ onClickEvent }}" {% endif %} {% if Model.ContentItem.Content.VideoModal.Video.Text != blank %} title="{{ Model.ContentItem.Content.VideoModal.Video.Text }}" {% endif %}>
         {% if embedURL != blank %}
             <div class="video-modal__media">
                 <div class="embed embed--ratio-16-9">
