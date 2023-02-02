@@ -66,7 +66,7 @@
       "contentType": [ "Section" ]
     },
     {
-      "place": "Parts#Advanced:2",
+      "place": "Parts#Advanced:30",
       "differentiator": "Link-OpenInNewWindow",
       "contentType": [ "Link" ]
     }
@@ -78,7 +78,7 @@
       "contentPart": [ "JavaScriptEventsPart" ]
     },
     {
-      "place": "Parts#Link:3",
+      "place": "Parts#Link:22",
       "differentiator": "LinkBehaviourPart-ClickEvent",
       "contentPart": [ "LinkBehaviourPart" ]
     }
@@ -129,7 +129,7 @@
       "contentType": [ "ContentFeed" ]
     },
     {
-      "place": "Parts#Advanced:1",
+      "place": "Parts#Advanced:30",
       "differentiator": "Space-CustomSize",
       "contentType": [ "Space" ]
     }
@@ -252,12 +252,12 @@
       "contentType": [ "Hero" ]
     },
     {
-      "place": "Parts#Link:1",
+      "place": "Parts#Link:20",
       "differentiator": "LinkDestinationPart-DestinationUrl",
       "contentPart": ["LinkDestinationPart"]
     },
     {
-      "place": "Parts#Link:2",
+      "place": "Parts#Link:21",
       "differentiator": "LinkBehaviourPart-OpenIn",
       "contentPart": ["LinkBehaviourPart"]
     },        
@@ -312,12 +312,12 @@
       "contentType": [ "Gallery" ]
     },
     {
-      "place": "Parts#Advanced:3",
+      "place": "Parts#Advanced:30",
       "differentiator": "Heading-VisualLevel",
       "contentType": [ "Heading" ]
     },
     {
-      "place": "Parts#Advanced:1",
+      "place": "Parts#Advanced:30",
       "differentiator": "RenderContent-ShapeDisplayOverride",
       "contentType": [ "RenderContent" ]
     },
