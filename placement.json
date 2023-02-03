@@ -257,6 +257,12 @@
       "contentPart": ["LinkDestinationPart"]
     },
     {
+      "place": "Parts#Content:5",
+      "differentiator": "LinkDestinationPart-DestinationUrl",
+      "contentPart": ["LinkDestinationPart"],
+      "contentType": ["Link"]
+    },
+    {
       "place": "Parts#Link:21",
       "differentiator": "LinkBehaviourPart-OpenIn",
       "contentPart": ["LinkBehaviourPart"]
