@@ -422,7 +422,7 @@ namespace Etch.OrchardCore.Widgets
                     .OfType(nameof(TextField))
                     .WithSettings(new TextFieldSettings
                     {
-                        Hint = "Define URL user is navigated to when selecting link."
+                        Hint = "URL user is navigated to when selecting link. If left blank then item won't be linked."
                     })));
 
             return 10;
