@@ -4,7 +4,12 @@
 {% assign imagePath = Model.ContentItem.Content.Image.Image.Paths[0] | asset_url | resize_url: width: 2560, mode:'min' %}
 {% assign altText = Model.ContentItem.Content.Image.AlternateText.Text | default: Model.ContentItem.Content.Image.Image.MediaTexts[0] %}
 
-{% assign linkUrl = Model.ContentItem.Content.LinkDestinationPart.DestinationUrl.Text %}
+{% assign linkUrl = Model.ContentItem.Content.Image.LinkTo.Text %}
+
+{% if Model.ContentItem.Content.LinkDestinationPart.DestinationUrl.Text != blank %}
+    {% assign linkUrl = Model.ContentItem.Content.LinkDestinationPart.DestinationUrl.Text %}
+{% endif %}
+
 {% assign openIn = Model.ContentItem.Content.LinkBehaviourPart.OpenIn.Text %}
 {% assign isModal = openIn == 'modal' or openIn == 'modal-wide' %}
 {% assign onClickEvent = Model.ContentItem.Content.LinkBehaviourPart.ClickEvent.Value %}

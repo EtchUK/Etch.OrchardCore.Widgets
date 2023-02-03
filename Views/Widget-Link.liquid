@@ -4,7 +4,14 @@
     {% assign linkUrl = Model.ContentItem.Content.LinkDestinationPart.DestinationUrl.Text %}
 {% endif %}
 
-{% assign openIn = Model.ContentItem.Content.LinkBehaviourPart.OpenIn.Text %}
+{% if Model.ContentItem.Content.Link.OpenInNewWindow.Value %}
+    {% assign openIn = "_blank" %}
+{% endif %}
+
+{% if Model.ContentItem.Content.LinkBehaviourPart.OpenIn.Text != blank %}
+    {% assign openIn = Model.ContentItem.Content.LinkBehaviourPart.OpenIn.Text %}
+{% endif %}
+
 {% assign isModal = openIn == 'modal' or openIn == 'modal-wide' %}
 
 {% assign text = Model.ContentItem.Content.Link.Text.Text %}
@@ -27,13 +34,13 @@
     {% assign cssClasses = cssClasses | append: ' js-iframe-modal' %}
 {% endif %}
 
-<a href="{{ linkUrl | liquid }}"
- {% if openIn != null and isModal == false %} target="{{ openIn }}" {% endif %}
- {% if isModal %} data-iframe="true" {% endif %}
- {% if openIn == 'modal-wide' %} data-wide="true" {% endif %} 
-  class="{{ cssClasses }} {{ Model.ContentItem | animation_css }}" 
-  style="{{ Model.ContentItem | animation_styles }}"
- {{ Model.ContentItem | animation_data_attributes }} 
- {% if onClickEvent != blank %} onClick="{{ onClickEvent }}" {% endif %}>
+<a  href="{{ linkUrl | liquid }}"
+    class="{{ cssClasses }} {{ Model.ContentItem | animation_css }}" 
+    style="{{ Model.ContentItem | animation_styles }}"
+    {% if openIn != null and isModal == false %} target="{{ openIn }}" {% endif %}
+    {% if isModal %} data-iframe="true" {% endif %}
+    {% if openIn == 'modal-wide' %} data-wide="true" {% endif %} 
+    {{ Model.ContentItem | animation_data_attributes }} 
+    {% if onClickEvent != blank %} onClick="{{ onClickEvent }}" {% endif %}>
    <span>{{ text }}</span>
 </a>
