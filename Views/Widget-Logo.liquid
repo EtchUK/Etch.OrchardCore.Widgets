@@ -5,6 +5,22 @@
 
 {% assign linkUrl = Model.ContentItem.Content.LinkDestinationPart.DestinationUrl.Text %}
 {% assign openIn = Model.ContentItem.Content.LinkBehaviourPart.OpenIn.Text %}
+
+{% assign linkText = Model.ContentItem.Content.Logo.Link.Text %}
+{% assign linkUrl = Model.ContentItem.Content.Logo.Link.Url %}
+
+{% if Model.ContentItem.Content.LinkDestinationPart.DestinationUrl.Text != blank %}
+    {% assign linkUrl = Model.ContentItem.Content.LinkDestinationPart.DestinationUrl.Text %}
+{% endif %}
+
+{% if Model.ContentItem.Content.Logo.OpenInNewTab.Value %}
+    {% assign openIn = "_blank" %}
+{% endif %}
+
+{% if Model.ContentItem.Content.LinkBehaviourPart.OpenIn.Text != blank %}
+	{% assign openIn = Model.ContentItem.Content.LinkBehaviourPart.OpenIn.Text %}
+{% endif %}
+
 {% assign isModal = openIn == 'modal' or openIn == 'modal-wide' %}
 {% assign onClickEvent = Model.ContentItem.Content.LinkBehaviourPart.ClickEvent.Value %}
 
@@ -24,7 +40,8 @@
 {% if openIn != null and isModal == false %} target="{{ openIn }}" {% endif %}
 {% if isModal %} data-iframe="true" {% endif %}
 {% if openIn == 'modal-wide' %} data-wide="true" {% endif %}
-{% if onClickEvent != blank %} onClick="{{ onClickEvent }}" {% endif %}>
+{% if onClickEvent != blank %} onClick="{{ onClickEvent }}" {% endif %}
+{% if linkUrl != blank and linkText != blank %} title="{{ linkText }}" {% endif %}>
 	<img class="logo__image" src="{{ logo | asset_url | resize_url: width:200 }}" alt="{{ logoAltText }}" />
 </{{tag}}>
 
