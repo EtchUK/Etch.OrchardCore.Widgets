@@ -1,6 +1,11 @@
 {% assign image = Model.Content.ResponsiveImage-Image %}
 
-{% assign linkUrl = Model.ContentItem.Content.LinkDestinationPart.DestinationUrl.Text %}
+{% assign linkUrl = Model.ContentItem.Content.ResponsiveImage.LinkTo.Text %}
+
+{% if Model.ContentItem.Content.LinkDestinationPart.DestinationUrl.Text != blank %}
+    {% assign linkUrl = Model.ContentItem.Content.LinkDestinationPart.DestinationUrl.Text %}
+{% endif %}
+
 {% assign openIn = Model.ContentItem.Content.LinkBehaviourPart.OpenIn.Text %}
 {% assign isModal = openIn == 'modal' or openIn == 'modal-wide' %}
 {% assign onClickEvent = Model.ContentItem.Content.LinkBehaviourPart.ClickEvent.Value %}
