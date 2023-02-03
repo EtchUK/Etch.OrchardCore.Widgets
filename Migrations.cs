@@ -418,7 +418,7 @@ namespace Etch.OrchardCore.Widgets
                 .WithDescription("Define location user is navigated to when interacting with a linkable element.")
                 .WithDefaultPosition("10")
                 .WithField(nameof(LinkDestinationPart.DestinationUrl), field => field
-                    .WithDisplayName("Destination Url")
+                    .WithDisplayName("Link Url")
                     .OfType(nameof(TextField))
                     .WithSettings(new TextFieldSettings
                     {
