@@ -91,6 +91,11 @@
     },
     {
       "place": "Parts#Background:20",
+      "differentiator": "Banner-MobileBackgroundColour",
+      "contentPart": [ "Banner" ]
+    },
+    {
+      "place": "Parts#Background:20",
       "differentiator": "PageHeader-MobileBackgroundColour",
       "contentPart": [ "PageHeader" ]
     },
@@ -106,6 +111,11 @@
     }
   ],
   "ContentPickerField_Edit": [
+    {
+      "place": "Parts#Menu:10",
+      "differentiator": "Banner-Menu",
+      "contentType": [ "Banner" ]
+    },
     {
       "place": "Parts#Menu:10",
       "differentiator": "PageHeader-Menu",
@@ -158,6 +168,26 @@
     },
     {
       "place": "Parts#Menu:8",
+      "differentiator": "Banner-MenuCloseButtonLabel",
+      "contentType": [ "Banner" ]
+    },
+    {
+      "place": "Parts#Menu:7",
+      "differentiator": "Banner-MenuToggleButtonLabel",
+      "contentType": [ "Banner" ]
+    },
+    {
+      "place": "Parts#Background:22",
+      "differentiator": "Banner-MobileBackgroundPattern",
+      "contentPart": [ "Banner" ]
+    },
+    {
+      "place": "Parts#Style:10",
+      "differentiator": "Banner-Position",
+      "contentType": [ "Banner" ]
+    },
+    {
+      "place": "Parts#Menu:8",
       "differentiator": "PageHeader-MenuCloseButtonLabel",
       "contentType": [ "PageHeader" ]
     },
@@ -188,8 +218,18 @@
     },
     {
       "place": "Parts#Layout:4",
+      "differentiator": "Banner-ContentWidth",
+      "contentType": [ "Banner" ]
+    },
+    {
+      "place": "Parts#Layout:4",
       "differentiator": "PageHeader-ContentWidth",
       "contentType": [ "PageHeader" ]
+    },
+    {
+      "place": "Parts#Layout:4",
+      "differentiator": "Footer-ContentWidth",
+      "contentType": [ "Footer" ]
     },
     {
       "place": "Parts#Layout:4",
