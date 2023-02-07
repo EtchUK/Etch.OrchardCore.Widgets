@@ -91,8 +91,8 @@
     },
     {
       "place": "Parts#Background:20",
-      "differentiator": "Banner-MobileBackgroundColour",
-      "contentPart": [ "Banner" ]
+      "differentiator": "PageHeader-MobileBackgroundColour",
+      "contentPart": [ "PageHeader" ]
     },
     {
       "place": "Parts#Background:1",
@@ -108,8 +108,8 @@
   "ContentPickerField_Edit": [
     {
       "place": "Parts#Menu:10",
-      "differentiator": "Banner-Menu",
-      "contentType": [ "Banner" ]
+      "differentiator": "PageHeader-Menu",
+      "contentType": [ "PageHeader" ]
     }
   ],
   "NumericField_Edit": [
@@ -158,23 +158,23 @@
     },
     {
       "place": "Parts#Menu:8",
-      "differentiator": "Banner-MenuCloseButtonLabel",
-      "contentType": [ "Banner" ]
+      "differentiator": "PageHeader-MenuCloseButtonLabel",
+      "contentType": [ "PageHeader" ]
     },
     {
       "place": "Parts#Menu:7",
-      "differentiator": "Banner-MenuToggleButtonLabel",
-      "contentType": [ "Banner" ]
+      "differentiator": "PageHeader-MenuToggleButtonLabel",
+      "contentType": [ "PageHeader" ]
     },
     {
       "place": "Parts#Background:22",
-      "differentiator": "Banner-MobileBackgroundPattern",
-      "contentPart": [ "Banner" ]
+      "differentiator": "PageHeader-MobileBackgroundPattern",
+      "contentPart": [ "PageHeader" ]
     },
     {
       "place": "Parts#Style:10",
-      "differentiator": "Banner-Position",
-      "contentType": [ "Banner" ]
+      "differentiator": "PageHeader-Position",
+      "contentType": [ "PageHeader" ]
     },
     {
       "place": "Parts#Layout:14",
@@ -188,13 +188,13 @@
     },
     {
       "place": "Parts#Layout:4",
-      "differentiator": "Banner-ContentWidth",
-      "contentType": [ "Banner" ]
+      "differentiator": "PageHeader-ContentWidth",
+      "contentType": [ "PageHeader" ]
     },
     {
       "place": "Parts#Layout:4",
-      "differentiator": "Footer-ContentWidth",
-      "contentType": [ "Footer" ]
+      "differentiator": "PageFooter-ContentWidth",
+      "contentType": [ "PageFooter" ]
     },
     {
       "place": "Parts#Layout:1",
