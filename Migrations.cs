@@ -427,5 +427,33 @@ namespace Etch.OrchardCore.Widgets
 
             return 10;
         }
+
+        public int UpdateFrom10()
+        {
+            _contentDefinitionManager.AlterPartDefinition("LinkVisualPart", part => part
+               .WithField("Style", field => field
+                   .WithSettings(new TextFieldPredefinedListEditorSettings
+                   {
+                       Editor = EditorOption.Dropdown,
+                       Options = new ListValueOption[] {
+                           new ListValueOption {
+                               Name = "Default",
+                               Value = string.Empty
+                           },
+                           new ListValueOption {
+                               Name = "Primary Button",
+                               Value = "btn btn--primary"
+                           },
+                           new ListValueOption {
+                               Name = "Secondary Button",
+                               Value = "btn btn--secondary"
+                           }
+                       }
+                   })
+               )
+            );
+
+            return 11;
+        }        
     }
 }
