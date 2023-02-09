@@ -22,12 +22,16 @@
 {% comment %} "Style" field is obsolete but remains for backwards compatibility {% endcomment %}
 {% assign style = Model.ContentItem.Content.Link.Style.Text %}
 
+{% if style != null and style != 'default' %}
+    {% assign style = 'btn ' | append: style %}
+{% endif %}
+
 {% if Model.ContentItem.Content.LinkVisualPart.Style.Text %}
     {% assign style = Model.ContentItem.Content.LinkVisualPart.Style.Text %}
 {% endif %}
 
 {% if style != null and style != 'default' %}
-    {% assign cssClasses = 'btn ' | append: style %}
+    {% assign cssClasses = cssClasses | append: style %}
 {% endif %}
 
 {% if isModal %}
