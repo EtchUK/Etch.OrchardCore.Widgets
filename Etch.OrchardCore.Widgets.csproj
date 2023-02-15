@@ -29,6 +29,7 @@
     <PackageReference Include="OrchardCore.Flows" Version="1.5.0" />
     <PackageReference Include="OrchardCore.Lists" Version="1.5.0" />
     <PackageReference Include="OrchardCore.Module.Targets" Version="1.5.0" />
+    <PackageReference Include="OrchardCore.Title" Version="1.5.0" />
   </ItemGroup>
 
   <ItemGroup>

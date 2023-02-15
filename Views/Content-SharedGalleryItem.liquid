@@ -1,0 +1,5 @@
+﻿{% assign sharedGalleries = Model.ContentItem.Content.SharedGalleryItem.SharedGallery.ContentItemIds | content_item_id %}
+
+{% assign itemShape = sharedGalleries[0] | shape_build_display: "Detail" %}
+{% shape_add_properties itemShape ThumbnailAspectRatio: Model.Properties.ThumbnailAspectRatio  %}
+{{ itemShape | shape_render }}
