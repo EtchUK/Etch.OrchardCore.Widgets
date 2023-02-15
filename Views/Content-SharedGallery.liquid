@@ -1,0 +1,7 @@
+﻿{% assign items = Model.ContentItem.Content.Items.ContentItems %}
+
+{% for item in items %}
+    {% assign itemShape = item | shape_build_display: "Detail" %}
+    {% shape_add_properties itemShape ThumbnailAspectRatio: Model.Properties.ThumbnailAspectRatio  %}
+    {{ itemShape | shape_render }}
+{% endfor %}

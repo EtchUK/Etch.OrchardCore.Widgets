@@ -5,11 +5,14 @@ using Etch.OrchardCore.Fields.Colour.Settings;
 using Etch.OrchardCore.Fields.ResponsiveMedia.Fields;
 using Etch.OrchardCore.Fields.ResponsiveMedia.Settings;
 using Etch.OrchardCore.Widgets.Models;
+using Newtonsoft.Json.Linq;
 using OrchardCore.ContentFields.Fields;
 using OrchardCore.ContentFields.Settings;
 using OrchardCore.ContentManagement.Metadata;
 using OrchardCore.ContentManagement.Metadata.Settings;
 using OrchardCore.Data.Migration;
+using OrchardCore.Flows.Models;
+using OrchardCore.Title.Models;
 
 namespace Etch.OrchardCore.Widgets
 {
@@ -454,6 +457,60 @@ namespace Etch.OrchardCore.Widgets
             );
 
             return 11;
-        }        
+        }
+        
+        public int UpdateFrom11()
+        {
+            _contentDefinitionManager.AlterPartDefinition("SharedGalleryItem", builder => builder
+                .WithField("SharedGallery", field => field
+                    .WithDisplayName("Shared Gallery")
+                    .OfType(nameof(ContentPickerField))
+                    .WithSettings(new ContentPickerFieldSettings
+                    {
+                        DisplayedContentTypes = new string[] { "SharedGallery" }
+                    })));
+
+            _contentDefinitionManager.AlterTypeDefinition("SharedGalleryItem", builder => builder
+                .WithPart("SharedGalleryItem", part => part
+                   .WithPosition("0"))
+                   .MergeSettings(JObject.FromObject(new
+                   {
+                       Category = "Content",
+                       Description = "Add items from a shared gallery, known as a 'Shared Gallery'",
+                       Icon = "image"
+                   })));
+
+            _contentDefinitionManager.AlterTypeDefinition("SharedGallery", builder => builder
+                .WithPart(nameof(TitlePart), builder => builder
+                   .WithPosition("0"))
+                .WithPart("SharedGallery", builder => builder
+                    .WithPosition("1"))
+                .WithSettings(new ContentTypeSettings
+                {
+                    Creatable = true,
+                    Draftable = true,
+                    Listable = true,
+                    Securable = true,
+                    Versionable = true
+                })
+                .WithPart("Items", nameof(BagPart), part => part
+                    .WithDisplayName("Items")
+                    .WithPosition("2")
+                    .WithDescription("Specify items for this gallery")
+                    .WithSettings(new BagPartSettings
+                    {
+                        ContainedContentTypes = new string[] { "GalleryEmbedItem", "GalleryMediaItem" }
+                    })));
+
+            _contentDefinitionManager.AlterTypeDefinition("Gallery", builder => builder
+                .WithPart("Items", nameof(BagPart), builder => builder
+                    .WithDisplayName("Items")
+                    .WithSettings(new BagPartSettings
+                    {
+                        ContainedContentTypes = new string[] { "GalleryEmbedItem", "GalleryMediaItem", "SharedGalleryItem" }
+                    })));
+
+            return 12;
+        }
     }
 }
