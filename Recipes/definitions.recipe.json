@@ -3250,6 +3250,14 @@
                     {
                       "name": "Form Group",
                       "value": "form-group"
+                    },
+                    {
+                      "name": "Padded",
+                      "value": "group--padded"
+                    },
+                    {
+                      "name": "Padded (Large)",
+                      "value": "group--padded-large"
                     }
                   ],
                   "Editor": 1
@@ -3868,7 +3876,7 @@
               }
             }
           ]
-        },                       
+        },
         {
           "Name": "FixedContent",
           "Settings": {},
