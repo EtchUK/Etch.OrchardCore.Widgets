@@ -83,7 +83,7 @@
         <div class="hero__media">
             <div class="embed embed--ratio-16-9">
 				<div class="embed__source">
-					<iframe src="{{ Model.ContentItem.Content.Hero.BackgroundEmbed.Text }}" loading="{{ loading | default: "eager" }}" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+					<iframe title="{{ "Background Video" | t }}" src="{{ Model.ContentItem.Content.Hero.BackgroundEmbed.Text }}" loading="{{ loading | default: "eager" }}" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 				</div>
             </div>
         </div>
