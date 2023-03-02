@@ -4,6 +4,7 @@ using Etch.OrchardCore.Fields.Colour.Fields;
 using Etch.OrchardCore.Fields.Colour.Settings;
 using Etch.OrchardCore.Fields.ResponsiveMedia.Fields;
 using Etch.OrchardCore.Fields.ResponsiveMedia.Settings;
+using Etch.OrchardCore.Fields.Values.Settings;
 using Etch.OrchardCore.Widgets.Models;
 using Newtonsoft.Json.Linq;
 using OrchardCore.ContentFields.Fields;
@@ -511,6 +512,23 @@ namespace Etch.OrchardCore.Widgets
                     })));
 
             return 12;
+        }
+
+        public int UpdateFrom12()
+        {
+            _contentDefinitionManager.AlterPartDefinition(nameof(Heading), builder => builder
+                .WithField(nameof(Heading.Emphasize), field => field
+                    .OfType(nameof(Fields.Values.Fields.ValuesField))
+                    .WithSettings(new ValuesFieldSettings
+                    {
+                        EmptyMessage = "Currently no text will be emphasized.",
+                        Hint = "Content within the heading text that should be given emphasis.",
+                        NewItemPlaceholder = "Text matching is case sensitive."
+
+                    })
+                    .WithDisplayName("Emphasize")
+                    .WithPosition("5")));
+            return 13;
         }
     }
 }
