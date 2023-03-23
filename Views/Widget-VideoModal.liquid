@@ -12,28 +12,28 @@
 {% endif %}
 
 {% if url != blank %}
-<div class="{{ cssClasses }}">
-    <a class="video-modal__link" href="{{ url }}" {% if onClickEvent != blank %} onClick="{{ onClickEvent }}" {% endif %} {% if Model.ContentItem.Content.VideoModal.Video.Text != blank %} title="{{ Model.ContentItem.Content.VideoModal.Video.Text }}" {% endif %}>
-        {% if embedURL != blank %}
-            <div class="video-modal__media">
-                <div class="embed embed--ratio-16-9">
-                    <div class="embed__source">
-                        <iframe src="{{embedURL}}" title="{{ altText }}" loading="lazy"></iframe>
-                    </div>
+    <div class="{{ cssClasses }}">
+        <a class="video-modal__link" href="{{ url }}" {% if onClickEvent != blank %} onClick="{{ onClickEvent }}" {% endif %} {% if Model.ContentItem.Content.VideoModal.Video.Text != blank %} title="{{ Model.ContentItem.Content.VideoModal.Video.Text }}" data-sub-html="{{ Model.ContentItem.Content.VideoModal.Video.Text }}" {% endif %}>
+            {% if embedURL != blank or imagePath != blank %}
+                <div class="video-modal__media">
+                    {% if embedURL != blank %}
+                        <div class="embed embed--ratio-16-9">
+                            <div class="embed__source">
+                                <iframe src="{{embedURL}}" title="{{ altText }}" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <div class="video-modal__cover"></div>
+                    {% else %}
+                        <img class="video-modal__thumbnail" src="{{ imagePath | asset_url | resize_url: width: 1280, height: 720 }}"
+                                alt="{{ altText }}" loading="lazy" />
+                    {% endif %}
                 </div>
-            </div>
-            <div class="video-modal__cover"></div>
-        {% elsif imagePath != blank %}
-            <div class="video-modal__media">
-                <img class="video-modal__thumbnail" src="{{ imagePath | asset_url | resize_url: width: 425, height: 240 }}"
-                    alt="{{ altText }}" loading="lazy" />
-            </div>
-        {% endif %}
-        {% if text != blank %}
-            <div class="video-modal__link-text">
-                {{ text }}
-            </div>
-        {% endif %}
-    </a>
-</div>
+            {% endif %}
+            {% if text != blank %}
+                <div class="video-modal__link-text">
+                    {{ text }}
+                </div>
+            {% endif %}
+        </a>
+    </div>
 {% endif %}
