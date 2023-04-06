@@ -469,6 +469,7 @@ namespace Etch.OrchardCore.Widgets
 
         public int UpdateFrom10()
         {
+            /*
             _contentDefinitionManager.AlterPartDefinition("LinkVisualPart", part => part
                .WithField("Style", field => field
                    .WithSettings(new TextFieldPredefinedListEditorSettings
@@ -491,6 +492,7 @@ namespace Etch.OrchardCore.Widgets
                    })
                )
             );
+            */
 
             return 11;
         }
