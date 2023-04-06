@@ -304,21 +304,57 @@ namespace Etch.OrchardCore.Widgets
                    })
                    .WithSettings(new TextFieldPredefinedListEditorSettings
                    {
-                       Editor = EditorOption.Dropdown,
-                       Options = new ListValueOption[] {
-                           new ListValueOption {
-                               Name = "Default",
-                               Value = string.Empty
-                           },
-                           new ListValueOption {
-                               Name = "Primary Button",
-                               Value = "btn--primary"
-                           },
-                           new ListValueOption {
-                               Name = "Secondary Button",
-                               Value = "btn--secondary"
-                           }
-                       }
+                        Editor = EditorOption.Dropdown,
+                        Options = new ListValueOption[] {
+                            new ListValueOption {
+                                Name = "Default",
+                                Value = string.Empty
+                            },
+                            new ListValueOption {
+                                Name = "Link with emphasis",
+                                Value = "link link--emphasis"
+                            },
+                            new ListValueOption {
+                                Name = "Primary Button",
+                                Value = "btn btn--primary"
+                            },
+                            new ListValueOption {
+                                Name = "Secondary Button",
+                                Value = "btn btn--secondary"
+                            },
+                            new ListValueOption {
+                                Name = "Plain Text",
+                                Value = "link link--plain-text"
+                            },
+                            new ListValueOption {
+                                Name = "Link with underline grow (from center)",
+                                Value = "link link--underline-animation link--underline-animation-grow-center"
+                            },
+                            new ListValueOption {
+                                Name = "Link with underline grow (from left to right)",
+                                Value = "link link--underline-animation link--underline-animation-grow-ltr"
+                            },
+                            new ListValueOption {
+                                Name = "Link with underline grow (from right to left)",
+                                Value = "link link--underline-animation link--underline-animation-grow-rtl"
+                            },
+                            new ListValueOption {
+                                Name = "Link with underline shrink (from center)",
+                                Value = "link link--underline-animation link--underline-animation-shrink-center"
+                            },
+                            new ListValueOption {
+                                Name = "Link with underline shrink (from left to right)",
+                                Value = "link link--underline-animation link--underline-animation-shrink-ltr"
+                            },
+                            new ListValueOption {
+                                Name = "Link with underline shrink (from right to left)",
+                                Value = "link link--underline-animation link--underline-animation-shrink-rtl"
+                            },
+                            new ListValueOption {
+                                Name = "Link with underline slide reveal",
+                                Value = "link link--underline-animation link--underline-animation-slide"
+                            },
+                        }
                    })
                )
             );
@@ -511,70 +547,6 @@ namespace Etch.OrchardCore.Widgets
                     })));
 
             return 12;
-        }
-
-        public int UpdateFrom12()
-        {
-            _contentDefinitionManager.AlterPartDefinition("LinkVisualPart", part => part
-               .WithField("Style", field => field
-                   .WithSettings(new TextFieldPredefinedListEditorSettings
-                   {
-                       Editor = EditorOption.Dropdown,
-                       Options = new ListValueOption[] {
-                           new ListValueOption {
-                               Name = "Default",
-                               Value = string.Empty
-                           },
-                           new ListValueOption {
-                               Name = "Link with emphasis",
-                               Value = "link link--emphasis"
-                           },
-                           new ListValueOption {
-                               Name = "Primary Button",
-                               Value = "btn btn--primary"
-                           },
-                           new ListValueOption {
-                               Name = "Secondary Button",
-                               Value = "btn btn--secondary"
-                           },
-                           new ListValueOption {
-                               Name = "Plain Text",
-                               Value = "link link--plain-text"
-                           },
-                           new ListValueOption {
-                               Name = "Link with underline grow (from center)",
-                               Value = "link  link--underline-animation link--underline-animation-grow-center"
-                           },
-                           new ListValueOption {
-                               Name = "Link with underline grow (from left to right)",
-                               Value = "link  link--underline-animation link--underline-animation-grow-ltr"
-                           },
-                           new ListValueOption {
-                               Name = "Link with underline grow (from right to left)",
-                               Value = "link  link--underline-animation link--underline-animation-grow-rtl"
-                           },
-                           new ListValueOption {
-                               Name = "Link with underline shrink (from center)",
-                               Value = "link  link--underline-animation link--underline-animation-shrink-center"
-                           },
-                           new ListValueOption {
-                               Name = "Link with underline shrink (from left to right)",
-                               Value = "link  link--underline-animation link--underline-animation-shrink-ltr"
-                           },
-                           new ListValueOption {
-                               Name = "Link with underline shrink (from right to left)",
-                               Value = "link  link--underline-animation link--underline-animation-shrink-rtl"
-                           },
-                           new ListValueOption {
-                               Name = "Link with underline slide reveal",
-                               Value = "link link--underline-animation link--underline-animation-slide"
-                           },
-                       }
-                   })
-               )
-            );
-
-            return 13;
         }
     }
 }
