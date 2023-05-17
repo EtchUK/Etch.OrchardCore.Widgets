@@ -78,14 +78,14 @@
                 {% if from > paginationStartPoint %}
                     {% assign prevPage = page | minus: 1 %}
                     <li>
-                        <a href="{{ pageUrl | append: "?page=" | append: prevPage }}">{{ "Newer posts" | t}}</a>
+                        <a href="{{ pageUrl | append: "?page=" | append: prevPage }}" rel="prev">{{ "Newer posts" | t}}</a>
                     </li>
                 {% endif %}
 
                 {% if items.size > pageSize %}
                     {% assign nextPage = page | plus: 1 %}
                     <li>
-                        <a href="{{ pageUrl | append: "?page=" | append: nextPage }}">{{ "Older posts" | t }}</a>
+                        <a href="{{ pageUrl | append: "?page=" | append: nextPage }}" rel="next">{{ "Older posts" | t }}</a>
                     </li>
                 {% endif %}
             </ul>
