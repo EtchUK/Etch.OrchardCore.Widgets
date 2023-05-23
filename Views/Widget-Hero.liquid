@@ -94,4 +94,12 @@
     {{ Model.Content.BleedPart | shape_render }}
 
     <div class="hero__space"></div>
+
+    {% if Model.ContentItem.Content.Hero.ShowScrollEncouragement.Value %}
+        <button class="hero__scroll-encouragement js-scroll-down">
+            <span class="visually-hidden">
+                Scroll
+            </span>
+        </button>
+    {% endif %}
 </section>
