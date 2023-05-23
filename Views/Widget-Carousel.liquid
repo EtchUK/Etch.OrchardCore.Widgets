@@ -13,7 +13,7 @@
             <span class="visually-hidden">{{ "Next" | t }}</span>
         </button>
 
-        <ul class="carousel__indicators">
+        <ul class="carousel__indicators list-reset">
             {% for i in (0..loopMaxIndex) %}
                 {% if i == 0 %}
                 <li class="carousel__indicator is-active">
@@ -29,7 +29,7 @@
     {% endif %}
 
     <div class="carousel__items">
-        <ul class="carousel__track js-carousel-track">
+        <ul class="carousel__track js-carousel-track list-reset">
         {% for i in (0..loopMaxIndex) %}
             <li class="carousel__item js-carousel-item {% if i == 0 %}is-active{% endif %}">
                 {{ Model.ContentItem.Content.Items.ContentItems[i] | shape_build_display: "Detail" | shape_render }}
