@@ -524,10 +524,10 @@ namespace Etch.OrchardCore.Widgets
                         EmptyMessage = "Currently no text will be emphasized.",
                         Hint = "Content within the heading text that should be given emphasis.",
                         NewItemPlaceholder = "Text matching is case sensitive."
-
                     })
                     .WithDisplayName("Emphasize")
                     .WithPosition("5")));
+                    
             return 13;
         }
     }

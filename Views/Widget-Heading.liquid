@@ -12,29 +12,33 @@
 {% assign emphasizeTerms = Model.ContentItem.Content.Heading.Emphasize.Data %}
 
 {% if Model.ContentItem.Content.HtmlAttributesPart.Id != null %}
-  {% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
+    {% assign id = Model.ContentItem.Content.HtmlAttributesPart.Id %}
 {% endif %}
 
 {% if Model.ContentItem.Content.HtmlAttributesPart.CssClasses != null %}
-  {% assign cssClasses = cssClasses | append: " " | append: Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
+    {% assign cssClasses = cssClasses | append: " " | append: Model.ContentItem.Content.HtmlAttributesPart.CssClasses %}
 {% endif %}
 
 {% comment %} This check is included for backwards compatibility but should not be needed in future {% endcomment %}
 {% if level == "1" or level == "2" or level == "3" or level == "4" or level == "5" or level == "6" %}
-  {% assign level = "h" | append: level %}
+    {% assign level = "h" | append: level %}
 {% endif %}
 
 {% if visualLevel != nil %}
-  {% assign cssClasses = cssClasses | append: " " | append: visualLevel %}
+    {% assign cssClasses = cssClasses | append: " " | append: visualLevel %}
 {% endif %}
 
 {% if isModal %}
-  {% assign cssClasses = cssClasses | append: ' js-iframe-modal' %}
+    {% assign cssClasses = cssClasses | append: ' js-iframe-modal' %}
 {% endif %}
 
 {% if linkUrl != blank %}
 
-  <a href="{{ linkUrl | liquid }}"{% if openIn != null and isModal == false %}target="{{ openIn }}"{% endif %}{% if isModal %}data-iframe="true"{% endif %}{% if openIn == 'modal-wide' %}data-wide="true"{% endif %}{% if onClickEvent != blank %}onClick="{{ onClickEvent }}"{% endif %}>
+<a href="{{ linkUrl | liquid }}"
+{% if openIn != null and isModal == false %} target="{{ openIn }}" {% endif %}
+{% if isModal %} data-iframe="true" {% endif %}
+{% if openIn == 'modal-wide' %} data-wide="true" {% endif %}
+{% if onClickEvent != blank %} onClick="{{ onClickEvent }}" {% endif %}>
 
     <{{ level }}
       id="{{ id }}"
@@ -48,12 +52,12 @@
 
 {% else %}
 
-  <{{ level }}
-    id="{{ id }}"
-    class="{{ cssClasses }} {{ Model.ContentItem | animation_css }}"
-    style="{{ Model.ContentItem | animation_styles }}"
-    {{ Model.ContentItem | animation_data_attributes }}>
-    {{ text | emphasize_text: terms: emphasizeTerms | raw }}
-  </{{ level }}>
+    <{{ level }}
+      id="{{ id }}"
+      class="{{ cssClasses }} {{ Model.ContentItem | animation_css }}"
+      style="{{ Model.ContentItem | animation_styles }}"
+      {{ Model.ContentItem | animation_data_attributes }}>
+      {{ text | emphasize_text: terms: emphasizeTerms | raw }}
+    </{{ level }}>
 
 {% endif %}
