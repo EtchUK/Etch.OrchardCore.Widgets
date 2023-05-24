@@ -24,6 +24,10 @@
     {% assign cssClasses = cssClasses | append: " bg--fill" %}
 {% endif %}
 
+{% if Model.ContentItem.Content.VisibilityPart.ResponsiveVisibility.Text != blank %}
+    {% assign cssClasses = cssClasses | append:" " | append: Model.ContentItem.Content.VisibilityPart.ResponsiveVisibility.Text %}
+{% endif %}
+
 {% assign styles = "" %}
 
 {% if backgroundColour != nil %}
