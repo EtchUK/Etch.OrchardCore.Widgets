@@ -73,6 +73,10 @@
     {% assign cssClasses = cssClasses | append: " section--reverse-stacking-order" %}
 {% endif %}
 
+{% if Model.ContentItem.Content.VisibilityPart.ResponsiveVisibility.Text != blank %}
+    {% assign cssClasses = cssClasses | append:" " | append: Model.ContentItem.Content.VisibilityPart.ResponsiveVisibility.Text %}
+{% endif %}
+
 {% assign styles = "" %}
 
 {% if backgroundColour != nil %}
