@@ -120,6 +120,11 @@
       "place": "Parts#Menu:10",
       "differentiator": "PageHeader-Menu",
       "contentType": [ "PageHeader" ]
+    },
+    {
+      "place": "Parts#Menu:20",
+      "differentiator": "PageHeader-SocialMenu",
+      "contentType": [ "PageHeader" ]
     }
   ],
   "NumericField_Edit": [
