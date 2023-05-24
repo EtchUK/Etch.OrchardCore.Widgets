@@ -38,6 +38,8 @@ namespace Etch.OrchardCore.Widgets
                 .AddLiquidFilter<EmbedUrlFilter>("embed_url");
 
             services.AddScoped<IDataMigration, Migrations>();
+
+            services.AddLiquidFilter<EmphasizeTextFilter>("emphasize_text");
         }
     }
 }
