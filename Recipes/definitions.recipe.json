@@ -801,6 +801,7 @@
                     "RadioButtons",
                     "Section",
                     "Select",
+                    "Space",
                     "Text",
                     "TextArea",
                     "UnorderedList",
