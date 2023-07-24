@@ -3287,6 +3287,92 @@
                 },
                 "ContentIndexSettings": {}
               }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "DisplayDirection",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Display Direction",
+                  "Editor": "PredefinedList",
+                  "Position": "8"
+                },
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "Horizontal",
+                      "value": "horizontal"
+                    },
+                    {
+                      "name": "Vertical",
+                      "value": "vertical"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": "horizontal"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "DisplayDirectionMobile",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Display Direction (Mobile)",
+                  "Editor": "PredefinedList",
+                  "Position": "9"
+                },
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "Horizontal",
+                      "value": "horizontal"
+                    },
+                    {
+                      "name": "Vertical",
+                      "value": "vertical"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": "vertical"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "ItemGap",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Item Gap",
+                  "Editor": "PredefinedList",
+                  "Position": "1"
+                },
+                "TextFieldSettings": {
+                  "Hint": "Define spacing between items within navigation."
+                },
+                "TextFieldPredefinedListEditorSettings": {
+                  "Options": [
+                    {
+                      "name": "None",
+                      "value": "none"
+                    },
+                    {
+                      "name": "Small",
+                      "value": "small"
+                    },
+                    {
+                      "name": "Default",
+                      "value": "default"
+                    },
+                    {
+                      "name": "Large",
+                      "value": "large"
+                    }
+                  ],
+                  "Editor": 1,
+                  "DefaultValue": "default"
+                }
+              }
             }
           ]
         },

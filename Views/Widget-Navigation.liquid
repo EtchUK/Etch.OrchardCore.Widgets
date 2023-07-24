@@ -1,6 +1,21 @@
-{% assign menu = Content.ContentItemId[Model.ContentItem.Content.Navigation.Menu.ContentItemIds] %}
+{% assign navigation = Model.ContentItem.Content.Navigation %}
+{% assign menu = Content.ContentItemId[navigation.Menu.ContentItemIds] %}
 {% assign menuAlias = "alias:" | append: menu.Content.AliasPart.Alias %}
 
-<nav class="nav">
+{% assign cssClasses = "nav" %}
+
+{% if navigation.DisplayDirection.Text != blank %}
+    {% assign cssClasses = cssClasses | append: " nav--display-" | append: navigation.DisplayDirection.Text %}
+{% endif %}
+
+{% if navigation.DisplayDirectionMobile.Text != blank %}
+    {% assign cssClasses = cssClasses | append: " nav--display-mobile-" | append: navigation.DisplayDirectionMobile.Text %}
+{% endif %}
+
+{% if navigation.ItemGap.Text != blank %}
+    {% assign cssClasses = cssClasses | append: " nav--item-gap-" | append: navigation.ItemGap.Text %}
+{% endif %}
+
+<nav class="{{ cssClasses }}">
     {% shape "menu", alias: menuAlias %}
 </nav>
