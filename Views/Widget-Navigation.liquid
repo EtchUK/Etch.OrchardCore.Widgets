@@ -1,8 +1,9 @@
 {% assign navigation = Model.ContentItem.Content.Navigation %}
 {% assign menu = Content.ContentItemId[navigation.Menu.ContentItemIds] %}
 {% assign menuAlias = "alias:" | append: menu.Content.AliasPart.Alias %}
+{% assign menuSlug = menu | slugify %}
 
-{% assign cssClasses = "nav" %}
+{% assign cssClasses = "nav" | append: " nav--" | append: menuSlug %}
 
 {% if navigation.DisplayDirection.Text != blank %}
     {% assign cssClasses = cssClasses | append: " nav--display-" | append: navigation.DisplayDirection.Text %}
