@@ -14,6 +14,7 @@ using OrchardCore.ContentManagement.Metadata.Settings;
 using OrchardCore.Data.Migration;
 using OrchardCore.Flows.Models;
 using OrchardCore.Title.Models;
+using System.Threading.Tasks;
 
 namespace Etch.OrchardCore.Widgets
 {
@@ -26,11 +27,11 @@ namespace Etch.OrchardCore.Widgets
             _contentDefinitionManager = contentDefinitionManager;
         }
 
-        public int Create()
+        public async Task<int> CreateAsync()
         {
             #region Html Attributes
 
-            _contentDefinitionManager.AlterPartDefinition("HtmlAttributesPart", part => part
+            await _contentDefinitionManager.AlterPartDefinitionAsync("HtmlAttributesPart", part => part
                 .Attachable()
                 .WithDescription("Customise common attributes on HTML element.")
                 .WithDisplayName("HTML Attributes"));
@@ -40,9 +41,9 @@ namespace Etch.OrchardCore.Widgets
             return 1;
         }
 
-        public int UpdateFrom1()
+        public async Task<int> UpdateFrom1Async()
         {
-            _contentDefinitionManager.AlterPartDefinition("BackgroundPart", part => part
+            await _contentDefinitionManager.AlterPartDefinitionAsync("BackgroundPart", part => part
                 .Attachable()
                 .WithDescription("Define background properties.")
                 .WithDisplayName("Background")
@@ -93,9 +94,9 @@ namespace Etch.OrchardCore.Widgets
             return 2;
         }
 
-        public int UpdateFrom2()
+        public async Task<int> UpdateFrom2Async()
         {
-            _contentDefinitionManager.AlterPartDefinition("JavaScriptEventsPart", part => part
+            await _contentDefinitionManager.AlterPartDefinitionAsync("JavaScriptEventsPart", part => part
                 .Attachable()
                 .WithDescription("Define handlers for JavaScript events.")
                 .WithDisplayName("JavaScript Events")
@@ -112,9 +113,9 @@ namespace Etch.OrchardCore.Widgets
             return 3;
         }
 
-        public int UpdateFrom3()
+        public async Task<int> UpdateFrom3Async()
         {
-            _contentDefinitionManager.AlterPartDefinition("ColumnablePart", part => part
+            await _contentDefinitionManager.AlterPartDefinitionAsync("ColumnablePart", part => part
                .Attachable()
                .WithDescription("Define properties for controlling column layout.")
                .WithDisplayName("Columnable")
@@ -143,9 +144,9 @@ namespace Etch.OrchardCore.Widgets
             return 4;
         }
 
-        public int UpdateFrom4()
+        public async Task<int> UpdateFrom4Async()
         {
-            _contentDefinitionManager.AlterPartDefinition("AnimationPart", part => part
+            await _contentDefinitionManager.AlterPartDefinitionAsync("AnimationPart", part => part
                 .Attachable()
                 .WithDescription("Define settings for animating widget.")
                 .WithDisplayName("Animation")
@@ -238,9 +239,9 @@ namespace Etch.OrchardCore.Widgets
             return 5;
         }
 
-        public int UpdateFrom5()
+        public async Task<int> UpdateFrom5Async()
         {
-            _contentDefinitionManager.AlterPartDefinition("BackgroundPart", part => part
+            await _contentDefinitionManager.AlterPartDefinitionAsync("BackgroundPart", part => part
                 .WithField("BackgroundFill", field => field
                     .OfType(nameof(BooleanField))
                     .WithDisplayName("Background Fill")
@@ -254,9 +255,9 @@ namespace Etch.OrchardCore.Widgets
             return 6;
         }
 
-        public int UpdateFrom6()
+        public async Task<int> UpdateFrom6Async()
         {
-            _contentDefinitionManager.AlterPartDefinition("BleedPart", part => part
+            await _contentDefinitionManager.AlterPartDefinitionAsync("BleedPart", part => part
                 .Attachable()
                 .WithDescription("Adds \"bleed\" imagery options to make this area appear to blend in to adjacent ones")
                 .WithDisplayName("Bleed")
@@ -288,9 +289,9 @@ namespace Etch.OrchardCore.Widgets
             return 7;
         }
 
-        public int UpdateFrom7()
+        public async Task<int> UpdateFrom7Async()
         {
-            _contentDefinitionManager.AlterPartDefinition("LinkVisualPart", part => part
+            await _contentDefinitionManager.AlterPartDefinitionAsync("LinkVisualPart", part => part
                .Attachable()
                .WithDescription("Define visual properties for a link.")
                .WithDisplayName("Link Visual")
@@ -363,9 +364,9 @@ namespace Etch.OrchardCore.Widgets
             return 8;
         }
 
-        public int UpdateFrom8()
+        public async Task<int> UpdateFrom8Async()
         {
-            _contentDefinitionManager.AlterPartDefinition(nameof(VisibilityPart), builder => builder
+            await _contentDefinitionManager.AlterPartDefinitionAsync(nameof(VisibilityPart), builder => builder
                  .Attachable()
                  .WithDisplayName("Visibility")
                  .WithDescription("Control when a content item is visible based on factors like screen size.")
@@ -401,9 +402,9 @@ namespace Etch.OrchardCore.Widgets
             return 9;
         }
 
-        public int UpdateFrom9()
+        public async Task<int> UpdateFrom9Async()
         {
-            _contentDefinitionManager.AlterPartDefinition(nameof(LinkBehaviourPart), builder => builder
+            await _contentDefinitionManager.AlterPartDefinitionAsync(nameof(LinkBehaviourPart), builder => builder
                 .Attachable()
                 .WithDisplayName("Link Behaviour")
                 .WithDescription("Define behaviour when user interacts with link.")
@@ -452,7 +453,7 @@ namespace Etch.OrchardCore.Widgets
                         Language= "javascript"
                     })));
 
-            _contentDefinitionManager.AlterPartDefinition(nameof(LinkDestinationPart), builder => builder
+            await _contentDefinitionManager.AlterPartDefinitionAsync(nameof(LinkDestinationPart), builder => builder
                 .Attachable()
                 .WithDisplayName("Link Destination")
                 .WithDescription("Define location user is navigated to when interacting with a linkable element.")
@@ -498,9 +499,9 @@ namespace Etch.OrchardCore.Widgets
             return 11;
         }
         
-        public int UpdateFrom11()
+        public async Task<int> UpdateFrom11Async()
         {
-            _contentDefinitionManager.AlterPartDefinition("SharedGalleryItem", builder => builder
+            await _contentDefinitionManager.AlterPartDefinitionAsync("SharedGalleryItem", builder => builder
                 .WithField("SharedGallery", field => field
                     .WithDisplayName("Shared Gallery")
                     .OfType(nameof(ContentPickerField))
@@ -509,7 +510,7 @@ namespace Etch.OrchardCore.Widgets
                         DisplayedContentTypes = new string[] { "SharedGallery" }
                     })));
 
-            _contentDefinitionManager.AlterTypeDefinition("SharedGalleryItem", builder => builder
+            await _contentDefinitionManager.AlterTypeDefinitionAsync("SharedGalleryItem", builder => builder
                 .WithPart("SharedGalleryItem", part => part
                    .WithPosition("0"))
                    .MergeSettings(JObject.FromObject(new
@@ -519,7 +520,7 @@ namespace Etch.OrchardCore.Widgets
                        Icon = "image"
                    })));
 
-            _contentDefinitionManager.AlterTypeDefinition("SharedGallery", builder => builder
+            await _contentDefinitionManager.AlterTypeDefinitionAsync("SharedGallery", builder => builder
                 .WithPart(nameof(TitlePart), builder => builder
                    .WithPosition("0"))
                 .WithPart("SharedGallery", builder => builder
@@ -541,7 +542,7 @@ namespace Etch.OrchardCore.Widgets
                         ContainedContentTypes = new string[] { "GalleryEmbedItem", "GalleryMediaItem" }
                     })));
 
-            _contentDefinitionManager.AlterTypeDefinition("Gallery", builder => builder
+            await _contentDefinitionManager.AlterTypeDefinitionAsync("Gallery", builder => builder
                 .WithPart("Items", nameof(BagPart), builder => builder
                     .WithDisplayName("Items")
                     .WithSettings(new BagPartSettings
@@ -552,9 +553,9 @@ namespace Etch.OrchardCore.Widgets
             return 12;
         }
 
-        public int UpdateFrom12()
+        public async Task<int> UpdateFrom12Async()
         {
-            _contentDefinitionManager.AlterPartDefinition(nameof(Heading), builder => builder
+            await _contentDefinitionManager.AlterPartDefinitionAsync(nameof(Heading), builder => builder
                 .WithField(nameof(Heading.Emphasize), field => field
                     .OfType(nameof(Fields.Values.Fields.ValuesField))
                     .WithSettings(new ValuesFieldSettings
