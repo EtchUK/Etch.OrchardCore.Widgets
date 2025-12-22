@@ -1,3 +1,7 @@
+> ⚠️ **Archived – No Longer Maintained**
+>
+> This repository is no longer maintained due to a change in the technologies used by our organisation. No further updates, fixes, or security patches will be provided. The project is archived to prevent the expectation of ongoing support. The code remains available as-is for reference or forking.
+
 # Etch.OrchardCore.Widgets
 
 Module for [Orchard Core](https://github.com/OrchardCMS/OrchardCore) that provides common widgets used when constructing a web page.
@@ -39,3 +43,4 @@ These breakpoints can be configured within the field settings, however any ammen
 ## Theming
 
 All templates associated to content types defined within this module render HTML that's tightly coupled to scripts and styles defined within [our theme boilerplate project](https://github.com/EtchUK/Etch.OrchardCore.ThemeBoilerplate).
+
